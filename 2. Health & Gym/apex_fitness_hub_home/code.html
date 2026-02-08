@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Apex Fitness Hub | Elevate Your Performance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#D4FF00", // Electric Lime Green
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#0A0A0A",
+                    },
+                    fontFamily: {
+                        display: ["Bebas Neue", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        .hero-gradient {
+            background: linear-gradient(to top, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.4) 50%, rgba(10, 10, 10, 0) 100%);
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300">
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-slate-200 dark:border-white/10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded-sm rotate-12">
+<span class="material-symbols-outlined text-black font-bold -rotate-12">bolt</span>
+</div>
+<span class="font-display text-3xl tracking-wider dark:text-white">APEX <span class="text-primary">FITNESS</span></span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#classes">CLASSES</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#membership">MEMBERSHIP</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#schedule">SCHEDULE</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">LOCATIONS</a>
+<button class="bg-primary text-black px-6 py-2.5 rounded-none font-bold text-sm tracking-widest hover:bg-white transition-all transform hover:-translate-y-0.5 active:translate-y-0">
+                        JOIN NOW
+                    </button>
+</div>
+<div class="md:hidden flex items-center">
+<span class="material-symbols-outlined text-3xl cursor-pointer">menu</span>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative h-screen flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Athlete training in a dark gym environment" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqen_mT9n01M7eGwa9OBMrNFsebIgYNcfhvGmGX93Nb76LScUoDue0JPZlvrCa7l_I4ghTin57wVtqhhiL8OwZcDk-8lIDtrXossL2bSiBiiUxGx1P5fgcdSxUstwXpPzqz1CGUO2zlpffwCWfakzJKFpk5LHQ_ClSnotlGpnnKShrDiue17ZQvXvBxIda4MFvCcQGotmZR_N5D47cksIRMT_G8AjCDFTqEG_OtzoqCqxnjS_ZZMM82rsl-BHqppg3wO_lqRW5BMZt"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+<div class="max-w-3xl">
+<h2 class="text-primary font-bold tracking-[0.3em] text-lg mb-4 flex items-center gap-2">
+<span class="w-12 h-[2px] bg-primary"></span> NO EXCUSES ONLY RESULTS
+                </h2>
+<h1 class="text-6xl md:text-9xl font-display leading-none mb-8 dark:text-white">
+                    PUSH YOUR <br/> <span class="text-primary italic">LIMITS</span> FURTHER
+                </h1>
+<p class="text-xl md:text-2xl text-slate-300 mb-10 max-w-xl leading-relaxed">
+                    Experience elite coaching and world-class equipment at the premier fitness destination in the city.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-black px-10 py-5 font-display text-2xl tracking-widest hover:bg-white transition-all flex items-center justify-center gap-3">
+                        START FREE TRIAL <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border-2 border-white text-white px-10 py-5 font-display text-2xl tracking-widest hover:bg-white hover:text-black transition-all">
+                        VIEW CLASSES
+                    </button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce">
+<span class="text-xs tracking-widest mb-2 font-semibold">SCROLL</span>
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</section>
+<section class="bg-primary py-12">
+<div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-black text-center">
+<div>
+<div class="font-display text-5xl">15+</div>
+<div class="text-sm font-bold tracking-widest opacity-80 uppercase">Elite Trainers</div>
+</div>
+<div>
+<div class="font-display text-5xl">50+</div>
+<div class="text-sm font-bold tracking-widest opacity-80 uppercase">Weekly Classes</div>
+</div>
+<div>
+<div class="font-display text-5xl">24/7</div>
+<div class="text-sm font-bold tracking-widest opacity-80 uppercase">Member Access</div>
+</div>
+<div>
+<div class="font-display text-5xl">10k+</div>
+<div class="text-sm font-bold tracking-widest opacity-80 uppercase">Active Members</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-light dark:bg-background-dark" id="schedule">
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<h3 class="text-primary font-bold tracking-widest mb-2">WEEKLY SCHEDULE</h3>
+<h2 class="text-5xl font-display dark:text-white uppercase">Find Your <span class="text-primary">Rythm</span></h2>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+<button class="bg-primary text-black px-6 py-2 font-bold whitespace-nowrap">MON</button>
+<button class="border border-slate-700 hover:border-primary px-6 py-2 font-bold whitespace-nowrap">TUE</button>
+<button class="border border-slate-700 hover:border-primary px-6 py-2 font-bold whitespace-nowrap">WED</button>
+<button class="border border-slate-700 hover:border-primary px-6 py-2 font-bold whitespace-nowrap">THU</button>
+<button class="border border-slate-700 hover:border-primary px-6 py-2 font-bold whitespace-nowrap">FRI</button>
+<button class="border border-slate-700 hover:border-primary px-6 py-2 font-bold whitespace-nowrap">SAT</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="group bg-slate-100 dark:bg-zinc-900/50 p-8 border-l-4 border-primary hover:bg-zinc-800 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-6">
+<span class="text-4xl font-display group-hover:text-primary transition-colors">08:00 AM</span>
+<span class="bg-primary/20 text-primary text-[10px] font-black px-2 py-1 tracking-widest">STRENGTH</span>
+</div>
+<h4 class="text-2xl font-display mb-2 group-hover:translate-x-2 transition-transform">POWER LIFTING</h4>
+<p class="text-slate-500 text-sm mb-6">Coach: Marcus 'The Titan' Stone</p>
+<div class="flex items-center gap-2 text-xs font-bold tracking-widest">
+<span class="material-symbols-outlined text-sm">schedule</span> 60 MINS
+                    </div>
+</div>
+<div class="group bg-slate-100 dark:bg-zinc-900/50 p-8 border-l-4 border-slate-700 hover:border-primary hover:bg-zinc-800 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-6">
+<span class="text-4xl font-display group-hover:text-primary transition-colors">10:30 AM</span>
+<span class="bg-slate-700 text-white text-[10px] font-black px-2 py-1 tracking-widest">HIIT</span>
+</div>
+<h4 class="text-2xl font-display mb-2 group-hover:translate-x-2 transition-transform">CARDIO BLAST</h4>
+<p class="text-slate-500 text-sm mb-6">Coach: Sarah Jenkins</p>
+<div class="flex items-center gap-2 text-xs font-bold tracking-widest">
+<span class="material-symbols-outlined text-sm">schedule</span> 45 MINS
+                    </div>
+</div>
+<div class="group bg-slate-100 dark:bg-zinc-900/50 p-8 border-l-4 border-slate-700 hover:border-primary hover:bg-zinc-800 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-6">
+<span class="text-4xl font-display group-hover:text-primary transition-colors">04:00 PM</span>
+<span class="bg-slate-700 text-white text-[10px] font-black px-2 py-1 tracking-widest">FLEXIBILITY</span>
+</div>
+<h4 class="text-2xl font-display mb-2 group-hover:translate-x-2 transition-transform">ZEN FLOW YOGA</h4>
+<p class="text-slate-500 text-sm mb-6">Coach: Elena Rivers</p>
+<div class="flex items-center gap-2 text-xs font-bold tracking-widest">
+<span class="material-symbols-outlined text-sm">schedule</span> 90 MINS
+                    </div>
+</div>
+<div class="group bg-slate-100 dark:bg-zinc-900/50 p-8 border-l-4 border-slate-700 hover:border-primary hover:bg-zinc-800 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-6">
+<span class="text-4xl font-display group-hover:text-primary transition-colors">06:00 PM</span>
+<span class="bg-slate-700 text-white text-[10px] font-black px-2 py-1 tracking-widest">STRENGTH</span>
+</div>
+<h4 class="text-2xl font-display mb-2 group-hover:translate-x-2 transition-transform">BODY SCULPT</h4>
+<p class="text-slate-500 text-sm mb-6">Coach: David Chen</p>
+<div class="flex items-center gap-2 text-xs font-bold tracking-widest">
+<span class="material-symbols-outlined text-sm">schedule</span> 60 MINS
+                    </div>
+</div>
+<div class="group bg-slate-100 dark:bg-zinc-900/50 p-8 border-l-4 border-slate-700 hover:border-primary hover:bg-zinc-800 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-6">
+<span class="text-4xl font-display group-hover:text-primary transition-colors">07:30 PM</span>
+<span class="bg-slate-700 text-white text-[10px] font-black px-2 py-1 tracking-widest">COMBAT</span>
+</div>
+<h4 class="text-2xl font-display mb-2 group-hover:translate-x-2 transition-transform">MUAY THAI</h4>
+<p class="text-slate-500 text-sm mb-6">Coach: Jax "Iron" Malone</p>
+<div class="flex items-center gap-2 text-xs font-bold tracking-widest">
+<span class="material-symbols-outlined text-sm">schedule</span> 60 MINS
+                    </div>
+</div>
+<div class="group bg-slate-100 dark:bg-zinc-900/50 p-8 border-l-4 border-slate-700 hover:border-primary hover:bg-zinc-800 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-6">
+<span class="text-4xl font-display group-hover:text-primary transition-colors">08:45 PM</span>
+<span class="bg-slate-700 text-white text-[10px] font-black px-2 py-1 tracking-widest">RECOVERY</span>
+</div>
+<h4 class="text-2xl font-display mb-2 group-hover:translate-x-2 transition-transform">DEEP STRETCH</h4>
+<p class="text-slate-500 text-sm mb-6">Coach: Elena Rivers</p>
+<div class="flex items-center gap-2 text-xs font-bold tracking-widest">
+<span class="material-symbols-outlined text-sm">schedule</span> 45 MINS
+                    </div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-zinc-100 dark:bg-zinc-950" id="membership">
+<div class="max-w-7xl mx-auto px-4">
+<div class="text-center mb-16">
+<h3 class="text-primary font-bold tracking-widest mb-2">PRICING PLANS</h3>
+<h2 class="text-5xl font-display dark:text-white">SELECT YOUR <span class="text-primary">LEVEL</span></h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-zinc-900 border border-slate-200 dark:border-white/5 p-10 flex flex-col items-center group transition-transform hover:-translate-y-2">
+<span class="font-display text-2xl mb-4 tracking-wider">BASIC</span>
+<div class="flex items-baseline mb-8">
+<span class="text-2xl font-bold">$</span>
+<span class="text-7xl font-display">29</span>
+<span class="text-slate-500">/mo</span>
+</div>
+<ul class="w-full space-y-4 mb-10 text-slate-400">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Gym floor access</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Standard lockers</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> 1 Free fitness assessment</li>
+<li class="flex items-center gap-3 opacity-30"><span class="material-symbols-outlined">cancel</span> No sauna access</li>
+<li class="flex items-center gap-3 opacity-30"><span class="material-symbols-outlined">cancel</span> No towel service</li>
+</ul>
+<button class="w-full border-2 border-slate-800 dark:border-white py-4 font-bold tracking-widest hover:bg-primary hover:text-black hover:border-primary transition-all">SELECT PLAN</button>
+</div>
+<div class="relative bg-white dark:bg-zinc-900 border-2 border-primary p-10 flex flex-col items-center transform scale-105 shadow-2xl z-10">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-black text-xs font-black px-4 py-1 tracking-widest">MOST POPULAR</div>
+<span class="font-display text-2xl mb-4 tracking-wider text-primary">ELITE PRO</span>
+<div class="flex items-baseline mb-8">
+<span class="text-2xl font-bold">$</span>
+<span class="text-7xl font-display text-primary">59</span>
+<span class="text-slate-500">/mo</span>
+</div>
+<ul class="w-full space-y-4 mb-10 text-slate-400">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Unlimited 24/7 access</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> All group classes included</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Sauna &amp; Steam room</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Monthly nutrition consult</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Free guest passes (2/mo)</li>
+</ul>
+<button class="w-full bg-primary text-black py-4 font-bold tracking-widest hover:bg-white transition-all">JOIN NOW</button>
+</div>
+<div class="bg-white dark:bg-zinc-900 border border-slate-200 dark:border-white/5 p-10 flex flex-col items-center group transition-transform hover:-translate-y-2">
+<span class="font-display text-2xl mb-4 tracking-wider">PLATINUM</span>
+<div class="flex items-baseline mb-8">
+<span class="text-2xl font-bold">$</span>
+<span class="text-7xl font-display">99</span>
+<span class="text-slate-500">/mo</span>
+</div>
+<ul class="w-full space-y-4 mb-10 text-slate-400">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Personal trainer (4/mo)</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Priority class booking</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Private locker &amp; Laundry</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Premium supplement lounge</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Unlimited towel service</li>
+</ul>
+<button class="w-full border-2 border-slate-800 dark:border-white py-4 font-bold tracking-widest hover:bg-primary hover:text-black hover:border-primary transition-all">SELECT PLAN</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-primary overflow-hidden relative">
+<div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="flex-1 text-black">
+<h2 class="text-6xl font-display mb-6">TRAIN ANYWHERE <br/>WITH THE <span class="italic">APEX APP</span></h2>
+<p class="text-xl font-medium mb-10 max-w-lg">Track your progress, book classes, and access exclusive training programs from our top coaches, all in the palm of your hand.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-black text-white px-8 py-4 rounded-xl flex items-center gap-3 hover:bg-zinc-800 transition-all">
+<img alt="App Store" class="w-6 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBsO3xoUicyV78_GpIOPW_woj1e7BqiV0XPNm_T8pKIaYmyYHl3Eqjb8tw7Zn7AxcXEL6VXQuzPXkFrUZasTLq_NFz-Btda73W8IVzwsL3Qc0GXotFnDNfaXmGRdN6-8IIf1sElTGe_qg1iP90Cu5_ufof7bLXF_Ci9NZ-uJNhjvDRSOBDHOM-TWWzHI3qLABksfzH9eBWfuhQ93CYwS03qcEp78dzzUT8ogzZr2Dfo760vIZGm83DKLcjHhQMt4ruqVPovTifpqmb"/>
+<div class="text-left">
+<div class="text-[10px] uppercase font-bold">Download on the</div>
+<div class="text-lg font-bold leading-none">App Store</div>
+</div>
+</button>
+<button class="bg-black text-white px-8 py-4 rounded-xl flex items-center gap-3 hover:bg-zinc-800 transition-all">
+<img alt="Google Play" class="w-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASE5ZdeuTXGbgaBtojIV_edaicDstujdAATN-Z_iJIPRbFLT148jCnGqtoAry56QzsBd9L_E7GqKV76Y--fP0n6HqUFlsadnnepFSDyBmDhnWAdv0_-0dq5TVaFd7o-BZ20N14htzVHlG27J6VnMbar2CEG18LhS1hjG_k9jdQBel1kw_xeZe9vrVGwMwtyPTHY8Rz-K1KjrFa_bc8HuQz0bCjdLDhq_B6cirO4sEG6HKee_BeGQebAvnIwDBPIPnupDa5NPXjXya-"/>
+<div class="text-left">
+<div class="text-[10px] uppercase font-bold">Get it on</div>
+<div class="text-lg font-bold leading-none">Google Play</div>
+</div>
+</button>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="w-64 h-[500px] bg-black rounded-[3rem] border-8 border-zinc-800 overflow-hidden shadow-2xl rotate-12 -mr-20">
+<img alt="App Interface Preview" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrowpSzhbfyzs1boZw5iohuUEC7hHedxFhl1HmjpwB007N_Cc18PFswXAsB8FUWaDnTCrq7ybh9RROSlgnmKNuzxKDWqrYFwbUUxO8d9oGlEh6L9YUfBnXwfWUPHdMuDT4UlOr6cC8xzd0heyMFZhHaQQuo_y1FoqM0GS6Yt1cvbK5IYAUNKUpByD67tIexoWAcFph-yIg2_i8FMmxgxau2RmkFp4WpeA10oE4cm-3-3_jKiP8M3P7kPGvm549YUb-B9MJ2s-wZWe5"/>
+</div>
+<div class="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-[500px] bg-black rounded-[3rem] border-8 border-zinc-800 overflow-hidden shadow-2xl -rotate-6">
+<img alt="App Interface Workout" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfZ3xmOUZ7BZc3SHRbEqFxTvNhRLO7Ub-fD9KdEFED3tW1rHE6ZxyqhxQnOisyCaQ7tVqn7kesZQ4mZd20pq1XwKVqAir0It2LwDOThRLXtjsKl0xv22MarS9tv8d0kZb0PvAoxvA0IArKL6LwRU5weOwo5V8vFCTv5rQLFv02RiiUYvLRAtYULJ5Ekmwi-SOrUjk0kTIoy0NCDcxZf0gViMv55FCOzCZe8Ly_zclL0GEmRlI-eLb2pw2nWAs2KIE3XnfYRzktGpky"/>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-background-light dark:bg-black pt-20 pb-10 border-t border-slate-200 dark:border-white/5">
+<div class="max-w-7xl mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 mb-8">
+<div class="w-8 h-8 bg-primary flex items-center justify-center rounded-sm rotate-12">
+<span class="material-symbols-outlined text-black font-bold -rotate-12 text-sm">bolt</span>
+</div>
+<span class="font-display text-2xl tracking-wider dark:text-white">APEX FITNESS</span>
+</div>
+<p class="text-slate-500 max-w-sm mb-8 leading-relaxed">
+                        The ultimate destination for those who want to push their limits and achieve the impossible. Join the community of elite performers today.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-slate-700 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary hover:text-black transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-10 h-10 border border-slate-700 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary hover:text-black transition-all" href="#">
+<span class="material-symbols-outlined">smart_display</span>
+</a>
+<a class="w-10 h-10 border border-slate-700 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary hover:text-black transition-all" href="#">
+<span class="material-symbols-outlined">camera</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-display text-xl mb-6 tracking-widest">COMPANY</h5>
+<ul class="space-y-4 text-slate-500 text-sm font-semibold">
+<li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Trainers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Class Guide</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-display text-xl mb-6 tracking-widest">LOCATIONS</h5>
+<ul class="space-y-4 text-slate-500 text-sm font-semibold">
+<li>Downtown HQ</li>
+<li>Westside Studio</li>
+<li>The Heights</li>
+<li>River District</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-800 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-600 text-xs tracking-widest uppercase">© 2024 APEX FITNESS HUB. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-8 text-[10px] text-slate-600 tracking-widest font-black">
+<a class="hover:text-white transition-colors uppercase" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors uppercase" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

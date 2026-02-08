@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Neon Speed - Velocity Redefined</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#258cf4",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0a1118", // Darker shade for high contrast
+                        "surface-dark": "#131e29",
+                    },
+                    fontFamily: {
+                        display: ["Space Grotesk", "sans-serif"],
+                        body: ["Space Grotesk", "sans-serif"],
+                    },
+                    backgroundImage: {
+                        'metallic-text': 'linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 100%)',
+                        'neon-gradient': 'linear-gradient(90deg, #258cf4 0%, #00d4ff 100%)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .metallic-text {
+            background: linear-gradient(to bottom, #ffffff 20%, #9ca3af 80%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(37, 140, 244, 0.3);
+        }
+
+        .neon-border {
+            box-shadow: 0 0 10px rgba(37, 140, 244, 0.5), inset 0 0 10px rgba(37, 140, 244, 0.2);
+            border: 1px solid rgba(37, 140, 244, 0.4);
+        }
+
+        /* Speed lines background pattern */
+        .speed-lines {
+            background-image: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 50px,
+                rgba(255, 255, 255, 0.03) 50px,
+                rgba(255, 255, 255, 0.03) 51px
+            );
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased overflow-x-hidden">
+<div class="relative min-h-screen flex flex-col">
+<!-- Sticky Header with blurred background -->
+<header class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary animate-pulse">
+<span class="material-symbols-outlined text-3xl">electric_bolt</span>
+</div>
+<span class="text-xl font-bold tracking-widest uppercase metallic-text">Neon Speed</span>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors uppercase tracking-widest" href="#">Models</a>
+<a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors uppercase tracking-widest" href="#">Technology</a>
+<a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors uppercase tracking-widest" href="#">Charging</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex items-center justify-center h-10 px-6 rounded bg-primary hover:bg-blue-600 transition-all shadow-[0_0_15px_rgba(37,140,244,0.5)] text-white text-sm font-bold uppercase tracking-widest">
+                        Order Now
+                    </button>
+<button class="md:hidden text-white p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="relative h-[85vh] w-full overflow-hidden flex items-end pb-20 px-6 md:px-20 speed-lines">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Futuristic electric sports car speeding through a dark tunnel with neon light trails" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpO0vuSTiVm3g4wPW5Mllkp6lBPNbGiHsqmVPIf7N7mTSYxhX6ah9D2LhmRuqda43dCdw0Vxn-iOdSYCwAigaQWUtDrN8Qu7I5r5jw68gO1THwbA5reFNSD2YjmIB8fEKJtGU0TUCFoSxcpz7f3y57b65zISLesZ5iqsXoadbDBXWtqCOC5N0Cw7NoSd4_ou_DBVXHGUB60RUSFrsJlHJbhodljSS5EwGsvWxx2NL4hXo5DkauylCyyuezl_3iR_Esq-B6ZJuyI-Rh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-[1440px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="flex items-center gap-2 text-primary uppercase tracking-[0.2em] text-sm font-bold">
+<span class="w-8 h-[2px] bg-primary inline-block"></span>
+                            The Future is Fast
+                        </div>
+<h1 class="text-6xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tighter metallic-text uppercase">
+                            Velocity<br/>Redefined
+                        </h1>
+<p class="text-lg md:text-xl text-slate-300 max-w-xl font-light leading-relaxed border-l-2 border-primary pl-6 mt-4">
+                            Experience the silence of pure speed. The NS-1 breaks the barrier between machine and lightning.
+                        </p>
+<div class="flex flex-wrap gap-4 mt-6">
+<button class="group flex items-center gap-3 h-14 px-8 rounded bg-transparent border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 uppercase tracking-widest font-bold neon-border">
+<span class="material-symbols-outlined group-hover:animate-pulse">play_circle</span>
+                                Watch Film
+                            </button>
+<button class="flex items-center justify-center h-14 px-8 rounded bg-white text-background-dark hover:bg-slate-200 transition-colors uppercase tracking-widest font-bold">
+                                Configurator
+                            </button>
+</div>
+</div>
+<!-- Hero Stats -->
+<div class="lg:col-span-5 flex flex-col justify-end">
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-dark/50 backdrop-blur-sm border border-white/5 p-6 rounded group hover:border-primary/50 transition-colors">
+<p class="text-slate-400 text-xs uppercase tracking-widest mb-1">Acceleration</p>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold text-white group-hover:text-primary transition-colors">1.9</span>
+<span class="text-sm text-primary">s</span>
+</div>
+<p class="text-xs text-slate-500 mt-2">0-60 mph</p>
+</div>
+<div class="bg-surface-dark/50 backdrop-blur-sm border border-white/5 p-6 rounded group hover:border-primary/50 transition-colors">
+<p class="text-slate-400 text-xs uppercase tracking-widest mb-1">Top Speed</p>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold text-white group-hover:text-primary transition-colors">250</span>
+<span class="text-sm text-primary">mph</span>
+</div>
+<p class="text-xs text-slate-500 mt-2">Track limiter off</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Marquee Text Strip -->
+<div class="w-full bg-primary overflow-hidden py-3 transform -skew-y-1">
+<div class="flex whitespace-nowrap gap-8 animate-[marquee_20s_linear_infinite]">
+<span class="text-background-dark font-bold text-xl uppercase tracking-widest mx-4">/// Pure Electric Velocity /// Zero Emissions /// 100% Adrenaline /// Next Gen Battery Tech /// </span>
+<span class="text-background-dark font-bold text-xl uppercase tracking-widest mx-4">/// Pure Electric Velocity /// Zero Emissions /// 100% Adrenaline /// Next Gen Battery Tech /// </span>
+<span class="text-background-dark font-bold text-xl uppercase tracking-widest mx-4">/// Pure Electric Velocity /// Zero Emissions /// 100% Adrenaline /// Next Gen Battery Tech /// </span>
+</div>
+</div>
+<!-- Tech Breakdown Section -->
+<section class="py-24 px-6 md:px-20 bg-background-dark relative overflow-hidden">
+<!-- Background decorative elements -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"></div>
+<div class="absolute top-20 left-10 text-[20rem] font-bold text-white/5 leading-none select-none -z-10">01</div>
+<div class="max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+<div>
+<h2 class="text-4xl md:text-5xl font-bold uppercase tracking-tight metallic-text mb-4">Core Architecture</h2>
+<p class="text-slate-400 max-w-lg text-lg">Beneath the aerodynamic shell lies a tri-motor powertrain capable of vectoring torque instantly to any wheel.</p>
+</div>
+<button class="text-primary hover:text-white flex items-center gap-2 uppercase tracking-widest text-sm font-bold group">
+                            Full Specs <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group relative bg-surface-dark border border-white/5 hover:border-primary/50 p-8 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(37,140,244,0.15)]">
+<div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-4xl text-primary">battery_charging_full</span>
+</div>
+<div aria-label="Abstract 3D rendering of a glowing high-tech battery pack module" class="mt-4 mb-8 h-48 w-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-110" role="img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAg33TxB9bZ4XYy6SiqMItxrinXCBs5A1FrFBjQJongjktd0e29OaM0bDVUyOf-3EJ3IN5L9OcKFMJOHAesm0tCUvASCp0nRgkeamVD0AwcMKidYJ2vsUedlu_qe4hJksAuwkwF9CPcZWYSQwrl6jFyPEw-lFn6Mbnx7h6gJmBHYCyb1-aVAQOoloJ9TwtuM_tygEVT0TvJKxTlab2O6wmy1D6dxWIee8RTdBhCX5C-f4JQmgKnrUzpeEiVXv47CngqpwtQFi7vuqju');">
+</div>
+<h3 class="text-xl font-bold text-white mb-2 uppercase">Solid State Battery</h3>
+<p class="text-slate-400 text-sm leading-relaxed">Next-gen energy density delivering 500+ miles of range with reduced weight and faster thermal regulation.</p>
+<div class="w-full bg-white/10 h-1 mt-6 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%]"></div>
+</div>
+<div class="flex justify-between mt-2 text-xs text-primary font-mono">
+<span>DENSITY</span>
+<span>850 Wh/L</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative bg-surface-dark border border-white/5 hover:border-primary/50 p-8 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(37,140,244,0.15)]">
+<div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-4xl text-primary">settings_motion_mode</span>
+</div>
+<div aria-label="Detailed close-up of a futuristic electric motor engine coil" class="mt-4 mb-8 h-48 w-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-110" role="img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLZ8U4mnieVNm0u0ag9bELn8ZqEh-H8_Y2f9urE57fmJIruIfMa2dnCCR8m8l5bI2E73TVxc59oc6NFN4vtAcJsMbxsGhAPLNGFIzB7LmyOqo0D_aNPwWz07P8HhkeUYsd19MU3vroTai4wc1NpG2U0vhjhXawhUjn-IkYcUPyh4qF3RNZAozq9FmqBLdnR9nrQwy_UPMKwc3Y6FWyJzUA7M9mysY8JsXKcm9RhGv19vcjhSXoHAzgEZs5ZgqyJ0bwS6JhrE6juZHP');">
+</div>
+<h3 class="text-xl font-bold text-white mb-2 uppercase">Tri-Motor Drivetrain</h3>
+<p class="text-slate-400 text-sm leading-relaxed">1,100 horsepower delivered with zero lag. Independent torque vectoring for surgical precision on curves.</p>
+<div class="w-full bg-white/10 h-1 mt-6 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[98%]"></div>
+</div>
+<div class="flex justify-between mt-2 text-xs text-primary font-mono">
+<span>EFFICIENCY</span>
+<span>98%</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative bg-surface-dark border border-white/5 hover:border-primary/50 p-8 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(37,140,244,0.15)]">
+<div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-4xl text-primary">grid_4x4</span>
+</div>
+<div aria-label="Abstract carbon fiber texture pattern representing chassis structure" class="mt-4 mb-8 h-48 w-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-110" role="img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC841flk7tC0j2nm48HFZcDJCKGvWFNOXrOM1m0UsTtBx1LwUe6ILKanDgHcvoYYsqjm5kmHFO7oP-K4R4ZQfUbjVFcKg06Twqr9JjJkYt8QxGx1HJl3v1BRn3X-K3ONqjN2vu4xbbolYAPzmHYjKQyobUP1qADynKDuSzZk7dsOJFAdAznEPGYU7-Cp0Z7pAmixfJ2A1j1m0XXmV1Z18wG1HAqDovd07l9tm5XcHVMWCVjx5TNM_boBDQh9BeEJDIaiXYNXJx3h5ZD');">
+</div>
+<h3 class="text-xl font-bold text-white mb-2 uppercase">Carbon Fiber Chassis</h3>
+<p class="text-slate-400 text-sm leading-relaxed">Aerospace-grade rigidity. The monocoque design integrates the battery pack for a lower center of gravity.</p>
+<div class="w-full bg-white/10 h-1 mt-6 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[60%]"></div>
+</div>
+<div class="flex justify-between mt-2 text-xs text-primary font-mono">
+<span>WEIGHT</span>
+<span>-40%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial / Lifestyle Section -->
+<section class="py-24 px-0 bg-surface-dark">
+<div class="max-w-[1440px] mx-auto px-6 md:px-20">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-20 items-center">
+<div class="order-2 lg:order-1 relative group">
+<div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
+<img alt="Luxurious dark car interior with glowing blue ambient lighting strips" class="relative z-10 w-full rounded-lg shadow-2xl border border-white/10 grayscale-[30%] group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLoCQatUCfGXZ-Hl9cFZJriYTpHVBiUk9ZdKG3O-bStLmmvYy4JaC3rGUA8iCkTYUA4tfx7Dot-2NvqFOGoJn39dwLE-OVDbqBCDlEW_bt6P37lI87lFIYmIBKgeGWvrvpgH4tpnihgbLYIm1IMhb_Q4Qhjk6ctbFWv03ztVuEn8xCOmM9Jvcd19QgJGNbQ4ZYhd-xIi4eLIfSrkxyi6fhXDjCHSKc4biErNWysN6KulpOMLxzAogYGeSk-LWC7nCY2xS3XT0e7H4i"/>
+<!-- Floating UI Card on Image -->
+<div class="absolute -bottom-6 -right-6 z-20 bg-background-dark/90 backdrop-blur border border-white/10 p-6 rounded max-w-xs shadow-xl hidden md:block">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary">sensors</span>
+<span class="text-white font-bold text-sm uppercase">Lidar Array Active</span>
+</div>
+<p class="text-xs text-slate-400">Real-time mapping of 360 degrees for autonomous navigation.</p>
+</div>
+</div>
+<div class="order-1 lg:order-2 mb-12 lg:mb-0">
+<span class="text-primary font-bold uppercase tracking-widest text-sm mb-4 block">Interior &amp; Intelligence</span>
+<h2 class="text-4xl md:text-5xl font-bold text-white uppercase leading-tight mb-6">
+                                 Cockpit of the <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white">22nd Century</span>
+</h2>
+<p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                                 Forget buttons. The Neon Speed interface is purely gestural and voice-activated. Customizable neon ambient lighting adapts to your driving mode—pulsing red in Sport, calming teal in Cruise.
+                             </p>
+<div class="flex flex-col gap-6">
+<div class="flex items-start gap-4">
+<div class="p-3 rounded bg-white/5 text-primary border border-white/10">
+<span class="material-symbols-outlined">chair</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-lg">Vegan Leather</h4>
+<p class="text-slate-500 text-sm">Sustainable, durable, and softer than traditional hide.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-3 rounded bg-white/5 text-primary border border-white/10">
+<span class="material-symbols-outlined">graphic_eq</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-lg">Immersive Sound</h4>
+<p class="text-slate-500 text-sm">24-speaker system with active noise cancellation.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Large CTA Footer Section -->
+<section class="relative py-32 px-6 flex flex-col items-center justify-center text-center overflow-hidden bg-background-dark border-t border-white/5">
+<div class="absolute inset-0 z-0 opacity-30">
+<img alt="Top down view of a dark asphalt road with car light streaks" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJheW1vPi1mVkYEwKXzOs4Ph-iScgh3HM2Tr-M4UEILI5qemTJeJtWpKzWcDR5sHl9ViFNsuewB7DCJXqy4g_MKfOvdAGpZYBfJpUQQNmcjZ4gdPAHXyDL0doFUty1PBadk1e3B9UCBOo7u-Off23PgjOIuanloCknOE6_M19JOqzC9LfmpF9iEsq31DuIz_MMh4DAPBkKE5Bqy9FBMqJU_5qwe_4WARuj1OoSnAExgPfN0rov1iujlhfRSh9Qz16Etyyxon6FiCuI"/>
+<div class="absolute inset-0 bg-background-dark/80"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto">
+<h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter text-white mb-8">Ready to Fly?</h2>
+<p class="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">Secure your production slot for 2025. Fully refundable reservation fee.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="relative group overflow-hidden h-16 px-12 rounded bg-primary text-white text-lg font-bold uppercase tracking-widest shadow-[0_0_20px_rgba(37,140,244,0.4)] hover:shadow-[0_0_40px_rgba(37,140,244,0.6)] transition-all">
+<span class="relative z-10">Reserve Yours</span>
+<div class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+</button>
+<button class="h-16 px-12 rounded border border-white/20 hover:bg-white/5 text-white text-lg font-bold uppercase tracking-widest transition-colors backdrop-blur-sm">
+                             Locate Studio
+                         </button>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-[#05090d] text-slate-500 py-12 px-6 border-t border-white/5">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-sm">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">electric_bolt</span>
+<span class="text-white font-bold uppercase tracking-widest">Neon Speed</span>
+</div>
+<p class="mb-4">Redefining electric performance for the modern era.</p>
+<div class="flex gap-4">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">Twitter</a>
+<a class="hover:text-primary transition-colors" href="#">YouTube</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest mb-4">Vehicles</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="hover:text-primary transition-colors" href="#">NS-1 Coupe</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">NS-X SUV</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Fleet</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest mb-4">Company</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Investors</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest mb-4">Newsletter</h4>
+<div class="flex flex-col gap-3">
+<input class="bg-white/5 border border-white/10 rounded px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Enter your email" type="email"/>
+<button class="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded uppercase font-bold text-xs tracking-widest transition-colors">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs">
+<p>© 2024 Neon Speed Automotive. All rights reserved.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-white" href="#">Privacy Policy</a>
+<a class="hover:text-white" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+<style>
+        /* Custom Keyframes for Marquee */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</body></html>

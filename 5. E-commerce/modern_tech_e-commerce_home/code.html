@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Modern Tech E-commerce Home</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b7cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-nav {
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .dark .glass-nav {
+            background-color: rgba(16, 24, 34, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-300">
+<!-- Urgency Top Banner -->
+<div class="bg-primary text-white py-2 px-4 text-center text-sm font-bold tracking-wide">
+<span class="inline-flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">bolt</span>
+            FLASH SALE: 25% OFF PRO-SERIES ENDS IN 02:45:12
+            <span class="hidden md:inline">| USE CODE: TECH25</span>
+</span>
+</div>
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Sticky Navigation -->
+<header class="sticky top-0 z-50 glass-nav border-b border-solid border-gray-200 dark:border-gray-800 px-6 md:px-10 py-3">
+<div class="max-w-[1280px] mx-auto flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined">memory</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-xl font-black leading-tight tracking-[-0.015em]">TechPro</h2>
+</div>
+<div class="hidden lg:flex items-center gap-9">
+<a class="text-[#111418] dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Products</a>
+<a class="text-[#111418] dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Innovations</a>
+<a class="text-[#111418] dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Support</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-6">
+<label class="hidden md:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+<div class="text-gray-400 flex items-center justify-center pl-3">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-sm placeholder:text-gray-400" placeholder="Search gadgets..." value=""/>
+</div>
+</label>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-[22px]">shopping_cart</span>
+</button>
+<button class="md:hidden flex items-center justify-center rounded-lg h-10 w-10 bg-gray-100 dark:bg-gray-800">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="hidden md:block bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile avatar of a professional male" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuARhnLZcEt9kZfpfGVG53NxX8Xt7gioFzFS3ree-ZdodDGzvqrbmzJlAPfzoMoItnWcIxLAUWRHblHW0hZhjAL1k0Ot7UNmTTe3AVZ-Y6fZE0UPhoMkjMNqNaOF6lHRTDD0KOSDD0tVafqgEGgSqDmZCUsPPA9NW7idhEBlh9MKJc9sqRpnzTTvzHD7FgCxS18B1d-SK7nNFIsmPaLNpp_dIrSVf_IANfVJNcnnq7O2TtKVhPBY_ILLKneS861CwKp1kP52HcNnfWIn");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="max-w-[1280px] mx-auto px-6 py-12 md:py-20 lg:py-24">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="order-2 lg:order-1 flex flex-col gap-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 w-fit animate-pulse">
+<span class="material-symbols-outlined text-sm">warning</span>
+<span class="text-xs font-bold uppercase tracking-widest">Limited Stock: Only 42 units left!</span>
+</div>
+<div class="flex flex-col gap-4">
+<h1 class="text-[#111418] dark:text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-[-0.04em]">
+                                    The Future of <span class="text-primary">Sound</span>
+</h1>
+<p class="text-lg text-gray-600 dark:text-gray-400 max-w-[540px]">
+                                    Experience precision engineering with our latest Pro-X Series audio technology. Noise cancellation redefined for the modern innovator.
+                                </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white font-bold rounded-lg hover:bg-blue-600 transition-all shadow-lg shadow-primary/20 hover:scale-105">
+<span>Buy Now</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="flex items-center justify-center px-8 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 font-bold rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
+                                    View Specs
+                                </button>
+</div>
+<div class="flex items-center gap-6 pt-4">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-white bg-gray-200" data-alt="Customer avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAM-xwe0BJ9k9FYVDQnd2ROahH8NNgq0ACkXuvvF4d9qXJKHnjm7UsdHWgi5Cx-Bu7Zy08NV5B2Z-Nr8JTTgvgmiUkzs3My8cZYRMIw90Aq-4xvetxt6bR_O6vHM0b_YsGhkr8ZX58rog0qNELGeTlbDCquzLBYWdxvKxMm26UHl4sGAOvFx3EIUQ3Mleqtjm-jf-fNhZwuvTOdzprwtmSuZaTOlIfSC61UIZwdjqOXxJVMPVuP7_xX0p4zjX9Ex7ecIxqDjgKpLSWo'); background-size: cover;"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-gray-200" data-alt="Customer avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9jzwN3dxsqCze4lgkPIhOhc9yK3GJ-SyId853ypGutIjpoY0TTLdkwS3bOuj4N_fkBvWDRs5Mmlfn_gCZzi7tUZOJUhXed4WFKdd1qyMTCQuyeIcMQPIQ24516mrcRgfaxekjHGudDm_tX519ygNDQ-6S3fCmsJlumJ1u_kMvhgDhZS5dE9HyxxqfAliMK5keYrvo4TZH7PO212dW22ACb6Ykpa_9eF1Q4LZajjkf6oXElhEzVVWi2HVAQxFP8hq2dTqW5hsdcTsa'); background-size: cover;"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-gray-200" data-alt="Customer avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA5vemBlbaleidvuSF7G1XktQJqcASNorOSa1bq1Z4ApuYz9q3btNQF1gVNPpGOu0ssY6TbrHLWyiLHmd_Rwvzx6yCZz0m88BZnfhD0f65blH-G8U627Gep1PTpysWu4FhqVhbg4QBN39Oyclv1uo3zlTc8xd3vXgrTiXtysZdHfXxzh4mB8z-_v6TPPa5cV2Kuek1bIxrXoGkIzh4WWHupRNyo6NUEQIZ81MJpbWOrGKY11lRfoX8GQQkpy2kd1B943pq1sBuZwGQr'); background-size: cover;"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-primary flex items-center justify-center text-[10px] font-bold text-white tracking-tighter">+2k</div>
+</div>
+<div class="text-sm font-medium text-gray-500">Trusted by 2,000+ early adopters</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 relative">
+<div class="absolute inset-0 bg-primary/10 blur-[120px] rounded-full"></div>
+<div class="relative bg-center bg-no-repeat aspect-square bg-contain rounded-3xl" data-alt="Premium high-fidelity wireless headphones in electric blue and black" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDLMDPuG505XPqA0K0CgU2IU-x7Rhk6urGayawon63wjvHmSScFFKp6tmSLzKd69OA2fobzd-TLkHdMCtWQ3Cr3EtSPHeOfxhqYlryc6peRNxwPRXRfWTF_WOgBqdGkEisgGDmMTDz0xDOsCQHwFcCOGOQ9ZIHDOxSq4veN7SK_0A0QXErOP3xN6W54GRr7ldvRBy9Jk98TlghDtqTfiSDSObba6p3tplHde9nakbzDEuL4TMA44VwxzFsbIzg2UdrSFfomzZNf7o91");'>
+</div>
+</div>
+</div>
+</section>
+<!-- Bestseller Strip with Countdown -->
+<section class="bg-white dark:bg-gray-900 py-16 border-y border-gray-100 dark:border-gray-800">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+<div>
+<h2 class="text-3xl font-black tracking-tight text-[#111418] dark:text-white">Top Performers</h2>
+<p class="text-gray-500 mt-2">The most sought-after tech this week.</p>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="flex h-12 w-14 items-center justify-center rounded-lg bg-background-light dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+<p class="text-primary text-xl font-black">02</p>
+</div>
+<p class="text-[10px] uppercase font-bold text-gray-400 mt-1">Hours</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="flex h-12 w-14 items-center justify-center rounded-lg bg-background-light dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+<p class="text-primary text-xl font-black">45</p>
+</div>
+<p class="text-[10px] uppercase font-bold text-gray-400 mt-1">Mins</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="flex h-12 w-14 items-center justify-center rounded-lg bg-background-light dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+<p class="text-primary text-xl font-black">12</p>
+</div>
+<p class="text-[10px] uppercase font-bold text-gray-400 mt-1">Secs</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Product Card 1 -->
+<div class="group bg-background-light dark:bg-gray-800/50 rounded-xl overflow-hidden border border-transparent hover:border-primary/30 transition-all hover:shadow-xl">
+<div class="relative aspect-square bg-gray-100 dark:bg-gray-800 overflow-hidden">
+<img alt="Smart watch" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Sleek black smartwatch with digital interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn7Sf1fiKgTsm0oUeirZ5iqLYc8LYPOLiJwed0Ucfg1yxSPWTAFQybXZE-0SDCzK2ENrt1vtUO2Y8xL7QShxotXieHX1I2K7HYl_fjKQIyoXsv9kwhdou6TF9J4uTWZGVPvB6hA3F0h0QDyBhoi9c8uEMDFQiYjM_SMowN_aKw9L0MpfSa9AY5zmtNwZGxcJFCm2_JjM4XYitPVKlp82zfEh3XMMF48GDhaG1E_95SXGMvYrFed-of4BKmMX8cV2MLiOc-ekUuKtBe"/>
+<div class="absolute top-3 left-3 bg-white dark:bg-gray-900 px-2 py-1 rounded text-[10px] font-black uppercase tracking-tighter">Bestseller</div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Pro Watch Ultra</h3>
+<span class="text-primary font-black">$299</span>
+</div>
+<p class="text-sm text-gray-500 line-clamp-2">The most advanced health tracking in a rugged titanium body.</p>
+<button class="w-full py-2 bg-white dark:bg-gray-800 border border-primary text-primary font-bold rounded group-hover:bg-primary group-hover:text-white transition-all">
+                                        Add to Cart
+                                    </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-background-light dark:bg-gray-800/50 rounded-xl overflow-hidden border border-transparent hover:border-primary/30 transition-all hover:shadow-xl">
+<div class="relative aspect-square bg-gray-100 dark:bg-gray-800 overflow-hidden">
+<img alt="Laptop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Minimalist high-performance laptop on a desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtmCWaphRNETl3r3BI9oLPjBvB8d315W_jafarCPMt91QFJrQTSXwM-Tn_eqIUVRBJT46IbgA9L4vXlZZTt66doVQBm8pgSk4gBfo3YQVOBl-gNo8YQhKgsM3MGhwPw9G6DqpI-VmdyOc16C02A2vcLm6fU1Ixyp3s43xAbMtsCXVuDBTXPpFKV0zbFrN_urtT-M-DsBjNhnGtCdbG1MpcA3mwNSiNMo9uaXMeiQwCY_8fn_651HFFu5f2IZinGpUjhm7iNfmlhZS5"/>
+<div class="absolute top-3 left-3 bg-primary text-white px-2 py-1 rounded text-[10px] font-black uppercase tracking-tighter">-15% OFF</div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">TechBook M3</h3>
+<span class="text-primary font-black">$1,249</span>
+</div>
+<p class="text-sm text-gray-500 line-clamp-2">Unparalleled performance for creators and developers.</p>
+<button class="w-full py-2 bg-white dark:bg-gray-800 border border-primary text-primary font-bold rounded group-hover:bg-primary group-hover:text-white transition-all">
+                                        Add to Cart
+                                    </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-background-light dark:bg-gray-800/50 rounded-xl overflow-hidden border border-transparent hover:border-primary/30 transition-all hover:shadow-xl">
+<div class="relative aspect-square bg-gray-100 dark:bg-gray-800 overflow-hidden">
+<img alt="Camera" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Professional mirrorless camera with prime lens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnYPXz75vXqxY-X6pR2dyaoDH-GCSgcnCCtZy_aqQGRNTNf3tFu_Q2im3QHEQ8wXbG7xMTrCZHfNdhMfGs-AH9MEK4MI-1ZdZNj-Y9OjtE3TDL09b2826Bq0KhKxLh_Gvp0O4gTISX75QcU14MewVGEcCjVu7euNdp4mrO4NBtnykukVs3htKwmSEoMM9whDZ5yTJfhm58T2_NSVXwCTinZOBYpnk9H0c2RxmbdPCQ9pPyeWErtZFyGuCHO6DuJiJHHUgDu6yGo7-T"/>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Vision Camera</h3>
+<span class="text-primary font-black">$899</span>
+</div>
+<p class="text-sm text-gray-500 line-clamp-2">8K video recording in a pocket-sized masterpiece.</p>
+<button class="w-full py-2 bg-white dark:bg-gray-800 border border-primary text-primary font-bold rounded group-hover:bg-primary group-hover:text-white transition-all">
+                                        Add to Cart
+                                    </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-background-light dark:bg-gray-800/50 rounded-xl overflow-hidden border border-transparent hover:border-primary/30 transition-all hover:shadow-xl">
+<div class="relative aspect-square bg-gray-100 dark:bg-gray-800 overflow-hidden">
+<img alt="Smartphone" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Latest flagship smartphone with vibrant OLED screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDET62qzTnE4jnSbHyIoiGx1t2oOjr00smwgPdfHx93YHktlG_jkwud24ZK3QY3KJmuh8QbNx--thH93OAcE6FqQmfg4nRAV_G170xXg41GzWJftoKZ4fnbYsd4aQaz0VuDCPJtYYD4bgxOyBvdZEMooL_zdR686LDOMCIvXRU3i-WDIWXb33XFJ19r01ofC4IXVVSH5oZ7fXYTaObptc1UQhCuosPEiSTruqs9D0m68hWI9coJMAAt1T8vTkmthvEWqQ8yFeYzZbcb"/>
+<div class="absolute top-3 left-3 bg-white dark:bg-gray-900 px-2 py-1 rounded text-[10px] font-black uppercase tracking-tighter">New</div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Nova Phone 12</h3>
+<span class="text-primary font-black">$749</span>
+</div>
+<p class="text-sm text-gray-500 line-clamp-2">Satellite connectivity and all-day battery life.</p>
+<button class="w-full py-2 bg-white dark:bg-gray-800 border border-primary text-primary font-bold rounded group-hover:bg-primary group-hover:text-white transition-all">
+                                        Add to Cart
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- High-Contrast Features Grid -->
+<section class="max-w-[1280px] mx-auto px-6 py-24">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-black mb-4">Engineered for Excellence</h2>
+<div class="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-shadow group">
+<div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">speed</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Lightning Fast</h3>
+<p class="text-gray-500">Equipped with the new Hyper-Core chip for 3x faster processing speeds than last gen.</p>
+</div>
+<div class="p-8 rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-shadow group">
+<div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">battery_charging_full</span>
+</div>
+<h3 class="text-xl font-bold mb-3">48-Hour Battery</h3>
+<p class="text-gray-500">Go further with intelligent power management that lasts all weekend on a single charge.</p>
+</div>
+<div class="p-8 rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-shadow group">
+<div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">mobile</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Global 6G</h3>
+<p class="text-gray-500">Next-gen connectivity keeps you synced across 120+ countries without missing a beat.</p>
+</div>
+</div>
+</section>
+<!-- Newsletter / Early Access -->
+<section class="max-w-[1280px] mx-auto px-6 mb-24">
+<div class="relative bg-background-dark text-white rounded-3xl overflow-hidden p-8 md:p-16">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/20 to-transparent pointer-events-none"></div>
+<div class="relative z-10 max-w-xl">
+<h2 class="text-4xl font-black mb-6">Get Early Access</h2>
+<p class="text-gray-400 text-lg mb-8">Join 50,000+ tech enthusiasts. Be the first to hear about product drops, exclusive beta testing, and community-only offers.</p>
+<form class="flex flex-col sm:flex-row gap-4">
+<input class="flex-1 bg-gray-800 border-gray-700 rounded-lg px-6 py-4 focus:ring-primary focus:border-primary text-white outline-none" placeholder="Enter your email" type="email"/>
+<button class="px-8 py-4 bg-primary hover:bg-blue-600 font-bold rounded-lg transition-all shadow-lg shadow-primary/20 whitespace-nowrap">Subscribe Now</button>
+</form>
+<p class="text-[10px] text-gray-500 mt-4">By subscribing, you agree to our Privacy Policy. No spam, ever.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 pt-16 pb-8">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-16">
+<div class="col-span-2">
+<div class="flex items-center gap-2 text-primary mb-6">
+<div class="size-6 flex items-center justify-center bg-primary rounded text-white">
+<span class="material-symbols-outlined text-sm">memory</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-lg font-black tracking-tight">TechPro</h2>
+</div>
+<p class="text-gray-500 text-sm max-w-xs leading-relaxed">
+                                Designing the future of consumer electronics with a focus on efficiency, speed, and uncompromising quality.
+                            </p>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-6">Shop</h4>
+<ul class="flex flex-col gap-4 text-sm text-gray-500">
+<li><a class="hover:text-primary transition-colors" href="#">Laptops</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Audio</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Wearables</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cameras</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-6">Company</h4>
+<ul class="flex flex-col gap-4 text-sm text-gray-500">
+<li><a class="hover:text-primary transition-colors" href="#">About</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Journal</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-6">Support</h4>
+<ul class="flex flex-col gap-4 text-sm text-gray-500">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Warrenty</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-6">Social</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">camera</span>
+</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-100 dark:border-gray-800 text-[10px] text-gray-400 font-bold uppercase tracking-widest">
+<p>© 2024 TechPro Innovations. All Rights Reserved.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-primary" href="#">Privacy</a>
+<a class="hover:text-primary" href="#">Terms</a>
+<a class="hover:text-primary" href="#">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ATELIER | RAW BRUTALISM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700;800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "accent": "#FF4D00", // Electric Orange
+                "background": "#000000",
+                "surface": "#111111",
+                "border-gray": "#333333",
+              },
+              fontFamily: {
+                "mono": ["'JetBrains Mono'", "monospace"],
+              },
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --accent-color: #FF4D00;
+        }
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: black;
+            color: white;
+            cursor: crosshair;
+        }
+        .grayscale-img {
+            filter: grayscale(100%) contrast(120%);
+        }
+        .brutalist-border {
+            border: 1px solid #333333;
+        }
+        .grid-breaker {
+            position: relative;
+            z-index: 10;
+        }
+        ::selection {
+            background-color: var(--accent-color);
+            color: black;
+        }
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="bg-background text-white antialiased overflow-x-hidden">
+<header class="border-b border-border-gray fixed top-0 w-full z-[100] bg-black">
+<div class="flex h-16 items-center justify-between px-4 lg:px-8">
+<div class="flex items-center gap-12">
+<a class="flex items-center gap-2 group" href="#">
+<span class="text-accent font-extrabold text-2xl tracking-tighter">ATELIER.01</span>
+</a>
+<nav class="hidden xl:flex items-center gap-8 text-[10px] tracking-[0.2em] font-bold uppercase">
+<a class="hover:text-accent transition-none border-b border-transparent hover:border-accent" href="#">[ CATALOG ]</a>
+<a class="hover:text-accent transition-none border-b border-transparent hover:border-accent" href="#">[ ARCHIVE ]</a>
+<a class="hover:text-accent transition-none border-b border-transparent hover:border-accent" href="#">[ PROCESS ]</a>
+<a class="hover:text-accent transition-none border-b border-transparent hover:border-accent" href="#">[ LOGS ]</a>
+</nav>
+</div>
+<div class="flex items-center gap-4 text-xs font-bold">
+<span class="hidden md:inline text-border-gray">STATUS: OPERATIONAL</span>
+<button class="bg-accent text-black px-4 py-1 uppercase">Cart (0)</button>
+</div>
+</div>
+</header>
+<main class="pt-16">
+<section class="relative min-h-screen flex flex-col border-b border-border-gray overflow-hidden">
+<div class="absolute right-0 top-0 w-full lg:w-2/3 h-full grayscale-img opacity-60">
+<img alt="Raw Editorial" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuPfJqnWM5sBKAEJUPX9nHo3UBZRSJa3po-pWBGY5hEDkPWHMVqgCCU2y0yRM5wnRbowDLVmdsWqKzngc9tMaI0arBnBlhMydXgqZjRc5FD7BY8NLFQKwkLOgEbTndG1P9lKRkPoO536dxwSljvUk9rAN-PXm8qkcopBajM1qrxAh3vGFvs3fwhXk5bEMcu3qmC7ZasolV8xMNOIlrmsu5BruBK3XFFkXFYHDexJQie77Hso4UxXEa_OGF7EP_f2gKqhE0IABskkrP"/>
+</div>
+<div class="relative z-10 flex-1 flex flex-col justify-end p-4 lg:p-12">
+<div class="max-w-4xl space-y-4">
+<div class="bg-accent text-black inline-block px-2 py-1 text-xs font-bold mb-4">BATCH_v2.24 / SERIES_01</div>
+<h1 class="text-5xl md:text-[10vw] font-extrabold leading-[0.85] tracking-tighter uppercase break-all">
+                    RAW<br/>MATERIAL<br/><span class="text-accent">FUNCTION</span>
+</h1>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 pt-12 border-t border-border-gray">
+<p class="text-xs leading-relaxed uppercase tracking-wider text-gray-400">
+                        Object ID: 001-A2<br/>
+                        Composition: High-density textile / Carbon-reinforced<br/>
+                        Construction: Ultrasonic welded seams<br/>
+                        Origin: Industrial Zone 4
+                    </p>
+<div class="flex flex-col gap-4">
+<button class="w-full border-2 border-white hover:bg-white hover:text-black p-4 text-sm font-bold uppercase transition-none">
+                            Enter Archive
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute top-1/4 -right-20 rotate-90 origin-right text-[120px] font-black text-white/5 pointer-events-none uppercase">
+            ATELIER SYSTEM ATELIER SYSTEM
+        </div>
+</section>
+<section class="border-b border-border-gray">
+<div class="grid grid-cols-1 md:grid-cols-12 border-collapse">
+<div class="md:col-span-3 p-8 border-b md:border-b-0 md:border-r border-border-gray">
+<h2 class="text-xs font-bold uppercase tracking-[0.5em] sticky top-24">Inventory<br/>Manifest</h2>
+</div>
+<div class="md:col-span-9 grid grid-cols-1 md:grid-cols-2">
+<div class="p-8 border-b border-border-gray md:border-r group">
+<div class="aspect-square grayscale-img mb-8 overflow-hidden bg-surface">
+<img alt="Watch" class="w-full h-full object-cover group-hover:scale-105 transition-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzhWjLLUaMFAu-WnkNhaZ7hjG8jEPWiE4A1W03lyZxbh5fQ3LIaM9SteNLw69u-Gmaz4beRa0qKdNATUri9-fIUZIapN4BS6OnR1QnpYaKZGsWM0wDz94ZagJymgTZ9gEYT2_VWOAKvXpL-8KJYzYKhX68YNRdHXmcC-SAz2rSifsSvZoWd-0UKl3wkMP-rnsbA68Gd_FaxYjCeTtRKrZ4rsWqJkorf1RPogLT4gdZAfoUfjA9EZFpOn6jmz7eEWwH3jUMCOrBWxHo"/>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-baseline">
+<h3 class="text-xl font-bold uppercase">Chronograph.01</h3>
+<span class="text-accent text-lg">$1,250</span>
+</div>
+<ul class="text-[10px] uppercase text-gray-500 space-y-1 mt-4">
+<li>- 316L Stainless Steel Shell</li>
+<li>- Sapphire Crystal Aperture</li>
+<li>- 42mm Modular Diameter</li>
+</ul>
+<button class="mt-6 border border-border-gray p-3 text-[10px] font-bold uppercase hover:bg-accent hover:border-accent hover:text-black transition-none">Add to Manifest</button>
+</div>
+</div>
+<div class="p-8 border-b border-border-gray group bg-surface/30">
+<div class="aspect-square grayscale-img mb-8 overflow-hidden bg-surface">
+<img alt="Bag" class="w-full h-full object-cover group-hover:scale-105 transition-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRw65wcOJA2PjEFlxSnUYwITRU_9ncsB61w9GSQc-wKrngvIcAk4AddOoaEFm6SiWll24bIaBa4AVAbDcL-hxO94UDMAAFO4xocCKt5uio2DOB9f-bjfAbwRa3-7GLl4MWrWlqU8zm-5kRh_0Udy_fbQNYG5Vy5cFpGNUuOTcBreFaczRaroYH5nmrIw88PI3i8FcSUdlFMH8we925R-VJZhpjB-YxmrzKyVeC42eHv01fQ7oPL8YRNjyGkgAijlgLGAZ7dhIc1XdQ"/>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-baseline">
+<h3 class="text-xl font-bold uppercase">Utility_Carry</h3>
+<span class="text-accent text-lg">$890</span>
+</div>
+<ul class="text-[10px] uppercase text-gray-500 space-y-1 mt-4">
+<li>- Full-grain bovine hide</li>
+<li>- Zinc-alloy hardware</li>
+<li>- 45L internal volume</li>
+</ul>
+<button class="mt-6 border border-border-gray p-3 text-[10px] font-bold uppercase hover:bg-accent hover:border-accent hover:text-black transition-none">Add to Manifest</button>
+</div>
+</div>
+<div class="p-8 border-b border-border-gray md:border-b-0 md:border-r group">
+<div class="aspect-square grayscale-img mb-8 overflow-hidden bg-surface">
+<img alt="Fragrance" class="w-full h-full object-cover group-hover:scale-105 transition-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg1TxLM75jl3QvkrK73T91iuLEB0peMCoXTHRWpZpsqYZIZCn37IGFSuaEknlUId_QB8_mNXvgnvNUFLNTurMJe4BngFtsh_ulwdgsIERqLfGDI7w-fPOW5FjaWIF7sVRk3fwpQSZo5JX4-zfj6IkPDHktwQw-wA6DGO7SfPTfbDroP6zkIKbGBqjnXYiQps6tZcjdoX-5AAncya7D1a-kbhX3tX6OlbuYkQ3k1Fc71qbxieg1KgU4VnociR0cPpgobiqstMUEr8XO"/>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-baseline">
+<h3 class="text-xl font-bold uppercase">Extract_04</h3>
+<span class="text-accent text-lg">$320</span>
+</div>
+<ul class="text-[10px] uppercase text-gray-500 space-y-1 mt-4">
+<li>- High concentration distillate</li>
+<li>- Amber / Wood / Smoke profile</li>
+<li>- Laboratory-grade glass vessel</li>
+</ul>
+<button class="mt-6 border border-border-gray p-3 text-[10px] font-bold uppercase hover:bg-accent hover:border-accent hover:text-black transition-none">Add to Manifest</button>
+</div>
+</div>
+<div class="p-8 group bg-surface/30">
+<div class="aspect-square grayscale-img mb-8 overflow-hidden bg-surface">
+<img alt="Eyewear" class="w-full h-full object-cover group-hover:scale-105 transition-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3VU25pchpoaz5yK3aep-gEH9Hujs1zR8ISjLAUZRd-l5efFiL9FqQYJ8rJhE47igy27TwGfr9i4a-71FCn-4c0QrlO8N-zxW3Ie1maYaEE_R8y2LnRPKXbb7EheKS0__3u6rNkGCG1_phxp0xGGzZ_u_H6aJg9U_J3Drvml1UdHTrnH9SbhQmcMnZw9YvHTe3XhRrmLQhWsilLm1kENmkH5h8F50H9hHb7w-xC9U9uTV6ZFmtEkR4VlSJKX-j_J0rwyD4r5ITK0pv"/>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-baseline">
+<h3 class="text-xl font-bold uppercase">Optical_Shield</h3>
+<span class="text-accent text-lg">$450</span>
+</div>
+<ul class="text-[10px] uppercase text-gray-500 space-y-1 mt-4">
+<li>- Solid ebony chassis</li>
+<li>- Polarized UV filtration</li>
+<li>- Tension-hinge construction</li>
+</ul>
+<button class="mt-6 border border-border-gray p-3 text-[10px] font-bold uppercase hover:bg-accent hover:border-accent hover:text-black transition-none">Add to Manifest</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="border-b border-border-gray grid grid-cols-1 md:grid-cols-3">
+<div class="p-12 border-b md:border-b-0 md:border-r border-border-gray space-y-6">
+<div class="text-accent font-bold text-4xl">01/</div>
+<h4 class="text-lg font-bold uppercase">Sourcing Protocol</h4>
+<p class="text-xs leading-loose text-gray-400 uppercase">Direct factory verification. Raw material validation. No intermediaries. Certified industrial standards.</p>
+</div>
+<div class="p-12 border-b md:border-b-0 md:border-r border-border-gray space-y-6 bg-accent text-black">
+<div class="font-bold text-4xl">02/</div>
+<h4 class="text-lg font-bold uppercase">Build Paradigm</h4>
+<p class="text-xs leading-loose uppercase">Mechanical integrity prioritized over aesthetic ornament. Built to perform. Built to last.</p>
+</div>
+<div class="p-12 space-y-6">
+<div class="text-accent font-bold text-4xl">03/</div>
+<h4 class="text-lg font-bold uppercase">Logistics Path</h4>
+<p class="text-xs leading-loose text-gray-400 uppercase">Expedited transit. Global hub distribution. Sealed packaging. Real-time telemetry tracking.</p>
+</div>
+</section>
+<section class="py-32 px-4 border-b border-border-gray bg-surface relative overflow-hidden">
+<div class="max-w-5xl mx-auto relative z-10">
+<div class="text-accent text-6xl font-black mb-8">"</div>
+<p class="text-3xl md:text-6xl font-extrabold uppercase tracking-tighter leading-none mb-12">
+                CRITICAL INFRASTRUCTURE FOR THE MODERN INDIVIDUAL. NO FLUFF. JUST HARDWARE.
+            </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-[2px] bg-accent"></div>
+<div class="text-sm font-bold uppercase">Verification: VOGUE_SYS_01</div>
+</div>
+</div>
+<div class="absolute -bottom-10 -right-10 text-[20vw] font-black text-black leading-none select-none opacity-50">QUOTE</div>
+</section>
+<section class="p-4 lg:p-12 border-b border-border-gray">
+<div class="border-2 border-border-gray bg-black p-8 md:p-16 flex flex-col md:flex-row gap-12 items-center">
+<div class="flex-1 space-y-6">
+<h2 class="text-4xl font-black uppercase tracking-tighter italic">Network_Access</h2>
+<p class="text-xs text-gray-400 uppercase leading-relaxed max-w-sm">
+                    Enter email to establish connection. Receive technical specifications and drop coordinates. Zero marketing noise.
+                </p>
+<form class="flex flex-col gap-4">
+<input class="bg-surface border-border-gray text-white p-4 focus:border-accent focus:ring-0 text-xs font-mono placeholder:text-gray-700" placeholder="USER@TERMINAL.NET" type="email"/>
+<button class="bg-white text-black p-4 text-sm font-bold uppercase hover:bg-accent transition-none">Establish Link</button>
+</form>
+</div>
+<div class="flex-1 w-full aspect-video grayscale-img border border-border-gray overflow-hidden">
+<img alt="Workshop" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRujHdZTURNv-N9Kh16PRTuXWoZDqh7otm-2CzYK3LgItFxJjQS0UFAfAciy3T8F0SNP777e0LX27QX2Xy9UNEqkePBLgQfVzECLVa0iG_R5bQLfk9WZLKXwRBQupA3KyuHFTa_AboNKobCaoFms4Mojfdc_awjxY7u3f3I7n-HEJvxfP8VLvjzeRcFOdoV4bcecb9S0kOTz96bDiOK0LGH2HBaofm0zSu2jh_VaKD7jM22ecLD6H8TjDdV1nbWMo89ZPGKUdGdNOG"/>
+</div>
+</div>
+</section>
+</main>
+<footer class="p-8 lg:p-16 bg-black">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-24">
+<div class="md:col-span-2 space-y-8">
+<h3 class="text-4xl font-black tracking-tighter text-accent uppercase break-all">ATELIER_CORE_SYSTEM</h3>
+<p class="text-[10px] text-gray-500 uppercase leading-relaxed max-w-xs">
+                A RADICAL DISRUPTION OF CONSUMER ELECTRONICS AND APPAREL. DESIGNED UNDER THE PRINCIPLES OF BRUTALIST ARCHITECTURE AND INDUSTRIAL NECESSITY.
+            </p>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase mb-6 text-accent">// DIRECTORY</h4>
+<ul class="space-y-3 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+<li><a class="hover:text-white" href="#">Inventory_A</a></li>
+<li><a class="hover:text-white" href="#">Inventory_B</a></li>
+<li><a class="hover:text-white" href="#">Hardware</a></li>
+<li><a class="hover:text-white" href="#">Textiles</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase mb-6 text-accent">// PROTOCOLS</h4>
+<ul class="space-y-3 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+<li><a class="hover:text-white" href="#">Returns.exe</a></li>
+<li><a class="hover:text-white" href="#">Secure_Checkout</a></li>
+<li><a class="hover:text-white" href="#">Privacy_Policy</a></li>
+<li><a class="hover:text-white" href="#">Terms_v3.4</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-border-gray pt-12 flex flex-col md:flex-row justify-between gap-8">
+<div class="text-[10px] text-gray-500 uppercase tracking-[0.3em]">
+            © 2024 ATELIER_BRUTALIST_SYSTEM. ALL_RIGHTS_RESERVED.
+        </div>
+<div class="flex gap-4">
+<div class="w-8 h-8 border border-border-gray flex items-center justify-center text-xs hover:border-accent hover:text-accent cursor-pointer">IG</div>
+<div class="w-8 h-8 border border-border-gray flex items-center justify-center text-xs hover:border-accent hover:text-accent cursor-pointer">TW</div>
+<div class="w-8 h-8 border border-border-gray flex items-center justify-center text-xs hover:border-accent hover:text-accent cursor-pointer">TK</div>
+</div>
+</div>
+</footer>
+
+</body></html>

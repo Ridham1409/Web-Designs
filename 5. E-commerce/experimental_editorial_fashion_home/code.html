@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VOID - Experimental Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec13a4",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#22101c",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"],
+                        "sans": ["Newsreader", "serif"] // Forcing serif everywhere for this editorial look
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+        }
+        
+        /* Custom scrollbar to keep it sleek */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #22101c; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #48233c; 
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ec13a4; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-white font-display overflow-x-hidden selection:bg-primary selection:text-white">
+<!-- Navigation / Header (Floating & Minimalist) -->
+<nav class="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-start pointer-events-none mix-blend-difference">
+<!-- Logo -->
+<div class="pointer-events-auto">
+<h2 class="text-white text-3xl font-bold tracking-tighter leading-none italic">VOID</h2>
+</div>
+<!-- Menu Trigger -->
+<button class="pointer-events-auto group flex flex-col items-end gap-1.5 cursor-pointer">
+<span class="text-white text-sm font-medium tracking-widest uppercase mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Menu</span>
+<div class="w-8 h-[2px] bg-white group-hover:bg-primary transition-colors duration-300"></div>
+<div class="w-5 h-[2px] bg-white group-hover:w-8 group-hover:bg-primary transition-all duration-300"></div>
+</button>
+</nav>
+<!-- Floating Action Button (Shop) -->
+<div class="fixed bottom-8 right-8 z-40">
+<button class="bg-primary/90 hover:bg-primary text-white rounded-full p-4 shadow-lg shadow-primary/20 transition-all duration-300 hover:scale-105 flex items-center justify-center group">
+<span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+<span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 ease-out text-sm font-bold pl-0 group-hover:pl-2">
+                CART (0)
+            </span>
+</button>
+</div>
+<!-- Main Content Wrapper -->
+<main class="relative w-full min-h-screen">
+<!-- Hero Section: Experimental Layout -->
+<section class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+<!-- Background Video Placeholder -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center opacity-40 mix-blend-overlay grayscale transition-all duration-1000 hover:grayscale-0" data-alt="Abstract runway shadows and lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDiSHwRNYJqiYMsEIJ5xHx_qecU7AyuJXoIgP-lnaCTu2_u5Q-b423q2c5SXhDX1qJTOFgZSjPGOn4t7dAPREG_NmTGb_pWw1BiWL5ZwQ_lNBJEtGW2OeuiHwyjEZN7zwGm-NaDHD6o46g5dtw_WS7ga5VwDNq3QVXyUiKvraKwmWuxtzze7uuDIG92vEvjcq9xI0A-DXI7TD_8KPd7CGXsnPO-zfodoFZb4_eO1c0Cbv2i8F3zJIInc2USaf3sDSqJdmO7c98bFeU4');"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-[#22101c]/30 via-transparent to-[#22101c]"></div>
+<!-- Simulated Video Elements -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[90vw] max-h-[80vh] border border-white/10 rounded-lg overflow-hidden">
+<div class="w-full h-full bg-cover bg-center opacity-60 scale-110 motion-safe:animate-[pulse_8s_ease-in-out_infinite]" data-alt="Fashion model walking on runway low light" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdD7CwdmbCI6i35cX1YafjBLm0wLWTFWtbf21HcE21oPbID5z37Ojs2XQXnLGVgbSJ27RioMjDAULosNwNcA3chG5grM_POUcHSGT3aaXEU4jExadgIC-yMuFP2gKYh7aTSZHm647MVBjX07KECSxvWrQzP-EsPLxa8YGl8TIMBwzwnNSu6EaaUYMhtKX8sBWfEs5GpxsUmjd2P9txt8czEIA7rCE2L2T9wrpD_CfXxcz8BX59CiyunEqL5GxsNWOYdiKiY_aJFaFR');"></div>
+</div>
+</div>
+<!-- Overlapping Typography & Graphic Elements -->
+<div class="relative z-10 w-full h-full max-w-[1600px] mx-auto pointer-events-none">
+<!-- Large Vertical Text Left -->
+<div class="absolute left-4 top-1/2 -translate-y-1/2 hidden md:block">
+<h1 class="vertical-text text-[12vh] lg:text-[18vh] font-light tracking-tight text-white/10 mix-blend-overlay leading-none select-none">
+                        COLLECTION
+                    </h1>
+</div>
+<!-- Main Hero Content -->
+<div class="absolute top-[20%] right-[10%] md:right-[15%] text-right pointer-events-auto">
+<div class="inline-block relative">
+<span class="absolute -left-12 top-0 text-primary text-xs tracking-[0.2em] -rotate-90 origin-top-right">EST. 2024</span>
+<h1 class="text-6xl md:text-8xl lg:text-9xl font-light italic tracking-tighter text-white leading-[0.8]">
+                            VOID<br/>
+<span class="font-normal not-italic text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40">WALKER</span>
+</h1>
+</div>
+<p class="mt-8 text-lg md:text-xl text-gray-400 max-w-sm ml-auto leading-relaxed border-r-2 border-primary pr-6">
+                        A study in movement and shadow. <br/>
+                        Paris Fashion Week <span class="text-primary font-bold">2024</span>.
+                    </p>
+<button class="mt-10 group relative inline-flex items-center gap-3 px-8 py-3 overflow-hidden rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-primary/50 transition-all duration-500">
+<span class="absolute inset-0 bg-primary/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
+<span class="relative text-sm font-bold tracking-widest uppercase">Explore Lookbook</span>
+<span class="material-symbols-outlined relative text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- Floating Image Card (Parallax Feel) -->
+<div class="absolute bottom-[10%] left-[10%] md:left-[20%] w-64 md:w-80 aspect-[3/4] hidden md:block pointer-events-auto z-20 group">
+<div class="absolute inset-0 bg-primary translate-x-4 translate-y-4 rounded-lg opacity-20 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
+<div class="relative w-full h-full rounded-lg overflow-hidden shadow-2xl shadow-black/50 border border-white/10">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Detail shot of draped fabric texture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNjDJk3FuSye90uFBijMA_CDb3yE5bCDamms4OXTRBPbyQCHF__rLXt4dvyvmRjf5EdyqaiyoaXhf9fZz8Gle1pWxRKy6JsQL7sOwBadJ88hAfrb7Z3cwn02tlur3wvvGGkqcQ6hcnk5QdWDmWvODa209OTW8P5oIxpBoKzVDu_MpsPQeubLtv744p9cdU4E4rlbwM7b_V14NngQ3PFaH7qE8ALC4I440pcxz8O9GrieJxOHpwvSzyivNOLvZJtlg2N_fxFXtpmk80');"></div>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/90 to-transparent">
+<p class="text-xs text-primary font-bold tracking-widest mb-1">LOOK 04</p>
+<p class="text-lg italic text-white leading-none">Silk Draped Coat</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 mix-blend-screen animate-bounce">
+<span class="text-[10px] tracking-[0.2em] uppercase">Scroll</span>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</div>
+</section>
+<!-- Section 2: The Editorial Grid (Broken Grid) -->
+<section class="relative w-full py-20 px-6 md:px-20 overflow-hidden bg-[#22101c]">
+<!-- Decorative Background Text -->
+<div class="absolute top-20 right-0 pointer-events-none opacity-5">
+<h2 class="text-[20vw] leading-none font-bold text-white tracking-tighter">SILHOUETTE</h2>
+</div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-y-20 gap-x-8 items-start relative z-10">
+<!-- Text Block -->
+<div class="md:col-span-5 md:mt-20">
+<div class="sticky top-24">
+<h2 class="text-4xl md:text-6xl font-light text-white mb-8 leading-tight">
+                            Deconstructed <br/>
+<span class="italic text-primary/80">Perfection</span>
+</h2>
+<p class="text-gray-400 text-lg leading-relaxed mb-8 border-l border-primary/30 pl-6">
+                            Exploring the boundaries between fabric and skin. Raw edges meet architectural precision in a collection designed for the void.
+                        </p>
+<div class="flex gap-4">
+<a class="text-white hover:text-primary transition-colors text-sm font-bold tracking-widest border-b border-white/20 pb-1" href="#">READ JOURNAL</a>
+</div>
+</div>
+</div>
+<!-- Image Gallery (Off-grid) -->
+<div class="md:col-span-7 flex flex-col gap-20">
+<!-- Image 1 -->
+<div class="w-full md:w-[80%] self-end relative group">
+<div class="absolute -inset-4 border border-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 scale-95 group-hover:scale-100"></div>
+<div class="aspect-[4/5] rounded-lg overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-700" data-alt="Avant-garde fashion model posing in shadow" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbYbRCuGJ3pdhXZ8F_EN21nqezPgw3zheXVSAmWBimb1u4w2cK-R6dr9POd6emUFmGOPSaI_jx-KdGVEy80jikV_6_S4PnC1J5p5uoZxosNQTP5vEZRwTeYZB3ido5Pf7RiujnxD5JOnlVzvVVjlw14iPKwMGgZbEI8V6Zco4XaPR4JEzwv_7plbiRm9VBV6Rv4iNxciG_PEMwg_0nVBdCUaycCsesmOA8b5rQaGRQOYVSwl1Awg8E7FIGRM3aJM1ZWRMNdWf8-oZz');"></div>
+<div class="absolute top-4 right-4 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">
+<span class="text-xs text-white uppercase tracking-wider">Campaign</span>
+</div>
+</div>
+<div class="mt-4 flex justify-between items-baseline">
+<h3 class="text-2xl italic text-white">The Void Jacket</h3>
+<span class="text-primary font-mono">$1,200</span>
+</div>
+</div>
+<!-- Image 2 -->
+<div class="w-full md:w-[70%] self-start -ml-0 md:-ml-12 relative z-20 group">
+<div class="aspect-square rounded-lg overflow-hidden relative shadow-2xl shadow-primary/5">
+<div class="w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-700" data-alt="Close up texture of dark wool fabric" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZgL5djhyMaQfbGmqjruCWWzgILkFPDBkX0tdjLahvODXpvuygRobChLqokbIoTZ9IzaSqMDegmihQvNfeyX5eciTjpxOY9bP1WGudTKzUjq1jUSJKEvyYEmd-IEt4c0rTl2pi6OrQsEuGkaYGUzU7LdyziDVcFOrh4o-0rKQPbu9ukc_znvJ0-qSyR99a1_h8BueZ1nt-EeO9A1RIE4VkazGIn3JBVT124OSPCbomMf9Z-v5qGbwpC8CxsPqrIGnvOUlv3dleH32n');"></div>
+</div>
+<div class="mt-4">
+<h3 class="text-2xl italic text-white">Raw Wool Texture</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Shop The Runway (Horizontal Scroll / Interactive) -->
+<section class="py-24 bg-[#1a0c15] border-t border-white/5 relative">
+<div class="container mx-auto px-6 mb-12 flex items-end justify-between">
+<div>
+<p class="text-primary text-sm font-bold tracking-[0.2em] mb-2">LIMITED RELEASE</p>
+<h2 class="text-5xl font-light text-white">Shop The Runway</h2>
+</div>
+<div class="hidden md:flex gap-2">
+<button class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Scroll Container -->
+<div class="flex overflow-x-auto pb-12 px-6 md:px-20 gap-8 scrollbar-hide snap-x">
+<!-- Product Card 1 -->
+<div class="min-w-[280px] md:min-w-[320px] snap-start group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden rounded-lg bg-gray-900 mb-4">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500 ease-out" data-alt="Model wearing yellow outfit" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJCCmzncQ17RdcLwuIvqUi9IfWJU5RifY05pdm4r2UGuZqDix-t32xMt09iloWJljBKkb2iJ6mzDbc7VGbkKP_8HtsQ-heEWZ90oCBXKOu2NrNXsdZnmpST5IsZ-i7r69pK6LF1Ihg6RjLQuQ7JONhahDQV70o59DU2romi5chBtaSq9cU1lsUGSM4gVeGNA4_rxhEUynTmK_xrtSL83B2B_GPM44LM9e0qteM71TyI8Bgja-sEE5pwLCuwytEpkAIaqGV_lPZv_Ei');"></div>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-300"></div>
+<div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<button class="w-full bg-white text-black py-3 rounded text-sm font-bold uppercase tracking-wider hover:bg-primary hover:text-white transition-colors">Add to Bag</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-white text-lg font-medium group-hover:text-primary transition-colors">Asymmetric Tunic</h3>
+<p class="text-gray-500 text-sm">$450.00</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="min-w-[280px] md:min-w-[320px] snap-start group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden rounded-lg bg-gray-900 mb-4">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500 ease-out" data-alt="Model wearing textured dark dress" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1qF3ZhzcLwotdzAkXBEtdE1k06IFIXoXdEFtPoUPvLqQJSdIC5GFXKZe5wvJWu16svBdEJ8PjofPWVKaxyeHSTK6kmKi_3ziF3fqgUtRg3O6L3uiG-IbHEmos_5n7mflBQ7mbJnQH8LF6H58KXm2Qn375rWsyC6VNHw5zh6O4PIyp_0ZHcuvunCdhwc0BKRPegEjjUMUtK6EHGPewLF_T28q2nZ6rG0X8im4tlFHLHrFXRcnRn9GFOyT05MT66mbhksgY8DJ5xor6');"></div>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-300"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase">New Arrival</span>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<button class="w-full bg-white text-black py-3 rounded text-sm font-bold uppercase tracking-wider hover:bg-primary hover:text-white transition-colors">Add to Bag</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-white text-lg font-medium group-hover:text-primary transition-colors">Obsidian Dress</h3>
+<p class="text-gray-500 text-sm">$890.00</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="min-w-[280px] md:min-w-[320px] snap-start group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden rounded-lg bg-gray-900 mb-4">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500 ease-out" data-alt="Detail of high fashion boots" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDho5Zmw8KP_ZFfaDbNjX1di26EKe6Dd86--ADlY_oAD_-rgSpb0CxJCUkY92_LFC2G3Sva7qWUagSSCoxKU5w9xYHg7iX5ABvMYBKsOKlXJRckSYhzHnVNyR0nRSL1fVNIJ3jMXw4S_K9JJ1xYEViAmcmeX5M1rI7kyce3veGOzUAbQH_22zBvcCXi7PHSxzivFjwisme4PjPk0rLlxui_3PlOYncUDKvD5uHV8DKdcQimrr-5MGNuyevuYmmI6TfzH5g1ov3oKaTh');"></div>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-300"></div>
+<div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<button class="w-full bg-white text-black py-3 rounded text-sm font-bold uppercase tracking-wider hover:bg-primary hover:text-white transition-colors">Add to Bag</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-white text-lg font-medium group-hover:text-primary transition-colors">Platform Boots</h3>
+<p class="text-gray-500 text-sm">$1,050.00</p>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="min-w-[280px] md:min-w-[320px] snap-start group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden rounded-lg bg-gray-900 mb-4 border border-white/5 flex items-center justify-center group-hover:border-primary/50 transition-colors">
+<div class="text-center p-6">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">grid_view</span>
+<h3 class="text-white text-xl font-light italic">View Full<br/>Collection</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Minimalist Footer -->
+<footer class="bg-[#22101c] border-t border-white/5 py-12 px-6">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
+<div class="flex flex-col gap-6">
+<h2 class="text-4xl font-bold tracking-tighter italic text-white">VOID</h2>
+<div class="flex gap-6 text-sm text-gray-400">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">Twitter</a>
+<a class="hover:text-primary transition-colors" href="#">TikTok</a>
+</div>
+</div>
+<div class="flex flex-col md:items-end gap-2">
+<div class="flex flex-wrap gap-x-8 gap-y-2 text-sm text-gray-400 mb-4">
+<a class="hover:text-white transition-colors" href="#">Legal</a>
+<a class="hover:text-white transition-colors" href="#">Shipping</a>
+<a class="hover:text-white transition-colors" href="#">Returns</a>
+<a class="hover:text-white transition-colors" href="#">Contact</a>
+</div>
+<p class="text-xs text-gray-600 uppercase tracking-wider">© 2024 VOID Fashion House. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

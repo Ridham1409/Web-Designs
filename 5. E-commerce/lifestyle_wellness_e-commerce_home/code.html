@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WellnessCo | Lifestyle &amp; Wellness Essentials</title>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0fbd49",
+                        "forest": "#112b18",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                        "soft-cream": "#fafbf9"
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .product-card:hover .secondary-img { opacity: 1; }
+        .product-card .secondary-img { opacity: 0; transition: opacity 0.4s ease-in-out; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-forest dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full border-b border-forest/10 bg-soft-cream/80 backdrop-blur-md dark:bg-background-dark/80 dark:border-white/10 px-6 lg:px-20 py-4">
+<div class="mx-auto flex max-w-[1440px] items-center justify-between">
+<div class="flex items-center gap-10">
+<a class="flex items-center gap-2 group" href="#">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-lg">eco</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-forest dark:text-white">WellnessCo</h2>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Shop All</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Best Sellers</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Daily Rituals</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Our Story</a>
+</nav>
+</div>
+<div class="flex items-center gap-4 lg:gap-6">
+<div class="hidden lg:flex items-center bg-forest/5 dark:bg-white/10 rounded-full px-4 py-2 border border-forest/5">
+<span class="material-symbols-outlined text-forest/50 dark:text-white/50 text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder:text-forest/40" placeholder="Search rituals..." type="text"/>
+</div>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-forest/5 dark:hover:bg-white/10 relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-0 right-0 size-4 bg-primary text-[10px] text-white flex items-center justify-center rounded-full border-2 border-white dark:border-background-dark">2</span>
+</button>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-forest/5 dark:hover:bg-white/10">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="relative px-6 lg:px-20 py-10 lg:py-16">
+<div class="mx-auto max-w-[1440px]">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="order-2 lg:order-1 flex flex-col gap-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">
+<span class="size-1.5 rounded-full bg-primary"></span>
+                                New Autumn Collection
+                            </div>
+<h1 class="text-5xl lg:text-7xl font-black leading-[1.1] tracking-tighter">
+                                Small Habits, <br/>
+<span class="text-primary italic font-light font-serif">Big Changes.</span>
+</h1>
+<p class="text-lg lg:text-xl text-forest/70 dark:text-white/70 max-w-lg leading-relaxed">
+                                Nourish your body and elevate your life with our organic, science-backed essentials. Crafted for those who seek natural balance in a modern world.
+                            </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:shadow-primary/20 transition-all flex items-center gap-2 group">
+                                    Shop the Collection
+                                    <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+<button class="bg-white dark:bg-white/10 border border-forest/10 dark:border-white/10 px-8 py-4 rounded-xl font-bold text-lg hover:bg-forest/5 transition-all">
+                                    Explore Rituals
+                                </button>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<div class="relative aspect-square lg:aspect-auto lg:h-[600px] w-full bg-forest/5 rounded-3xl overflow-hidden shadow-2xl">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Serene woman practicing morning yoga in soft light" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBddoe5n8NU1QiSao2KgddGO7Cp15Voe9ZTKSPGx3TvhAglPqKjFplpMYE_-5uUAS5qFNuXFvdcAJQ-2H0l6VkD-Uako9cmH3bTIJd7aHjk7aVELV8iZ8Ak0Z7inabS5kc4_eBljhQyqozRxfTBM1lt4a0M5wrYvOTbO137iQKzGjmaucwIbJQBN6PXcFI73A-quf8ubC54KtcIpcdf7jOqMUydwDhMVIBjZqZ0gWojdHxeEmz3hGQ4FZoADsZ5iAl8rH70vtY9HRDx');"></div>
+<div class="absolute bottom-6 left-6 right-6 bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl p-6 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+<div>
+<p class="text-white font-bold">Purity Guaranteed</p>
+<p class="text-white/80 text-xs tracking-wide">Lab-Tested Ingredients</p>
+</div>
+</div>
+<div class="flex -space-x-3">
+<div class="size-10 rounded-full border-2 border-white overflow-hidden bg-gray-200" data-alt="Customer avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxG2hswqNQm4okRT_cq_NAOFwl3cSRr80QByZzEMWtUEjc0GDJsuzbpaDLhC_6ND-xcKTVvW_yIuIqwAVMP63-3iMAREEZy2bZt8oFOFfTYQ487rjePDx32zqvB5_1g8W_SgtmSaedTxfQ-VBqLRVC4KS_-w6mw3ibqF6Lgmw84KMNaFO4Z-shBJvmW9Jv8Nh5jvbblJFo4xhp_fnORpy0J7LRGwEzthwQNLzX1QJV-bIaqN_KmbkKksJjAqpvZzvuaTzD7hapcnwM'); background-size: cover;"></div>
+<div class="size-10 rounded-full border-2 border-white overflow-hidden bg-gray-200" data-alt="Customer avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD4n6gOB7MGH9PqLfDbB_EIEeQFIk9Ma_80HZCMSf6uro_k7HDj6ce-0Fb9Tu6l3uiA8uYzD3HeGnud2HbSExTW_LF4WA578ZJqOCWhjIIDw5Rmp08hN1RE7tsvx_NO4CTdeBwNnVUpyrk5mbDOGVb9qNFDjLYQ1tMNkzowd70OqHRgaikN1n_2J2bvsdyP_fGlICYHpyOtFCGyex7aTct3aGmkK2kzn2ND1Qqbl1_AA9fqAnRoHMofSvZpC9qWjSk96BftHKSbW-Hp'); background-size: cover;"></div>
+<div class="size-10 rounded-full border-2 border-white overflow-hidden bg-gray-200" data-alt="Customer avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqNTeuDQiEtZTx2m-lgwmvx_Gk01s2Pp3pGwzZYEL8aG3D6Y2uLUwRGLm9tBtb9TuRplh7M8u7dcS0ZwmuNUb1_TXbkV86bzrcfwiaymiMGROHlwUgrCTWInG-U1k-C7BKjwOjhRMFTSsnUHAhRFxFMy1FMmCtYOdMYrKjgXFBijPmsVdjzddGO9KV5sP_97BaskcRaC99FHP1EgW6R9qJ8a-KbKDsViAipIE9pxCe6y07dZdgh2zXtjFZRHyJJyzZc8xwRxWM7UP-'); background-size: cover;"></div>
+<div class="size-10 rounded-full bg-white flex items-center justify-center text-[10px] font-bold text-forest">+12k</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="bg-white dark:bg-background-dark py-12 border-y border-forest/5 dark:border-white/5">
+<div class="mx-auto max-w-[1440px] px-6 lg:px-20">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col items-center md:items-start gap-2 group">
+<span class="material-symbols-outlined text-primary text-3xl mb-1">eco</span>
+<h3 class="font-bold text-lg">Organic Certified</h3>
+<p class="text-sm text-forest/60 dark:text-white/60">100% Traceable ingredients</p>
+</div>
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="material-symbols-outlined text-primary text-3xl mb-1">cruelty_free</span>
+<h3 class="font-bold text-lg">Cruelty-Free</h3>
+<p class="text-sm text-forest/60 dark:text-white/60">Never tested on animals</p>
+</div>
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="material-symbols-outlined text-primary text-3xl mb-1">recycling</span>
+<h3 class="font-bold text-lg">Sustainable</h3>
+<p class="text-sm text-forest/60 dark:text-white/60">Earth-first packaging</p>
+</div>
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="material-symbols-outlined text-primary text-3xl mb-1">science</span>
+<h3 class="font-bold text-lg">Science-Backed</h3>
+<p class="text-sm text-forest/60 dark:text-white/60">Clinically proven results</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="px-6 lg:px-20 py-20">
+<div class="mx-auto max-w-[1440px]">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="text-3xl font-black mb-2">Our Best Sellers</h2>
+<p class="text-forest/60 dark:text-white/60">Community favorites for a reason.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 hover:underline underline-offset-4" href="#">
+                            View All <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<div class="product-card group relative flex flex-col gap-4">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-forest/5 cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Morning Ritual Essential Oil bottle" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDWB1oYUhpqEGb_HVI-peK_W0ZAwTxUJlcPKG6OhsFVBVZIEytFZzwK-VXTvJ-32wniKI8dv3zaRD5urr1LK3m21UWZW9-yvLg9fykCPl17QvNbsGkmfrnslxAEshky3E4rayeSsPkHOKW__h-rQ1WqUNTVRn7TTjtlHjPeDMPRj9pG1cTm5ZDv_vbFk6Ly-XtQTxjF5XWuDHAJCOsUHms46EYT5m9gbxtHh4zwqa_IbQsahGXd71VZWdIOllC9gt622VLgN68iYr9w');"></div>
+<div class="secondary-img absolute inset-0 bg-cover bg-center" data-alt="Woman using essential oil in lifestyle setting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB2JXu4U0v1sbZBSpZ0sUCvET1w7ClXXFEsb8U9Ti70xiTaZWP7T-sWl6_NlWBs3SpbR9hw8kEszMVhfKLpEldITJDJCT_raxcbEqLyunesbrAwjhYCG3T-GZz3dntj-i9nxb_Gevbm_GPSMVWEC9WGJD_QO8kjGq0RTN8_AXuXvy8P0ap5UVLbq-VuIBCHh62XADeHyNc_oIOkAUaAyXeCSXN5pdQe0WCpNqmLSzBvRGmZfdVS0TCmaku2KJhA6Ot6vYxU8C9Ltju3');"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-white px-3 py-1 text-[10px] font-bold rounded-full text-forest shadow-sm uppercase tracking-widest">Bestseller</span>
+</div>
+<button class="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 bg-forest text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+                                    Quick Add — $42
+                                </button>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Morning Ritual Oil</h3>
+<span class="font-medium text-forest/60">$42.00</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm text-forest/20">star</span>
+</div>
+<span class="text-xs text-forest/40">120 reviews</span>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="product-card group relative flex flex-col gap-4">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-forest/5 cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Deep Sleep Tincture glass bottle" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXULQJvNzaqhR7U41G86gUquhN9rOsIaPFAz6ZtrkL5n2USMdxGStaV-e3WALh9I1w0y2bLoAS5ruerYm0WS4NwbpY_reQE5-VKmKvsJxn_8zm3eQWq63BPsbu7DtiIU02wIjaWhfH7dg21lPJKPN8H2xk5_zWErUGMrmc-7lynhZtsRFn7deta7osascpaCe_yiyegQWDjyr3vXdeAQDfapF4bFNoxcg1qxLtToJQ9MZHMW31RI1QjRlraCm2Wm6nl7WXi-HP5t0m');"></div>
+<div class="secondary-img absolute inset-0 bg-cover bg-center" data-alt="Sleeping mask and tincture on a bedside table" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMw6dbLFsn6jP8s9A_9XBC6a5b8upqMwGVCf60a6Hb3Rnhq-CtTk_cmlL4aL29XMFgTlrf6x1Sm0Fp5lPu079XRh4zX-HnPsdynRnpfWjLe1OW0lafmHgWwbFV_1tFaOoFz3_XaAggCIDfvaTJfwvd9FD-SC308rK4sucC4T86OAXjkV3QlWLTbVrKL9USjFgA1QvK4Bullg-cDdB5ELNDG386zAc7FssR84Zla5R0dJR3BFtnRJA8qe5srvFbWHeofUVdjDgwiaBt');"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-white px-3 py-1 text-[10px] font-bold rounded-full text-forest shadow-sm uppercase tracking-widest">Restorative</span>
+</div>
+<button class="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 bg-forest text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+                                    Quick Add — $38
+                                </button>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Deep Sleep Tincture</h3>
+<span class="font-medium text-forest/60">$38.00</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<span class="text-xs text-forest/40">85 reviews</span>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="product-card group relative flex flex-col gap-4">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-forest/5 cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Daily Balance Powder container" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAwS65aEjlcdsYpjs1eVJOAZhZUycc9maE9TQ3faQ7-dCe-uCI9IeHTc-N8le1cWbHXkD-aZu4hZT-I5OXOTFZpHQix5ZtByWWqqkco8MOgQJSLqjM2DlWl7eLN-5o8xsckBBuHlKW5IkW64admhycskQ7TSIfLJig3HIHS8j86d8vEzY2OcRmdvpFE7dJYUsBc4CqWhN8ylXQtPxC2q8Pw0C_KfzF28CFGrGozRPMCiop7LHmS9fy47ph_L5JEI-D8vXRnrwiZBlBF');"></div>
+<div class="secondary-img absolute inset-0 bg-cover bg-center" data-alt="Healthy smoothie bowl with powder" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCTO43L15dU5LSTrePHz7Z-sPYHWZtnr48nShCMrANmXytPKc0YWwK87bgfDJgX2zUS5Ky-gqTsWmRiZiEumU6f3g5NtwoAcgC-cObJXS9iB-4X-x7lNA1nHsUtquiKwR0sPJ8tkSzT-CFU3Bm-yjm4rs10qGJucXcYj6VSJb67nhB9YNNHgrNJ8jxNv4bJkD1_H697G_vsloiTESbGrfdfMBg7obXxeXvuqjGRHbv7CD_uJNkr2PcH5SW68FIJi0Zg-DpZ72mXIXum');"></div>
+<button class="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 bg-forest text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+                                    Quick Add — $54
+                                </button>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Daily Balance Powder</h3>
+<span class="font-medium text-forest/60">$54.00</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<span class="text-xs text-forest/40">210 reviews</span>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="product-card group relative flex flex-col gap-4">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-forest/5 cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Glow Serum dropper bottle" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZvM30Wjldydbl5l38vNMkpDp4xpOxq2g1wwOZMnpQdpvIGvMUtp2M1K9nFlS6E5lAjuxpEJd_zs2fIehFeuI-piZnkxde9LlfUHRByx1l3SCVzyiIuU9OdLk1TsYYg85o_wnYDHv-3B62HV7v7QYcyV0z5Y1cGqrGEZIW4XLSsanYgy5dUHd7QDW47WdjtmuMAbjqpIoixMSOJfMJppigrcc_SalGR7WUvqRiiLrEzo9YG0XwBgOfKJNCCdAI2VZszCr2iptnrexG');"></div>
+<div class="secondary-img absolute inset-0 bg-cover bg-center" data-alt="Serum droplets on glowing skin" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnhchlKba21QswQj7ydEyb-JfEe_kiZsz70qnaNaWJEgAOgduWdEXn6WwB7-CNt5Uj73c-3-tEtA7b1n1yLqie1jUiSXspZ95lOJYt48VqDmcIBgrXgVMQ4fXbXTofvh4PPuzCwxln7eIAFN1g9I7LXfulblc5x-Y69Op45NGfWlGKQs8qJBeWFeVKEvfKcWytxDCUfUqSh06FdMP3kThdQoRIoFg5LOWezRPYCoFWu31uAyNJbuWu7bckPwN-hN9zDe1U6-oxI_-n');"></div>
+<button class="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 bg-forest text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+                                    Quick Add — $65
+                                </button>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Botanical Glow Serum</h3>
+<span class="font-medium text-forest/60">$65.00</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star_half</span>
+</div>
+<span class="text-xs text-forest/40">150 reviews</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- User Reviews Section -->
+<section class="bg-forest dark:bg-forest/20 text-white py-24">
+<div class="mx-auto max-w-[1440px] px-6 lg:px-20">
+<div class="text-center mb-16">
+<h2 class="text-4xl lg:text-5xl font-black mb-4">Real Stories, Real Results</h2>
+<div class="flex items-center justify-center gap-2">
+<div class="flex text-primary">
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+<span class="text-lg font-bold">4.9/5</span>
+<span class="text-white/60">Average Customer Rating</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-gray-400 overflow-hidden" data-alt="Sarah M. customer portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4IFp0oWsliSOZ6MBhuJVVhJnpXpiGqp6K7zPN2tE3QcKdU9E2UNR-BtVWQKe7f3WvTSMmNJAsO7snNqfZkCDTIyW9RYnEBSYOMPqC85qaY7GoJV9wIrJGN9fnrno0seiYdw-865KlpXWJr4XkvMhaXjHADqx6Y9gg171SurmFLmv6uzChaFv3h846RAQCfngdYBpfmk4pgbJKbxDeMxMyZmfDYzDRdK0QoNvGBHBiPueCi5ryzRBuVGtsH7i6QXPUmDgezndVPFeJ'); background-size: cover;"></div>
+<div>
+<h4 class="font-bold">Sarah M.</h4>
+<p class="text-xs text-white/50 italic">Verified Buyer</p>
+</div>
+</div>
+<p class="text-lg leading-relaxed text-white/90">"The Morning Ritual Oil has completely changed my focus. I used to reach for coffee 3 times a day, now I just take a moment with this oil and I'm good to go."</p>
+<div class="w-full h-48 bg-gray-600 rounded-xl bg-cover bg-center" data-alt="Customer using the morning ritual oil at her desk" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuClG3GIBUps-IShRJZSzQmGIytWwUEfe6xVsRCLvcmwFuVdlWEL45Zv2sZID-YkYfuEuStxF19Bg7DywbG7Xnahe14ihnrB0ncgLs_4bWCeYoJZYfypJSljr0mVaQZh45pPDxcXnyi28rc1QGGQxKIk-J8228f3V1U30duD1SFYK4LJnGQ59VMJJUSFFT8k69wmurR0v5uRtNDnWNnAGv7C6mm59dVoliZ7N2O9ameyZb6Nc8dzu6zJTu1uOTEg5nKw0YEILcmCrJkm');"></div>
+</div>
+<div class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 flex flex-col gap-6 lg:mt-12">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-gray-400 overflow-hidden" data-alt="James T. customer portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBC2OHcodCF6QzEbbo8R6jPLUyyeHd4R_hVj_WN7dmr4K74JMM4PENv69OEeY5q5RbaAYP0ud_Uo92wpS61yCHrrOwLalOsjlemj2JHwNvyhVessL5tDKu_3a8pob5Mr8vD5ou3-oR8n1ArD5BsH_vD__EcssVGZ_mOR8MAnIn-WU-VpjAsdajVqFg2FE_5awiqxq6pQySog9JhniIgvwOEqUMfNTg2IAMpEczB4HYQiNcXal0zE-3CNRucpunDO6FToktbtpJ0CUk2'); background-size: cover;"></div>
+<div>
+<h4 class="font-bold">James T.</h4>
+<p class="text-xs text-white/50 italic">Verified Buyer</p>
+</div>
+</div>
+<p class="text-lg leading-relaxed text-white/90">"I've struggled with restless nights for years. The Deep Sleep Tincture is the only thing that works without making me feel groggy the next day."</p>
+<div class="w-full h-48 bg-gray-600 rounded-xl bg-cover bg-center" data-alt="Peaceful bedroom setting with tincture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7WrTd5musMcxvNDjjsqDZ7GMYIuBQPpuBHaQZsorgu7FasknFTl0WMwOQiFwx5709nzQjFClrCr4qMnqbMn-GNc1PwlGeKvm_kmazxtNN9D84l1CwiSlOPuhxPmEFDvhvEh6H9v5AgR8cIhkMjQ9sodCOO_gTcBewVFGHzOTM0AabmZpAPHmZWSNQGiHQ-dKgzcpzs4xaTBF2IWJpH1HN93anVpGK9BwH0fila1C1kDKuFsEU5wOMnMFiTgJJPhOKmz-IiFUpeW6K');"></div>
+</div>
+<div class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-gray-400 overflow-hidden" data-alt="Elena R. customer portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8tfFtKgT4r915Fp8wgbhHJysDfHYWwlvpmj7lur-d-IKNgw7zu-KrB2TnztQXGIuGxyLu6Z2_5-lyRpHzMQtIRYP9gw5kVKva04C99rQDAwgbnAUk_5DiQG4oN-h9_95whAJFLdHbv_CsroFEBKTkKzNrmaOW4ZBzHl6KYfjhBOZgV33RC4XsWtYNyEz7WwGrXyUS2KDJPsnBzjh-S_4lEIIrR6NQ-C-bF1CblXu7XpReVGNpQ3cbWEZfCJbKb2asG-tZ_S78pTz_'); background-size: cover;"></div>
+<div>
+<h4 class="font-bold">Elena R.</h4>
+<p class="text-xs text-white/50 italic">Verified Buyer</p>
+</div>
+</div>
+<p class="text-lg leading-relaxed text-white/90">"The Glow Serum is my holy grail. My skin feels plump and looks radiant naturally. I've stopped using foundation altogether!"</p>
+<div class="w-full h-48 bg-gray-600 rounded-xl bg-cover bg-center" data-alt="Customer showing her radiant skin in sunlight" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZgQwxyJ7pKnkLZ7CsqXxM28BgsF4bJkScLKmxRx1uM9fstOEyruJucaqDP9mUlhpaFfA_g_TyOQG2ScRhsclq6l2G11_7-cK3r4LMP_8bjS431XIygJIVmQ5FJ24Fz-8_yP-WrBbpLKlFsHloYAVXfG_fuMUU1vLNkhlba2oU5Zd_H8XCn75-bWPNn0P-ePqOFMxqmgSTW_t_QmwkyVvk3EFgHole2CC6BoeYLL9Y1PmwRx3Rr6jt0wtxGzF24zfh698kYCapeYbX');"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="py-24 px-6 lg:px-20">
+<div class="mx-auto max-w-[960px] bg-primary/10 rounded-[3rem] p-12 lg:p-24 text-center">
+<h2 class="text-4xl lg:text-5xl font-black mb-6">Join the Community</h2>
+<p class="text-lg text-forest/70 dark:text-white/70 mb-10 max-w-lg mx-auto leading-relaxed">
+                        Get wellness tips, ritual guides, and 10% off your first order. No spam, just good energy.
+                    </p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+<input class="flex-1 bg-white dark:bg-background-dark border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary shadow-sm text-forest dark:text-white" placeholder="Enter your email" type="email"/>
+<button class="bg-forest text-white px-8 py-4 rounded-2xl font-bold hover:bg-forest/90 transition-all" type="submit">Sign Up</button>
+</form>
+<p class="mt-6 text-xs text-forest/40 uppercase tracking-widest">Trust and transparency in every email.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-forest/5 dark:border-white/5 pt-20 pb-10">
+<div class="mx-auto max-w-[1440px] px-6 lg:px-20">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-2">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-lg">eco</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-forest dark:text-white">WellnessCo</h2>
+</div>
+<p class="text-forest/60 dark:text-white/60 leading-relaxed">
+                            Crafting organic, science-backed essentials for your daily rituals. Helping you find balance in the chaos of modern life.
+                        </p>
+<div class="flex gap-4">
+<a class="size-10 rounded-full bg-forest/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="size-10 rounded-full bg-forest/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">photo_camera</span>
+</a>
+<a class="size-10 rounded-full bg-forest/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">play_circle</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-6">Shop</h4>
+<ul class="flex flex-col gap-4 text-forest/60 dark:text-white/60">
+<li><a class="hover:text-primary transition-colors" href="#">All Products</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Tinctures</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Botanicals</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Powders</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Gift Cards</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-6">About</h4>
+<ul class="flex flex-col gap-4 text-forest/60 dark:text-white/60">
+<li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">The Lab</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Press</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-6">Support</h4>
+<ul class="flex flex-col gap-4 text-forest/60 dark:text-white/60">
+<li><a class="hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Wholesale</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-between gap-6 border-t border-forest/5 dark:border-white/5 pt-10">
+<p class="text-sm text-forest/40">© 2024 WellnessCo. All rights reserved.</p>
+<div class="flex items-center gap-8">
+<img alt="PayPal" class="h-4 opacity-50 grayscale hover:grayscale-0 transition-all" data-alt="PayPal payment logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUA6dEIP8DdrwGBGDtIxuTbbjsSbGb85x6dYrAEvcJ-eV3dIPG29ZvRQJyCJk9FMVZOfMlThR1_jbDpLbJS8B32VrKKLiFdle5QDP7MtqVrYuIT_xrGVPcrPp7JrJTrqFeIzrqAkHLzLapSlmUbroqLwLKpLqzxi8dAp9U5KDuGmhBR1aBMFfoMehqh8CUmcRjcPyZ5_zWmGnU1dGSUX4vbBM0TrpaCMFh_TuSzjEbuhaENRbWY11rdI8EYhM2zVretffbXgBSl_7m"/>
+<img alt="Visa" class="h-3 opacity-50 grayscale hover:grayscale-0 transition-all" data-alt="Visa payment logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAddaAe_LHY0lnVTI_9369YkLzlTXnEHyAVuYaIAv0NhX4rgs5rWPJaZBer_FgYj3X7vSDsoH0i5QrgobFYxYnKiqp2SXyxwPWsFgwODtXRqWyVPAI5LP3mUcdfL1R4G1uhwQzLTm-L77CwbsMdYa0MrM7Rd0Ymha_KF-VHhtF_7FiqtjC93xMgTzKRTMqm-VCCkM-cZ9eUKZfs5Masyu7yf5E7pzVv0xar-DQy8FfJPaVDJT-bmW8DG_-RprpXcP4uzQOlNhcU5yg"/>
+<img alt="Mastercard" class="h-5 opacity-50 grayscale hover:grayscale-0 transition-all" data-alt="Mastercard payment logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJPUdk8eB_EE327zcqrlxrv9OJj2dKfTr8N6yf0Mw4t7S-Hm9c5p1yRV30d53LIpr95bHRSjjiexDntg6FYPU-CiquZQJzJyehG3IQMTIa1JxreU1W1xVBwnFph_-ZwHFbzc17IMw0OAcWl_PDY9QazbvWMjGt0274MM0rgtJWhXJ4OMZVirUlwwpb7rl1c5N1R7VmvL0ppD5MZJuDJ33NHhH-BuL3W7vPbSGY-9UX4RCnzEwt1j_pIBDt8j35lMlFIMHsHOeCy0AE"/>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

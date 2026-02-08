@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Data Stream AI Dashboard Home</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#06f9f9",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#0f2323",
+                        "surface-dark": "#183535",
+                        "accent-green": "#0bda50",
+                    },
+                    fontFamily: {
+                        display: ["Space Grotesk", "sans-serif"],
+                        sans: ["Space Grotesk", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px",
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=2832&auto=format&fit=crop')",
+                        'grid-pattern': "linear-gradient(to right, #214a4a 1px, transparent 1px), linear-gradient(to bottom, #214a4a 1px, transparent 1px)"
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(24, 53, 53, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(6, 249, 249, 0.1);
+        }
+        
+        .hero-glow {
+            box-shadow: 0 0 100px -20px rgba(6, 249, 249, 0.2);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 20px rgba(6, 249, 249, 0.5);
+        }
+
+        .animate-pulse-slow {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-float-delayed {
+            animation: float 8s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden transition-colors duration-300">
+<div class="relative flex flex-col min-h-screen w-full">
+<!-- Navbar -->
+<header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-white/5 px-6 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3 text-white group cursor-pointer">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">hub</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Data Stream</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Product</a>
+<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Solutions</a>
+<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Pricing</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex text-white hover:text-primary text-sm font-bold transition-colors">
+                        Login
+                    </button>
+<button class="flex items-center justify-center rounded-lg h-10 px-5 bg-primary hover:bg-cyan-300 text-background-dark text-sm font-bold transition-all shadow-[0_0_20px_-5px_rgba(6,249,249,0.4)] hover:shadow-[0_0_25px_-5px_rgba(6,249,249,0.6)]">
+                        Get Started
+                    </button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex flex-col justify-center overflow-hidden">
+<!-- Background decorative elements -->
+<div class="absolute inset-0 z-0 opacity-20" style="background-image: linear-gradient(to right, #214a4a 1px, transparent 1px), linear-gradient(to bottom, #214a4a 1px, transparent 1px); background-size: 40px 40px;"></div>
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] pointer-events-none"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[128px] pointer-events-none"></div>
+<div class="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+<!-- Text Content -->
+<div class="flex flex-col gap-6 max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border border-primary/20 w-fit">
+<span class="w-2 h-2 rounded-full bg-accent-green animate-pulse"></span>
+<span class="text-primary text-xs font-medium uppercase tracking-wider">System Operational</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight text-white hero-glow">
+                            Orchestrate Your <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Data Intelligence</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-400 max-w-lg leading-relaxed">
+                            Harness the power of neural networks with our real-time isometric processing engine. Visualize, analyze, and predict outcomes with zero latency.
+                        </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<button class="flex items-center justify-center h-12 px-8 rounded-lg bg-primary text-background-dark text-base font-bold tracking-wide hover:bg-cyan-300 transition-all shadow-[0_0_20px_rgba(6,249,249,0.3)]">
+                                Initialize Dashboard
+                            </button>
+<button class="flex items-center justify-center h-12 px-8 rounded-lg border border-slate-600 hover:border-primary text-white hover:text-primary transition-all glass-panel">
+                                View Documentation
+                            </button>
+</div>
+<!-- Mini Trust Proof -->
+<div class="mt-8 pt-8 border-t border-white/10 flex items-center gap-6">
+<span class="text-slate-500 text-sm">Trusted by future-forward teams:</span>
+<div class="flex gap-4 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="h-6 w-20 bg-white/20 rounded"></div>
+<div class="h-6 w-20 bg-white/20 rounded"></div>
+<div class="h-6 w-20 bg-white/20 rounded"></div>
+</div>
+</div>
+</div>
+<!-- 3D Isometric Visual / Metric Cards -->
+<div class="relative h-[500px] w-full flex items-center justify-center lg:justify-end perspective-1000">
+<!-- Abstract Globe/Network Representation -->
+<div class="absolute inset-0 bg-contain bg-center bg-no-repeat opacity-80 animate-pulse-slow" data-alt="Abstract 3D digital network nodes and connections glowing blue" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3St61RKaxmZde3dlDy0-l_RPuovBXySvgJCjAO3uy2EQWanxgh3RsWbowkNhVVOcucMWN2epp4V3mDN9XZochuSSzPO02TGlUqtMdZs_veuBFkxGN9x2eUtfVelySF05Yt3Mnj8BZA9xfJNPhjzOKsU5-q_ryR8vrlApzaQTbmPcB_EntAzbhmVRdT8uS-YqR35PQD5w_eybU15AFlh1D2pGM6-uE4qXUfs0V7agbEGDgLCYL0dKXqP2_ShgjqG4s84phg-BHmh2r');">
+</div>
+<!-- Floating Metric Cards -->
+<div class="absolute top-10 right-0 md:right-10 glass-panel p-6 rounded-xl border-l-4 border-l-primary animate-float w-64 shadow-2xl">
+<div class="flex items-start justify-between mb-2">
+<span class="text-slate-400 text-sm font-medium">Neural Accuracy</span>
+<span class="material-symbols-outlined text-primary text-xl">psychology</span>
+</div>
+<div class="flex items-end gap-2">
+<span class="text-3xl font-bold text-white">99.9%</span>
+<span class="text-accent-green text-xs font-bold mb-1.5 flex items-center">
+<span class="material-symbols-outlined text-sm">arrow_upward</span> 0.02%
+                                </span>
+</div>
+<div class="w-full bg-slate-700/50 h-1.5 mt-3 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full w-[99%] shadow-[0_0_10px_rgba(6,249,249,0.8)]"></div>
+</div>
+</div>
+<div class="absolute bottom-20 left-0 md:left-10 glass-panel p-6 rounded-xl border-l-4 border-l-blue-500 animate-float-delayed w-64 shadow-2xl z-20">
+<div class="flex items-start justify-between mb-2">
+<span class="text-slate-400 text-sm font-medium">Active Nodes</span>
+<span class="material-symbols-outlined text-blue-400 text-xl">hub</span>
+</div>
+<div class="flex items-end gap-2">
+<span class="text-3xl font-bold text-white">4,502</span>
+<span class="text-accent-green text-xs font-bold mb-1.5">+124</span>
+</div>
+<div class="flex gap-1 mt-3">
+<div class="h-1.5 w-2 bg-blue-500 rounded-full animate-pulse"></div>
+<div class="h-1.5 w-2 bg-blue-500 rounded-full animate-pulse delay-75"></div>
+<div class="h-1.5 w-2 bg-blue-500 rounded-full animate-pulse delay-150"></div>
+<div class="h-1.5 w-full bg-slate-700/50 rounded-full"></div>
+</div>
+</div>
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 glass-panel p-4 rounded-xl border border-primary/30 flex items-center gap-4 z-10">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary animate-spin">sync</span>
+</div>
+<div>
+<div class="text-xs text-slate-400 uppercase tracking-wider">Latency</div>
+<div class="text-xl font-bold text-white">&lt; 2ms</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Grid -->
+<section class="py-24 relative bg-background-dark/50">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
+<div class="max-w-2xl">
+<h2 class="text-4xl font-bold text-white mb-4">Core Capabilities</h2>
+<p class="text-slate-400 text-lg">Advanced processing architecture designed for modern enterprise scale needs.</p>
+</div>
+<a class="text-primary hover:text-white transition-colors flex items-center gap-2 font-medium" href="#">
+                            Explore all features <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group relative bg-surface-dark border border-white/5 p-8 rounded-2xl hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+<div class="relative z-10">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">Real-time Processing</h3>
+<p class="text-slate-400 leading-relaxed">
+                                    Analyze streams of unstructured data with essentially zero latency using our proprietary pipe architecture.
+                                </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative bg-surface-dark border border-white/5 p-8 rounded-2xl hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+<div class="relative z-10">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">model_training</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">Predictive Modeling</h3>
+<p class="text-slate-400 leading-relaxed">
+                                    Forecast market trends and user behaviors using our pre-trained neural engine that adapts to your data.
+                                </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative bg-surface-dark border border-white/5 p-8 rounded-2xl hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+<div class="relative z-10">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">encrypted</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">Secure Nodes</h3>
+<p class="text-slate-400 leading-relaxed">
+                                    Enterprise-grade encryption for all data points, ensuring your intellectual property remains sovereign.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Dashboard Preview / Visualization -->
+<section class="py-20 px-6">
+<div class="max-w-7xl mx-auto rounded-3xl overflow-hidden border border-white/10 relative bg-[#0a1616]">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"></div>
+<div class="grid lg:grid-cols-3 min-h-[600px]">
+<!-- Sidebar Area -->
+<div class="border-r border-white/5 p-6 hidden lg:flex flex-col gap-6 bg-surface-dark/30">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-3 h-3 rounded-full bg-red-500"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+<div class="w-3 h-3 rounded-full bg-green-500"></div>
+</div>
+<div class="space-y-1">
+<div class="p-3 rounded-lg bg-white/5 text-white text-sm font-medium flex items-center justify-between cursor-pointer border-l-2 border-primary">
+<span>Main Cluster</span>
+<span class="material-symbols-outlined text-xs">expand_more</span>
+</div>
+<div class="p-3 rounded-lg hover:bg-white/5 text-slate-400 hover:text-white text-sm font-medium flex items-center justify-between cursor-pointer transition-colors">
+<span>Secondary Nodes</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+</div>
+<div class="p-3 rounded-lg hover:bg-white/5 text-slate-400 hover:text-white text-sm font-medium flex items-center justify-between cursor-pointer transition-colors">
+<span>Data Ingestion</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+</div>
+</div>
+<div class="mt-auto p-4 rounded-xl bg-gradient-to-br from-primary/20 to-transparent border border-primary/20">
+<p class="text-xs text-primary font-bold mb-1">SYSTEM STATUS</p>
+<p class="text-white text-sm">All systems nominal. <br/> processing 45TB/s</p>
+</div>
+</div>
+<!-- Main Vis Area -->
+<div class="lg:col-span-2 relative bg-cover bg-center" data-alt="Dark dashboard data visualization graph with blue lines" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzc1_gAArLBzwFagbSUVHrgK74JaPRDJmjlioGqOamWePCfVIC6jMnhdVcbSbc0k_xzrN29IPwHxUuB2n1VmL6CYtRhOGELflTL9UJ82ISohMoihbztq86dELGNa_eb6Zp0IupUWV143gfxgi_dqTytFoB_XKr8tJvnateWpg-oZU6_OlhhUpx6D6l-MvlZJ4GIhRdkdnpPVfhPhj9rNhMroOcmRKz16xy4mmLMFq_3rRQV1j2ttsqI3Um9X8rt4521XOGK1wiWo_o');">
+<div class="absolute inset-0 bg-background-dark/80 backdrop-blur-sm"></div>
+<div class="relative z-10 p-8 h-full flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-2xl font-bold text-white">Live Data Feed</h3>
+<p class="text-slate-400 text-sm">Global-server-04</p>
+</div>
+<div class="flex gap-2">
+<span class="px-2 py-1 rounded bg-black/40 border border-white/10 text-xs text-slate-300 font-mono">1H</span>
+<span class="px-2 py-1 rounded bg-primary text-background-dark font-bold text-xs font-mono">24H</span>
+<span class="px-2 py-1 rounded bg-black/40 border border-white/10 text-xs text-slate-300 font-mono">7D</span>
+</div>
+</div>
+<!-- Fake Graph Lines using SVG -->
+<div class="flex-grow w-full py-8">
+<svg class="w-full h-full overflow-visible" viewbox="0 0 800 300">
+<defs>
+<lineargradient id="gradientLine" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#06f9f9" stop-opacity="0"></stop>
+<stop offset="50%" stop-color="#06f9f9" stop-opacity="1"></stop>
+<stop offset="100%" stop-color="#06f9f9" stop-opacity="0"></stop>
+</lineargradient>
+<filter height="140%" id="glow" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="coloredBlur" stddeviation="4"></fegaussianblur>
+<femerge>
+<femergenode in="coloredBlur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<!-- Grid lines -->
+<line stroke="rgba(255,255,255,0.05)" stroke-width="1" x1="0" x2="800" y1="50" y2="50"></line>
+<line stroke="rgba(255,255,255,0.05)" stroke-width="1" x1="0" x2="800" y1="150" y2="150"></line>
+<line stroke="rgba(255,255,255,0.05)" stroke-width="1" x1="0" x2="800" y1="250" y2="250"></line>
+<!-- Data Line -->
+<path d="M0,200 C100,200 150,100 250,120 S350,180 450,150 S550,50 650,80 S750,100 800,90" fill="none" filter="url(#glow)" stroke="url(#gradientLine)" stroke-width="3"></path>
+<!-- Points -->
+<circle cx="250" cy="120" fill="#0f2323" r="4" stroke="#06f9f9" stroke-width="2"></circle>
+<circle cx="450" cy="150" fill="#0f2323" r="4" stroke="#06f9f9" stroke-width="2"></circle>
+<circle cx="650" cy="80" fill="#0f2323" r="4" stroke="#06f9f9" stroke-width="2"></circle>
+</svg>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<div class="p-4 rounded-lg bg-black/40 border border-white/10">
+<div class="text-xs text-slate-400 mb-1">Throughput</div>
+<div class="text-lg font-bold text-white">12.4 GB/s</div>
+</div>
+<div class="p-4 rounded-lg bg-black/40 border border-white/10">
+<div class="text-xs text-slate-400 mb-1">Latency</div>
+<div class="text-lg font-bold text-white">12ms</div>
+</div>
+<div class="p-4 rounded-lg bg-black/40 border border-white/10">
+<div class="text-xs text-slate-400 mb-1">Errors</div>
+<div class="text-lg font-bold text-white">0.00%</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/5"></div>
+<!-- Gradient glow -->
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-64 bg-primary/20 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="container mx-auto px-6 relative z-10 text-center">
+<h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to visualize your data?</h2>
+<p class="text-xl text-slate-400 max-w-2xl mx-auto mb-10">
+                        Join leading enterprises in the next generation of AI analytics. Request access to our beta program today.
+                    </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto">
+<div class="w-full relative">
+<input class="w-full h-14 bg-surface-dark border border-white/10 rounded-lg px-5 text-white placeholder:text-slate-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Enter your work email" type="email"/>
+</div>
+<button class="w-full sm:w-auto h-14 px-8 bg-primary hover:bg-cyan-300 text-background-dark font-bold rounded-lg transition-all shadow-[0_0_20px_rgba(6,249,249,0.4)] whitespace-nowrap">
+                            Request Access
+                        </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-white/5 bg-background-dark py-12">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-primary">hub</span>
+<span class="font-bold text-lg">Data Stream</span>
+</div>
+<div class="flex gap-8 text-sm text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Contact Support</a>
+</div>
+<div class="text-slate-600 text-sm">
+                        © 2023 Data Stream AI. All rights reserved.
+                    </div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elite Aesthetic Clinic</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ee2b4b",
+                "background-light": "#f8f6f6",
+                "background-dark": "#221013",
+                "rose-gold": "#d4af37", // Adding a custom accent for the luxurious feel
+                "cream": "#fdfbf7",
+              },
+              fontFamily: {
+                "display": ["Manrope", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#1b0d10] dark:text-gray-100 font-display transition-colors duration-300">
+<div class="flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-neutral-200 dark:border-neutral-800 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md px-6 lg:px-10 py-4 transition-all">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-3xl">spa</span>
+</div>
+<h2 class="text-neutral-900 dark:text-white text-xl font-bold tracking-tight">Elite Aesthetic</h2>
+</div>
+<div class="hidden lg:flex items-center gap-10">
+<a class="text-neutral-600 dark:text-neutral-300 text-sm font-medium hover:text-primary transition-colors" href="#">Treatments</a>
+<a class="text-neutral-600 dark:text-neutral-300 text-sm font-medium hover:text-primary transition-colors" href="#">Specialists</a>
+<a class="text-neutral-600 dark:text-neutral-300 text-sm font-medium hover:text-primary transition-colors" href="#">Before &amp; After</a>
+<a class="text-neutral-600 dark:text-neutral-300 text-sm font-medium hover:text-primary transition-colors" href="#">About Us</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-lg h-10 px-6 bg-primary hover:bg-red-600 text-white text-sm font-bold tracking-wide transition-all shadow-lg shadow-primary/20">
+<span class="truncate">Book Consultation</span>
+</button>
+<button class="lg:hidden text-neutral-900 dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full py-16 lg:py-24 px-6 lg:px-20 overflow-hidden">
+<div class="layout-container max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+<div class="flex-1 flex flex-col gap-6 lg:gap-8 z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 w-fit">
+<span class="material-symbols-outlined text-primary text-sm">verified</span>
+<span class="text-primary text-xs font-bold uppercase tracking-wider">Board Certified Excellence</span>
+</div>
+<h1 class="text-neutral-900 dark:text-white text-5xl lg:text-7xl font-light leading-[1.1] tracking-tight">
+                            Redefining <br/>
+<span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#d4af37]">Natural Beauty</span>
+</h1>
+<p class="text-neutral-600 dark:text-neutral-400 text-lg lg:text-xl font-light leading-relaxed max-w-xl">
+                            Experience the pinnacle of aesthetic medicine with our bespoke treatments designed to enhance your unique features.
+                        </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-2">
+<button class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-red-600 text-white text-base font-bold tracking-wide transition-all shadow-xl shadow-primary/25">
+                                Book Consultation
+                            </button>
+<button class="flex items-center justify-center rounded-lg h-12 px-8 bg-transparent border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-white/5 text-neutral-900 dark:text-white text-base font-medium transition-all">
+                                View Gallery
+                            </button>
+</div>
+<div class="flex items-center gap-6 mt-6 text-neutral-500 dark:text-neutral-400">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark bg-gray-200 bg-cover bg-center" data-alt="Patient portrait thumbnail 1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCTY3N7aDj3m0mPYVjDW9FhahLr7kcCtceZJcRPltv0BgAhBu2D1DOvEid64tEpDSE_TQrdZ_nCZaeAWPo8vz-UacqHLqKbDGlOfTr8k-s93P0fCnsAd4KAA1ohiS90DwwIqbZV5FdXrQLBe-EAWj5-kT96rgRzj_1kc9sfAIcB1BLqi6aZ4sHb1_HC9wotkkbHtT_G_F6YxLxAkLb5oaCBMbMQ-nfbHcnf3Y-HZy5EnsnMjzVSJORa42pSRwDB3zDi4q-zGZwCLLio");'></div>
+<div class="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark bg-gray-200 bg-cover bg-center" data-alt="Patient portrait thumbnail 2" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCJo6J6bY5FPQY7TZoGiJuX2RqlrNxHZG1OlWx6Llkk3rV6l1AohX9HtVEyjd98CL2i5hMnR9pMYuYamsqhzVt1jnEbQAlOZsI8C_bCUTHFVrF3KLAJ9f0Q0BE3sGwwN0xjKo79sHXE4M3-rBmNOyabVoq4b6EJcFXNhO2QOvgtFHKJSvZXrMM4unijgI6Rrmz4tL104m8E6yA4dP0TlS91BtZNnfb3Y-M6hN3_zOa9ExUfdIyJ1ROEyAf3dlTUHtSD0SPl5JP9gFFr");'></div>
+<div class="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark bg-gray-200 bg-cover bg-center" data-alt="Patient portrait thumbnail 3" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBS26FhXaK2I6HdIzUmb72uP2Ls1bI1Z9tgSCwZCLyx419LA2AoH5JgmHqoRUOOhRwhta0O7Q1lnuA0YM73n5n8e7oEODdAb3Qv2tTOOUAqm3nHYTNJRrBnQtH0ccGnlqC3hMt3mLbpN-MiKuRFX-SiRAS-vjY1cIZFsILKJUL63CM3gsuYFjbWjpyxBuw2gNr4IW1OnNfylel6HIp6nFsR-1rvZhKm0_4k8r4QW-SzU2jcTigTKkfINhVOWdvI2ALjQNDomVML57V7");'></div>
+</div>
+<div class="flex flex-col">
+<div class="flex text-yellow-500 text-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+</div>
+<span class="text-xs font-medium">500+ Happy Patients</span>
+</div>
+</div>
+</div>
+<div class="flex-1 w-full relative group">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-[2rem] transform rotate-3 group-hover:rotate-2 transition-transform duration-500"></div>
+<div class="relative w-full aspect-[4/5] lg:aspect-square bg-cover bg-center rounded-[2rem] shadow-2xl" data-alt="Close up of woman with glowing skin touching her face gently" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1LoiyFGz2PFQbXiHAHTbuwxJ--Z_dLQxovho5-dh9HVXnZusEJIpgG2Z0dkeAsYSqZ0k6KH-Exhbou0bvgJ9uv4aPQovbRaSSaeA4RdgnCGTRYlb8e3jlF8jOYCeBD2dRI_XfaVe6s2XOAZ2SGRZ6DuYs9KEtB2pn5OkWB6064cigS-mTlVL5xpNFQlIVHJMIvK21zggnco2S5wAQd7-jG3wYr0M65fsKRRt0on2aQ01Zp-CWURuUir66TZy3RKBCyeTpArI-ZkXO");'>
+<div class="absolute bottom-6 left-6 right-6 bg-white/90 dark:bg-neutral-900/90 backdrop-blur p-4 rounded-xl shadow-lg border border-white/20">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">water_drop</span>
+<div>
+<p class="text-sm font-bold text-neutral-900 dark:text-white">HydraFacial Elite</p>
+<p class="text-xs text-neutral-500 dark:text-neutral-400">Restore moisture &amp; radiance</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-12 bg-white dark:bg-neutral-800/50 border-y border-neutral-100 dark:border-neutral-800">
+<div class="max-w-7xl mx-auto px-6 lg:px-20 grid grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="flex flex-col items-center text-center gap-2">
+<p class="text-primary text-4xl font-bold tracking-tight">10k+</p>
+<p class="text-neutral-500 dark:text-neutral-400 text-sm font-medium uppercase tracking-wide">Procedures Performed</p>
+</div>
+<div class="flex flex-col items-center text-center gap-2">
+<p class="text-primary text-4xl font-bold tracking-tight">12</p>
+<p class="text-neutral-500 dark:text-neutral-400 text-sm font-medium uppercase tracking-wide">Board Specialists</p>
+</div>
+<div class="flex flex-col items-center text-center gap-2">
+<p class="text-primary text-4xl font-bold tracking-tight">15+</p>
+<p class="text-neutral-500 dark:text-neutral-400 text-sm font-medium uppercase tracking-wide">Years of Excellence</p>
+</div>
+<div class="flex flex-col items-center text-center gap-2">
+<p class="text-primary text-4xl font-bold tracking-tight">5.0</p>
+<p class="text-neutral-500 dark:text-neutral-400 text-sm font-medium uppercase tracking-wide">Client Satisfaction</p>
+</div>
+</div>
+</section>
+<!-- Treatments Section -->
+<section class="py-20 px-6 lg:px-20 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="text-3xl md:text-4xl font-light text-neutral-900 dark:text-white mb-3">Our Signature <span class="font-bold">Treatments</span></h2>
+<p class="text-neutral-500 dark:text-neutral-400 max-w-md">Scientifically proven procedures delivered with artistic precision for natural-looking results.</p>
+</div>
+<a class="group flex items-center gap-1 text-primary font-bold text-sm hover:gap-2 transition-all" href="#">
+                        View All Services <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group flex flex-col bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden border border-neutral-100 dark:border-neutral-700 hover:shadow-xl transition-all hover:-translate-y-1">
+<div class="h-64 overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700" data-alt="Dermal fillers syringe and aesthetic preparation setup" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSsOkMrSEBC4DTJkz015zC0hoE_0epkBcLeQHChENdWtHUs8Ks5iY_4hKmfCcI5VoOkJNrkgnr4Lfo7dJwySYEz61CvEQgpb_wr3Yluu0v9zuYOdO3mk32F8RmfzKcdQzb8mZEBSPHk19ClhYSkFhfFLI3608pgY0JwF731wW51LpMevlOfX0ibj0r7ShpUP0KQJcQdgOzxAWCYo2eiTtycOyQaO4CgSBOxN-LTPZnb3A9fdeZCit0GmReFSi42bS9kQGr85n2KeCe");'></div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-2">Injectables &amp; Fillers</h3>
+<p class="text-neutral-500 dark:text-neutral-400 text-sm leading-relaxed mb-6 flex-grow">
+                                Restore volume and smooth lines with our premium range of dermal fillers and anti-wrinkle injections.
+                            </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-xs font-semibold text-neutral-400 dark:text-neutral-500 uppercase">Non-Surgical</span>
+<button class="size-10 rounded-full bg-neutral-50 dark:bg-neutral-700 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden border border-neutral-100 dark:border-neutral-700 hover:shadow-xl transition-all hover:-translate-y-1">
+<div class="h-64 overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700" data-alt="Laser treatment device close up on skin" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZR3sWsyqmn5WFYUqJEFTHo0_2Go_ME6wvk8GUgn_kDW_w60ijNh8x_6_KC4uwWBKShyesHbh4COz0JpMik34KdW6s_DXutBwG9TrNA08NOWeUkiC7WNSEoJXo8TnT3RPUqKY-6TPeND9L25UYy3aK7vZfqenCO6KkjX_QwRxAhT-CgtkxesWNXlGV1N9oSzDRFsY0rmWMFQLBQzJlOXetV6AEG017GnES3I4Y1qDGJB3yK3P0hWyj2937mqGP9Za4cLX2dXUlpmeA");'></div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-2">Laser Rejuvenation</h3>
+<p class="text-neutral-500 dark:text-neutral-400 text-sm leading-relaxed mb-6 flex-grow">
+                                Advanced laser technology to treat pigmentation, scars, and uneven texture for flawless skin.
+                            </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-xs font-semibold text-neutral-400 dark:text-neutral-500 uppercase">Technology</span>
+<button class="size-10 rounded-full bg-neutral-50 dark:bg-neutral-700 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden border border-neutral-100 dark:border-neutral-700 hover:shadow-xl transition-all hover:-translate-y-1">
+<div class="h-64 overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700" data-alt="Relaxing spa facial massage treatment" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB22k21Sl75jHlRCuw7Blj7-OJl5VfV_nvr_y-ATL_KTRzyTgchw1aaf9rS1IndFFEwg_n80skoF-HEdFaN811ZIW0t6kaCGbsbaO_isV4tco8iWAJwpai-cS0ky71Q0RE_dR4e3BUctLgYkDmLZt0LTxR2h4ns-Nu49zemE_l4iPzimK6Bytn3_fweMQpBhnh1s5DBGi5UckDye2mcedUuSFeQhIy7TMoUL4yb88RC8Qil-Ho2Eqv0IP11EDCo4P7hja0ELWUaSSSM");'></div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-2">Facial Contouring</h3>
+<p class="text-neutral-500 dark:text-neutral-400 text-sm leading-relaxed mb-6 flex-grow">
+                                Define and sculpt your natural features with our expert non-surgical contouring techniques.
+                            </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-xs font-semibold text-neutral-400 dark:text-neutral-500 uppercase">Aesthetic</span>
+<button class="size-10 rounded-full bg-neutral-50 dark:bg-neutral-700 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Specialist Section -->
+<section class="py-20 bg-cream dark:bg-neutral-900/50">
+<div class="max-w-7xl mx-auto px-6 lg:px-20">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="w-full lg:w-1/2 relative">
+<div class="absolute -top-4 -left-4 w-full h-full border-2 border-primary/20 rounded-2xl hidden lg:block"></div>
+<img alt="Portrait of Dr. Elena Vance in medical coat smiling professionally" class="w-full h-auto object-cover rounded-2xl shadow-xl relative z-10 aspect-[3/4]" data-alt="Dr. Elena Vance professional portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzG4WJyCYahsCjpsGIJGUzzDDTU6c2nvgpmk1YKOS0iiKFrBz6Zo5FxDXBBTzfb3kMVafeyvh0QTMbAJmc9xA1zrpJ_-HciO8ifVo9IrmoVaPRHjZiFVfL1ZbHcYYTXtFeUOn0svizdMYb636-Ubodkyp2gdoiuAwMZXUxr6_7Dk6kspNZPgC8bKShVhxD4TKvCWGfTqMfChgRcaZzyEllEPXnTx45I4J0Kdlie7Iv8WSyeRUO4fgVybj-lXng4ZgJLUM5nOar23mQ"/>
+</div>
+<div class="w-full lg:w-1/2 flex flex-col gap-6">
+<h4 class="text-primary font-bold uppercase tracking-widest text-sm">Meet The Expert</h4>
+<h2 class="text-4xl lg:text-5xl font-light text-neutral-900 dark:text-white leading-tight">
+                                Dr. Elena Vance <br/>
+<span class="text-2xl lg:text-3xl font-normal text-neutral-500 dark:text-neutral-400">MD, PhD, Board Certified</span>
+</h2>
+<p class="text-neutral-600 dark:text-neutral-300 text-lg font-light leading-relaxed">
+                                "I believe that true aesthetic medicine is about subtlety. It's not about changing who you are, but refining your natural beauty to reflect how you feel inside. My approach combines medical precision with an artistic eye to deliver results that are undetectable yet transformative."
+                            </p>
+<div class="flex flex-col gap-4 mt-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-neutral-700 dark:text-neutral-300">Over 15 years of specialized experience</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-neutral-700 dark:text-neutral-300">Pioneer in minimally invasive techniques</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-neutral-700 dark:text-neutral-300">Member of the International Society of Aesthetic Plastic Surgery</span>
+</div>
+</div>
+<button class="mt-6 w-fit text-primary font-bold border-b-2 border-primary pb-1 hover:text-red-700 hover:border-red-700 transition-colors">
+                                Read Full Bio
+                            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="py-20 px-6 lg:px-20 max-w-4xl mx-auto text-center">
+<div class="mb-10">
+<span class="material-symbols-outlined text-6xl text-primary/20 mb-4">format_quote</span>
+<h2 class="text-3xl font-light text-neutral-900 dark:text-white mb-2">Client Stories</h2>
+</div>
+<div class="bg-white dark:bg-neutral-800 p-8 lg:p-12 rounded-2xl shadow-lg border border-neutral-100 dark:border-neutral-700 relative">
+<div class="flex justify-center mb-6 text-yellow-500 gap-1">
+<span class="material-symbols-outlined fill-current" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined fill-current" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined fill-current" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined fill-current" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined fill-current" style="font-variation-settings: 'FILL' 1">star</span>
+</div>
+<p class="text-xl lg:text-2xl text-neutral-700 dark:text-neutral-200 font-light italic leading-relaxed mb-8">
+                        "The staff at Elite Aesthetic made me feel comfortable from the moment I walked in. The results of my treatment are beyond what I expected—so natural and refreshed. I finally have my confidence back!"
+                    </p>
+<div class="flex items-center justify-center gap-4">
+<div class="w-12 h-12 rounded-full bg-cover bg-center" data-alt="Reviewer portrait thumbnail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBWSEj6DUv4I5-CEEa0i91cVaI_vzCcXzCD-klLIrj8haX6D9Ntqi4hZS5kYHtet0wV_96CtUpgMrgSVttFYESAotDnch787tkA-0w69BbRZolhBntfq5qWTsBGuDBGVf7Wj9IiaQBTlTRKexW_io_bew90Sf-o1y91zIEsM4lxgAwQDM4eRyiWfTiZuL0zKWpaTCYvJvJubNkZY3ExnoR6sLLpXvLoE7migV2WlJ3katmAGYB2bAyeN726YWjFJe95mEQhOF2vI7ky");'></div>
+<div class="text-left">
+<p class="font-bold text-neutral-900 dark:text-white">Sarah Jenkins</p>
+<p class="text-sm text-neutral-500">Lip Augmentation Patient</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 px-6 lg:px-20 bg-background-dark text-white relative overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&amp;w=2070&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-20" data-alt="Abstract dark luxury spa background pattern"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/90 to-transparent"></div>
+<div class="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+<div class="max-w-xl">
+<h2 class="text-4xl font-light mb-4 text-white">Ready to Reveal Your Best Self?</h2>
+<p class="text-neutral-300 text-lg mb-8 font-light">Book your complimentary consultation today and let our specialists design a treatment plan tailored just for you.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary hover:bg-red-600 text-white px-8 py-3 rounded-lg font-bold transition-all shadow-lg shadow-primary/30">
+                                Book Appointment
+                            </button>
+<button class="bg-white/10 hover:bg-white/20 backdrop-blur text-white px-8 py-3 rounded-lg font-medium transition-all border border-white/20">
+                                Contact Us
+                            </button>
+</div>
+</div>
+<div class="hidden md:block">
+<div class="p-6 border border-white/10 bg-white/5 backdrop-blur rounded-xl max-w-xs">
+<div class="flex items-start gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">calendar_month</span>
+<div>
+<p class="font-bold text-lg">Next Availability</p>
+<p class="text-sm text-neutral-300">Limited spots available for next week.</p>
+</div>
+</div>
+<div class="w-full bg-white/10 h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-3/4"></div>
+</div>
+<p class="text-xs text-neutral-400 mt-2 text-right">High Demand</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-neutral-100 dark:border-neutral-800 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-6 lg:px-20">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+<!-- Brand -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-3xl">spa</span>
+<span class="text-xl font-bold tracking-tight text-neutral-900 dark:text-white">Elite Aesthetic</span>
+</div>
+<p class="text-neutral-500 dark:text-neutral-400 text-sm leading-relaxed">
+                            Premier aesthetic clinic dedicated to enhancing natural beauty through state-of-the-art medical procedures and personalized care.
+                        </p>
+<div class="flex gap-4 mt-2">
+<a class="text-neutral-400 hover:text-primary transition-colors" href="#"><span class="sr-only">Instagram</span><svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a>
+<a class="text-neutral-400 hover:text-primary transition-colors" href="#"><span class="sr-only">Twitter</span><svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h4 class="font-bold text-neutral-900 dark:text-white mb-4">Clinic</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="text-neutral-500 dark:text-neutral-400 hover:text-primary text-sm transition-colors" href="#">Our Story</a></li>
+<li><a class="text-neutral-500 dark:text-neutral-400 hover:text-primary text-sm transition-colors" href="#">Specialists</a></li>
+<li><a class="text-neutral-500 dark:text-neutral-400 hover:text-primary text-sm transition-colors" href="#">Careers</a></li>
+<li><a class="text-neutral-500 dark:text-neutral-400 hover:text-primary text-sm transition-colors" href="#">Press &amp; Media</a></li>
+</ul>
+</div>
+<!-- Treatments -->
+<div>
+<h4 class="font-bold text-neutral-900 dark:text-white mb-4">Treatments</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="text-neutral-500 dark:text-neutral-400 hover:text-primary text-sm transition-colors" href="#">Injectables</a></li>
+<li><a class="text-neutral-500 dark:text-neutral-400 hover:text-primary text-sm transition-colors" href="#">Laser Therapy</a></li>
+<li><a class="text-neutral-500 dark:text-neutral-400 hover:text-primary text-sm transition-colors" href="#">Body Contouring</a></li>
+<li><a class="text-neutral-500 dark:text-neutral-400 hover:text-primary text-sm transition-colors" href="#">Skin Rejuvenation</a></li>
+</ul>
+</div>
+<!-- Contact -->
+<div>
+<h4 class="font-bold text-neutral-900 dark:text-white mb-4">Visit Us</h4>
+<ul class="flex flex-col gap-3">
+<li class="flex items-start gap-3 text-neutral-500 dark:text-neutral-400 text-sm">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">location_on</span>
+<span>123 Beverly Blvd, Suite 400<br/>Los Angeles, CA 90210</span>
+</li>
+<li class="flex items-center gap-3 text-neutral-500 dark:text-neutral-400 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">call</span>
+<span>(310) 555-0123</span>
+</li>
+<li class="flex items-center gap-3 text-neutral-500 dark:text-neutral-400 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">mail</span>
+<span>concierge@eliteaesthetic.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-neutral-100 dark:border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-neutral-400 text-xs">© 2023 Elite Aesthetic Clinic. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-200 text-xs transition-colors" href="#">Privacy Policy</a>
+<a class="text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-200 text-xs transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

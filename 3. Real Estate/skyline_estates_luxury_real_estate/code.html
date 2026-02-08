@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skyline Estates | Luxury Real Estate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Icons+Outlined&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#D4AF37", // Classic Gold
+                        "background-light": "#F8F9FA",
+                        "background-dark": "#0A0A0A",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .light .glass {
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #D4AF37, #F5E050);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-vignette {
+            background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.8) 100%);
+        }
+        .property-card:hover .property-image {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-gray-800 dark:text-gray-100 transition-colors duration-300">
+<nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-icons-outlined text-primary text-3xl">domain</span>
+<span class="font-display text-2xl tracking-widest uppercase font-semibold">Skyline <span class="text-primary">Estates</span></span>
+</div>
+<div class="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest font-medium">
+<a class="hover:text-primary transition-colors" href="#">Properties</a>
+<a class="hover:text-primary transition-colors" href="#">Penthouses</a>
+<a class="hover:text-primary transition-colors" href="#">Concierge</a>
+<a class="hover:text-primary transition-colors" href="#">Developments</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-white/10 transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons-outlined text-xl">contrast</span>
+</button>
+<button class="bg-primary hover:bg-yellow-600 text-black px-6 py-2 rounded-sm font-semibold tracking-wide transition-all uppercase text-xs">
+                    Inquire Now
+                </button>
+</div>
+</div>
+</nav>
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<img alt="Luxury Penthouse View" class="absolute inset-0 w-full h-full object-cover brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzwD2qhNf-BbwIq_5D4B6ANIQzj_2jwG81qCyKakbROYtMM_JCdv0QIh2FtwPyi2jqvEZM6e65640KmAiRSjlpgWlyU_SsIts6Qhapz4701ZMdFQ0qltJT1MVZZazEn3DrptwOQY0W9-3EKgwbe2lRkeiehAPyCTUcK2rGJc9ONQjRG0Q_k7Yk3A0NeS2PSqOsM-AiOJ_QS7Em0hgXkLHYOwxBS9RYSH3zPzVCCtl1wh0_M1z9aKASaUczwwbMsfDqQ3wltgeYNLwk"/>
+<div class="absolute inset-0 hero-vignette"></div>
+<div class="relative z-10 text-center max-w-4xl px-6">
+<h1 class="font-display text-5xl md:text-7xl mb-6 text-white leading-tight">
+                Refining the Art of <br/> <span class="text-gradient italic">High-End Living</span>
+</h1>
+<p class="text-gray-300 text-lg md:text-xl font-light mb-12 tracking-wide max-w-2xl mx-auto">
+                Discover an exclusive collection of architectural masterpieces in the world's most coveted locations.
+            </p>
+<div class="glass p-2 md:p-3 rounded-xl max-w-4xl mx-auto shadow-2xl flex flex-col md:flex-row gap-2">
+<div class="flex-1 px-4 py-3 flex items-center gap-3 border-r border-white/10 last:border-0">
+<span class="material-icons-outlined text-primary">location_on</span>
+<div class="text-left">
+<p class="text-[10px] uppercase tracking-tighter text-gray-400">Location</p>
+<input class="bg-transparent border-0 p-0 focus:ring-0 text-sm w-full placeholder:text-gray-500" placeholder="Manhattan, NY" type="text"/>
+</div>
+</div>
+<div class="flex-1 px-4 py-3 flex items-center gap-3 border-r border-white/10 last:border-0">
+<span class="material-icons-outlined text-primary">home</span>
+<div class="text-left">
+<p class="text-[10px] uppercase tracking-tighter text-gray-400">Type</p>
+<select class="bg-transparent border-0 p-0 focus:ring-0 text-sm w-full appearance-none cursor-pointer">
+<option class="bg-zinc-900">Penthouse</option>
+<option class="bg-zinc-900">Modern Villa</option>
+<option class="bg-zinc-900">Mansion</option>
+</select>
+</div>
+</div>
+<div class="flex-1 px-4 py-3 flex items-center gap-3 border-r border-white/10 last:border-0">
+<span class="material-icons-outlined text-primary">payments</span>
+<div class="text-left">
+<p class="text-[10px] uppercase tracking-tighter text-gray-400">Price Range</p>
+<select class="bg-transparent border-0 p-0 focus:ring-0 text-sm w-full appearance-none cursor-pointer">
+<option class="bg-zinc-900">$5M - $10M</option>
+<option class="bg-zinc-900">$10M - $50M</option>
+<option class="bg-zinc-900">$50M+</option>
+</select>
+</div>
+</div>
+<button class="bg-primary hover:bg-yellow-600 text-black px-10 py-4 rounded-lg font-bold transition-all flex items-center justify-center gap-2">
+<span class="material-icons-outlined">search</span>
+                    SEARCH
+                </button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+<span class="text-[10px] uppercase tracking-[0.3em] text-white/60">Scroll to Explore</span>
+<div class="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</section>
+<section class="py-24 px-6 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div class="max-w-xl">
+<span class="text-primary uppercase tracking-[0.4em] text-xs font-bold mb-4 block">The Collection</span>
+<h2 class="font-display text-4xl md:text-5xl dark:text-white mb-6">Exquisite Global <span class="italic font-light">Listings</span></h2>
+<p class="text-gray-500 dark:text-gray-400 font-light leading-relaxed">
+                    Our portfolio spans from glass-walled penthouses overlooking Central Park to sprawling coastal estates in the French Riviera.
+                </p>
+</div>
+<a class="group flex items-center gap-2 text-sm uppercase tracking-widest font-semibold pb-2 border-b-2 border-primary transition-all" href="#">
+                View All Properties 
+                <span class="material-icons-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="property-card group cursor-pointer">
+<div class="relative overflow-hidden rounded-sm aspect-[4/5] mb-6">
+<img alt="Luxury Villa" class="property-image w-full h-full object-cover transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGERuyri076kSBjQmCCHGaw7Mlu0IrLdknh4FEHMKV811ww6nomZ52zbjEWKMnczknPLN68Y5oyxgPEH2Udgpr2w15oSyrww0tiX8gAwHAJKWxJCC7dzaRzje_MqQE598mCINDTXw4dShvAWqNDLekB7Nq1M3oF45MlZoe7whYhr53lpSoiq7HmoLr5sohqOkgsX2tCPJS8sawKAqcj-XSV8QjOvOAd18c13B1zMGeRjQtEbd4-NEfW2f5FsmJKckqmYj8DAdJNvrw"/>
+<div class="absolute top-4 left-4 glass px-3 py-1 text-[10px] uppercase tracking-widest font-bold text-white">Featured</div>
+<div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
+<p class="text-primary font-display text-2xl">$12,450,000</p>
+</div>
+</div>
+<h3 class="font-display text-2xl mb-2 dark:text-white">Azure Zenith Heights</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm mb-4 flex items-center gap-1">
+<span class="material-icons-outlined text-xs">location_on</span>
+                    Bel Air, California
+                </p>
+<div class="flex items-center gap-6 border-t border-gray-100 dark:border-white/5 pt-4 text-[10px] uppercase tracking-widest font-medium text-gray-500 dark:text-gray-400">
+<div class="flex items-center gap-2"><span class="material-icons-outlined text-sm text-primary">bed</span> 5 Beds</div>
+<div class="flex items-center gap-2"><span class="material-icons-outlined text-sm text-primary">bathtub</span> 7 Baths</div>
+<div class="flex items-center gap-2"><span class="material-icons-outlined text-sm text-primary">square_foot</span> 8,400 sqft</div>
+</div>
+</div>
+<div class="property-card group cursor-pointer">
+<div class="relative overflow-hidden rounded-sm aspect-[4/5] mb-6">
+<img alt="New York Penthouse" class="property-image w-full h-full object-cover transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDisfmhTY3oQFUOW1ds9-hjIi40cDSfW82vfSNpsTiw0GyA7w3NiWNNhhSIsIuNs6PRzygaWm0GlCTH9OU9BHfeEpY7mpuD24AiKwKVY-y0ex4CmINQSaHLqR4Gx63GvFHXdYGQDYDgY8PkAeyUeb7mP7rVWJ71kLoM_k6IRs1qLSk0yNgobIOHzCjQAHfAVXZrp1gFR4nQFL9LgxWfh2_eMnFFGfU1YnL8pSE1cSwsFmPVYwLcFhcR4d2VwXQMeX9gTFIUCiRNMgbV"/>
+<div class="absolute top-4 left-4 glass px-3 py-1 text-[10px] uppercase tracking-widest font-bold text-white">Exclusive</div>
+<div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
+<p class="text-primary font-display text-2xl">$45,000,000</p>
+</div>
+</div>
+<h3 class="font-display text-2xl mb-2 dark:text-white">The Skyline Pavilion</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm mb-4 flex items-center gap-1">
+<span class="material-icons-outlined text-xs">location_on</span>
+                    Upper East Side, Manhattan
+                </p>
+<div class="flex items-center gap-6 border-t border-gray-100 dark:border-white/5 pt-4 text-[10px] uppercase tracking-widest font-medium text-gray-500 dark:text-gray-400">
+<div class="flex items-center gap-2"><span class="material-icons-outlined text-sm text-primary">bed</span> 4 Beds</div>
+<div class="flex items-center gap-2"><span class="material-icons-outlined text-sm text-primary">bathtub</span> 5 Baths</div>
+<div class="flex items-center gap-2"><span class="material-icons-outlined text-sm text-primary">square_foot</span> 5,200 sqft</div>
+</div>
+</div>
+<div class="property-card group cursor-pointer">
+<div class="relative overflow-hidden rounded-sm aspect-[4/5] mb-6">
+<img alt="Coastal Mansion" class="property-image w-full h-full object-cover transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5l3byXcfPbOD_hc_UzRipCsNLnp7TkklOfBe4YZUawgevbfD1Lu8E2K1tg-UvjiD4CJen7OYJjjH0W8QS7FTyQwQH_PRfQlaS35souei-b8z-MDL5OaevAoka033dijEol1AAgRsxeEbYFkN7zHefotLMwMX1YowYfUjXaK5Tcw7SKIxM6TxVnwkR329coElSg3rUdaWEVi0WDezqXMNI7ASm79h_fHeSO0hAstflXwgZzpVBGSSrP35PC18UiAwtTrmaYe5aowRN"/>
+<div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
+<p class="text-primary font-display text-2xl">$8,900,000</p>
+</div>
+</div>
+<h3 class="font-display text-2xl mb-2 dark:text-white">Mariner's Watch Estate</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm mb-4 flex items-center gap-1">
+<span class="material-icons-outlined text-xs">location_on</span>
+                    Biscayne Bay, Miami
+                </p>
+<div class="flex items-center gap-6 border-t border-gray-100 dark:border-white/5 pt-4 text-[10px] uppercase tracking-widest font-medium text-gray-500 dark:text-gray-400">
+<div class="flex items-center gap-2"><span class="material-icons-outlined text-sm text-primary">bed</span> 6 Beds</div>
+<div class="flex items-center gap-2"><span class="material-icons-outlined text-sm text-primary">bathtub</span> 8 Baths</div>
+<div class="flex items-center gap-2"><span class="material-icons-outlined text-sm text-primary">square_foot</span> 10,500 sqft</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-zinc-900 dark:bg-black py-24 px-6 text-white overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 hidden lg:block">
+<img alt="Interior Detail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7uegSXxCb1qJf3RUAhMF6BtsEg4WiSj2s9rIfaBfPx0fQIiq4ECvOgIOBRwmjlccUlqUCWxP6bFoZFv5ZL_sLk6H2staygL4QauVUYHW-fMVps5PzB6q77PyXQjX6RVw9RQneISCLWDLm5xmqWDvseLwLUsvOU-qkDHllcYBRePZR46vapTfpReonWzIvI1lobRVifYHhShRvo4pFb9KWbUAlxehQPEcGRPf4Ldtj3xlDyFvVvp5652w6UxAjamFzZELKyJA2-6CG"/>
+</div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="max-w-xl">
+<span class="text-primary uppercase tracking-[0.4em] text-xs font-bold mb-4 block">The Experience</span>
+<h2 class="font-display text-4xl md:text-6xl mb-12">Unrivaled <span class="italic font-light">Concierge Services</span></h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="h-12 w-12 rounded-full border border-primary/30 flex items-center justify-center flex-shrink-0">
+<span class="material-icons-outlined text-primary">diamond</span>
+</div>
+<div>
+<h4 class="font-display text-xl mb-2">Private Showings</h4>
+<p class="text-gray-400 text-sm leading-relaxed">Exclusive access to off-market properties via private jet or luxury yacht charters for our global clientele.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="h-12 w-12 rounded-full border border-primary/30 flex items-center justify-center flex-shrink-0">
+<span class="material-icons-outlined text-primary">architecture</span>
+</div>
+<div>
+<h4 class="font-display text-xl mb-2">Design Advisory</h4>
+<p class="text-gray-400 text-sm leading-relaxed">Partnering with world-renowned interior designers to curate your space before you even move in.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="h-12 w-12 rounded-full border border-primary/30 flex items-center justify-center flex-shrink-0">
+<span class="material-icons-outlined text-primary">verified_user</span>
+</div>
+<div>
+<h4 class="font-display text-xl mb-2">Asset Management</h4>
+<p class="text-gray-400 text-sm leading-relaxed">Discreet and professional management of your global real estate portfolio and luxury assets.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center">
+<div>
+<p class="text-primary font-display text-4xl mb-2">$4.2B</p>
+<p class="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold">Closed Sales</p>
+</div>
+<div>
+<p class="text-primary font-display text-4xl mb-2">15</p>
+<p class="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold">Global Cities</p>
+</div>
+<div>
+<p class="text-primary font-display text-4xl mb-2">120</p>
+<p class="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold">Exclusive Listings</p>
+</div>
+<div>
+<p class="text-primary font-display text-4xl mb-2">24/7</p>
+<p class="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold">White Glove Support</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-zinc-950 text-white pt-20 pb-10 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-icons-outlined text-primary text-2xl">domain</span>
+<span class="font-display text-xl tracking-widest uppercase font-semibold">Skyline Estates</span>
+</div>
+<p class="text-gray-500 text-sm leading-relaxed mb-6">
+                        The world's leading authority in luxury real estate, providing unparalleled expertise and discreet service for the global elite.
+                    </p>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-icons-outlined">facebook</span></a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-icons-outlined">camera</span></a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-icons-outlined">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h5 class="font-display text-lg mb-6 text-primary">Marketplace</h5>
+<ul class="space-y-3 text-sm text-gray-400">
+<li><a class="hover:text-white transition-colors" href="#">Residential</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Commercial</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Off-Market</a></li>
+<li><a class="hover:text-white transition-colors" href="#">New Developments</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-display text-lg mb-6 text-primary">Company</h5>
+<ul class="space-y-3 text-sm text-gray-400">
+<li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Our Team</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Press Room</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-display text-lg mb-6 text-primary">Newsletter</h5>
+<p class="text-sm text-gray-500 mb-4">Receive curated monthly listings and market reports.</p>
+<div class="flex border-b border-white/20 focus-within:border-primary transition-colors">
+<input class="bg-transparent border-0 py-2 px-0 text-sm w-full focus:ring-0" placeholder="Email Address" type="email"/>
+<button class="text-primary p-2">
+<span class="material-icons-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
+<p>© 2024 Skyline Estates Luxury Real Estate. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-white" href="#">Privacy Policy</a>
+<a class="hover:text-white" href="#">Terms of Service</a>
+<a class="hover:text-white" href="#">Cookie Settings</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

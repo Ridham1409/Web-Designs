@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Radiant Glow | Premium Luxury Skincare</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Great+Vibes&amp;family=Montserrat:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#B76E79", // Rose Gold
+              "background-light": "#fdf8f9",
+              "background-dark": "#1a0b14", // Deep plum/wine base
+              plum: {
+                50: "#fdf3f6",
+                100: "#fbe8ef",
+                200: "#f7d1e0",
+                300: "#efacc8",
+                400: "#e47ba6",
+                500: "#d35186",
+                600: "#bf396c",
+                700: "#a02a54",
+                800: "#852648",
+                900: "#4a0e24", // Deepest plum
+                950: "#2d0614",
+              }
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              script: ["Great Vibes", "cursive"],
+              serif: ["Cinzel", "serif"],
+              sans: ["Montserrat", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        .rose-gold-text {
+            background: linear-gradient(to right, #e7b1a1, #b76e79, #f7d1c1, #b76e79);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(183, 110, 121, 0.2);
+        }
+        .hero-glow {
+            background: radial-gradient(circle at center, rgba(183, 110, 121, 0.15) 0%, rgba(45, 6, 20, 0) 70%);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: #B76E79;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-sans selection:bg-primary selection:text-white overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center bg-white/5 backdrop-blur-sm border-b border-primary/10">
+<div class="flex items-center space-x-2">
+<span class="text-2xl font-serif tracking-widest uppercase rose-gold-text font-bold">LUMINA</span>
+</div>
+<div class="hidden md:flex space-x-10 text-xs tracking-[0.2em] uppercase font-medium">
+<a class="nav-link text-slate-900 dark:text-slate-200" href="#">Collections</a>
+<a class="nav-link text-slate-900 dark:text-slate-200" href="#">Our Story</a>
+<a class="nav-link text-slate-900 dark:text-slate-200" href="#">Boutique</a>
+<a class="nav-link text-slate-900 dark:text-slate-200" href="#">Account</a>
+</div>
+<div class="flex items-center space-x-6">
+<span class="material-icons-outlined cursor-pointer hover:text-primary transition-colors">search</span>
+<span class="material-icons-outlined cursor-pointer hover:text-primary transition-colors">shopping_bag</span>
+</div>
+</nav>
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-plum-950">
+<div class="absolute inset-0 z-0">
+<img alt="High fashion editorial model with glowing skin" class="w-full h-full object-cover opacity-60 dark:opacity-40 grayscale-[20%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrTm0ZsiYXqiy7EB8a7uabYKQDPMYKrOmfF49upZHFrYDVMbwgokq1HtxRe13RKelFh0zg8mJBeXIKfFppmor3ayQJA-iwTMURyWmLCdqd74RZWWkzI2SZcCacG1dlIHrcsRGKNRF3V_qDEeIPvy6vTnGYN8dMBLhb6ghqlsHZMnz9Je1l90HPePxtz7NNUlqlPdVLHfZtBZqOZR3NzF_9d9NgXjcenNR2iWlCdrKam_6u9BOrCbKJdP2I7jk6PicktH92PvE-iI7Q"/>
+<div class="absolute inset-0 bg-gradient-to-b from-plum-950/40 via-plum-950/20 to-plum-950"></div>
+<div class="absolute inset-0 hero-glow"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+<p class="font-serif tracking-[0.4em] uppercase text-xs mb-6 text-primary animate-pulse">Eternal Radiance Awaits</p>
+<h1 class="text-8xl md:text-[11rem] font-script rose-gold-text mb-8 leading-[0.8]">
+                Radiant Glow
+            </h1>
+<p class="max-w-xl mx-auto text-lg md:text-xl font-light text-slate-300 mb-12 italic">
+                Experience the science of luminosity through our handcrafted rose-gold elixir collection.
+            </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="px-12 py-4 border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-500 uppercase tracking-widest text-sm font-medium">
+                    Shop The Collection
+                </button>
+<button class="px-12 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white hover:bg-white/10 transition-all duration-500 uppercase tracking-widest text-sm font-medium">
+                    Book Your Glow
+                </button>
+</div>
+</div>
+</section>
+<section class="py-32 bg-background-light dark:bg-background-dark overflow-hidden">
+<div class="container mx-auto px-4 text-center">
+<div class="inline-block relative">
+<span class="absolute -top-12 -left-12 text-9xl text-primary/10 font-serif italic">"</span>
+<h2 class="text-3xl md:text-5xl font-display font-light italic leading-relaxed max-w-4xl mx-auto dark:text-white">
+                    True beauty is the harmony between inner vitality and outer luminosity, a timeless reflection of the 
+                    <span class="text-primary not-italic font-serif uppercase tracking-widest text-4xl block mt-4">Essence of Beauty</span>
+</h2>
+<span class="absolute -bottom-16 -right-12 text-9xl text-primary/10 font-serif italic">"</span>
+</div>
+</div>
+</section>
+<section class="py-24 px-8 bg-plum-50 dark:bg-plum-950/30">
+<div class="container mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h3 class="text-primary font-serif uppercase tracking-widest text-sm mb-2">Curated Perfection</h3>
+<h2 class="text-4xl md:text-5xl font-display dark:text-white">The Signature Edit</h2>
+</div>
+<a class="text-xs uppercase tracking-widest font-semibold border-b border-primary text-primary pb-1" href="#">View All Products</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="group relative glass-card p-6 transition-all duration-500 hover:-translate-y-2">
+<div class="relative aspect-[3/4] overflow-hidden mb-6 bg-plum-900/10">
+<img alt="Golden Serum Elixir" class="w-full h-full object-cover grayscale-[10%] group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBExChARHyNHS3FoF1WbyVM7S6lrklyHu1gjD3gfLZT6x32El1Jows2tr_KOsRHovP9Uvud9QYUeouV_lj4TXUM_WB0iG3ewOBCdpt6uhX30xsIjJhTwzBm3dFkOFVFoLBg3Cg4LUO9lNr_o3XgQZ0azuLUJIaAKx7Xp_4oFdo7sTweTNbcTOKPqrRaYh6jMzfIcPlfAQ0YwDGIKf3IW2pdxdQDLOzGUiL10xKLwwlIu8-r437FjjDhxBpjtkv-bOAprq1muwaeABJ4"/>
+<div class="absolute top-4 left-4 bg-primary text-white text-[10px] tracking-widest uppercase px-3 py-1">Limited</div>
+</div>
+<div class="w-12 h-[2px] bg-primary mb-4"></div>
+<h4 class="font-serif text-2xl mb-2 dark:text-white">Aurelian Elixir</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-6 italic">Infused with 24k Rose Gold Flakes</p>
+<div class="flex justify-between items-center">
+<span class="text-xl font-light dark:text-primary">$185.00</span>
+<button class="material-icons-outlined text-primary hover:scale-125 transition-transform">add_circle_outline</button>
+</div>
+</div>
+<div class="group relative glass-card p-6 transition-all duration-500 hover:-translate-y-2">
+<div class="relative aspect-[3/4] overflow-hidden mb-6 bg-plum-900/10">
+<img alt="Rose Quartz Sculpting Cream" class="w-full h-full object-cover grayscale-[10%] group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnvZYibhT-W3kVsoOtx85cBP3hgLSkos362-YkQ0bEnQbRbnHe4INnhemwqsYExa-bPndHDZFpAzfauyu7tQUFqVF6nakCHV1LCxrOFiMVnTFPMXGyM7hgKri6holyDsAM_FWdgOAfy5yzoMpk0tMx10VULQOq4CKBUE5UmSgb_MMP0N1Kaq1kCMxvD5QF3MITgrC_tBh9drMPoZl1A2H1L0g4SmbbYFd-2cGjA6txg56Sni6Y45kKIzBkuYmxgrW3CRjYThWIVKAH"/>
+</div>
+<div class="w-12 h-[2px] bg-primary mb-4"></div>
+<h4 class="font-serif text-2xl mb-2 dark:text-white">Velvet Rose Crème</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-6 italic">Overnight Skin Recovery Treatment</p>
+<div class="flex justify-between items-center">
+<span class="text-xl font-light dark:text-primary">$210.00</span>
+<button class="material-icons-outlined text-primary hover:scale-125 transition-transform">add_circle_outline</button>
+</div>
+</div>
+<div class="group relative glass-card p-6 transition-all duration-500 hover:-translate-y-2">
+<div class="relative aspect-[3/4] overflow-hidden mb-6 bg-plum-900/10">
+<img alt="Liquid Diamond Illuminator" class="w-full h-full object-cover grayscale-[10%] group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1ehe4b81Lom0_3l8Sowri7BSp5orvANbEomWgxn_xmfyKMYvoC0LgLT9b2KCvT62JzLZXKpcpO2W6Kjc6DIyrXm9NY3PoNdgy8YwUBm29C8yovsJev8MqLR6vWMn5glkhyqvkDEGr8-G40dbNLkdtYgz_PjzsLgXMYWjMPY8I-SrSShobaxFkEUNxjCg0T-xBuhixZS9yZqi_ljy3HjXIYf71M5JCrFBBW-Sm2IgI3-CSMFncBYF4zXwCDgCKjsD4vrD4kOe4dGY3"/>
+</div>
+<div class="w-12 h-[2px] bg-primary mb-4"></div>
+<h4 class="font-serif text-2xl mb-2 dark:text-white">Solar Lumina Oil</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-6 italic">The Signature Golden Glow Oil</p>
+<div class="flex justify-between items-center">
+<span class="text-xl font-light dark:text-primary">$145.00</span>
+<button class="material-icons-outlined text-primary hover:scale-125 transition-transform">add_circle_outline</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="relative h-[80vh] flex items-center bg-plum-950 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Spiritual wellness and luxury spa vibe" class="w-full h-full object-cover opacity-30 mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq8q8qFUkOCHOtP6hJAqT1hQvcAf8-y4IKT730ebrUHQHaMT-ydvG26eTCNm_QC_8FluycWI1plPJUt4N4c73Pq9TR4c8RYFsH7HlRAelEcFXLc8mdtlFybF_AkqwHO6OXybc5bIurPm1Xj1mD4s-N4xh_aFkap3Elgca07nsT7I7Ymt5LvSQdAwwVAGiBqY_Ebjb3-42XXdLngywvE1hYuvM-Rc80-IcAJ1QNlD-ZafM8RV0xrm2VvlTESg4G6kuonfqkiovRt7EY"/>
+</div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="max-w-2xl bg-black/40 backdrop-blur-xl p-12 border-l-4 border-primary">
+<h2 class="font-serif text-4xl md:text-5xl mb-6 text-white leading-tight">A Sanctuary of <br/><span class="rose-gold-text">Sophistication</span></h2>
+<p class="text-slate-300 text-lg mb-8 leading-relaxed">
+                    Step into our digital atelier, where every formula is a masterpiece and every routine is a ritual. We believe that skincare is the ultimate form of self-devotion.
+                </p>
+<button class="px-10 py-4 bg-primary text-white uppercase tracking-widest text-sm font-semibold hover:bg-white hover:text-primary transition-all duration-300">
+                    Discover The Ritual
+                </button>
+</div>
+</div>
+</section>
+<footer class="bg-white dark:bg-plum-950 py-20 px-8 border-t border-primary/20">
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<span class="text-3xl font-serif tracking-widest uppercase rose-gold-text font-bold mb-8 block">LUMINA</span>
+<p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
+                    Redefining high-end beauty through artisanal science and rose-gold elegance.
+                </p>
+<div class="flex space-x-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><i class="material-icons-outlined">camera_alt</i></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><i class="material-icons-outlined">facebook</i></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><i class="material-icons-outlined">alternate_email</i></a>
+</div>
+</div>
+<div>
+<h5 class="font-serif uppercase tracking-widest text-sm mb-6 dark:text-white">The Boutique</h5>
+<ul class="space-y-4 text-xs tracking-wider text-slate-500 dark:text-slate-400 uppercase">
+<li><a class="hover:text-primary transition-colors" href="#">Serum Collection</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Daily Rituals</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">The Gift Edit</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Membership</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-serif uppercase tracking-widest text-sm mb-6 dark:text-white">Client Service</h5>
+<ul class="space-y-4 text-xs tracking-wider text-slate-500 dark:text-slate-400 uppercase">
+<li><a class="hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Book a Consultation</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Store Locator</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-serif uppercase tracking-widest text-sm mb-6 dark:text-white">Newsletter</h5>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-4 italic">Join our circle for exclusive early access and beauty insights.</p>
+<div class="relative">
+<input class="w-full bg-transparent border-b border-primary/50 py-2 text-sm focus:outline-none focus:border-primary transition-colors dark:text-white" placeholder="Email Address" type="email"/>
+<button class="absolute right-0 bottom-2 text-primary">
+<span class="material-icons-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="container mx-auto mt-20 pt-8 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.3em] text-slate-400">
+<p>© 2024 LUMINA BEAUTY. ALL RIGHTS RESERVED.</p>
+<div class="flex space-x-8 mt-4 md:mt-0">
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-primary transition-colors" href="#">Accessibility</a>
+</div>
+</div>
+</footer>
+<button class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary text-white shadow-lg flex items-center justify-center hover:scale-110 transition-transform z-50" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons-outlined">contrast</span>
+</button>
+
+</body></html>

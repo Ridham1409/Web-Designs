@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trendly | High-Performance E-commerce Storefront</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Montserrat:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#F97316", // Bold Orange-Red Accent
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#121212",
+                        charcoal: "#1F2937",
+                    },
+                    fontFamily: {
+                        display: ["Montserrat", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        .product-card:hover .quick-add {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .scroll-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+        }
+        .dark .hero-gradient {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.05) 0%, rgba(18, 18, 18, 0) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-charcoal dark:text-gray-100 font-sans transition-colors duration-300">
+<div class="bg-primary text-white py-2 px-4 text-center text-sm font-semibold tracking-wide">
+        FLASH SALE: EXTRA 20% OFF ALL TRENDING ITEMS. USE CODE: <span class="underline">TREND20</span>
+<span class="ml-4 font-mono">02:45:12 REMAINING</span>
+</div>
+<nav class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center space-x-12">
+<a class="text-2xl font-display font-extrabold tracking-tighter text-charcoal dark:text-white flex items-center" href="#">
+<span class="text-primary mr-1 italic">T</span>RENDLY
+                </a>
+<div class="hidden md:flex space-x-8 text-sm font-medium">
+<a class="hover:text-primary transition-colors" href="#">New Arrivals</a>
+<a class="hover:text-primary transition-colors" href="#">Best Sellers</a>
+<a class="hover:text-primary transition-colors" href="#">Collections</a>
+<a class="text-red-500 font-semibold italic" href="#">Sale</a>
+</div>
+</div>
+<div class="flex items-center space-x-6">
+<div class="relative hidden lg:block">
+<input class="w-64 pl-10 pr-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 border-none focus:ring-2 focus:ring-primary text-sm" placeholder="Search products..." type="text"/>
+<span class="material-icons-round absolute left-3 top-2 text-gray-400 text-sm">search</span>
+</div>
+<button class="hover:text-primary"><span class="material-icons-round">person_outline</span></button>
+<button class="hover:text-primary relative">
+<span class="material-icons-round">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">3</span>
+</button>
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons-round block dark:hidden">dark_mode</span>
+<span class="material-icons-round hidden dark:block">light_mode</span>
+</button>
+</div>
+</div>
+</nav>
+<header class="relative overflow-hidden hero-gradient">
+<div class="max-w-7xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 items-center gap-12">
+<div class="space-y-8">
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 text-primary text-xs font-bold uppercase tracking-wider">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span>Just Restocked: Minimalist Series</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-display font-extrabold leading-[1.1] text-charcoal dark:text-white">
+                    Style that speaks <br/><span class="text-primary italic">for you.</span>
+</h1>
+<p class="text-lg text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
+                    Elevate your everyday with our curated collection of premium essentials. Limited quantities available to ensure exclusivity.
+                </p>
+<div class="flex items-center space-x-4">
+<a class="bg-primary hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg shadow-orange-500/20" href="#shop">
+                        Shop Collection
+                    </a>
+<a class="px-8 py-4 rounded-full font-bold border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all" href="#">
+                        View Lookbook
+                    </a>
+</div>
+<div class="flex items-center space-x-8 pt-4">
+<div class="flex -space-x-3">
+<img alt="Customer" class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-900" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsUav_kEMsu3WqRuEfCWK7vMgmYGDdUhAOUewkQwrOp2d0JTlNLF_EvtuS9P7GSFpJR-9jInPjmsOYsFY8998XIbeDWB2vi-03MTV2WLo5IfgdAf0dQGfcQbyqzNpG0p1Yhyi1HHJPeeWMKjqz0813Jb9vV3-4nXeZOuFBwu9RwDfA8JeHnCVREueG5Hta5sMhaJqjYZNKBhgDAAmluvHt2yKxTRcMI7HZMphUdUAwIQvpQk6qlNfwDSPpCf1WKNdWPu0sIeacJkei"/>
+<img alt="Customer" class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-900" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiKIRR8M4y-iyNeI1M51_iyYOib_HmQU4RDwwwFKOYlT4N6B3VA_MZh-yF7BCxBn-Uy82i-Gs3WqsngB7gqjS__l8AbC5duth6Nl01IjAUSZ699tVEzMIlH5fzOjm_w5I1Qx6aMB2AmuGkBASBlNPqkjVfgpIFsZqs7AbHKK1sUR6L_yn7ggmDuBy9migtVqpkCIBI74uvlThVuxVjHAEVZcNJfnnfsJslW34EZgIDTYSv7cIQ-vi5-gAAArKEMr3eYahql9xPO28r"/>
+<img alt="Customer" class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-900" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBthJf20aCOc27D4qzEQ3TUMWnfgQjPqXIBGNZ3Ch9g4IahxYt4q9uC3n9j6LxnPWmNKypZBvdNdBGigIaLLFeXI51KzWRVSKAbehKfbyvo6nFAKG8vIx3273-9KiQrDp0T9qdPPrWuKvx905B6XyJOUmw7EwYui9VwAztE84F0HkK66lD7mL9GlyPYVe_Cnf5ozBctHfVYH6BNNPGKdulSUL0mPI2_A-qGuy2elknHI0OSXcbcjNwlpzIj8Zg-dh8r8ZUda0JKrmxo"/>
+<div class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 border-2 border-white dark:border-gray-900 flex items-center justify-center text-[10px] font-bold">+12k</div>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 font-medium italic">"Best shopping experience ever!"</p>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute inset-0 bg-primary/20 rounded-3xl blur-3xl transform rotate-6 group-hover:rotate-12 transition-transform duration-700"></div>
+<img alt="New Collection Model" class="relative rounded-3xl shadow-2xl object-cover aspect-[4/5] w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPWn2ZkvRk_cV5gmdwF_SmvWSZ8Ygcq23bzT2BwoeMmk9ecAWC_AGV7JVXz6UOcZaDaZHssA1Ndwl0wB-cH4R8gBPULjR728_U8Bc9WU3cGOTSgUZBqqtAjy97Oti2cGyGyAX-aLd4DFFu5kTyDF4l5wbT-gB7RlrytInJjkZDG7_GfNCiFFtN2mrRq09KVO1-CyeEsdOGzL7lQNNTDj9P9cLIGBZVYrzn3i9WriWeIDadppeu2PzwWWNzxqHcQYIK75SNInEsl4t4"/>
+<div class="absolute bottom-6 left-6 right-6 bg-white/90 dark:bg-charcoal/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/50 dark:border-gray-700/50 flex items-center justify-between">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-primary">New In</p>
+<p class="font-bold">Midnight Linen Set</p>
+</div>
+<p class="text-xl font-display font-extrabold text-primary">$189</p>
+</div>
+</div>
+</div>
+</header>
+<div class="border-y border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/50 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex items-center space-x-3">
+<span class="material-icons-round text-primary">local_shipping</span>
+<span class="text-sm font-semibold">Free Express Shipping</span>
+</div>
+<div class="flex items-center space-x-3">
+<span class="material-icons-round text-primary">verified_user</span>
+<span class="text-sm font-semibold">2-Year Warranty</span>
+</div>
+<div class="flex items-center space-x-3">
+<span class="material-icons-round text-primary">sync</span>
+<span class="text-sm font-semibold">30-Day Free Returns</span>
+</div>
+<div class="flex items-center space-x-3">
+<span class="material-icons-round text-primary">lock</span>
+<span class="text-sm font-semibold">Secure Checkout</span>
+</div>
+</div>
+</div>
+<main class="max-w-7xl mx-auto px-6 py-20" id="shop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<h2 class="text-3xl font-display font-extrabold text-charcoal dark:text-white">Trending Now</h2>
+<p class="text-gray-500 dark:text-gray-400 mt-2">The most wanted pieces of the season, updated hourly.</p>
+</div>
+<div class="flex items-center space-x-4">
+<button class="px-4 py-2 rounded-full bg-charcoal dark:bg-white text-white dark:text-charcoal text-sm font-bold">All</button>
+<button class="px-4 py-2 rounded-full border border-gray-200 dark:border-gray-800 text-sm font-medium hover:border-primary transition-colors">Apparel</button>
+<button class="px-4 py-2 rounded-full border border-gray-200 dark:border-gray-800 text-sm font-medium hover:border-primary transition-colors">Accessories</button>
+<button class="px-4 py-2 rounded-full border border-gray-200 dark:border-gray-800 text-sm font-medium hover:border-primary transition-colors">Footwear</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="product-card group relative">
+<div class="relative aspect-[3/4] overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 mb-4">
+<img alt="Product 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsmbA0H12qfw_NrXiUaGqMTiERB_SQAfCdMF4x8m6JmxpeMXtEnC3p-g9DB4LmeylWc_A-bKTGISNq9CI01SVzNZjvUrukfUrU3XWg-6ZUPU_Y6ft5fumIf6qh8_CjUH-XB6_SLwGDXSHSuDhYNXuaOD5SuoOBWtCpAhj8z0hEC9XJ2F85mDe9WS6WgKHvnLVuet3_rM2fF2IViqJJWsepCUv6OqXELY2hyauBfbaLaQHtSMHJ8RMRCD7c7ACdNr9RUEjTAbzOZkuj"/>
+<div class="absolute top-4 left-4">
+<span class="bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-tighter">Bestseller</span>
+</div>
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/80 dark:bg-charcoal/80 backdrop-blur-sm flex items-center justify-center text-charcoal dark:text-white hover:text-primary transition-colors">
+<span class="material-icons-round text-xl">favorite_border</span>
+</button>
+<div class="quick-add absolute inset-x-4 bottom-4 opacity-0 transform translate-y-4 transition-all duration-300">
+<button class="w-full bg-white dark:bg-charcoal text-charcoal dark:text-white py-3 rounded-xl font-bold shadow-xl hover:bg-primary hover:text-white transition-colors flex items-center justify-center space-x-2">
+<span class="material-icons-round text-sm">add_shopping_cart</span>
+<span>Quick Add</span>
+</button>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-lg group-hover:text-primary transition-colors">Eclipse Hooded Top</h3>
+<p class="font-display font-extrabold text-lg">$64.00</p>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400">Midnight Black / Organic Cotton</p>
+<div class="mt-3 flex items-center space-x-2">
+<div class="flex text-primary">
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+</div>
+<span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">(128 reviews)</span>
+</div>
+<p class="mt-2 text-xs font-bold text-red-500 italic">🔥 Selling fast! Only 4 left.</p>
+</div>
+</div>
+<div class="product-card group relative">
+<div class="relative aspect-[3/4] overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 mb-4">
+<img alt="Product 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHF62q4YW3fN1fBhtkms_ViH6EzGZ32MWapX7u8O0GzjW7JVrHyNxecCvYzg1bxXZMUO7gAMoIlh_uoKytQzP3ZlyhU7-IS8GvbMLPM0r7bjGxCYq4Eq6XYXkgP0hqrMBgwrxLTlNUVUp9kjMDlVmKKcXpKuu7R2R9ifCu5nELI1zvZJ9mmZeUIops9hp-r5aPEZxNBN89b2rK8AqZUAlc46NljyvYVOrFZwyv7kmWmwIGnFKNJwJyrUGHEuSziNc9HYdF4UNpxqHX"/>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-tighter">New Arrival</span>
+<span class="bg-charcoal text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-tighter">Premium</span>
+</div>
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/80 dark:bg-charcoal/80 backdrop-blur-sm flex items-center justify-center text-charcoal dark:text-white hover:text-primary transition-colors">
+<span class="material-icons-round text-xl">favorite_border</span>
+</button>
+<div class="quick-add absolute inset-x-4 bottom-4 opacity-0 transform translate-y-4 transition-all duration-300">
+<button class="w-full bg-white dark:bg-charcoal text-charcoal dark:text-white py-3 rounded-xl font-bold shadow-xl hover:bg-primary hover:text-white transition-colors flex items-center justify-center space-x-2">
+<span class="material-icons-round text-sm">add_shopping_cart</span>
+<span>Quick Add</span>
+</button>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-lg group-hover:text-primary transition-colors">Vanguard Blazer</h3>
+<p class="font-display font-extrabold text-lg">$145.00</p>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400">Charcoal Grey / Wool Blend</p>
+<div class="mt-3 flex items-center space-x-2">
+<div class="flex text-primary">
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star_half</span>
+</div>
+<span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">(42 reviews)</span>
+</div>
+</div>
+</div>
+<div class="product-card group relative">
+<div class="relative aspect-[3/4] overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 mb-4">
+<img alt="Product 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMA11Zzxob0v6XfwSYOskMXzBW9abhVGkHbed-grvwnhYiy9MTWVoB_vjSBnPopo_WScVewRSraceHuvdw5r-mSJxQJ-dFiUDQPxji4_Tod7Gw2Seq2VCO3bnZj_KvI31ykOZebMLpWxrpGZtMky4yYqDgMBxnN8VXE7y9mXCxwZvg68RbhPSmmH5ymF9f3sXqZQ-4XhPFU-nc_IDWjtO6h5hm5KkUivwJWxuQYqwGdH_ky1rLRqDGZGMHCGDexUKt7MwxOL0pYwIy"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-tighter">Sale -25%</span>
+</div>
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/80 dark:bg-charcoal/80 backdrop-blur-sm flex items-center justify-center text-charcoal dark:text-white hover:text-primary transition-colors">
+<span class="material-icons-round text-xl">favorite_border</span>
+</button>
+<div class="quick-add absolute inset-x-4 bottom-4 opacity-0 transform translate-y-4 transition-all duration-300">
+<button class="w-full bg-white dark:bg-charcoal text-charcoal dark:text-white py-3 rounded-xl font-bold shadow-xl hover:bg-primary hover:text-white transition-colors flex items-center justify-center space-x-2">
+<span class="material-icons-round text-sm">add_shopping_cart</span>
+<span>Quick Add</span>
+</button>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-lg group-hover:text-primary transition-colors">Apex Runner Gen-2</h3>
+<div class="text-right">
+<p class="font-display font-extrabold text-lg text-primary">$89.00</p>
+<p class="text-xs text-gray-400 line-through">$119.00</p>
+</div>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400">Cyber White / Breathable Mesh</p>
+<div class="mt-3 flex items-center space-x-2 text-[10px] font-bold uppercase tracking-widest text-primary">
+<span class="material-icons-round text-sm">trending_up</span>
+<span>High Demand</span>
+</div>
+</div>
+</div>
+<div class="product-card group relative">
+<div class="relative aspect-[3/4] overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 mb-4">
+<img alt="Product 4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClXOJN0-KbqJshBQxEUsvNQigqudQj268EyPyaJ8Wr2MiVNJHkEzLtGcsNl9u6Kqp86O0EOsyso4Hs_JTpqkqp0NFomN78tB5BBB0FQcznZ9cm0qx9hjqblPLmJHcjxUFS8BhP0rUcatFKQqXvy71SMOnQe2rlFL-O996Nwqyruo3NlxUs1XffbS8-r-M3vhH2S6oS0YZehU4bDAh4zxNmvWImjdZ_UOX5UTBnQ6OYJxqRtDUx1VnV2UXHvEfBJYKIVaFXAVIZuTEG"/>
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/80 dark:bg-charcoal/80 backdrop-blur-sm flex items-center justify-center text-charcoal dark:text-white hover:text-primary transition-colors">
+<span class="material-icons-round text-xl">favorite_border</span>
+</button>
+<div class="quick-add absolute inset-x-4 bottom-4 opacity-0 transform translate-y-4 transition-all duration-300">
+<button class="w-full bg-white dark:bg-charcoal text-charcoal dark:text-white py-3 rounded-xl font-bold shadow-xl hover:bg-primary hover:text-white transition-colors flex items-center justify-center space-x-2">
+<span class="material-icons-round text-sm">add_shopping_cart</span>
+<span>Quick Add</span>
+</button>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-lg group-hover:text-primary transition-colors">Lumina Smart Watch</h3>
+<p class="font-display font-extrabold text-lg">$210.00</p>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400">Titanium Silver / OLED Display</p>
+<div class="mt-3 flex items-center space-x-2">
+<div class="flex text-primary">
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+</div>
+<span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">(312 reviews)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center">
+<button class="px-12 py-4 rounded-full font-bold border-2 border-charcoal dark:border-white hover:bg-charcoal dark:hover:bg-white hover:text-white dark:hover:text-charcoal transition-all">
+                Discover More Products
+            </button>
+</div>
+</main>
+<section class="max-w-7xl mx-auto px-6 mb-20">
+<div class="bg-charcoal dark:bg-gray-800 rounded-[2rem] overflow-hidden flex flex-col md:flex-row items-center">
+<div class="p-12 md:p-20 md:w-1/2 space-y-6">
+<h3 class="text-primary font-bold uppercase tracking-[0.2em] text-sm">Limited Season Offer</h3>
+<h2 class="text-4xl md:text-6xl font-display font-extrabold text-white leading-tight">
+                    The Winter <br/>Final Sale.
+                </h2>
+<p class="text-gray-400 text-lg">
+                    Take an additional 30% off already reduced styles. Last chance to grab your favorites before they're gone forever.
+                </p>
+<div class="pt-4">
+<button class="bg-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform">
+                        Explore Final Sale
+                    </button>
+</div>
+</div>
+<div class="md:w-1/2 h-[400px] md:h-[600px] w-full">
+<img alt="Sale Banner" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXOvHu55_DdksF0awiMUV7n7-KhjaNlQDllaIwPj6FlDXzwzyxtn1q9jQxvhI7pAOa0JxiCnJUSqscO_Fc5nkxSEiK3bizumQaSpm0rJxO8QhlyQE0DrI8fDudP3EeckWOlkg34jOBvwM83SPvEz8DyYKuTQ3XxW_fSBdyVBEywI3kh0Suo2AM-5UP7-HRq6rPEO-Lr5wTuJY9YaaGaoVFJbUdEuf_pMWaK7sp9etBCrMgzAyobSE44RHzZyE5bBZTfDI92dLKeror"/>
+</div>
+</div>
+</section>
+<section class="bg-gray-100 dark:bg-gray-900 py-20">
+<div class="max-w-3xl mx-auto px-6 text-center space-y-8">
+<div class="flex justify-center">
+<span class="material-icons-round text-5xl text-primary">mail_outline</span>
+</div>
+<h2 class="text-3xl font-display font-extrabold">Join the Inner Circle</h2>
+<p class="text-gray-600 dark:text-gray-400">Get early access to drops, exclusive discounts, and trend reports. No spam, only style.</p>
+<form class="flex flex-col sm:flex-row gap-4">
+<input class="flex-1 px-6 py-4 rounded-full border-none focus:ring-2 focus:ring-primary dark:bg-gray-800 text-charcoal dark:text-white" placeholder="Your best email address" type="email"/>
+<button class="bg-charcoal dark:bg-white text-white dark:text-charcoal px-8 py-4 rounded-full font-bold hover:bg-primary transition-colors" type="submit">
+                    Join Now
+                </button>
+</form>
+<p class="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Join 45,000+ others already in the loop</p>
+</div>
+</section>
+<footer class="bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 pt-20 pb-10">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-12 mb-20">
+<div class="col-span-2 space-y-6">
+<a class="text-2xl font-display font-extrabold tracking-tighter text-charcoal dark:text-white" href="#">
+<span class="text-primary italic">T</span>RENDLY
+                </a>
+<p class="text-gray-500 dark:text-gray-400 max-w-xs text-sm leading-relaxed">
+                    Designed for those who lead, not follow. Premium quality e-commerce curated for modern lifestyles.
+                </p>
+<div class="flex space-x-4">
+<a class="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-800 flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="#">
+<span class="material-icons-round text-sm">facebook</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-800 flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="#">
+<span class="material-icons-round text-sm">alternate_email</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-800 flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="#">
+<span class="material-icons-round text-sm">smart_display</span>
+</a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold uppercase text-xs tracking-widest">Shop</h4>
+<ul class="text-sm space-y-2 text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Men's Collection</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Women's Collection</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Accessories</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Limited Editions</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold uppercase text-xs tracking-widest">Support</h4>
+<ul class="text-sm space-y-2 text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Order Status</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Size Guide</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold uppercase text-xs tracking-widest">Company</h4>
+<ul class="text-sm space-y-2 text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 border-t border-gray-100 dark:border-gray-800 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-xs text-gray-400 font-medium">© 2024 TRENDLY INTERNATIONAL. ALL RIGHTS RESERVED.</p>
+<div class="flex items-center space-x-6">
+<img alt="Visa" class="h-4 opacity-50 grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOzflaDhAybkTpNpT3xr05Qqsw50HHhINuaHXi6sxqBWnVB0XMIaxA92moC4eRPh93rrYHR3qhkS8f_7cLChuPazDaEqXw9OILESnmaaMOB38_apFfEislP7sr1gnl7QZzqjxXgy5VmQVKrwVLcgKojltUP8gR7Zyx3lSAYYROYkRZTYM3HHutvaIabF-2PvL5Tk68jTACPCjBSfURHHW3AaZtXLCKf69xib9-hcfKxS4d6GyZWc6LOvwRB4i2vTwLsH83RxHBIcm-"/>
+<img alt="Mastercard" class="h-6 opacity-50 grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwDK1Rtb-PDfW6aASlNPW_LKd_rGNAjoAkfd_1AOtoIwvujxYlL7gQE9PeRoT_p7q3TEbJNA_q591eO4Y4um20StH2jOmsTgbFWIxX9U1PQFUvZVvZTW9VNm48q9n29JIGjyv_KbYQdHWMTZub7WK9iiIQzGMn1lADvNpCMppSbKMBPqV220F0pyaBZCCVyPiiLTlWQo7Kyd9pxSL-yDqF8OCKATeNYQvcutAiksULSHGIhGvP-78SYCFAtGEdMNpgNEdLk5yH7lEm"/>
+<img alt="Paypal" class="h-4 opacity-50 grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyjUFPm7EQBOtUgY6zxMDbZjuviU41cQBn8a1yAdUdQ15aZLjD6bSMJR1KOBLoZVgupA9LDz5eKnvc3JkbcMz0CY5HD-KyN7jMz5cVwBvZeHFm0N-bfNuYljJPIA4-65jfMqzB6aNIvn6jPQIq-sFYfxzUWBiEBpr8jigt0uaVx7pTWq_8Jy9lfQ7by2Fc77FyxiKhD1k_7XlBs0lqsSrjJ6VenJwRFgw_bMa15Q4o2mapHs2PL9PHJDp6A_wwmjTAWlqa60bTV9M9"/>
+<img alt="Apple Pay" class="h-6 opacity-50 grayscale hover:grayscale-0 transition-all dark:invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL0wRqcwmv3VVVQs21hRLj-iokVeU2gj3eh3Bg8NnfrszPL8c3RdTYUbag0AEDXpVesn9NNndM7x-eFDufJcaOjb5SnY8OS8faHm8LnbiRG7D2Wx7ns_4MNjBMbnsM-aYfdW0QZW4gpZihD5I4BxRYj6N1mlypZoFxxrmrFdWFMUJRlcbsbp_Ce92mFxDgf--EL1g71ojwYq7IOOCL-DmMU86v9CumdwK1FQixSpl-QYIdKQnwOsvddgAyH4hd-qh5mmpR1NL7qsyv"/>
+</div>
+</div>
+</footer>
+
+</body></html>

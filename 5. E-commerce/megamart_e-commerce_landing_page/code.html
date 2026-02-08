@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MegaMart - Your One-Stop Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#008ECC",
+                        "background-light": "#F3F9FB",
+                        "background-dark": "#0F172A",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-white dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-200">
+<div class="bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 py-2 text-xs text-slate-500 dark:text-slate-400">
+<div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+<p>Welcome to worldwide Megamart!</p>
+<div class="flex gap-6 items-center">
+<span class="flex items-center gap-1"><i class="material-icons-outlined text-sm">location_on</i> Deliver to <span class="font-semibold text-slate-800 dark:text-slate-200">423651</span></span>
+<span class="flex items-center gap-1"><i class="material-icons-outlined text-sm">local_shipping</i> Track your order</span>
+<span class="flex items-center gap-1"><i class="material-icons-outlined text-sm">percent</i> All Offers</span>
+</div>
+</div>
+</div>
+<header class="bg-white dark:bg-background-dark border-b border-slate-100 dark:border-slate-800 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 py-4">
+<div class="flex items-center justify-between gap-8">
+<div class="flex items-center gap-3 shrink-0">
+<div class="bg-primary/10 p-2 rounded-lg">
+<i class="material-icons-outlined text-primary text-3xl">shopping_bag</i>
+</div>
+<span class="text-2xl font-bold text-primary tracking-tight">MegaMart</span>
+</div>
+<div class="flex-1 max-w-2xl relative">
+<div class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+<i class="material-icons-outlined text-slate-400">search</i>
+</div>
+<input class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-xl py-3 pl-10 pr-12 focus:ring-2 focus:ring-primary text-sm" placeholder="Search essentials, groceries and more..." type="text"/>
+<div class="absolute inset-y-0 right-3 flex items-center">
+<i class="material-icons-outlined text-slate-400">list</i>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="flex items-center gap-2 font-medium hover:text-primary transition-colors">
+<i class="material-icons-outlined">person_outline</i>
+<span>Sign Up/Sign In</span>
+</button>
+<div class="w-px h-6 bg-slate-200 dark:bg-slate-700"></div>
+<button class="flex items-center gap-2 font-medium hover:text-primary transition-colors relative">
+<i class="material-icons-outlined">shopping_cart</i>
+<span>Cart</span>
+<span class="absolute -top-1 -left-1 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<nav class="bg-white dark:bg-background-dark border-b border-slate-100 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex items-center gap-8 py-3 text-sm font-medium text-slate-600 dark:text-slate-400 overflow-x-auto hide-scrollbar">
+<a class="bg-primary text-white px-4 py-2 rounded-full flex items-center gap-1 whitespace-nowrap" href="#">Groceries <i class="material-icons-outlined text-sm">keyboard_arrow_down</i></a>
+<a class="flex items-center gap-1 whitespace-nowrap hover:text-primary" href="#">Premium Fruits <i class="material-icons-outlined text-sm">keyboard_arrow_down</i></a>
+<a class="flex items-center gap-1 whitespace-nowrap hover:text-primary" href="#">Home &amp; Kitchen <i class="material-icons-outlined text-sm">keyboard_arrow_down</i></a>
+<a class="flex items-center gap-1 whitespace-nowrap hover:text-primary" href="#">Fashion <i class="material-icons-outlined text-sm">keyboard_arrow_down</i></a>
+<a class="flex items-center gap-1 whitespace-nowrap hover:text-primary" href="#">Electronics <i class="material-icons-outlined text-sm">keyboard_arrow_down</i></a>
+<a class="flex items-center gap-1 whitespace-nowrap hover:text-primary" href="#">Beauty <i class="material-icons-outlined text-sm">keyboard_arrow_down</i></a>
+<a class="flex items-center gap-1 whitespace-nowrap hover:text-primary" href="#">Home Improvement <i class="material-icons-outlined text-sm">keyboard_arrow_down</i></a>
+<a class="flex items-center gap-1 whitespace-nowrap hover:text-primary" href="#">Sports &amp; Luggage <i class="material-icons-outlined text-sm">keyboard_arrow_down</i></a>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-4 py-8 space-y-16">
+<section class="relative group">
+<div class="bg-[#2D3142] dark:bg-slate-800 rounded-3xl overflow-hidden aspect-[21/9] flex items-center px-12 md:px-20">
+<div class="max-w-lg space-y-6 relative z-10">
+<p class="text-white/80 font-medium tracking-wide uppercase">Best Deal Online on smart watches</p>
+<h1 class="text-5xl md:text-6xl font-bold text-white leading-tight">SMART WEARABLE.</h1>
+<p class="text-3xl text-white/90">UP TO 80% OFF</p>
+<div class="flex gap-2 pt-4">
+<span class="w-8 h-1 bg-white rounded-full"></span>
+<span class="w-2 h-1 bg-white/30 rounded-full"></span>
+<span class="w-2 h-1 bg-white/30 rounded-full"></span>
+<span class="w-2 h-1 bg-white/30 rounded-full"></span>
+<span class="w-2 h-1 bg-white/30 rounded-full"></span>
+</div>
+</div>
+<div class="absolute right-20 top-1/2 -translate-y-1/2 hidden md:block">
+<img alt="Smart Watch" class="w-80 h-auto drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSMArrbloFOasAp8CK8cgJV4s5xU5aElTHsAitcthSoSnuuXzAd33kapSKao7uiTZNpDRaMXjDM2VliXXgsj8ZGPu4sMMhA5LcPjCBHIf4lkdtW2DUc-l-jR3i-vT6Tjulx-QBBFiO2pmeHnZUZHu2KCz4nrJUVRXD79oCKZsYUmxGLxbIE5xGX2SzeHHVsInimEq6Ab_5oj6jdDPplPy7z_8n-HN8-icxzwK-ffEaPFkmJca_BSNaL6GI4tDZxtCsq1Nmw2hyoAyu"/>
+</div>
+<button class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white p-3 rounded-full transition-all opacity-0 group-hover:opacity-100">
+<i class="material-icons-outlined">chevron_left</i>
+</button>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white p-3 rounded-full transition-all opacity-0 group-hover:opacity-100">
+<i class="material-icons-outlined">chevron_right</i>
+</button>
+</div>
+</section>
+<section>
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="text-xl font-bold text-slate-800 dark:text-slate-100 border-b-2 border-primary inline-block pb-1">Grab the best deal on <span class="text-primary">Smartphones</span></h2>
+</div>
+<a class="text-sm font-medium text-slate-500 hover:text-primary flex items-center gap-1" href="#">View All <i class="material-icons-outlined text-sm">chevron_right</i></a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+<div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-4 relative group cursor-pointer hover:shadow-xl hover:shadow-primary/5 transition-all">
+<span class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-4 rounded-bl-2xl rounded-tr-2xl leading-tight">56%<br/>OFF</span>
+<div class="aspect-square mb-4 bg-white dark:bg-slate-700 rounded-xl flex items-center justify-center p-4">
+<img alt="Galaxy S22 Ultra" class="h-full object-contain group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVaSdzRJDJSZIrexT58nAmK5ZOlqi8Th6tAxGGSR9kfZf2wkH541ErIDNb_xUCvoEYFQc_TvBWvqEjEGw1kw3fFSkIeulRHrs3w0gWHpHlrj4yShwrbgvUJcTtzHJq5kuCKMLt3CPKyR-fnv-OUoX3RcXFWPj-KiFR09iYcjSCxmC2fsYGOwir2xlIAEd19mxqahn1JRYlwPWaW5YJ8-bp7p62LGyRaQw2aGPnpxFqg2RoDwnO6uTGr0HdzoSu3ZHn-qTlBIx4FSRI"/>
+</div>
+<div class="space-y-1">
+<h3 class="text-sm font-semibold truncate dark:text-slate-200">Galaxy S22 Ultra</h3>
+<div class="flex items-center gap-2">
+<span class="font-bold text-slate-800 dark:text-white">₹32999</span>
+<span class="text-xs text-slate-400 line-through">₹74999</span>
+</div>
+<p class="text-xs text-green-600 font-medium pt-1 border-t border-slate-200 dark:border-slate-700 mt-2">Save - ₹32999</p>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-4 relative group cursor-pointer hover:shadow-xl hover:shadow-primary/5 transition-all">
+<span class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-4 rounded-bl-2xl rounded-tr-2xl leading-tight">56%<br/>OFF</span>
+<div class="aspect-square mb-4 bg-white dark:bg-slate-700 rounded-xl flex items-center justify-center p-4">
+<img alt="Galaxy M13" class="h-full object-contain group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnowRRyjlNaA8flqLF9P0NEurs11n5cIVele2xtYs4SZbhlb4KpCICeLq403jYqr_xlX-6L2U4_P_DaddJdD5QN40VTyBeI0nJCAh7sNHYDkD635UxPJ8t-uhBvYr6EZZuZYk-2chdtO8yk7HSEK2zDpGheM9INmPujWxTeVgnxm3Y0zfqsuy6ren6rQux3WfZwCLwcyJ7uAM1Z8_zN8gnv916awWPJe1V80yURLXqFcppmV7Eg1JqZwMlLlYvsxyUlVEM-cCo-GN5"/>
+</div>
+<div class="space-y-1">
+<h3 class="text-sm font-semibold truncate dark:text-slate-200">Galaxy M13 (4GB | 64GB)</h3>
+<div class="flex items-center gap-2">
+<span class="font-bold text-slate-800 dark:text-white">₹10499</span>
+<span class="text-xs text-slate-400 line-through">₹14999</span>
+</div>
+<p class="text-xs text-green-600 font-medium pt-1 border-t border-slate-200 dark:border-slate-700 mt-2">Save - ₹4500</p>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-4 relative group cursor-pointer hover:shadow-xl hover:shadow-primary/5 transition-all">
+<span class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-4 rounded-bl-2xl rounded-tr-2xl leading-tight">56%<br/>OFF</span>
+<div class="aspect-square mb-4 bg-white dark:bg-slate-700 rounded-xl flex items-center justify-center p-4">
+<img alt="Galaxy M33" class="h-full object-contain group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb95-PK72SeYxhb46lXui-9cpgBUQ3_Umy6fGxPCSB4qGvP5jyFSkUHPHr8IKSZ67jUGzgg4VGnuy8AfxvUiSDa6nCb7us3qmMktA2tzxvHleizRgADlkrkCmQKJ3wUt3G5qkCfZ0Swf13e87bBelu8yO5kbiy7X2Vvx0ErE9A_2fuSDPjPh67q9T-EY74ReUJ2bEUAeQJtF5f9dqK60ipzn8d1lKWPDWMyPsjLrgtfUVDuyoVAQLWwYlevh-rhVx8N0Gd-6orsMVW"/>
+</div>
+<div class="space-y-1">
+<h3 class="text-sm font-semibold truncate dark:text-slate-200">Galaxy M33 (4GB | 64GB)</h3>
+<div class="flex items-center gap-2">
+<span class="font-bold text-slate-800 dark:text-white">₹16999</span>
+<span class="text-xs text-slate-400 line-through">₹24999</span>
+</div>
+<p class="text-xs text-green-600 font-medium pt-1 border-t border-slate-200 dark:border-slate-700 mt-2">Save - ₹8000</p>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-4 relative group cursor-pointer hover:shadow-xl hover:shadow-primary/5 transition-all">
+<span class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-4 rounded-bl-2xl rounded-tr-2xl leading-tight">56%<br/>OFF</span>
+<div class="aspect-square mb-4 bg-white dark:bg-slate-700 rounded-xl flex items-center justify-center p-4">
+<img alt="Galaxy M53" class="h-full object-contain group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZm928KAZzer5_S3ijTksSCsWBNx_kMPQJawjcn0FjkWc-KCxUBDmS5X3yxFscwj3ktDu9Vn5irjmKG0i05-YVoMaeu97fZQe999t62q5Q62QHoQ5pWt08CHFJoZX5oSl4s9gUh-l3Gf2VunC8hSKfBTuUI86lsA9W4XhUxuIce--D0dLJBzXVYdeNbErOn6VCtWDjSgvtA8jJFEnE_uzBcAEqxXaHXnIQRbYGYT6qJ1E-beqSXdTxLkWc-hnZ8pwO0m2yzv-855if"/>
+</div>
+<div class="space-y-1">
+<h3 class="text-sm font-semibold truncate dark:text-slate-200">Galaxy M53 (4GB | 64GB)</h3>
+<div class="flex items-center gap-2">
+<span class="font-bold text-slate-800 dark:text-white">₹31999</span>
+<span class="text-xs text-slate-400 line-through">₹40999</span>
+</div>
+<p class="text-xs text-green-600 font-medium pt-1 border-t border-slate-200 dark:border-slate-700 mt-2">Save - ₹9000</p>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-4 relative group cursor-pointer hover:shadow-xl hover:shadow-primary/5 transition-all">
+<span class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-4 rounded-bl-2xl rounded-tr-2xl leading-tight">56%<br/>OFF</span>
+<div class="aspect-square mb-4 bg-white dark:bg-slate-700 rounded-xl flex items-center justify-center p-4">
+<img alt="Galaxy S22 Ultra" class="h-full object-contain group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjnDSL1rwYV-qr4Qa0p9X2Y7Ktj7ONn6sL5LJ7rLng2giDhI27AjCaCAFY5J1RSxjCDY2wo4d01FDy00Yf6F1QCyUOvrTiugC4HDahH-DPqx4hji24B01mF_K13jU96TafPDl2Lnz0heUyh6dmfYV53TMaF5N3P7ZcWS6RomZ9fm04U6bBnINFdm4HqZ9qkiWLajsKZqjJ4EmZXb5v_BzhljPApog4WSGJfaVXnUV23Zr0p0zAhkHIcLx5slGseUQspcPJLxdxOW0r"/>
+</div>
+<div class="space-y-1">
+<h3 class="text-sm font-semibold truncate dark:text-slate-200">Galaxy S22 Ultra</h3>
+<div class="flex items-center gap-2">
+<span class="font-bold text-slate-800 dark:text-white">₹67999</span>
+<span class="text-xs text-slate-400 line-through">₹85999</span>
+</div>
+<p class="text-xs text-green-600 font-medium pt-1 border-t border-slate-200 dark:border-slate-700 mt-2">Save - ₹18000</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="flex justify-between items-end mb-10">
+<h2 class="text-xl font-bold text-slate-800 dark:text-slate-100 border-b-2 border-primary inline-block pb-1">Shop From <span class="text-primary">Top Categories</span></h2>
+<a class="text-sm font-medium text-slate-500 hover:text-primary flex items-center gap-1" href="#">View All <i class="material-icons-outlined text-sm">chevron_right</i></a>
+</div>
+<div class="flex flex-wrap justify-between gap-8">
+<div class="flex flex-col items-center gap-3 group cursor-pointer">
+<div class="w-24 h-24 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center p-4 border-2 border-transparent group-hover:border-primary transition-all">
+<img alt="Mobile" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg-lhTl-wZcxtOeGlIu9kIjQ4GtlFDAoh9IKqzcJhZZ555UUyOdcgGXoNgLf54jvSzWwt-9nH20jWXzNEmbJZ_3jWJ5mhkbhnJxYc4NqnndmfK7Q9lvCIu6AzlaXc57kRBEj2lIHFAHJ6gI1PnM1aioKzYHW9ILfrV073nPYo5Z2MgFnNsgQH-o9buNfzsX11PBYr9JxtP7MiVguPjMN1SBli-wLZLUx9eEzb1Idszy5EFOVzTl5BI77SXq1KEzwLU-_O0qHN-WIJd"/>
+</div>
+<span class="text-sm font-semibold text-slate-600 dark:text-slate-400 group-hover:text-primary">Mobile</span>
+</div>
+<div class="flex flex-col items-center gap-3 group cursor-pointer">
+<div class="w-24 h-24 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center p-4 border-2 border-transparent group-hover:border-primary transition-all">
+<img alt="Cosmetics" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiyi87XiFKUs3FoGhtfJlEbzD0nsXLL2nNcWYOk3LcsanQTKcxOvvSEo_klgrW0Mc7gsBoBoFUU6_kIxlhwmDzhlpNu1J5e2iCKYTXo5P88ECNzUjm9G28l5VK2yq8wLIcZTVYGnitHErpkgQYtQ0vAUCyrN-p9PiEt486htYRoDYaNt7f9HFNNOtB6dxFU5zTc0mX4hX-IdpNPwYIykzQJSKG-l2w7NfNdrpn_Cq_TiTrWV4lWs2n4POhX5CDk2DcqzIli3VOysQO"/>
+</div>
+<span class="text-sm font-semibold text-slate-600 dark:text-slate-400 group-hover:text-primary">Cosmetics</span>
+</div>
+<div class="flex flex-col items-center gap-3 group cursor-pointer">
+<div class="w-24 h-24 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center p-4 border-2 border-transparent group-hover:border-primary transition-all">
+<img alt="Electronics" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCraz1ioDGKX15iUE3UuyBJsnMUJhDQbCX2wCYicwt8axBV_-k4epacOuW-A49xzYgPDZ3wPLe6MBsVwPkCd7AacNmalDcmelttZo9pxhRpY940YLJ69mRgN-rxotdgkM5kOB52jnPr98KW3CqH4VUGomatjYhL67djc3G14rbQojenCetYeYilrDR68uJcMUMRezjZZpL3Oj8uHFTVQyYraLV0IMUS7sb420dY4SZKJM8q5LJBE8qpi6RQNCzhROk9xpyhBSsNpHvT"/>
+</div>
+<span class="text-sm font-semibold text-slate-600 dark:text-slate-400 group-hover:text-primary">Electronics</span>
+</div>
+<div class="flex flex-col items-center gap-3 group cursor-pointer">
+<div class="w-24 h-24 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center p-4 border-2 border-transparent group-hover:border-primary transition-all">
+<img alt="Furniture" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0Pm0cAO514B1M5c1s3l-g0jeQei-1fAh-5lhUsaujTJ46IT6MjeC0mjPcADU6F5KfjbcQnTBXkfGEZlkgGine0jPIqcId3v6UYKhrwXHXiZgKp7YZ5wY0GDRMnFmo7ocTe75a9ubBVz8Vwmeq8QuZWdGFSzmZ0ux6tqaP8RfiufSnvbBAJzdVA4dKj1PtsU-1shgyZN2EDXNSspujHzcdH7CxrnMN1iPIL9-iLv-39p4_ksBEcXl0K9tR0OQ-69hqaIJGuGA1bKA3"/>
+</div>
+<span class="text-sm font-semibold text-slate-600 dark:text-slate-400 group-hover:text-primary">Furniture</span>
+</div>
+<div class="flex flex-col items-center gap-3 group cursor-pointer">
+<div class="w-24 h-24 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center p-4 border-2 border-transparent group-hover:border-primary transition-all">
+<img alt="Watches" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsB3I33doUncTw7gYlRFXvUupmi4pp6GVYfKUEDo5QZVlZTShRx26kbbEMrKL_UJzupUg_wH9HCBAaIz-cmrZZlRncCX4wXMSQyIOxvvXO29huzZZR_36SFKBnUA47LbUtkKkISVXvG_DfyGmxhRZhzbnkOrHwAhHgKjkQTnDnhxAs096iXkrP13SEfnl6R7Mq6_wnlQalOuHUgcJReNm3fwZF0SiYbJ_fgzsMvMrrSbg7Tp-TMIkN8GSulkmXMzkebI6M4hjS3_pq"/>
+</div>
+<span class="text-sm font-semibold text-slate-600 dark:text-slate-400 group-hover:text-primary">Watches</span>
+</div>
+<div class="flex flex-col items-center gap-3 group cursor-pointer">
+<div class="w-24 h-24 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center p-4 border-2 border-transparent group-hover:border-primary transition-all">
+<img alt="Decor" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2wKYcpB_4Mc-pcbqgnk4Uxbw8C59wbsqnPD3WOahaV7qf0a1zoQS8ZmOOlGS1hZ2MCV4u1wCLZG5tA5-hKJO1ONNdiqFnNX20dWx85GjnG0Y52Csxa3NRWbh-zniRTYUEz0YR5B_qJ9nAbHiQwEGnllrwN66yl3CfpF-MYqDowfY-NXXF6zlYLgONtzgP-PQStqToesC1xWAJslbqw_QsrF79n1yB7F1nhQlZeY260aU6od7EDWWjeO82YWhLV1TNJOp0S2fyvswi"/>
+</div>
+<span class="text-sm font-semibold text-slate-600 dark:text-slate-400 group-hover:text-primary">Decor</span>
+</div>
+<div class="flex flex-col items-center gap-3 group cursor-pointer">
+<div class="w-24 h-24 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center p-4 border-2 border-transparent group-hover:border-primary transition-all">
+<img alt="Accessories" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdWdq-wG-JYSn5OwKpLs7dE1Hrlrx3V9_LTHnsnDPf2k0Oz8bZvbypVBWjPCFoMDTxwOtmli2YnV4hd9V2_aKkQyeI3sM2lepSronf85hWRcBBgbT8gZlqL4jp1-s1653QjWsGGenewByt4sAvySROw9LLl0YpxxMoymskhGpSMj0hyDGMbLdD5Ar2Qkid0HKDZfpm6zjAboXbK2dI1FXDgpZvcA2F42YKBoYo-JCrd8AXDi3sSfvclucKLJldjFt8yNBYnEp02Ipw"/>
+</div>
+<span class="text-sm font-semibold text-slate-600 dark:text-slate-400 group-hover:text-primary">Accessories</span>
+</div>
+</div>
+</section>
+<section>
+<div class="flex justify-between items-end mb-8">
+<h2 class="text-xl font-bold text-slate-800 dark:text-slate-100 border-b-2 border-primary inline-block pb-1">Top <span class="text-primary">Electronics Brands</span></h2>
+<a class="text-sm font-medium text-slate-500 hover:text-primary flex items-center gap-1" href="#">View All <i class="material-icons-outlined text-sm">chevron_right</i></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-slate-900 rounded-2xl p-6 flex items-center justify-between text-white overflow-hidden relative group h-44">
+<div class="space-y-4 relative z-10">
+<span class="text-[10px] uppercase font-bold tracking-widest bg-white/20 px-2 py-1 rounded">IPHONE</span>
+<div class="flex items-center gap-2">
+<img alt="Apple Logo" class="w-6 h-6 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXgRQIJFOT68zQXziwgcTca0cUFb3SpUqQxc8pGnWlz55bcMru2eadDGcVZiSmpndK9JE3qG91gv15euPZn3JIXARyKCS8aXUv818aYlPcjkNrCIl99HI3Z1sHL5NLI93uGOi_xg-SNoDcK7XnnSwCq1jDbMsbXvht8SSbC8y1aYYYvwLUJAlyizHNaP0KB5XgpgTGG17NLVe1kRSB2HzLyQE9BWywIJ9_jWD5eNnNOqB5nmlYvPmmqJJxHyb8LqcIidL9JBFAytfJ"/>
+</div>
+<p class="text-lg font-bold">UP TO 80% OFF</p>
+</div>
+<img alt="iPhone" class="h-40 rotate-12 -mr-6 group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5hpyS8Re8uzxVNM6HBrVY0eIS2ltKfnhzoPvL-1C0gjqOvdOxfgaSBz_yUqDctcx7ruLCw9XlUgW6QdsL1Hh635Na721G_zZq5VBVWexoTk0tFlgsz8SMtCze9oFRYCJhN0LoYy6-srAA96ioTRLdpHthV2jnSJh4_ovT3JtfkwQMUiU5sOF2Dj4c6HqmXwc84OGk3vzyKdEv4mF6Ain2H_7PbIxqdtzrbTsLHOYE_aQld3OkTh2rOnCp_YXemAxO_tSSmlPanqW-"/>
+</div>
+<div class="bg-amber-50 rounded-2xl p-6 flex items-center justify-between text-slate-800 overflow-hidden relative group h-44">
+<div class="space-y-4 relative z-10">
+<span class="text-[10px] uppercase font-bold tracking-widest bg-amber-200 px-2 py-1 rounded">REALME</span>
+<div class="bg-amber-400 px-3 py-1 rounded font-black text-xs inline-block">realme</div>
+<p class="text-lg font-bold">UP TO 80% OFF</p>
+</div>
+<img alt="Realme Phone" class="h-40 group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs_zuNlcsTZ75P-z9YWrUd04if3iVKBXmqZwTB38Ink3Fhj4_NwveP_teJhPf0tcxCV52UgwG965UDyre8ClRby_PUkqAVyf_dbsypi_qH-QZiYSeLvifcpxGNorXRf5hv1cGYdsLe8cVtR6d6QJu3g1ItAkaoLsT8Tz9F6JQWsQ3Uks7FPEJ9gI0NV8ikK7wItEtY9f9ckLaCALt8mPgEASNp7oy9_Ld4sJd50fbbtpkDlfP68K-KNTJ5178CAGuDH1Xew78j7SVQ"/>
+</div>
+<div class="bg-orange-50 rounded-2xl p-6 flex items-center justify-between text-slate-800 overflow-hidden relative group h-44">
+<div class="space-y-4 relative z-10">
+<span class="text-[10px] uppercase font-bold tracking-widest bg-orange-200 px-2 py-1 rounded">XIAOMI</span>
+<div class="bg-orange-500 w-8 h-8 rounded flex items-center justify-center">
+<span class="text-white font-bold text-xs">mi</span>
+</div>
+<p class="text-lg font-bold">UP TO 80% OFF</p>
+</div>
+<img alt="Xiaomi Phone" class="h-40 group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkrmdni5nA1gkvHMJc_2AiCsN6ZdVkMc3ZSYvvKAqJaLmZf80V-h61VbJE7ThUFmZdVKMRgxmh0abts_pBPD481VSPgaN_BuvQ7jXG1zA0uiRkgwP6aytHE5DzdACkUuoYRJthHL24JX2-w_yseF9yaMSRGc01tcceAT02AGyLPySgb2mokYAfAMCdZKv9qksWVhxhpdfssi0wTifGgKDlQaXeXEl0q4IzGvtifw8oTDesML4K5PiNhy4L4vAPcTftocS3j7tLX_Nv"/>
+</div>
+</div>
+<div class="flex justify-center gap-2 mt-6">
+<span class="w-2 h-2 bg-primary rounded-full"></span>
+<span class="w-2 h-2 bg-slate-200 dark:bg-slate-700 rounded-full"></span>
+<span class="w-2 h-2 bg-slate-200 dark:bg-slate-700 rounded-full"></span>
+<span class="w-2 h-2 bg-slate-200 dark:bg-slate-700 rounded-full"></span>
+<span class="w-2 h-2 bg-slate-200 dark:bg-slate-700 rounded-full"></span>
+<span class="w-2 h-2 bg-slate-200 dark:bg-slate-700 rounded-full"></span>
+</div>
+</section>
+<section>
+<div class="flex justify-between items-end mb-8">
+<h2 class="text-xl font-bold text-slate-800 dark:text-slate-100 border-b-2 border-primary inline-block pb-1">Daily <span class="text-primary">Essentials</span></h2>
+<a class="text-sm font-medium text-slate-500 hover:text-primary flex items-center gap-1" href="#">View All <i class="material-icons-outlined text-sm">chevron_right</i></a>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+<div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-4 flex flex-col items-center text-center group cursor-pointer hover:shadow-lg transition-all">
+<div class="aspect-square w-full mb-3 bg-white dark:bg-slate-700 rounded-xl flex items-center justify-center p-4">
+<img alt="Daily Essentials" class="w-full h-full object-contain group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYxxt8DLYV4MJRuSr6T8BUqh7r0sfQ_--t_KhtUyuwxQycp0X6QixfSoqjCeYIeXCgcx_d4OB0bOQW4u2b4-O1QLWK60KkZgAoKTpZI-9SW_tp8hQ1Nk36-I5zafNnzEFo07jH5fv1gHASl7ZhugYUXkeGaoemY4L11aNxVS59tDqf2v-tRZI4YaMAfWpOcPNDmlZn0VPpSpu0LaedhSWR0DsTGR3XVt18o0v_oQf9aKimlJi6UOjSKV-f2yikc7hxJnajNfF9DA6E"/>
+</div>
+<p class="text-[10px] text-slate-400 font-medium uppercase mb-1">Daily Essentials</p>
+<p class="text-sm font-bold text-slate-700 dark:text-slate-200">UP TO 50% OFF</p>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-4 flex flex-col items-center text-center group cursor-pointer hover:shadow-lg transition-all">
+<div class="aspect-square w-full mb-3 bg-white dark:bg-slate-700 rounded-xl flex items-center justify-center p-4">
+<img alt="Vegetables" class="w-full h-full object-contain group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqLkJc4slypOZwKZM-Ppv6KQjdFyQI9DliqO-Se9THLP70KeUcsxWh79HRK-1I-P_GnvpeCWEJUOWa3umtoGpRV5Az04yKAcqGjsxicIKh4vNExE_5PqDK3Tmd-81PE_z_pvAhLoFL2OJSsFHiGQE6p6Sxb5fGOASAjNosIjo4V9apA7blvC4f6FUpNS0f4eY8nk0PRteLhxXHhO-LcO89vsJakLDe4B5mnoMV2Ut-H4pkVQr6RTYNIWzA_9C54OeXC93OXcHyIolp"/>
+</div>
+<p class="text-[10px] text-slate-400 font-medium uppercase mb-1">Vegetables</p>
+<p class="text-sm font-bold text-slate-700 dark:text-slate-200">UP TO 50% OFF</p>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-4 flex flex-col items-center text-center group cursor-pointer hover:shadow-lg transition-all">
+<div class="aspect-square w-full mb-3 bg-white dark:bg-slate-700 rounded-xl flex items-center justify-center p-4">
+<img alt="Fruits" class="w-full h-full object-contain group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO_1VQbW3GN0G5nsrlzeUNrc2LiBqqjH46CS9MdMJ0OOAgXUf-dIkG5iQnMVplOq1FJ244d5Cv02uNc2vFjdAQqFWkcOfQ97oCiNULKl34UO0lVd_iBGbpHjtWYt-QVfQ1EooMgMi-7wFZZ_G2_mfrYUVKfoxg8vKEOowycPs9Gve0DxIsonp295VxnC31qUjBa5Qa21AGckac2vroqAS6KqYIf6y9CzylZ-4ttdc5QwndgIJAyPGn2fITlkgntthPk-gyP3OhDZ1r"/>
+</div>
+<p class="text-[10px] text-slate-400 font-medium uppercase mb-1">Fruits</p>
+<p class="text-sm font-bold text-slate-700 dark:text-slate-200">UP TO 50% OFF</p>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-4 flex flex-col items-center text-center group cursor-pointer hover:shadow-lg transition-all">
+<div class="aspect-square w-full mb-3 bg-white dark:bg-slate-700 rounded-xl flex items-center justify-center p-4">
+<img alt="Strawberry" class="w-full h-full object-contain group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbv8axjnhMLAwumRBRm2sELhdmIxS1IgTiS-RSEXJ0dLpMv13cZe-mgeB0jalqipI-gbYG3mYimLUmyclLr7yR0cXil-6YHr0m5nqq--J8kJ7-S3KnB9xGca4SJMa8DFrH7_cw009zPKwXm_gDBreOsY6LM3xlxkpB2oCS2TlGNqiPPzgA6lRQfzcXB_uTD_iZAxbt_C7zHfVuYlxLjZ8sU6XGrKEY31ti-kJvcE5G1NNwWJ7EuihmgqJe2DAiKaMzpdESNhxgtR7L"/>
+</div>
+<p class="text-[10px] text-slate-400 font-medium uppercase mb-1">Strawberry</p>
+<p class="text-sm font-bold text-slate-700 dark:text-slate-200">UP TO 50% OFF</p>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-4 flex flex-col items-center text-center group cursor-pointer hover:shadow-lg transition-all">
+<div class="aspect-square w-full mb-3 bg-white dark:bg-slate-700 rounded-xl flex items-center justify-center p-4">
+<img alt="Mango" class="w-full h-full object-contain group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIxbRfTuryRymoC5VUWKPqd1boG9gch3yYQUfXuw7o9oQzpv2cUSR4D414iSlhQv-k17JRrJH5EghBNmzG7AVOTLOCKmzUHiMQQThcB5iWP8eLzE8pNX1KRpRFcJx0ls3iCocubpPxjF_LwVmJz6gXtfevB9M0_rqgheeN3YfdTIkvwG7lXyvV62PD54_yaJfeLYmVeonUuJ3Y59u7zaNV-G08WWBrjwJJgbl7uA3rzrxO0a_R6vlHU-F71Y2XS7YbSyEPdHHq2C9C"/>
+</div>
+<p class="text-[10px] text-slate-400 font-medium uppercase mb-1">Mango</p>
+<p class="text-sm font-bold text-slate-700 dark:text-slate-200">UP TO 50% OFF</p>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-4 flex flex-col items-center text-center group cursor-pointer hover:shadow-lg transition-all">
+<div class="aspect-square w-full mb-3 bg-white dark:bg-slate-700 rounded-xl flex items-center justify-center p-4">
+<img alt="Cherry" class="w-full h-full object-contain group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD45EcKtPBs68M19ymEHXazPjR12-VQQlXBuSPhsM85u2ShcXXuXcc14pbi1GswD4uKRGgkDi_dQGcuKkBnOEOd8vUQ9fqeRqeCJvgG5G8HpE95S2UN_LCSMs0MhaQFERA5LXY_ZUxReVhj4wNbyHCM_zsXOZfe7jN3kFkpsnuWgGqekYjzVRtdRpniQH1PYXarmRw8D6o84srPoWSjv4BPUMp-KqxVMNQMkaHUmg6K9tKQ0iGEZpGrTKWHiYsi4Yxrckge99ObDFWt"/>
+</div>
+<p class="text-[10px] text-slate-400 font-medium uppercase mb-1">Cherry</p>
+<p class="text-sm font-bold text-slate-700 dark:text-slate-200">UP TO 50% OFF</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-primary pt-20 pb-10 text-white mt-20">
+<div class="max-w-7xl mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<div class="bg-white/20 p-2 rounded-lg">
+<i class="material-icons-outlined text-white text-3xl">shopping_bag</i>
+</div>
+<span class="text-3xl font-bold tracking-tight">MegaMart</span>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold border-b border-white/20 pb-2 inline-block">Contact Us</h4>
+<div class="space-y-3">
+<div class="flex gap-3">
+<i class="material-icons-outlined text-sm">whatsapp</i>
+<div>
+<p class="text-[10px] opacity-70">Whats App</p>
+<p class="text-sm font-medium">+1 202-918-2132</p>
+</div>
+</div>
+<div class="flex gap-3">
+<i class="material-icons-outlined text-sm">phone_in_talk</i>
+<div>
+<p class="text-[10px] opacity-70">Call Us</p>
+<p class="text-sm font-medium">+1 202-918-2132</p>
+</div>
+</div>
+</div>
+<div class="space-y-2 pt-4">
+<p class="text-xs opacity-70">Download App</p>
+<div class="flex gap-3">
+<button class="bg-black/20 hover:bg-black/30 transition-colors p-2 rounded-lg flex items-center gap-2 border border-white/20">
+<img alt="App Store" class="w-4 h-4 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPeDIRIGATWe4VpYGFIYbm5KVD2lRNilIPTxdfwSdVU5krmyte8am6T0IZvJYlSO9Swe6AbVxOMbE4VatwpJFaRUZCWsLayk2h5HjqJA0007s1vabjQMLd1XkHu2XDR0TSgBT4RYS1hZqSQZhc30xl5V78yL0Q2-VaJX0EoQJuqNGzxNjm-qxP4bKqBnNL8oyF-e1891u7HQOOn9Ju_LdOEaNwt5fRBy9W8j1oN_HYywH17GCLpM-HK_c_TYyDXAyO7B9U2O53wL-l"/>
+<div class="text-left">
+<p class="text-[8px] leading-none opacity-70">Download on the</p>
+<p class="text-[10px] font-bold leading-none">App Store</p>
+</div>
+</button>
+<button class="bg-black/20 hover:bg-black/30 transition-colors p-2 rounded-lg flex items-center gap-2 border border-white/20">
+<img alt="Play Store" class="w-16" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChtAseFjlyza5DD6_kE-BWDLbt43r5sTqhk8SqOMMQBC9sirz4L6aog45AHwXl6A1hscYID4ZX-afju1jSZaiJ8356HlrYkoSMuugwOIKeJrULu7CB7ICi_R-pVIN_xzaNmozmFqKNx1W1esrJ9t_nJkUKmBFuQ0Zv3KKQWudw7oSJcXsmfyg6JVOCSfI6MttrWDi-sEIekayRnjr92S_1H4Y3NIVQM8mVJLjy_esrF0MgZ_d2gGXfKMj1BTpkDtq5fD4XG3DMN0--"/>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-bold border-b border-white/20 pb-2 mb-6 inline-block">Most Popular Categories</h4>
+<ul class="space-y-3 text-sm opacity-80">
+<li><a class="hover:opacity-100 transition-opacity" href="#">Staples</a></li>
+<li><a class="hover:opacity-100 transition-opacity" href="#">Beverages</a></li>
+<li><a class="hover:opacity-100 transition-opacity" href="#">Personal Care</a></li>
+<li><a class="hover:opacity-100 transition-opacity" href="#">Home Care</a></li>
+<li><a class="hover:opacity-100 transition-opacity" href="#">Baby Care</a></li>
+<li><a class="hover:opacity-100 transition-opacity" href="#">Vegetables &amp; Fruits</a></li>
+<li><a class="hover:opacity-100 transition-opacity" href="#">Snacks &amp; Foods</a></li>
+<li><a class="hover:opacity-100 transition-opacity" href="#">Dairy &amp; Bakery</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold border-b border-white/20 pb-2 mb-6 inline-block">Customer Services</h4>
+<ul class="space-y-3 text-sm opacity-80">
+<li><a class="hover:opacity-100 transition-opacity" href="#">About Us</a></li>
+<li><a class="hover:opacity-100 transition-opacity" href="#">Terms &amp; Conditions</a></li>
+<li><a class="hover:opacity-100 transition-opacity" href="#">FAQ</a></li>
+<li><a class="hover:opacity-100 transition-opacity" href="#">Privacy Policy</a></li>
+<li><a class="hover:opacity-100 transition-opacity" href="#">E-waste Policy</a></li>
+<li><a class="hover:opacity-100 transition-opacity" href="#">Cancellation &amp; Return Policy</a></li>
+</ul>
+</div>
+<div class="space-y-8">
+<div class="bg-white/10 p-6 rounded-2xl border border-white/10">
+<h4 class="font-bold mb-4">Stay Updated</h4>
+<div class="flex gap-2">
+<input class="bg-white/20 border-none rounded-lg text-sm w-full focus:ring-1 focus:ring-white placeholder:text-white/50" placeholder="Your email" type="email"/>
+<button class="bg-white text-primary p-2 rounded-lg"><i class="material-icons-outlined">send</i></button>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 text-center text-sm opacity-60">
+<p>© 2022 All rights reserved. Reliance Retail Ltd.</p>
+</div>
+</div>
+</footer>
+<button class="fixed bottom-6 right-6 bg-slate-800 dark:bg-slate-100 text-white dark:text-slate-800 p-3 rounded-full shadow-2xl z-[100] hover:scale-110 transition-transform" onclick="document.documentElement.classList.toggle('dark')">
+<i class="material-icons-outlined block dark:hidden">dark_mode</i>
+<i class="material-icons-outlined hidden dark:block">light_mode</i>
+</button>
+
+</body></html>

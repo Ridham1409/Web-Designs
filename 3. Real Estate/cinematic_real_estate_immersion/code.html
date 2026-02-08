@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luxe Estates - Cinematic Immersion</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4c025",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#0f0f11",
+                        "surface-dark": "#18181b",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom Scrollbar for a sleeker look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f0f11;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #444;
+        }
+
+        .glass-panel {
+            background: rgba(15, 15, 17, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .glass-card {
+            background: linear-gradient(180deg, rgba(30, 30, 35, 0.4) 0%, rgba(20, 20, 24, 0.8) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 20px rgba(244, 192, 37, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex flex-col antialiased selection:bg-primary selection:text-black">
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+<!-- Glass background layer behind nav contents -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/80 to-transparent pointer-events-none"></div>
+<div class="relative max-w-[1600px] mx-auto px-6 h-24 flex items-center justify-between">
+<!-- Logo -->
+<div class="flex items-center gap-3 group cursor-pointer">
+<div class="w-10 h-10 bg-primary/10 rounded flex items-center justify-center border border-primary/30 group-hover:bg-primary group-hover:text-black transition-colors duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-black transition-colors">diamond</span>
+</div>
+<div>
+<h1 class="text-white text-xl font-bold tracking-[0.2em] uppercase leading-none">Luxe</h1>
+<span class="text-primary text-xs font-medium tracking-[0.4em] uppercase block mt-1">Estates</span>
+</div>
+</div>
+<!-- Links -->
+<div class="hidden md:flex items-center gap-12">
+<a class="text-sm font-medium tracking-widest uppercase text-white/80 hover:text-primary transition-colors" href="#">Buy</a>
+<a class="text-sm font-medium tracking-widest uppercase text-white/80 hover:text-primary transition-colors" href="#">Sell</a>
+<a class="text-sm font-medium tracking-widest uppercase text-white/80 hover:text-primary transition-colors" href="#">Agents</a>
+<a class="text-sm font-medium tracking-widest uppercase text-white/80 hover:text-primary transition-colors" href="#">Concierge</a>
+</div>
+<!-- CTA -->
+<button class="bg-primary hover:bg-[#dca60b] text-background-dark text-sm font-bold uppercase tracking-wider px-6 py-3 rounded transition-colors duration-300 flex items-center gap-2">
+<span>Contact Agent</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<main class="relative w-full h-screen min-h-[800px] flex flex-col justify-end pb-24 overflow-hidden">
+<!-- Cinematic Background (Simulating Video) -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-black/40 z-10"></div> <!-- Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent z-10 h-[50vh] bottom-0 w-full translate-y-1"></div> <!-- Bottom Fade -->
+<img alt="Ultra modern luxury mansion with infinity pool at twilight" class="w-full h-full object-cover transform scale-105 animate-[pulse_10s_ease-in-out_infinite]" data-alt="Ultra modern luxury mansion with infinity pool at twilight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXg-x9TgPvxFOaCcZGiIJfeLXbY4dqT-je7mgHUrHkN7QLBaTcik-rJv6xQbOIlWIXMeLwhPoEhg21vYi9lTk347es1QoWeK2d6tMOr3K9e-SFyG_BcqYeKSvWZxQv5CIEBMeF-PDMvSornC0CL-7dXU1YZIi0AGoaLMHe_E_CsptQsJb_dRVeRYdHqyjpd0pVFBJLrzYXP-qEG6d_DrrK6_-QcIKFgVtQyM6aIShGeriXpTMHI4lWxU0JIS9KxPbNIZbASshN0CcK" style="animation-duration: 30s; animation-direction: alternate;"/>
+</div>
+<!-- Hero Content -->
+<div class="relative z-20 w-full max-w-[1600px] mx-auto px-6 flex flex-col items-center">
+<div class="text-center mb-16 space-y-6 max-w-4xl mx-auto">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs uppercase tracking-widest text-white/90">Exclusive Listings Live</span>
+</div>
+<h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-tight">
+                    Architectural <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">Masterpieces</span>.
+                </h1>
+<p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto font-light leading-relaxed">
+                    Unrivaled living spaces curated for the world's most discerning individuals. Experience the pinnacle of luxury real estate.
+                </p>
+</div>
+<!-- Glassmorphism Search Bar -->
+<div class="w-full max-w-5xl glass-panel p-4 rounded-xl shadow-2xl shadow-black/50 animate-[fadeInUp_1s_ease-out]">
+<div class="flex flex-col md:flex-row gap-4 items-center">
+<!-- Search Input -->
+<div class="flex-1 w-full relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-white/40 group-focus-within:text-primary transition-colors">search</span>
+</div>
+<input class="w-full h-14 bg-white/5 border border-white/10 rounded-lg pl-12 pr-4 text-white placeholder-white/30 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary/50 transition-all font-light" placeholder="Search by location, keyword, or MLS #" type="text"/>
+</div>
+<!-- Filters -->
+<div class="flex w-full md:w-auto gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
+<div class="relative min-w-[140px]">
+<select class="w-full h-14 appearance-none bg-white/5 border border-white/10 rounded-lg pl-4 pr-10 text-white focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer text-sm font-medium">
+<option class="bg-surface-dark">Location</option>
+<option class="bg-surface-dark">Beverly Hills</option>
+<option class="bg-surface-dark">Monaco</option>
+<option class="bg-surface-dark">Dubai</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none text-sm">expand_more</span>
+</div>
+<div class="relative min-w-[140px]">
+<select class="w-full h-14 appearance-none bg-white/5 border border-white/10 rounded-lg pl-4 pr-10 text-white focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer text-sm font-medium">
+<option class="bg-surface-dark">Price Range</option>
+<option class="bg-surface-dark">$5M - $10M</option>
+<option class="bg-surface-dark">$10M - $20M</option>
+<option class="bg-surface-dark">$20M+</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none text-sm">expand_more</span>
+</div>
+<div class="relative min-w-[140px]">
+<select class="w-full h-14 appearance-none bg-white/5 border border-white/10 rounded-lg pl-4 pr-10 text-white focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer text-sm font-medium">
+<option class="bg-surface-dark">Property Type</option>
+<option class="bg-surface-dark">Villa</option>
+<option class="bg-surface-dark">Penthouse</option>
+<option class="bg-surface-dark">Estate</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none text-sm">expand_more</span>
+</div>
+</div>
+<!-- Search Button -->
+<button class="w-full md:w-auto h-14 px-8 bg-primary hover:bg-[#dca60b] text-background-dark font-bold rounded-lg transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(244,192,37,0.3)] hover:shadow-[0_0_30px_rgba(244,192,37,0.5)]">
+<span>Discover</span>
+</button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-white/50 text-3xl">keyboard_arrow_down</span>
+</div>
+</div>
+</main>
+<!-- Content Section -->
+<section class="bg-background-dark relative z-10 py-24 px-6">
+<div class="max-w-[1600px] mx-auto">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<h2 class="text-primary text-sm font-bold tracking-[0.2em] uppercase mb-3">Curated Exclusives</h2>
+<h3 class="text-4xl md:text-5xl font-medium text-white tracking-tight">Latest Acquisitions</h3>
+</div>
+<a class="flex items-center gap-2 text-white/60 hover:text-primary transition-colors group pb-1 border-b border-transparent hover:border-primary" href="#">
+<span class="text-sm font-medium uppercase tracking-wider">View All Properties</span>
+<span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Listing Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-5">
+<div class="absolute top-4 left-4 z-20 flex gap-2">
+<span class="px-3 py-1 bg-black/60 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider rounded border border-white/10">New</span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 z-10 transition-opacity group-hover:opacity-40"></div>
+<img alt="Modern minimalist villa with glass facade and pool at dusk" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern minimalist villa with glass facade and pool at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAreBjMuH2BsXIcjQREw7ksXdanEhOpu1iwFI5zKDrWiHXRBm8uv-K5VPvxnAZ_3gA9aNYM6B7w6x-j6AULq7k_lVbBLPM3Fnt2_9T2mN49EFw5-ezqcL7s5Pdaaiun2e0qymi6600Mt4DUImAh-SoOATQfso9Vd3hbSw7KV796Dej2KAQD1aOLEC6Ml3kVtG8-G2mc7CPE3yXvKO7keF2PW6n2PUie5zFoew2ATdP46c7HRhDJiFDLjTBTk93FMhvlaixJROstxHOi"/>
+<!-- Floating Info -->
+<div class="absolute bottom-0 left-0 right-0 p-6 z-20 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<div class="flex items-center gap-4 text-white/90 text-sm font-medium">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">bed</span>
+<span>6 Beds</span>
+</div>
+<div class="w-px h-3 bg-white/30"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">bathtub</span>
+<span>8 Baths</span>
+</div>
+<div class="w-px h-3 bg-white/30"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">square_foot</span>
+<span>12,000 ft²</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between items-start">
+<h4 class="text-2xl font-medium text-white group-hover:text-primary transition-colors">The Onyx Villa</h4>
+<span class="text-primary font-bold text-xl">$25,000,000</span>
+</div>
+<p class="text-white/50 font-light flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                            Beverly Hills, CA
+                        </p>
+</div>
+</div>
+<!-- Listing Card 2 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-5">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 z-10 transition-opacity group-hover:opacity-40"></div>
+<img alt="Luxury penthouse interior with panoramic city skyline view" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Luxury penthouse interior with panoramic city skyline view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhK0J-YjFQgDFD0CyAbjfM-URDJkYuDrXSY4PqqTzxm4HFXdMjrc0kpxNtotHfJMHH3M4dYg-VJSEKpvgGnb0eYq9maQY3khWb6X11ms3K1SlqfUq0GKsh2CsS_TTcZTB_1_LA4fs5uOkRRckl1Eh1wb-F1Wyq0ej5vqaLoisglObKVkXuMntYOwO4d8IiwazT1nWWj8Tx0RtrUOH6iZC4M9JdFO3_qkZlKixMTRt8rQawrsfZPlEvyX1QhFVoO6ebTH8cdUQMxRm7"/>
+<!-- Floating Info -->
+<div class="absolute bottom-0 left-0 right-0 p-6 z-20 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<div class="flex items-center gap-4 text-white/90 text-sm font-medium">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">bed</span>
+<span>4 Beds</span>
+</div>
+<div class="w-px h-3 bg-white/30"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">bathtub</span>
+<span>5 Baths</span>
+</div>
+<div class="w-px h-3 bg-white/30"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">square_foot</span>
+<span>6,500 ft²</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between items-start">
+<h4 class="text-2xl font-medium text-white group-hover:text-primary transition-colors">Skyline Penthouse</h4>
+<span class="text-primary font-bold text-xl">$18,500,000</span>
+</div>
+<p class="text-white/50 font-light flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                            New York, NY
+                        </p>
+</div>
+</div>
+<!-- Listing Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-5">
+<div class="absolute top-4 left-4 z-20 flex gap-2">
+<span class="px-3 py-1 bg-black/60 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider rounded border border-white/10">Sold</span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 z-10 transition-opacity group-hover:opacity-40"></div>
+<img alt="Coastal retreat mansion overlooking the ocean on a cliff" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Coastal retreat mansion overlooking the ocean on a cliff" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_oq6NtOaA-KqlHRtWA0zwwE9kAPKAq5f4YjmjSkgjs9WAhrSud5OWWyGLAoH_ZNJddsk7gioF_SpwBsP30U8G-KygkV7FjW1_wsq5QseKEy6wGKb0bNd75fjKLXoUnJ45RfYSLkO8EhR6LKcZ1ShhwZ8Bv-7JUeC4MqhhGT5necRFk8GHArL5f_BvabIbK2PHGpU4jmq-5kSrOOicRqVcpGscLsW-gv7fBppcDX4IXoKaj3ZAE-i7fgafL3hxIk44p1VXbTOo66iv"/>
+<!-- Floating Info -->
+<div class="absolute bottom-0 left-0 right-0 p-6 z-20 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<div class="flex items-center gap-4 text-white/90 text-sm font-medium">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">bed</span>
+<span>5 Beds</span>
+</div>
+<div class="w-px h-3 bg-white/30"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">bathtub</span>
+<span>6 Baths</span>
+</div>
+<div class="w-px h-3 bg-white/30"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">square_foot</span>
+<span>8,000 ft²</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between items-start">
+<h4 class="text-2xl font-medium text-white group-hover:text-primary transition-colors">Coastal Retreat</h4>
+<span class="text-primary font-bold text-xl">$12,000,000</span>
+</div>
+<p class="text-white/50 font-light flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                            Malibu, CA
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Marketing / Trust Section -->
+<section class="bg-[#141417] py-20 border-y border-white/5">
+<div class="max-w-[1600px] mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+<div class="space-y-4">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center border border-primary/20 mx-auto md:mx-0">
+<span class="material-symbols-outlined text-primary text-2xl">verified_user</span>
+</div>
+<h3 class="text-xl font-bold text-white">Private &amp; Confidential</h3>
+<p class="text-white/60 font-light leading-relaxed">
+                        Our brokerage prioritizes your privacy with bank-level security and discreet off-market transactions.
+                    </p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center border border-primary/20 mx-auto md:mx-0">
+<span class="material-symbols-outlined text-primary text-2xl">star</span>
+</div>
+<h3 class="text-xl font-bold text-white">World-Class Concierge</h3>
+<p class="text-white/60 font-light leading-relaxed">
+                        From private jet charters to interior design consultation, our concierge team handles every detail.
+                    </p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center border border-primary/20 mx-auto md:mx-0">
+<span class="material-symbols-outlined text-primary text-2xl">public</span>
+</div>
+<h3 class="text-xl font-bold text-white">Global Reach</h3>
+<p class="text-white/60 font-light leading-relaxed">
+                        Access an exclusive network of international buyers and properties in the world's most desirable locations.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-black pt-20 pb-10 border-t border-white/5">
+<div class="max-w-[1600px] mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between gap-12 mb-16">
+<!-- Brand -->
+<div class="max-w-sm">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-black">
+<span class="material-symbols-outlined text-lg">diamond</span>
+</div>
+<h2 class="text-white text-lg font-bold tracking-[0.2em] uppercase">Luxe Estates</h2>
+</div>
+<p class="text-white/50 font-light mb-8">
+                        Redefining luxury real estate with an unwavering commitment to quality, privacy, and exceptional service.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-black transition-all text-white/70" href="#">
+<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-black transition-all text-white/70" href="#">
+<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.468 2.373c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-black transition-all text-white/70" href="#">
+<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+</a>
+</div>
+</div>
+<!-- Footer Nav -->
+<div class="flex-1 flex flex-wrap gap-12 lg:gap-24">
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Company</h4>
+<ul class="space-y-3">
+<li><a class="text-white/60 hover:text-primary text-sm transition-colors" href="#">About</a></li>
+<li><a class="text-white/60 hover:text-primary text-sm transition-colors" href="#">Careers</a></li>
+<li><a class="text-white/60 hover:text-primary text-sm transition-colors" href="#">Press</a></li>
+<li><a class="text-white/60 hover:text-primary text-sm transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Services</h4>
+<ul class="space-y-3">
+<li><a class="text-white/60 hover:text-primary text-sm transition-colors" href="#">Buying</a></li>
+<li><a class="text-white/60 hover:text-primary text-sm transition-colors" href="#">Selling</a></li>
+<li><a class="text-white/60 hover:text-primary text-sm transition-colors" href="#">Concierge</a></li>
+<li><a class="text-white/60 hover:text-primary text-sm transition-colors" href="#">Relocation</a></li>
+</ul>
+</div>
+<!-- Newsletter -->
+<div class="flex-1 min-w-[280px]">
+<h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Newsletter</h4>
+<p class="text-white/50 text-sm mb-4">Subscribe for the latest market insights and exclusive listings.</p>
+<form class="flex gap-2">
+<input class="bg-white/5 border border-white/10 rounded px-4 py-2 text-white text-sm w-full focus:outline-none focus:ring-1 focus:ring-primary placeholder-white/20" placeholder="Email address" type="email"/>
+<button class="bg-white/10 hover:bg-primary hover:text-black text-white px-3 py-2 rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-white/30 text-xs">© 2024 Luxe Estates. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-white/30 hover:text-white text-xs transition-colors" href="#">Privacy Policy</a>
+<a class="text-white/30 hover:text-white text-xs transition-colors" href="#">Terms of Service</a>
+<a class="text-white/30 hover:text-white text-xs transition-colors" href="#">Sitemap</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

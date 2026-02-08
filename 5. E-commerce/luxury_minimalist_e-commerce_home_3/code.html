@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THE ARCHIVAL GALLERY | Legacy Collections</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&amp;family=IM+Fell+English:ital@0;1&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "sepia-paper": "#f4ead5",
+                "sepia-dark": "#d4c5a9",
+                "burgundy": "#5e1a1a",
+                "ink": "#2c2420",
+              },
+              fontFamily: {
+                "script": ["Pinyon Script", "cursive"],
+                "serif": ["IM Fell English", "serif"],
+                "body": ["Libre Baskerville", "serif"]
+              },
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-sepia-paper text-ink selection:bg-burgundy selection:text-sepia-paper;
+                background-image: url('https://www.transparenttextures.com/patterns/handmade-paper.png');
+            }
+        }
+        .ornate-border {
+            border: 12px solid #5e1a1a;
+            border-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm2 2v36h36V2H2zm4 4h28v28H6V6z' fill='%235e1a1a' fill-opacity='0.2'/%3E%3C/svg%3E") 12 stretch;
+            outline: 1px solid #5e1a1a;
+            outline-offset: -8px;
+        }
+        .vintage-filter {
+            filter: sepia(0.6) contrast(0.9) brightness(0.9);
+        }
+        .historical-label {
+            position: relative;
+            padding: 1rem;
+            border: 1px solid #2c2420;
+            background: rgba(255,255,255,0.3);
+        }
+        .historical-label::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            border: 1px solid #2c2420;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="font-body antialiased">
+<header class="border-b-2 border-burgundy py-8 relative">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex flex-col items-center md:items-start">
+<span class="text-[0.6rem] tracking-[0.4em] uppercase opacity-60 mb-1">Established MDCCCLXXXIV</span>
+<a class="flex items-center gap-3" href="#">
+<span class="text-burgundy text-4xl font-script leading-none">The Archival Gallery</span>
+</a>
+</div>
+<nav class="flex items-center gap-10 font-serif italic text-lg">
+<a class="hover:text-burgundy transition-colors underline underline-offset-4 decoration-burgundy/20" href="#">The Vault</a>
+<a class="hover:text-burgundy transition-colors underline underline-offset-4 decoration-burgundy/20" href="#">Provenance</a>
+<a class="hover:text-burgundy transition-colors underline underline-offset-4 decoration-burgundy/20" href="#">Exhibitions</a>
+<a class="hover:text-burgundy transition-colors underline underline-offset-4 decoration-burgundy/20" href="#">Registry</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="p-2 border border-ink/20 rounded-full hover:border-burgundy">
+<span class="material-symbols-outlined text-xl">search</span>
+</button>
+<button class="p-2 border border-ink/20 rounded-full hover:border-burgundy">
+<span class="material-symbols-outlined text-xl">book</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<section class="relative min-h-[85vh] flex items-center overflow-hidden py-20">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8 z-10">
+<span class="text-burgundy font-serif italic text-xl">Volume I: The Gilded Silence</span>
+<h1 class="text-7xl md:text-9xl font-script text-burgundy leading-[0.8]">Legacy of the Unspoken.</h1>
+<p class="text-xl font-serif leading-relaxed max-w-lg opacity-80 first-letter:text-5xl first-letter:font-script first-letter:mr-2 first-letter:float-left first-letter:leading-none">
+                    Witness a curation of artifacts that transcend time. Each object in our archive has been preserved through generations, embodying the silent whispers of craftsmen long passed.
+                </p>
+<div class="pt-8 flex flex-wrap gap-8">
+<button class="bg-burgundy text-sepia-paper px-12 py-5 font-serif italic text-xl border-4 border-burgundy outline outline-1 outline-offset-4 outline-burgundy hover:bg-transparent hover:text-burgundy transition-all duration-500">
+                        Enter The Archives
+                    </button>
+<button class="border-b-2 border-burgundy px-4 py-5 font-serif italic text-xl hover:text-burgundy/70 transition-colors">
+                        Read Our Provenance
+                    </button>
+</div>
+</div>
+<div class="relative">
+<div class="ornate-border p-6 bg-sepia-dark rotate-2 hover:rotate-0 transition-transform duration-700">
+<img alt="Historical Portrait" class="w-full h-[600px] object-cover vintage-filter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuPfJqnWM5sBKAEJUPX9nHo3UBZRSJa3po-pWBGY5hEDkPWHMVqgCCU2y0yRM5wnRbowDLVmdsWqKzngc9tMaI0arBnBlhMydXgqZjRc5FD7BY8NLFQKwkLOgEbTndG1P9lKRkPoO536dxwSljvUk9rAN-PXm8qkcopBajM1qrxAh3vGFvs3fwhXk5bEMcu3qmC7ZasolV8xMNOIlrmsu5BruBK3XFFkXFYHDexJQie77Hso4UxXEa_OGF7EP_f2gKqhE0IABskkrP"/>
+<div class="mt-4 text-center font-serif italic opacity-60 text-sm">Portrait of an Unknown Muse, c. 1922</div>
+</div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 border border-burgundy/20 rounded-full flex items-center justify-center text-center p-4">
+<span class="text-[0.6rem] uppercase tracking-widest font-bold opacity-40 italic">Certified Authentic Artifacts</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-6 lg:px-12 max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-20 border-b border-ink/10 pb-4">
+<div class="space-y-2">
+<h2 class="text-5xl font-script text-burgundy">Artifacts on Display</h2>
+<p class="font-serif italic opacity-60">A careful selection of historical essentials from the permanent collection</p>
+</div>
+<a class="group font-serif italic text-lg text-burgundy flex items-center gap-4" href="#">
+                Explore Entire Registry <span class="material-symbols-outlined text-sm">auto_stories</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="group">
+<div class="relative bg-white/40 p-4 border border-ink/10 mb-6 group-hover:bg-burgundy/5 transition-colors">
+<div class="aspect-[3/4] overflow-hidden vintage-filter group-hover:sepia-0 transition-all duration-700">
+<img alt="Watch" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzhWjLLUaMFAu-WnkNhaZ7hjG8jEPWiE4A1W03lyZxbh5fQ3LIaM9SteNLw69u-Gmaz4beRa0qKdNATUri9-fIUZIapN4BS6OnR1QnpYaKZGsWM0wDz94ZagJymgTZ9gEYT2_VWOAKvXpL-8KJYzYKhX68YNRdHXmcC-SAz2rSifsSvZoWd-0UKl3wkMP-rnsbA68Gd_FaxYjCeTtRKrZ4rsWqJkorf1RPogLT4gdZAfoUfjA9EZFpOn6jmz7eEWwH3jUMCOrBWxHo"/>
+</div>
+<div class="absolute top-8 right-8 bg-sepia-paper/80 px-2 py-1 text-[10px] uppercase tracking-tighter border border-ink/20 font-bold">Ref. No 7724</div>
+</div>
+<div class="historical-label space-y-3">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-serif italic">Horizon Chronometer</h3>
+<p class="text-burgundy font-bold font-serif">$1,250</p>
+</div>
+<p class="text-xs opacity-60 leading-relaxed font-serif">Steel, Enamel, Ceramic. Found in the archives of a master horologist. Restored for modern use while retaining original patina.</p>
+<button class="w-full mt-4 py-2 border border-burgundy text-burgundy font-serif italic text-sm hover:bg-burgundy hover:text-sepia-paper transition-all uppercase tracking-widest">Acquire Artifact</button>
+</div>
+</div>
+<div class="group">
+<div class="relative bg-white/40 p-4 border border-ink/10 mb-6 group-hover:bg-burgundy/5 transition-colors">
+<div class="aspect-[3/4] overflow-hidden vintage-filter group-hover:sepia-0 transition-all duration-1000">
+<img alt="Bag" class="w-full h-full object-cover group-hover:rotate-1 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRw65wcOJA2PjEFlxSnUYwITRU_9ncsB61w9GSQc-wKrngvIcAk4AddOoaEFm6SiWll24bIaBa4AVAbDcL-hxO94UDMAAFO4xocCKt5uio2DOB9f-bjfAbwRa3-7GLl4MWrWlqU8zm-5kRh_0Udy_fbQNYG5Vy5cFpGNUuOTcBreFaczRaroYH5nmrIw88PI3i8FcSUdlFMH8we925R-VJZhpjB-YxmrzKyVeC42eHv01fQ7oPL8YRNjyGkgAijlgLGAZ7dhIc1XdQ"/>
+</div>
+<div class="absolute top-8 right-8 bg-sepia-paper/80 px-2 py-1 text-[10px] uppercase tracking-tighter border border-ink/20 font-bold">Ref. No 1908</div>
+</div>
+<div class="historical-label space-y-3">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-serif italic">The Traveler's Hide</h3>
+<p class="text-burgundy font-bold font-serif">$890</p>
+</div>
+<p class="text-xs opacity-60 leading-relaxed font-serif">Full-Grain Ox Hide. Hand-stitched using techniques that haven't changed in a century. A companion for life's long journey.</p>
+<button class="w-full mt-4 py-2 border border-burgundy text-burgundy font-serif italic text-sm hover:bg-burgundy hover:text-sepia-paper transition-all uppercase tracking-widest">Acquire Artifact</button>
+</div>
+</div>
+<div class="group">
+<div class="relative bg-white/40 p-4 border border-ink/10 mb-6 group-hover:bg-burgundy/5 transition-colors">
+<div class="aspect-[3/4] overflow-hidden vintage-filter group-hover:sepia-0 transition-all duration-1000">
+<img alt="Perfume" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg1TxLM75jl3QvkrK73T91iuLEB0peMCoXTHRWpZpsqYZIZCn37IGFSuaEknlUId_QB8_mNXvgnvNUFLNTurMJe4BngFtsh_ulwdgsIERqLfGDI7w-fPOW5FjaWIF7sVRk3fwpQSZo5JX4-zfj6IkPDHktwQw-wA6DGO7SfPTfbDroP6zkIKbGBqjnXYiQps6tZcjdoX-5AAncya7D1a-kbhX3tX6OlbuYkQ3k1Fc71qbxieg1KgU4VnociR0cPpgobiqstMUEr8XO"/>
+</div>
+<div class="absolute top-8 right-8 bg-sepia-paper/80 px-2 py-1 text-[10px] uppercase tracking-tighter border border-ink/20 font-bold">Ref. No 0004</div>
+</div>
+<div class="historical-label space-y-3">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-serif italic">Essence of Oud N°4</h3>
+<p class="text-burgundy font-bold font-serif">$320</p>
+</div>
+<p class="text-xs opacity-60 leading-relaxed font-serif">Amber &amp; Resin. Distilled following the lost alchemy of the 18th century botanists. A scent that lingers through ages.</p>
+<button class="w-full mt-4 py-2 border border-burgundy text-burgundy font-serif italic text-sm hover:bg-burgundy hover:text-sepia-paper transition-all uppercase tracking-widest">Acquire Artifact</button>
+</div>
+</div>
+<div class="group">
+<div class="relative bg-white/40 p-4 border border-ink/10 mb-6 group-hover:bg-burgundy/5 transition-colors">
+<div class="aspect-[3/4] overflow-hidden vintage-filter group-hover:sepia-0 transition-all duration-1000">
+<img alt="Sunglasses" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3VU25pchpoaz5yK3aep-gEH9Hujs1zR8ISjLAUZRd-l5efFiL9FqQYJ8rJhE47igy27TwGfr9i4a-71FCn-4c0QrlO8N-zxW3Ie1maYaEE_R8y2LnRPKXbb7EheKS0__3u6rNkGCG1_phxp0xGGzZ_u_H6aJg9U_J3Drvml1UdHTrnH9SbhQmcMnZw9YvHTe3XhRrmLQhWsilLm1kENmkH5h8F50H9hHb7w-xC9U9uTV6ZFmtEkR4VlSJKX-j_J0rwyD4r5ITK0pv"/>
+</div>
+<div class="absolute top-8 right-8 bg-sepia-paper/80 px-2 py-1 text-[10px] uppercase tracking-tighter border border-ink/20 font-bold">Ref. No 4421</div>
+</div>
+<div class="historical-label space-y-3">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-serif italic">The Heritage Specs</h3>
+<p class="text-burgundy font-bold font-serif">$450</p>
+</div>
+<p class="text-xs opacity-60 leading-relaxed font-serif">Dark Ebony &amp; Glass. Recreated from the blueprints of Victorian explorers. Protecting the vision of tomorrow's pioneers.</p>
+<button class="w-full mt-4 py-2 border border-burgundy text-burgundy font-serif italic text-sm hover:bg-burgundy hover:text-sepia-paper transition-all uppercase tracking-widest">Acquire Artifact</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-burgundy/5 border-y border-burgundy/10">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="flex flex-col items-center text-center space-y-6">
+<span class="material-symbols-outlined text-5xl text-burgundy opacity-40">history_edu</span>
+<h3 class="text-2xl font-script text-burgundy">Provenance Assured</h3>
+<p class="font-serif italic text-sm leading-relaxed max-w-xs opacity-70">Every piece is accompanied by a handwritten certificate of origin, detailing the journey of its craftsmanship.</p>
+</div>
+<div class="flex flex-col items-center text-center space-y-6">
+<span class="material-symbols-outlined text-5xl text-burgundy opacity-40">auto_fix_normal</span>
+<h3 class="text-2xl font-script text-burgundy">Eternal Restoration</h3>
+<p class="font-serif italic text-sm leading-relaxed max-w-xs opacity-70">Our atelier offers lifetime conservation services for every artifact acquired through the gallery.</p>
+</div>
+<div class="flex flex-col items-center text-center space-y-6">
+<span class="material-symbols-outlined text-5xl text-burgundy opacity-40">local_post_office</span>
+<h3 class="text-2xl font-script text-burgundy">Discreet Courier</h3>
+<p class="font-serif italic text-sm leading-relaxed max-w-xs opacity-70">Secured transport in wax-sealed packaging, delivered with the care of a personal embassy attache.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-6 lg:px-12 max-w-5xl mx-auto text-center relative">
+<div class="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
+<span class="text-[30rem] font-script text-burgundy">L</span>
+</div>
+<div class="space-y-10 relative z-10">
+<span class="material-symbols-outlined text-7xl text-burgundy/20">menu_book</span>
+<p class="text-4xl md:text-5xl font-script text-burgundy leading-tight">
+                "We do not merely sell objects; we act as stewards for the physical manifestations of history itself. To own a piece from the Archival Gallery is to join a lineage of excellence."
+            </p>
+<div class="pt-6">
+<p class="text-burgundy font-serif italic text-xl">The Chief Curator</p>
+<div class="w-32 h-px bg-burgundy/20 mx-auto mt-4"></div>
+<p class="opacity-40 text-xs uppercase tracking-[0.4em] mt-4">Department of Antiquities &amp; Style</p>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 lg:px-12">
+<div class="max-w-[1440px] mx-auto bg-sepia-dark/30 border-4 border-burgundy p-2">
+<div class="border border-burgundy flex flex-col lg:flex-row overflow-hidden">
+<div class="lg:w-1/2 p-12 lg:p-20 flex flex-col justify-center space-y-8 bg-sepia-paper relative overflow-hidden">
+<div class="absolute -right-20 top-0 opacity-[0.05] text-[20rem] font-script pointer-events-none">A</div>
+<h2 class="text-5xl md:text-6xl font-script text-burgundy">Join the Registry.</h2>
+<p class="font-serif italic text-xl opacity-70">Receive invitations to private viewings and acquire early access to newly discovered relics.</p>
+<form class="flex flex-col gap-4 pt-6 max-w-md">
+<div class="relative">
+<input class="w-full bg-transparent border-b border-burgundy py-4 focus:ring-0 focus:border-burgundy px-0 placeholder:italic placeholder:font-serif italic font-serif" placeholder="Your formal address..." type="email"/>
+</div>
+<button class="bg-burgundy text-sepia-paper font-serif italic text-lg py-4 hover:opacity-90 transition-opacity">Submit Credentials</button>
+</form>
+</div>
+<div class="lg:w-1/2 min-h-[400px] vintage-filter bg-cover bg-center grayscale contrast-125" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDRujHdZTURNv-N9Kh16PRTuXWoZDqh7otm-2CzYK3LgItFxJjQS0UFAfAciy3T8F0SNP777e0LX27QX2Xy9UNEqkePBLgQfVzECLVa0iG_R5bQLfk9WZLKXwRBQupA3KyuHFTa_AboNKobCaoFms4Mojfdc_awjxY7u3f3I7n-HEJvxfP8VLvjzeRcFOdoV4bcecb9S0kOTz96bDiOK0LGH2HBaofm0zSu2jh_VaKD7jM22ecLD6H8TjDdV1nbWMo89ZPGKUdGdNOG')"></div>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t-2 border-burgundy mt-20 pt-24 pb-12 px-6 lg:px-12 bg-sepia-dark/20">
+<div class="max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 mb-24">
+<div class="lg:col-span-2 space-y-8">
+<a class="flex flex-col" href="#">
+<span class="text-4xl font-script text-burgundy">The Archival Gallery</span>
+<span class="text-[0.6rem] tracking-[0.5em] uppercase opacity-40 mt-1">Guardians of Legacy</span>
+</a>
+<p class="font-serif italic opacity-60 max-w-xs leading-relaxed">
+                    A dedicated institution preserving the fine intersection of historical artifact and contemporary luxury.
+                </p>
+<div class="flex gap-8">
+<a class="opacity-40 hover:opacity-100 hover:text-burgundy transition-all" href="#"><span class="material-symbols-outlined">camera_roll</span></a>
+<a class="opacity-40 hover:opacity-100 hover:text-burgundy transition-all" href="#"><span class="material-symbols-outlined">radio</span></a>
+<a class="opacity-40 hover:opacity-100 hover:text-burgundy transition-all" href="#"><span class="material-symbols-outlined">movie_edit</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-serif italic text-lg text-burgundy mb-8 underline decoration-burgundy/20">The Collections</h4>
+<ul class="space-y-4 font-serif text-sm opacity-60">
+<li><a class="hover:underline" href="#">The Victorian Era</a></li>
+<li><a class="hover:underline" href="#">Mid-Century Relics</a></li>
+<li><a class="hover:underline" href="#">Art Deco Curios</a></li>
+<li><a class="hover:underline" href="#">Modern Antiquities</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-serif italic text-lg text-burgundy mb-8 underline decoration-burgundy/20">The Institution</h4>
+<ul class="space-y-4 font-serif text-sm opacity-60">
+<li><a class="hover:underline" href="#">Our Philosophy</a></li>
+<li><a class="hover:underline" href="#">Curatorial Team</a></li>
+<li><a class="hover:underline" href="#">Atelier Services</a></li>
+<li><a class="hover:underline" href="#">Gallery History</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-serif italic text-lg text-burgundy mb-8 underline decoration-burgundy/20">Assistance</h4>
+<ul class="space-y-4 font-serif text-sm opacity-60">
+<li><a class="hover:underline" href="#">Contact Bureau</a></li>
+<li><a class="hover:underline" href="#">Registry Fees</a></li>
+<li><a class="hover:underline" href="#">Private Viewings</a></li>
+<li><a class="hover:underline" href="#">Legal Archive</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-burgundy/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-8 font-serif italic text-sm opacity-40">
+<p>© MDCCCLXXXIV - MMXXIV ARCHIVAL GALLERY INT. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-10">
+<span>By Appointment Only</span>
+<span>London &amp; Paris</span>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

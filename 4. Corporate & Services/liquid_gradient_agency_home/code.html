@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Liquid Gradient Agency Home</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b8c",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                        "liquid-purple": "#4a1c40",
+                        "liquid-cyan": "#00bcd4",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out 3s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Space Grotesk", "Noto Sans", sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* Custom Scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #221019;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ee2b8c;
+            border-radius: 4px;
+        }
+
+        /* Glassmorphism utilities */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .glass-nav {
+            background: rgba(34, 16, 25, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(238, 43, 140, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(135deg, #fff 0%, #ee2b8c 50%, #00bcd4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Smooth Mesh Gradient Background */
+        .mesh-bg {
+            background-color: #221019;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(328,91%,29%,1) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, hsla(189,100%,46%,0.4) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, hsla(330,81%,56%,0.5) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(270,100%,20%,1) 0px, transparent 50%),
+                radial-gradient(at 50% 50%, hsla(328,91%,29%,0.5) 0px, transparent 50%);
+            filter: blur(80px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen relative selection:bg-primary selection:text-white">
+<!-- Ambient Background Mesh -->
+<div class="fixed inset-0 z-0 mesh-bg opacity-60 pointer-events-none"></div>
+<!-- Animated 3D Floating Blobs (CSS Only representation) -->
+<div class="fixed top-20 left-10 w-72 h-72 bg-primary/20 rounded-full mix-blend-screen filter blur-3xl animate-blob z-0"></div>
+<div class="fixed top-40 right-10 w-96 h-96 bg-purple-500/20 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-2000 z-0"></div>
+<div class="fixed -bottom-32 left-1/3 w-96 h-96 bg-cyan-500/20 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-4000 z-0"></div>
+<div class="relative z-10 flex flex-col min-h-screen w-full">
+<!-- Minimal Top Header -->
+<header class="w-full flex items-center justify-between px-6 py-6 lg:px-12 fixed top-0 left-0 right-0 z-50 pointer-events-none">
+<div class="pointer-events-auto flex items-center gap-3 group cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shadow-[0_0_15px_rgba(238,43,140,0.5)] transition-transform group-hover:scale-110 duration-300">
+<span class="material-symbols-outlined text-2xl">water_drop</span>
+</div>
+<h2 class="text-white text-xl font-bold tracking-tighter mix-blend-difference hidden sm:block">LIQUID AGENCY</h2>
+</div>
+<button class="pointer-events-auto group relative overflow-hidden rounded-full bg-transparent border border-white/20 px-6 py-2 transition-all hover:bg-white/10 hover:border-primary/50">
+<span class="relative z-10 text-sm font-bold tracking-widest uppercase text-white flex items-center gap-2">
+                    Start Project
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</span>
+</button>
+</header>
+<main class="flex-grow flex flex-col items-center w-full max-w-[1600px] mx-auto px-4 lg:px-12 pt-32 pb-40">
+<!-- Hero Section -->
+<section class="w-full relative min-h-[85vh] flex flex-col justify-center">
+<div class="absolute right-0 top-0 lg:w-1/2 h-full opacity-30 lg:opacity-60 pointer-events-none select-none">
+<!-- Abstract 3D shape/liquid representation -->
+<div class="w-full h-full bg-cover bg-center rounded-[30%_70%_70%_30%/30%_30%_70%_70%] animate-float-delayed" data-alt="Abstract 3D liquid iridescent shape floating in void" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBAFdZKunfn5vdxw4-4RqMIhl6pxyNjrVapAkVrvGglByeCx315ul06miLcww50tPz91WyE1Iax59FzH0g3c_lzVh1RQwLWj-Pg72Y-mqwRCnAuUvIa1FLD2GQ81HCniicbeqZHhv_g9IUJrOb2HTfDrWhWX57YFo1Kgl3BwYwUVGuIjeZYjd1tv0HY5sYvDi6I94uSiXqqg3nZF9rbB0hPjL4XLWbkEasuuveb6dkc-OhBhbtuadzXkBltwwkj3so7Zu5oKTeDtwmA'); box-shadow: 0 0 100px rgba(238,43,140,0.2);">
+</div>
+</div>
+<div class="relative z-10 max-w-5xl">
+<div class="flex items-center gap-4 mb-6">
+<span class="h-px w-12 bg-primary"></span>
+<span class="text-primary tracking-[0.2em] text-sm font-bold uppercase">Digital Alchemy</span>
+</div>
+<h1 class="text-7xl md:text-8xl lg:text-[10rem] font-bold leading-[0.85] tracking-tighter text-white mix-blend-overlay opacity-90 mb-8">
+                        WE SHAPE<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400 opacity-100 mix-blend-normal">CHAOS</span><br/>
+                        INTO FORM.
+                    </h1>
+<p class="text-xl md:text-2xl text-gray-300 max-w-xl leading-relaxed font-light glass-panel p-6 rounded-2xl border-l-4 border-primary">
+                        Exploring the boundaries of design and code. We create immersive digital experiences that fluidly adapt to the modern web.
+                    </p>
+</div>
+<!-- Scrolling text indicator -->
+<div class="absolute bottom-10 left-0 animate-bounce hidden md:flex items-center gap-4 text-white/50">
+<span class="material-symbols-outlined">south</span>
+<span class="text-xs uppercase tracking-widest">Scroll to explore</span>
+</div>
+</section>
+<!-- Selected Works - Off-grid Layout -->
+<section class="w-full py-24 flex flex-col gap-32">
+<div class="flex flex-col md:flex-row items-end justify-between mb-12 border-b border-white/10 pb-8">
+<h2 class="text-4xl md:text-6xl font-bold text-white tracking-tight">Selected Works</h2>
+<span class="text-white/40 font-mono mt-4 md:mt-0">(2023 — 2024)</span>
+</div>
+<!-- Project 1: Left Aligned, Large -->
+<div class="group relative w-full md:w-3/4 self-start">
+<div class="relative overflow-hidden rounded-[2.5rem] aspect-video md:aspect-[16/7] transition-all duration-700 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(238,43,140,0.15)]">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40"></div>
+<img alt="Futuristic neon city interface dashboard" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="Futuristic neon city interface dashboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsVRZhUE07r-6OK-Z7wXPPzB71JzgUlG-B6ty9YVuL0y07j1L7X3mIz7pt4SQ7Ge6-Vmvu0QC2CMl9hgO_Gop-vsz9o6XnjgahCbT7SWNl0RuH0NSdOc4b0RIq0umtsVhRV-C3BmF6ME5udTEb8MX7f_jh4mHI2YUzLt-LQMkt0VSmFCQmlhHjLYRtI69c8cyxHID8P4XWzq_Z0ZjYidM2bIYlF1GiC0-Gk5g23CaVAQHg8zeDtWKiIp0G_Oc5TAJoBKKXdLkhtUn-"/>
+<div class="absolute bottom-8 left-8 md:bottom-12 md:left-12 z-20 translate-y-4 transition-transform duration-500 group-hover:translate-y-0">
+<h3 class="text-3xl md:text-5xl font-bold text-white mb-2">Neon Dreams</h3>
+<div class="flex items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+<span class="px-3 py-1 rounded-full border border-white/30 text-xs text-white bg-black/20 backdrop-blur-md">WebGL</span>
+<span class="px-3 py-1 rounded-full border border-white/30 text-xs text-white bg-black/20 backdrop-blur-md">Immersive</span>
+</div>
+</div>
+<div class="absolute top-6 right-6 z-20 w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-75 group-hover:scale-100">
+<span class="material-symbols-outlined text-white rotate-[-45deg] group-hover:rotate-0 transition-transform duration-500">arrow_outward</span>
+</div>
+</div>
+</div>
+<!-- Project 2: Right Aligned, Offset -->
+<div class="group relative w-full md:w-2/3 self-end translate-y-[-10%] md:translate-y-[-20%]">
+<div class="relative overflow-hidden rounded-[2.5rem] aspect-square md:aspect-[4/3] transition-all duration-700 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(0,188,212,0.15)]">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40"></div>
+<img alt="Abstract colorful light refraction artwork" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="Abstract colorful light refraction artwork" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEu3XtfJ6C7EonziMfHSM3Kx0mezdqc1Pf9ykVYLLi-zqIhrR2r48OOLTSIlmh7bVTcp9GRv-3VjJNr57Nl_hPMIBWhpFFxdMH_6H_OzXd2Ln3Fv6cJriLxuEDupn39DXSgfqMr5b6rgambiyiTOaBqEfikukHeAL60vF3wo7KB4sIxBvSol9IEiTvdBuhYPR6pS9F3Eyf9Zp5llHG7x2GFW0Dzpt-tHayYsEXlswcvfhKlbUV7IYbYoSIzfw6eQG8kuE3BEwObfCQ"/>
+<div class="absolute bottom-8 left-8 md:bottom-12 md:left-12 z-20 translate-y-4 transition-transform duration-500 group-hover:translate-y-0">
+<h3 class="text-3xl md:text-5xl font-bold text-white mb-2">Prism Flow</h3>
+<div class="flex items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+<span class="px-3 py-1 rounded-full border border-white/30 text-xs text-white bg-black/20 backdrop-blur-md">Branding</span>
+<span class="px-3 py-1 rounded-full border border-white/30 text-xs text-white bg-black/20 backdrop-blur-md">Motion</span>
+</div>
+</div>
+<div class="absolute top-6 right-6 z-20 w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-75 group-hover:scale-100">
+<span class="material-symbols-outlined text-white rotate-[-45deg] group-hover:rotate-0 transition-transform duration-500">arrow_outward</span>
+</div>
+</div>
+</div>
+<!-- Project 3: Center/Left, Horizontal Pill Shape -->
+<div class="group relative w-full md:w-4/5 mx-auto">
+<div class="relative overflow-hidden rounded-full aspect-[2/1] md:aspect-[21/9] transition-all duration-700 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(156,39,176,0.15)]">
+<div class="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-black/30 z-10 opacity-60 transition-opacity group-hover:opacity-40"></div>
+<img alt="Digital data visualization waves" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="Digital data visualization waves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt1ftf9g130e5pPIkcUcfIeELK9xzRvQnWYHk1akmfBN1IgSg9-tbz-73xwAtSin2q6p7pmQa3X510qTOLtILj9JlnP3zs08kD3TOg3y-Wn4X25suRrVNiyOFKFqyUdwW-zSkfpXpmeEoH6_-7NMggSOvBr2kBt9hzysniQFyWjyzfUWLhHL-o_lwaDnO4P8T4dGNt9-IPbYGTCbOSpob3sj9DuQNPeAXwgXLgdUxPyjPDDE6x9fdhRiCPw1NMobWe6dUNSjlUhMDK"/>
+<div class="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<div class="bg-black/40 backdrop-blur-xl px-8 py-4 rounded-full border border-white/10">
+<span class="text-white font-bold tracking-widest uppercase">View Case Study</span>
+</div>
+</div>
+<div class="absolute bottom-8 left-8 md:bottom-12 md:left-12 z-20">
+<h3 class="text-2xl md:text-4xl font-bold text-white mb-2">Data Sculpture</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Text Content Section -->
+<section class="py-20 w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="relative">
+<div class="absolute -inset-4 bg-gradient-to-r from-primary to-purple-600 rounded-full blur-2xl opacity-20 animate-pulse"></div>
+<h2 class="relative text-5xl md:text-7xl font-bold text-white leading-tight">
+                        Fluidity is our <br/> <span class="text-primary italic">superpower</span>.
+                    </h2>
+</div>
+<div class="space-y-6 text-lg text-gray-300 font-light">
+<p>
+                        We don't believe in rigid grids or static experiences. The web is alive, and your brand should be too. We build digital ecosystems that breathe, move, and adapt.
+                    </p>
+<p>
+                        From WebGL immersive experiences to avant-garde e-commerce, we push the browser to its absolute limit.
+                    </p>
+<div class="pt-4 flex gap-4">
+<div class="flex -space-x-4">
+<div class="w-12 h-12 rounded-full border-2 border-[#221019] bg-gray-600 bg-cover bg-center" data-alt="Team member portrait 1" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJ3ZL5H4ROqkndl1UXJrkVvL95i3wSAlBS0hq96sQMYy1H4dgLdRwWijmptGE5i1d9WUwMLxFXpV_0HoQK0j2YbRr-nWrOOrIyxlC1UF0Jt9fOhgOEyDsu4tfNz3NtvXgpFvf6l0ok5f2vtIuaUDUj94TmrmZbZ-K7XYdb0meC5-QBXGDapBUr2HhK0AsIgQ8Cxuvano1ZpVc0AB4XDrDPNfdxjcy5c6jDDIZHr54RxiJsXzcJOZb4hpDLuRr0vFnHw8IiTirXnsMm')"></div>
+<div class="w-12 h-12 rounded-full border-2 border-[#221019] bg-gray-600 bg-cover bg-center" data-alt="Team member portrait 2" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGfQJeM4F8G8n4XS0ph-r0HuS6R6S2QdzLcQnpk0dn5ZZGikWEDm2ZMSmfsHKshyyFf0shBVfHRYJCFJ1RwJo5kkDaCG-Q1L0W2x7tBglZz7nTGiGE5-wkJMHx3BkQbEiKkzPbyWtVrze-FZvMcoJQ1UfCsxO1gOINsc4RNPipmgi2khfm4DXBRl4Lhbvd2aAcQS8H4rSojyNlrVjy7Se2HxTyhDSG5ZLEtWDVmok8qVy-cW9zzYqvwqGrII4-ZJ9uv49heyd8jyLr')"></div>
+<div class="w-12 h-12 rounded-full border-2 border-[#221019] bg-gray-600 bg-cover bg-center" data-alt="Team member portrait 3" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBr6L1sebFeCGgBtYxrjQJX3PTM9Xbkmt1LBlSVrFVKfTIhX0YQZGNdGm4fcHn4_S9Rj1ptrN55MLhDetLLt7s7GbbJ-WXiRaK0j_s9xbXfYYuH3rzKvQKc9McO66_ysBDB0FiDRyTkDKChi3vJa8xqdAn9I8CgadWUEyt3XXivTR1tKK1lGM8Z1zPh6O-_MGqphMwhIk58Ww2IqIMMahFY-JzfS5pRIWjSUV4GD7awJNSfNYM7He6dqmYDYeRVWZAIE64TaY4FvLAL')"></div>
+<div class="w-12 h-12 rounded-full border-2 border-[#221019] bg-primary flex items-center justify-center text-white text-xs font-bold">+12</div>
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-white font-bold">Award Winning Team</span>
+<span class="text-xs text-gray-400">Based in Tokyo &amp; NYC</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Circular Navigation Hub -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
+<nav class="glass-nav rounded-full p-2 flex items-center gap-2 shadow-[0_10px_40px_rgba(0,0,0,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_50px_rgba(238,43,140,0.3)]">
+<a class="group relative flex items-center justify-center w-12 h-12 rounded-full hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-white group-hover:text-primary transition-colors">home</span>
+<span class="absolute -top-10 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">Home</span>
+</a>
+<a class="group relative flex items-center justify-center w-12 h-12 rounded-full hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-white group-hover:text-primary transition-colors">grid_view</span>
+<span class="absolute -top-10 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">Work</span>
+</a>
+<!-- Center Main Action -->
+<a class="relative flex items-center justify-center w-16 h-16 bg-primary rounded-full text-white shadow-lg mx-2 transition-transform hover:-translate-y-1 hover:shadow-primary/50" href="#">
+<span class="material-symbols-outlined text-3xl animate-pulse">fingerprint</span>
+</a>
+<a class="group relative flex items-center justify-center w-12 h-12 rounded-full hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-white group-hover:text-primary transition-colors">science</span>
+<span class="absolute -top-10 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">Lab</span>
+</a>
+<a class="group relative flex items-center justify-center w-12 h-12 rounded-full hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-white group-hover:text-primary transition-colors">mail</span>
+<span class="absolute -top-10 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">Contact</span>
+</a>
+</nav>
+</div>
+</div>
+</body></html>

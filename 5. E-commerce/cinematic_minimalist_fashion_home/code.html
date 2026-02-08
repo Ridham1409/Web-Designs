@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AURUM - Cinematic Minimalist</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Noto+Sans:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eca413",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1a1612", // Slightly lighter than pure black for depth
+                        "surface-dark": "#221c16",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom styles for thin lines and scrollbar hiding */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .text-vertical {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden transition-colors duration-500">
+<!-- Hero Section: Full Screen Video Background -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<!-- Background Video Placeholder -->
+<div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="Dark moody fashion model in shadow" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuApCc7DCB86AqOuzP49fiP0-wbXvUCDluauTW8ihGs_tIBVpiAsVMEH_Vw03iwiDrWJsE94Wxqw1QFEn_Ni3UTYRH5aeNy_j6DyKX-uQUTC0YeedB7rikjv3Spdq6DpjzPCcpPyak2E-ttlAzHk3u1Co0qiL8gGmZiD0Ek5buG5k7DXvmRf7UgMjWWCRIjGCoVZtLjwwPz8PvhDn2dYkEOD-gcoC3MUMUdB10g-MmHqtMqpaC5zDx9Odmfr6s54l3kz6ZtjCq-C0Df8");'>
+<!-- Overlay to darken video -->
+<div class="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+</div>
+<!-- Brand Name -->
+<div class="relative z-10 flex flex-col items-center text-center p-6 mix-blend-difference">
+<h1 class="text-[15vw] leading-[0.8] font-light tracking-tighter text-white/90 italic">
+                A U R U M
+            </h1>
+<p class="mt-4 text-sm md:text-lg font-sans font-light tracking-[0.3em] text-primary/80 uppercase">
+                Spring / Summer '24
+            </p>
+</div>
+<!-- Floating Scroll Indicator -->
+<div class="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 animate-pulse">
+<span class="material-symbols-outlined text-white/50 text-3xl font-light">keyboard_arrow_down</span>
+</div>
+</section>
+<!-- Main Content Area -->
+<main class="relative z-10 px-6 md:px-12 lg:px-24 pb-32">
+<!-- Introduction Text -->
+<div class="py-24 md:py-32 flex flex-col md:flex-row justify-between items-end border-b border-white/10 pb-8 mb-16">
+<h2 class="text-4xl md:text-6xl font-light italic max-w-2xl text-white/90">
+                Silence is the new luxury. <br/>
+<span class="text-primary opacity-80">Discover the unspoken.</span>
+</h2>
+<div class="mt-8 md:mt-0 max-w-sm text-right">
+<p class="font-sans text-sm text-white/60 leading-relaxed">
+                    A collection defined by what is absent. No noise, no excess. Just pure form and the weight of gold against the skin.
+                </p>
+</div>
+</div>
+<!-- Editorial Grid Layout (Simulated Parallax) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 w-full">
+<!-- Look 01: Left Column -->
+<div class="md:col-span-5 flex flex-col gap-4 mt-0 md:-mt-20">
+<div class="relative w-full aspect-[3/4] overflow-hidden rounded-sm group cursor-pointer">
+<img alt="Fashion model in dark coat" class="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105 opacity-80 hover:opacity-100" data-alt="Fashion model in dark coat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfDdzieRCw5ZO_7XO1oPx4fu7yTisCeFYxJbpDllPyP_xCFBkUYukF7oj71QxFFZbhq9nd6XAYxjZZ9p6pCeyy0VHLp94UGIIyUBNtthpSg5G7B1QA2T37vG8BzFRl4pdFu1fAC1i9ySZE-MAFHuVoQzUfxLK-hzB3CN3ZwMipFtpJNn-uMZbkaaKY-FAR6LcA2OkdL_KgxTDDO2soXrx2-2WoMQQebgqqv6kI3PIgruyYgt8d6-TDci5nd92sNH_l3eUUQoG3gasB"/>
+<div class="absolute bottom-4 left-4">
+<span class="bg-primary text-background-dark text-xs font-sans font-bold px-2 py-1 uppercase tracking-wider">01</span>
+</div>
+</div>
+<div class="flex justify-between items-start border-t border-white/10 pt-4">
+<div>
+<h3 class="text-2xl font-light italic text-white">The Evening Coat</h3>
+<p class="text-xs font-sans text-white/50 mt-1 uppercase tracking-widest">Wool &amp; Silk</p>
+</div>
+<button class="group flex items-center gap-2 text-primary text-sm font-sans tracking-wide hover:text-white transition-colors">
+                        Shop
+                        <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Spacer -->
+<div class="hidden md:block md:col-span-2"></div>
+<!-- Look 02: Right Column (Offset) -->
+<div class="md:col-span-5 flex flex-col gap-4 mt-12 md:mt-40">
+<div class="relative w-full aspect-[3/4] overflow-hidden rounded-sm group cursor-pointer">
+<img alt="Close up of silk fabric texture" class="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105 opacity-80 hover:opacity-100 grayscale hover:grayscale-0" data-alt="Close up of silk fabric texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlo5nUCdsDk4jsN0YKtWTr3AcG0tzlLHblsmkXZ_RCDDGyMzBGl1tmU8I36GQxhjOmrIq8JD_griPJzpWuPS8x_WpFMhfBBpD7ULC-U9_FrYu_v32cdwacX4R387H6uBPMpxfA2GdUKDSOpDqbB1zBBZOPmNltNtty4EH-eOh2A-xkVrvtFFb1e00AaoDp-BMqMJz9-vx9aG1C4uYjXzA99nkJgva6IUJWQK7puLP7gdspCCeHMW2IaWi2a163wscktaq16iIEMsh_"/>
+<div class="absolute bottom-4 left-4">
+<span class="bg-primary text-background-dark text-xs font-sans font-bold px-2 py-1 uppercase tracking-wider">02</span>
+</div>
+</div>
+<div class="flex justify-between items-start border-t border-white/10 pt-4">
+<div>
+<h3 class="text-2xl font-light italic text-white">The Silk Drape</h3>
+<p class="text-xs font-sans text-white/50 mt-1 uppercase tracking-widest">Hand-Dyed</p>
+</div>
+<button class="group flex items-center gap-2 text-primary text-sm font-sans tracking-wide hover:text-white transition-colors">
+                        Shop
+                        <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Full Width Cinematic Break -->
+<div class="relative w-full h-[60vh] mt-32 rounded-sm overflow-hidden flex items-center justify-center group">
+<div class="absolute inset-0 bg-cover bg-center scale-105 transition-transform duration-[2s] ease-in-out group-hover:scale-100" data-alt="Wide shot of woman walking in minimal setting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9pHY4KGng_2dEed8PAOKWeqE8K3qf7MMOJwCqpT89SaTE38bNH3Q0Z6BkTy7oU_XjsgFSrBJ7V45zz6xJGdFwA1vSM7Jg9sWhNLbuVGT-ERwOQnR8O_B98JfNZRlK3LfhDI6np5ehb23_0DakvW0XzCCEvxyAUrUavET8AIAbRTAQxMM3OvPO2XkdH4t2bOm4THpWNEvTv4CfreMYsso8KzgEWPJ00zpH_PqFwnmiVsc8nhOBzkorkS6dvrRHo9jpiMuWEA_49FbE");'>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500"></div>
+</div>
+<button class="relative z-10 w-24 h-24 rounded-full border border-white/30 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-all duration-500 hover:bg-primary hover:border-primary">
+<span class="material-symbols-outlined text-white text-4xl font-light pl-1">play_arrow</span>
+</button>
+<div class="absolute bottom-8 left-8">
+<p class="text-white text-lg font-light italic">Campaign Film</p>
+</div>
+</div>
+<!-- Look 03: Centered Focus -->
+<div class="max-w-4xl mx-auto mt-32 flex flex-col md:flex-row gap-12 items-center">
+<div class="flex-1 order-2 md:order-1 text-center md:text-right">
+<h3 class="text-3xl md:text-5xl font-light italic text-white mb-4">Structure &amp;<br/>Fluidity</h3>
+<p class="font-sans text-sm text-white/60 leading-relaxed mb-6">
+                    Designed to move with you. The structured bodice gives way to a fluid skirt, creating a silhouette that is both powerful and ephemeral.
+                </p>
+<button class="inline-block border-b border-primary text-primary text-sm font-sans pb-1 hover:text-white hover:border-white transition-colors uppercase tracking-widest">
+                    View The Details
+                </button>
+</div>
+<div class="flex-1 order-1 md:order-2 w-full">
+<div class="relative w-full aspect-[4/5] overflow-hidden rounded-sm group">
+<img alt="Model posing in structured dress" class="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105 opacity-90" data-alt="Model posing in structured dress" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDao7lm8BgvZHuNET9A21JN5K9S3eudfBV5UZwkHrO84_YzT_oskOXfbqZgKUDx6vamut2DVtt34aLG__r02ufHR02zX3lNrQ7AFPPc8uA5QWcpgxNRZBOufDVYpNT6AkVrS44jk1J2f3zta7w_iFjLZpBlmKpIgSvuA9WP9WYJBE5_NKFU_Y5_7Ah_Re1qnLR5DXCNkMP0J95ipxCwpqUrIsLT8LRXJeKyUVhousnFojv3_dZQereka4-2uicQeDvkHXOOFG8G4WWr"/>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Sticky) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-background-dark/95 backdrop-blur-md border-t border-white/10 px-6 py-4 transition-transform duration-300">
+<div class="max-w-[1920px] mx-auto flex items-center justify-between">
+<!-- Left: Minimal Menu Links -->
+<div class="flex items-center gap-8 md:gap-12">
+<a class="text-white/60 hover:text-primary transition-colors text-xs md:text-sm uppercase tracking-[0.15em] font-sans font-medium relative group" href="#">
+                    Shop
+                    <span class="absolute -bottom-5 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+</a>
+<a class="text-white hover:text-primary transition-colors text-xs md:text-sm uppercase tracking-[0.15em] font-sans font-medium relative group" href="#">
+                    Collections
+                    <span class="absolute -bottom-5 left-0 w-full h-[2px] bg-primary transition-all duration-300"></span>
+</a>
+<a class="text-white/60 hover:text-primary transition-colors text-xs md:text-sm uppercase tracking-[0.15em] font-sans font-medium relative group" href="#">
+                    Editorial
+                    <span class="absolute -bottom-5 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+</a>
+<a class="hidden md:block text-white/60 hover:text-primary transition-colors text-xs md:text-sm uppercase tracking-[0.15em] font-sans font-medium relative group" href="#">
+                    About
+                    <span class="absolute -bottom-5 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+</a>
+</div>
+<!-- Right: Utilities -->
+<div class="flex items-center gap-6">
+<button class="text-white/60 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+<div class="h-4 w-[1px] bg-white/20"></div>
+<button class="flex items-center gap-2 text-white/80 hover:text-primary transition-colors group">
+<span class="text-xs font-sans uppercase tracking-widest hidden md:block">Cart</span>
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="bg-primary text-background-dark text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center -ml-1 -mt-2 opacity-0 group-hover:opacity-100 transition-opacity">0</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Background Grain Overlay for texture -->
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[9999] mix-blend-overlay" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATh8QQAhCm2rDq-Ee6xDkK1CskK21DGmRbUeBBgXjH-Elnx_F0OQYkziuUXeNi44SMwAXGWBZV6FSZFb2INqcI89VEY3zUN-PexNY09olC6BDHgpCseIDL09okbceMIpqCxOHAxpIDJw3AhmLMVcYDiJ975HvOEZaxZnCZXU30HSDjA-711DJpfOBrZbdduvyT8xGJJUNy81JE4IqsF-Opa4vR2rXvxj1REnPyss13ojvnfBnWwPKfrwa9gXl2OfrHLsk355L4xgRb");'></div>
+</body></html>

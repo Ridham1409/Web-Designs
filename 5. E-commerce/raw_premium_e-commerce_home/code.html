@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RAW PREMIUM | Elite Performance Gear</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#bef264", // lime-300
+              "background-light": "#f8fafc",
+              "background-dark": "#09090b",
+            },
+            fontFamily: {
+              display: ["Anton", "sans-serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0px", // Keeping it "raw" and sharp
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      .distressed-text {
+        text-transform: uppercase;
+        letter-spacing: -0.02em;
+        background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      .product-card:hover .add-to-cart {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #bef264;
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-zinc-900 dark:text-zinc-100 font-sans selection:bg-primary selection:text-black">
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-8">
+<a class="font-display text-3xl tracking-tighter" href="#">RAW.</a>
+<div class="hidden md:flex gap-6 text-sm font-bold uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Shop</a>
+<a class="hover:text-primary transition-colors" href="#">Drops</a>
+<a class="hover:text-primary transition-colors" href="#">Lab</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined">contrast</span>
+</button>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">search</span>
+<div class="relative cursor-pointer group">
+<span class="material-symbols-outlined hover:text-primary">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-black text-[10px] font-bold px-1 rounded-full">3</span>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+<div class="absolute inset-0 z-0">
+<img alt="Premium Headphones" class="w-full h-full object-cover opacity-40 dark:opacity-30 grayscale hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUpC9A39h4H-cwiMWgrFH5OM9saZn0sRTdnXRvnxbsM-Aj3hDwVi221_n6wZXxQ6R5ZnkdjHnlDaGx1q-wxmepNQlZRqFqmKwsy7_tEhBQTJGfEl1hkCbTDZWtAmOoKL92Nkwu7rU0y1Av01IdgiBXkWJHWOQSspo2EH5mWW4ybt_O61VLidLmQfyBS-fWPOuyfoMp97bqAuCM24Xq_560tY1ScKGhzJDm5PIrsE2ExM6FHt1jWYG1jR1-ZT_qBPmBMtOPyIPU7tXc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-light via-transparent to-background-light dark:from-background-dark dark:via-transparent dark:to-background-dark"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary text-black font-black text-xs uppercase tracking-tighter mb-6">
+<span class="animate-pulse">●</span> New Drop Live
+            </div>
+<h1 class="font-display text-7xl md:text-[12rem] leading-[0.85] distressed-text mb-8 select-none">
+                CORE<br/>SERIES
+            </h1>
+<p class="max-w-xl mx-auto text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-10 font-light tracking-wide">
+                Engineered for the elite. Raw materials, refined aesthetics, unparalleled performance.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="group relative px-10 py-5 bg-primary text-black font-black uppercase tracking-widest overflow-hidden transition-all hover:scale-105 active:scale-95" href="#shop">
+<span class="relative z-10">Shop The Collection</span>
+<div class="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 opacity-20"></div>
+</a>
+<div class="flex items-center gap-3 px-6 py-4 border border-zinc-300 dark:border-zinc-700 backdrop-blur-sm">
+<span class="text-xs uppercase font-bold tracking-widest opacity-60 text-zinc-600 dark:text-zinc-400">Ends in:</span>
+<div class="font-mono font-bold text-xl tabular-nums" id="countdown">04:12:45:09</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-zinc-100 dark:bg-zinc-900 border-y border-zinc-200 dark:border-zinc-800 py-8">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">local_shipping</span>
+<div>
+<h4 class="font-bold uppercase text-sm">Fast Global Shipping</h4>
+<p class="text-xs text-zinc-500">2-day delivery available worldwide</p>
+</div>
+</div>
+<div class="flex items-center gap-4 border-y md:border-y-0 md:border-x border-zinc-200 dark:border-zinc-800 py-4 md:py-0 md:px-8">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+<div>
+<h4 class="font-bold uppercase text-sm">Secure Checkout</h4>
+<p class="text-xs text-zinc-500">AES-256 Encrypted Payments</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">support_agent</span>
+<div>
+<h4 class="font-bold uppercase text-sm">24/7 Elite Support</h4>
+<p class="text-xs text-zinc-500">Dedicated concierge for members</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-6 py-24" id="shop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<h2 class="font-display text-5xl uppercase mb-4 italic tracking-tighter">Featured Gear</h2>
+<div class="h-1 w-24 bg-primary"></div>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-2 text-xs font-bold uppercase tracking-widest border border-zinc-300 dark:border-zinc-700 hover:border-primary hover:text-primary transition-colors">View All</button>
+<div class="flex items-center gap-2">
+<button class="p-2 border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="p-2 border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-zinc-200 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-800">
+<div class="group product-card bg-background-light dark:bg-background-dark relative aspect-[3/4] overflow-hidden flex flex-col p-6">
+<div class="absolute top-4 right-4 z-10 flex flex-col gap-2 items-end">
+<span class="bg-primary text-black text-[10px] font-black px-2 py-0.5 uppercase tracking-tighter">Low Stock</span>
+<button class="bg-white/10 backdrop-blur-md p-2 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+</div>
+<img alt="Pro Runner X1" class="w-full h-full object-contain mb-4 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6GuHUl6Jn3BYzuqxahTW-RnsbbBnDG6xhJUPI0rhPXq-Yti0aFqoALDYb2i_jPisoQI6hsLm7B3_cgx60hzgU0xFRmXj9e3lbIR5x5ZlVM88afgge6davebXZfk7Xg--ktddp6Cwno6kDDKfC77ViApaeOSrArrIVE1MBUbyZBQ-VHaL7HGrpgby_aZUr3cSpwmRrEnlICa9E-5A6egIaJXymuVT5tIFrioMU1--J9NYy1Vp0b_p_O5Np-PtlrxHCTejFCZSnWBcO"/>
+<div class="mt-auto">
+<h3 class="font-bold uppercase tracking-widest text-sm mb-1">Pro Runner X1</h3>
+<div class="flex items-center justify-between">
+<span class="text-zinc-500 text-sm">$249.00</span>
+<div class="flex gap-1">
+<div class="w-2 h-2 rounded-full bg-red-500"></div>
+<div class="w-2 h-2 rounded-full bg-zinc-400"></div>
+</div>
+</div>
+</div>
+<button class="add-to-cart opacity-0 translate-y-4 transition-all duration-300 absolute bottom-6 left-6 right-6 bg-primary text-black font-black py-4 uppercase text-xs tracking-widest">
+                    Add to Cart
+                </button>
+</div>
+<div class="group product-card bg-background-light dark:bg-background-dark relative aspect-[3/4] overflow-hidden flex flex-col p-6">
+<div class="absolute top-4 right-4 z-10">
+<span class="bg-white dark:bg-zinc-800 text-[10px] font-black px-2 py-0.5 uppercase tracking-tighter border border-zinc-200 dark:border-zinc-700">Essential</span>
+</div>
+<img alt="Minimalist Watch" class="w-full h-full object-contain mb-4 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB67iTxtnI1Y9uabdxr5tsDw5Gefoj8RN338yNBcWseWdLL5_hS0BtXHm0rE4EaEOdJCTyyHDLZHRHjkejLQv1_ZyTkI1QKfDtEoxVqN3AQFO6_jAW1suufTnVR0StbIl8kbAXDFOt9S_20IwFFS8tNAMJf0s2d-PHe0O5nxvKLtZz1gbl-a8eFtKxEqDcaCTqvnSkUhtXg1VL81uHXrQbOgKW2sYJ7E4Nq18ZBlEfTpubzLhdH9Tpf-8rZ5t2icFtDn3S0W-ugrVWd"/>
+<div class="mt-auto">
+<h3 class="font-bold uppercase tracking-widest text-sm mb-1">Carbon Watch v2</h3>
+<div class="flex items-center justify-between">
+<span class="text-zinc-500 text-sm">$399.00</span>
+</div>
+</div>
+<button class="add-to-cart opacity-0 translate-y-4 transition-all duration-300 absolute bottom-6 left-6 right-6 bg-primary text-black font-black py-4 uppercase text-xs tracking-widest">
+                    Add to Cart
+                </button>
+</div>
+<div class="group product-card bg-background-light dark:bg-background-dark relative aspect-[3/4] overflow-hidden flex flex-col p-6">
+<div class="absolute top-4 left-4 z-10">
+<span class="bg-zinc-900 text-white text-[10px] font-black px-2 py-0.5 uppercase tracking-tighter">New</span>
+</div>
+<img alt="Audio Studio" class="w-full h-full object-contain mb-4 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8H4Xy0t-lENNP67rqrr6MJGcv9GnjL7Kgcz0NRHR3qBntlBFjLD6JxX6Ji5bJ5hHU-PRGW7-vWvQJ_Ea36DiOZcIb4YUSGXVg3FjpghrTDeUJsAz4FWvdbg1EomXKldlb3es34aOpmvsUrUflf0IKcY9FmALS50no4oRcRIIGMekfHNmlnrWOlZGdezQjyA5eL6-p_A6sru3qlpjDWshtOjtaLYxyOW334J56WZ1ZE1eo2js4lA-sSQ7SwN7mZIiaD7EKkU116Gl2"/>
+<div class="mt-auto">
+<h3 class="font-bold uppercase tracking-widest text-sm mb-1">Studio Headphones</h3>
+<div class="flex items-center justify-between">
+<span class="text-zinc-500 text-sm">$189.00</span>
+</div>
+</div>
+<button class="add-to-cart opacity-0 translate-y-4 transition-all duration-300 absolute bottom-6 left-6 right-6 bg-primary text-black font-black py-4 uppercase text-xs tracking-widest">
+                    Add to Cart
+                </button>
+</div>
+<div class="group product-card bg-background-light dark:bg-background-dark relative aspect-[3/4] overflow-hidden flex flex-col p-6">
+<div class="absolute top-4 right-4 z-10 flex flex-col gap-2 items-end">
+<span class="bg-red-600 text-white text-[10px] font-black px-2 py-0.5 uppercase tracking-tighter">Only 2 Left</span>
+</div>
+<img alt="Elite Jacket" class="w-full h-full object-contain mb-4 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjsKyAHxWtLsU9NsmObX87aQGrSr1n0uN3UQK4IhklyEfkaFEeIV2nqDDkA7uggybSKL96z0imj3BNH8gVn8bXBxxXM-wMuXgzMCaWNOXNPWdz4LDorn3HzU1tztdUwLntqsCiYKYT-kRZ9iHGJVlgRkJCrwh2DqRsP_E46F_79HM_i_6cLEulLqb170losH6crpXoXxEwc0X52mXzbVVidiFmANe5ELWW2Rf3T4CsaiI7pwspkpNLNQkvEzktaYJYioo2ob-HrL_O"/>
+<div class="mt-auto">
+<h3 class="font-bold uppercase tracking-widest text-sm mb-1">Stealth Tech Jacket</h3>
+<div class="flex items-center justify-between">
+<span class="text-zinc-500 text-sm">$450.00</span>
+</div>
+</div>
+<button class="add-to-cart opacity-0 translate-y-4 transition-all duration-300 absolute bottom-6 left-6 right-6 bg-primary text-black font-black py-4 uppercase text-xs tracking-widest">
+                    Add to Cart
+                </button>
+</div>
+</div>
+</section>
+<section class="relative h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0">
+<img alt="Promo Background" class="w-full h-full object-cover grayscale opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMsEkABkCwuyMvAij35dop2ifwCEMOpZhacCeHPNL49xLCxUCoSHCJ7OCnsJfKaAsYDJVC4F3f_rQHY9O4tjRtNYkbg6xrzl86oYuIiZO3GxMb0H-_9pKQ8se-KB5oFrcMdo9vE0MpG8TaCFESmGZZ2Bjq8yASyDB4UDZYlpcJccryQLUEe0b1eYZS2D3Q629qh7ihxS4lDUSCjM9wOaU7u1ZJL7oaXp9eTxRr1NCEhtvSGbPhD69Xx7fRXWZJa6CmpiPLZQ3IV5Pz"/>
+<div class="absolute inset-0 bg-black/60"></div>
+</div>
+<div class="relative max-w-7xl mx-auto px-6 w-full text-white">
+<div class="max-w-xl">
+<h2 class="font-display text-7xl md:text-8xl leading-none mb-8">JOIN THE<br/><span class="text-primary italic">ELITE.</span></h2>
+<p class="text-zinc-400 mb-10 text-lg uppercase tracking-widest font-bold">Members get early access to drops and exclusive 1/1 pieces.</p>
+<form class="flex flex-col sm:flex-row gap-0 border border-white/20">
+<input class="flex-1 bg-white/5 backdrop-blur-md border-0 px-6 py-4 focus:ring-0 text-white placeholder:text-zinc-500 font-bold uppercase tracking-widest text-xs" placeholder="ENTER YOUR EMAIL" type="email"/>
+<button class="bg-primary text-black font-black px-10 py-4 uppercase text-xs tracking-widest hover:bg-white transition-colors">Subscribe</button>
+</form>
+</div>
+</div>
+</section>
+<footer class="bg-zinc-100 dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-900 py-20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 mb-20">
+<div class="col-span-2">
+<a class="font-display text-4xl tracking-tighter mb-6 block" href="#">RAW.</a>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm max-w-xs mb-6">Redefining the standard of premium lifestyle and performance gear since 2024.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-zinc-300 dark:border-zinc-800 flex items-center justify-center hover:bg-primary hover:text-black transition-all" href="#">𝕏</a>
+<a class="w-10 h-10 border border-zinc-300 dark:border-zinc-800 flex items-center justify-center hover:bg-primary hover:text-black transition-all" href="#">IG</a>
+<a class="w-10 h-10 border border-zinc-300 dark:border-zinc-800 flex items-center justify-center hover:bg-primary hover:text-black transition-all" href="#">YT</a>
+</div>
+</div>
+<div>
+<h5 class="font-bold uppercase text-xs tracking-widest mb-6">Shop</h5>
+<ul class="flex flex-col gap-4 text-sm text-zinc-500 dark:text-zinc-400">
+<li><a class="hover:text-primary transition-colors" href="#">All Products</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Best Sellers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">New Arrivals</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sale</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold uppercase text-xs tracking-widest mb-6">Company</h5>
+<ul class="flex flex-col gap-4 text-sm text-zinc-500 dark:text-zinc-400">
+<li><a class="hover:text-primary transition-colors" href="#">About</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Journal</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold uppercase text-xs tracking-widest mb-6">Support</h5>
+<ul class="flex flex-col gap-4 text-sm text-zinc-500 dark:text-zinc-400">
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Shipping</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold uppercase text-xs tracking-widest mb-6">Legal</h5>
+<ul class="flex flex-col gap-4 text-sm text-zinc-500 dark:text-zinc-400">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-zinc-200 dark:border-zinc-900 text-[10px] font-bold uppercase tracking-widest text-zinc-400">
+<p>© 2024 RAW PREMIUM E-COMMERCE. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-8 mt-4 md:mt-0">
+<span>Designed by Expert Frontend Designer</span>
+<span>High Conversion UI</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Countdown Timer Implementation
+        function startTimer(duration, display) {
+            let timer = duration, hours, minutes, seconds, days;
+            setInterval(function () {
+                days = parseInt(timer / (24 * 3600), 10);
+                hours = parseInt((timer % (24 * 3600)) / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+                days = days < 10 ? "0" + days : days;
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+                display.textContent = days + ":" + hours + ":" + minutes + ":" + seconds;
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+        window.onload = function () {
+            const countdownTime = (4 * 24 * 3600) + (12 * 3600) + (45 * 60) + 9;
+            const display = document.querySelector('#countdown');
+            startTimer(countdownTime, display);
+        };
+    </script>
+
+</body></html>

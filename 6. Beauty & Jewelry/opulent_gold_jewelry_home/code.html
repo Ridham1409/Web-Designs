@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Opulent Gold Jewelry Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,200..800&amp;family=Noto+Sans:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4c025",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#1a1a1a", // Deep charcoal as requested
+                        "surface-dark": "#232323",
+                        "gold-dim": "#8a7e58",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    backgroundImage: {
+                        'gold-radial': 'radial-gradient(circle at center, rgba(244, 192, 37, 0.15) 0%, rgba(26, 26, 26, 0) 70%)',
+                        'card-gradient': 'linear-gradient(180deg, rgba(35,35,35,0) 0%, rgba(35,35,35,0.8) 100%)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Newsreader', serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .hover-gold-glow:hover {
+            box-shadow: 0 0 20px rgba(244, 192, 37, 0.2);
+            border-color: #f4c025;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white overflow-x-hidden transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Header / Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-[#333] bg-background-dark/80 backdrop-blur-md transition-all duration-300">
+<div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
+<!-- Mobile Menu Icon (Left) -->
+<div class="flex lg:hidden">
+<button class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white" type="button">
+<span class="sr-only">Open main menu</span>
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+</div>
+<!-- Logo (Center on mobile, Left on Desktop) -->
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5 flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-primary text-3xl">diamond</span>
+<span class="text-2xl font-medium tracking-wide text-primary">Maison d'Or</span>
+</a>
+</div>
+<!-- Desktop Navigation (Centered) -->
+<nav class="hidden lg:flex lg:gap-x-12">
+<a class="text-sm font-semibold leading-6 text-gray-300 hover:text-primary transition-colors duration-300 uppercase tracking-widest" href="#">High Jewelry</a>
+<a class="text-sm font-semibold leading-6 text-gray-300 hover:text-primary transition-colors duration-300 uppercase tracking-widest" href="#">Collections</a>
+<a class="text-sm font-semibold leading-6 text-gray-300 hover:text-primary transition-colors duration-300 uppercase tracking-widest" href="#">Maison</a>
+<a class="text-sm font-semibold leading-6 text-gray-300 hover:text-primary transition-colors duration-300 uppercase tracking-widest" href="#">Boutique</a>
+</nav>
+<!-- Right Utility Icons -->
+<div class="flex flex-1 justify-end gap-x-6">
+<a class="text-gray-300 hover:text-primary transition-colors duration-300" href="#">
+<span class="sr-only">Search</span>
+<span class="material-symbols-outlined">search</span>
+</a>
+<a class="text-gray-300 hover:text-primary transition-colors duration-300" href="#">
+<span class="sr-only">Shopping bag</span>
+<span class="material-symbols-outlined">shopping_bag</span>
+</a>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section with Spotlight Effect -->
+<section class="relative isolate overflow-hidden pt-14">
+<!-- Radial Spotlight Background -->
+<div class="absolute inset-0 -z-10 h-full w-full bg-background-dark">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gold-radial blur-3xl opacity-60 pointer-events-none"></div>
+</div>
+<div class="mx-auto max-w-7xl px-6 lg:px-8 py-20 sm:py-32 lg:py-40">
+<div class="mx-auto max-w-2xl text-center relative z-10">
+<div class="mb-8 flex justify-center">
+<div class="relative rounded-full px-3 py-1 text-xs leading-6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20 uppercase tracking-widest">
+                                New Season Arrival <a class="font-semibold text-primary ml-2" href="#"><span aria-hidden="true" class="absolute inset-0"></span>Read more <span aria-hidden="true">→</span></a>
+</div>
+</div>
+<h1 class="text-5xl font-display font-medium tracking-tight text-white sm:text-7xl">
+                            The Gilded <span class="text-primary italic">Era</span>
+</h1>
+<p class="mt-8 text-lg leading-8 text-gray-300 font-light font-body max-w-xl mx-auto">
+                            Discover the epitome of craftsmanship in our latest collection. Each piece tells a story of timeless elegance and unparalleled luxury.
+                        </p>
+<div class="mt-10 flex items-center justify-center gap-x-6">
+<a class="rounded-sm bg-primary px-8 py-3.5 text-sm font-semibold text-background-dark shadow-sm hover:bg-[#dcb028] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary uppercase tracking-widest transition-all duration-300" href="#">
+                                Explore Collection
+                            </a>
+<a class="text-sm font-semibold leading-6 text-white hover:text-primary transition-colors duration-300 flex items-center gap-2" href="#">
+                                View Lookbook <span aria-hidden="true" class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Hero Image Container -->
+<div class="mt-16 flow-root sm:mt-24 relative">
+<div class="-m-2 rounded-xl bg-white/5 p-2 ring-1 ring-inset ring-white/10 lg:-m-4 lg:rounded-2xl lg:p-4 backdrop-blur-sm">
+<img alt="Close up of luxury gold diamond necklace on dark background" class="rounded-md shadow-2xl ring-1 ring-gray-900/10 w-full object-cover h-[400px] lg:h-[600px] opacity-90 hover:opacity-100 transition-opacity duration-700" height="1442" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnsL021YBZY67zytRgtzafVIu6wygZY-nFq0_ZNSu29TAyc0m9kiMQcUTotHaEudt-9h-hXD2wXVXVSIBwCtiQb11jaUFalTDdpKI41UlYnGXR4NvzEgENJtojTO5BYaZ-u0Gdy5r0MOI6n1Fow3KXZcaWTRFbZts9Hp0t9gNMRse_ASBjufx47jMstjoFLl5jWfMtAzJ4MMX0iptcsjlt9U540N-OaWX8sxKLWZt8d2C23W2KKihl8gpfvsPAOyJUl7bSetF6KQPh" width="2432"/>
+</div>
+<!-- Decorative elements -->
+<div class="absolute -top-10 -left-10 w-40 h-40 border-l border-t border-primary/30 rounded-tl-3xl hidden lg:block"></div>
+<div class="absolute -bottom-10 -right-10 w-40 h-40 border-r border-b border-primary/30 rounded-br-3xl hidden lg:block"></div>
+</div>
+</div>
+</section>
+<!-- Boutique Experience Section -->
+<section class="bg-surface-dark py-24 sm:py-32 border-y border-[#333]">
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<div class="mx-auto max-w-2xl lg:text-center mb-16">
+<h2 class="text-base font-semibold leading-7 text-primary uppercase tracking-widest">Services</h2>
+<p class="mt-2 text-3xl font-display font-medium tracking-tight text-white sm:text-4xl">The Boutique Experience</p>
+<p class="mt-6 text-lg leading-8 text-gray-400 font-body">Excellence in every detail, from our atelier to your home. We ensure your journey with us is as exquisite as the jewelry you choose.</p>
+</div>
+<div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+<dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+<div class="flex flex-col items-center text-center group">
+<div class="mb-6 flex h-16 w-16 items-center justify-center rounded-full border border-primary/20 bg-primary/5 group-hover:bg-primary/10 group-hover:border-primary/50 transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-3xl">visibility</span>
+</div>
+<dt class="text-xl font-semibold leading-7 text-white font-display">Private Viewing</dt>
+<dd class="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-400 font-body">
+<p class="flex-auto">Schedule a personal appointment with our experts in a private setting designed for your comfort.</p>
+</dd>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="mb-6 flex h-16 w-16 items-center justify-center rounded-full border border-primary/20 bg-primary/5 group-hover:bg-primary/10 group-hover:border-primary/50 transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+</div>
+<dt class="text-xl font-semibold leading-7 text-white font-display">Lifetime Warranty</dt>
+<dd class="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-400 font-body">
+<p class="flex-auto">Guaranteed maintenance for the life of your piece, ensuring it shines as bright as the day you bought it.</p>
+</dd>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="mb-6 flex h-16 w-16 items-center justify-center rounded-full border border-primary/20 bg-primary/5 group-hover:bg-primary/10 group-hover:border-primary/50 transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-3xl">public</span>
+</div>
+<dt class="text-xl font-semibold leading-7 text-white font-display">Global Concierge</dt>
+<dd class="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-400 font-body">
+<p class="flex-auto">White-glove delivery service to anywhere in the world, handled with the utmost discretion and care.</p>
+</dd>
+</div>
+</dl>
+</div>
+</div>
+</section>
+<!-- Curated Masterpieces Grid -->
+<section class="py-24 sm:py-32 relative">
+<!-- Subtle Radial for Grid -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-gold-radial blur-3xl opacity-30 pointer-events-none -z-10"></div>
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<div class="flex flex-col sm:flex-row items-baseline justify-between border-b border-[#333] pb-6 mb-12">
+<h2 class="text-3xl font-display font-medium tracking-tight text-white sm:text-4xl">Curated Masterpieces</h2>
+<a class="hidden sm:block text-sm font-semibold leading-6 text-primary hover:text-white transition-colors duration-300" href="#">Browse all pieces <span aria-hidden="true">→</span></a>
+</div>
+<div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+<!-- Product 1 -->
+<div class="group relative">
+<div class="aspect-[3/4] w-full overflow-hidden rounded-md border border-[#333] bg-gray-900 lg:aspect-none group-hover:border-primary/60 transition-colors duration-500 lg:h-96 relative">
+<img alt="Gold pendant necklace on a dark bust" class="h-full w-full object-cover object-center lg:h-full lg:w-full opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB443dteYAHfaP7yhSQPlBE9YLLuKiKXTyiKHKB1Z6Gry-FbcH88kalsX4GKAB6DHhzYwSAQ_UUOO7ANcd7hKB7EmTLvn_EGKXlI5FMaDn87pXbA9wy56QbqGhbdO_g41zbbHP6qmlf4WK79fvBmSj6n-Q_DIOUEC6dGLs9A3OM3oHaUw445wXJQicLk1BAIPKPgslwJilbZW14BOVIzY1jcyMNvgI3MylEaTlbRz4y7YWQ6GBISFtEiMGFz41xmBltgKJUcF50kJV0"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+<button class="w-full bg-primary text-background-dark py-2 text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors">Quick View</button>
+</div>
+</div>
+<div class="mt-4 flex justify-between items-start">
+<div>
+<h3 class="text-lg text-white font-display">
+<a href="#">
+<span aria-hidden="true" class="absolute inset-0"></span>
+                                            The Royal Pendant
+                                        </a>
+</h3>
+<p class="mt-1 text-sm text-gray-500 font-body">18k Gold, Diamond</p>
+</div>
+<p class="text-sm font-medium text-primary font-body">$12,500</p>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group relative">
+<div class="aspect-[3/4] w-full overflow-hidden rounded-md border border-[#333] bg-gray-900 lg:aspect-none group-hover:border-primary/60 transition-colors duration-500 lg:h-96 relative">
+<img alt="Pair of diamond stud earrings on black surface" class="h-full w-full object-cover object-center lg:h-full lg:w-full opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCR7d-odBWXMSj4LnjmGf_fKXiNxPr0sHrVKK4u9okJUoM1XL2lCak8L0M4SVKbAp1nF3GmWYmHiwX3eVRcPiSkO1nMFGF-EMwImgY37fqODodyKlvA7U1Mp7TYsG-m0nGRmDBpVZTik1qCHiL6spjz7R-g76M_edzv8KCD4UJp45vR9MatjdRTWFcsv1GzqWG9ftlrq3CJe7IydahKcmS8RqGUNjGkvmJut4GP1eqBaf51yvNKT91zNrZIwXSIzvNWlT9pfcQt8_M"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+<button class="w-full bg-primary text-background-dark py-2 text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors">Quick View</button>
+</div>
+</div>
+<div class="mt-4 flex justify-between items-start">
+<div>
+<h3 class="text-lg text-white font-display">
+<a href="#">
+<span aria-hidden="true" class="absolute inset-0"></span>
+                                            Eternal Gold Studs
+                                        </a>
+</h3>
+<p class="mt-1 text-sm text-gray-500 font-body">24k Gold</p>
+</div>
+<p class="text-sm font-medium text-primary font-body">$4,200</p>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group relative">
+<div class="aspect-[3/4] w-full overflow-hidden rounded-md border border-[#333] bg-gray-900 lg:aspect-none group-hover:border-primary/60 transition-colors duration-500 lg:h-96 relative">
+<img alt="Elegant gold cuff bracelet on velvet stand" class="h-full w-full object-cover object-center lg:h-full lg:w-full opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUtKpHIms2qfJz166yZ6doKuJNzCOqBGm0yDQbmU3WyjJFcbLvkNNTy1kwx9J6iC6jXPCg8mZtnOBUZzvFDfvRw26stVzyVv4Z7TEiy7bO5Zt7zLVkfNVCnbbTXaMFYlozKMDbKpUjl0j20-H8dnDVM57fRikO8Z2ya7WQn9HZzd3jPBmVxBAradbzAkyMpfkj87edouUIv1NY5ovhDcq9yEKEO2GgdAd6a3v5OvVjNAxr0ts_enRRiVkV-tbJ29_O7n9mv_CWKczW"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+<button class="w-full bg-primary text-background-dark py-2 text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors">Quick View</button>
+</div>
+</div>
+<div class="mt-4 flex justify-between items-start">
+<div>
+<h3 class="text-lg text-white font-display">
+<a href="#">
+<span aria-hidden="true" class="absolute inset-0"></span>
+                                            Imperia Cuff
+                                        </a>
+</h3>
+<p class="mt-1 text-sm text-gray-500 font-body">18k Rose Gold</p>
+</div>
+<p class="text-sm font-medium text-primary font-body">$8,900</p>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group relative">
+<div class="aspect-[3/4] w-full overflow-hidden rounded-md border border-[#333] bg-gray-900 lg:aspect-none group-hover:border-primary/60 transition-colors duration-500 lg:h-96 relative">
+<img alt="Diamond engagement ring with gold band" class="h-full w-full object-cover object-center lg:h-full lg:w-full opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh-6BVkgyzdFrVLW8uq6hTNMMzYNNh-cXdW2uHdrvbdX-Pm2A11Dh-HwTG-S-k2P57snC3I3LMT5EFkLwWqVI8URDiGF_hhMo8TEGqVcHg3rvt10q-qV8MOZb0svmch0VdLNyo8fREIk3NVS660JDaVdYMQeqt8lsZZPZvPNjtFmC4Drhjnz6ItvjRU8Yq2nbtB6RiQXpcvBPQLuoepXoFlO_fwKoAPS1AFQ_J5Bkq5qZVYzt8ksJi9ZKyEWldXz27O5wwX1QuIXH4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+<button class="w-full bg-primary text-background-dark py-2 text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors">Quick View</button>
+</div>
+</div>
+<div class="mt-4 flex justify-between items-start">
+<div>
+<h3 class="text-lg text-white font-display">
+<a href="#">
+<span aria-hidden="true" class="absolute inset-0"></span>
+                                            Veridian Ring
+                                        </a>
+</h3>
+<p class="mt-1 text-sm text-gray-500 font-body">Emerald, Gold</p>
+</div>
+<p class="text-sm font-medium text-primary font-body">$15,000</p>
+</div>
+</div>
+</div>
+<div class="mt-12 sm:hidden text-center">
+<a class="text-sm font-semibold leading-6 text-primary hover:text-white transition-colors duration-300" href="#">Browse all pieces <span aria-hidden="true">→</span></a>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="relative isolate overflow-hidden bg-background-dark py-16 sm:py-24 lg:py-32 border-t border-[#333]">
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2 items-center">
+<div class="max-w-xl lg:max-w-lg">
+<h2 class="text-3xl font-display font-medium tracking-tight text-white sm:text-4xl">Join the Inner Circle</h2>
+<p class="mt-4 text-lg leading-8 text-gray-300 font-body">Be the first to witness our newest creations and receive invitations to private viewings.</p>
+<div class="mt-6 flex max-w-md gap-x-4">
+<label class="sr-only" for="email-address">Email address</label>
+<input autocomplete="email" class="min-w-0 flex-auto rounded-sm border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" id="email-address" name="email" placeholder="Enter your email" required="" type="email"/>
+<button class="flex-none rounded-sm bg-primary px-3.5 py-2.5 text-sm font-semibold text-background-dark shadow-sm hover:bg-[#dcb028] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary uppercase tracking-widest transition-colors" type="submit">Subscribe</button>
+</div>
+</div>
+<dl class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
+<div class="flex flex-col items-start">
+<div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+<span class="material-symbols-outlined text-primary">calendar_month</span>
+</div>
+<dt class="mt-4 font-semibold text-white font-display">Weekly Articles</dt>
+<dd class="mt-2 leading-7 text-gray-400 font-body">Insights into the world of haute joaillerie.</dd>
+</div>
+<div class="flex flex-col items-start">
+<div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+<span class="material-symbols-outlined text-primary">notifications_active</span>
+</div>
+<dt class="mt-4 font-semibold text-white font-display">Exclusive Releases</dt>
+<dd class="mt-2 leading-7 text-gray-400 font-body">Priority access to limited edition pieces.</dd>
+</div>
+</dl>
+</div>
+</div>
+</section>
+</main>
+<footer aria-labelledby="footer-heading" class="bg-surface-dark border-t border-[#333]">
+<h2 class="sr-only" id="footer-heading">Footer</h2>
+<div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+<div class="xl:grid xl:grid-cols-3 xl:gap-8">
+<div class="space-y-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">diamond</span>
+<span class="text-2xl font-medium tracking-wide text-white font-display">Maison d'Or</span>
+</div>
+<p class="text-sm leading-6 text-gray-400 font-body">
+                            Crafting legacies since 1920. <br/>Based in Paris, delivering worldwide.
+                        </p>
+<div class="flex space-x-6">
+<a class="text-gray-400 hover:text-primary" href="#">
+<span class="sr-only">Instagram</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.03 2 12.48 2h.165zm-2.32 1.09c-2.425.109-2.72.138-3.667.57a2.91 2.91 0 00-1.059.692 2.91 2.91 0 00-.693 1.059c-.432.946-.46 1.242-.57 3.667-.109 2.425-.139 2.72-.139 6.845 0 4.126.03 4.42.139 6.845.109 2.426.138 2.72.57 3.667a2.91 2.91 0 00.693 1.059 2.91 2.91 0 001.059.693c.946.432 1.242.46 3.667.57 2.425.109 2.72.139 6.845.139 4.127 0 4.42-.03 6.845-.139 2.425-.109 2.72-.138 3.667-.57a2.91 2.91 0 001.059-.693 2.91 2.91 0 00.693-1.059c.432-.946.46-1.242.57-3.667.109-2.425.139-2.72.139-6.845 0-4.126-.03-4.42-.139-6.845-.109-2.426-.138-2.72-.57-3.667a2.91 2.91 0 00-.693-1.059 2.91 2.91 0 00-1.059-.693c-.946-.432-1.242-.46-3.667-.57-2.425-.109-2.72-.139-6.845-.139-4.126 0-4.42.03-6.845.139zm12.593 1.623a1.182 1.182 0 110 2.364 1.182 1.182 0 010-2.364zM12.352 6.556a5.796 5.796 0 110 11.592 5.796 5.796 0 010-11.592zm0 1.996a3.8 3.8 0 100 7.6 3.8 3.8 0 000-7.6z" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm font-semibold leading-6 text-white font-display uppercase tracking-widest">Solutions</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li><a class="text-sm leading-6 text-gray-400 hover:text-white font-body" href="#">Marketing</a></li>
+<li><a class="text-sm leading-6 text-gray-400 hover:text-white font-body" href="#">Analytics</a></li>
+<li><a class="text-sm leading-6 text-gray-400 hover:text-white font-body" href="#">Commerce</a></li>
+<li><a class="text-sm leading-6 text-gray-400 hover:text-white font-body" href="#">Insights</a></li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm font-semibold leading-6 text-white font-display uppercase tracking-widest">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li><a class="text-sm leading-6 text-gray-400 hover:text-white font-body" href="#">Pricing</a></li>
+<li><a class="text-sm leading-6 text-gray-400 hover:text-white font-body" href="#">Documentation</a></li>
+<li><a class="text-sm leading-6 text-gray-400 hover:text-white font-body" href="#">Guides</a></li>
+<li><a class="text-sm leading-6 text-gray-400 hover:text-white font-body" href="#">API Status</a></li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm font-semibold leading-6 text-white font-display uppercase tracking-widest">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li><a class="text-sm leading-6 text-gray-400 hover:text-white font-body" href="#">About</a></li>
+<li><a class="text-sm leading-6 text-gray-400 hover:text-white font-body" href="#">Blog</a></li>
+<li><a class="text-sm leading-6 text-gray-400 hover:text-white font-body" href="#">Jobs</a></li>
+<li><a class="text-sm leading-6 text-gray-400 hover:text-white font-body" href="#">Press</a></li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm font-semibold leading-6 text-white font-display uppercase tracking-widest">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li><a class="text-sm leading-6 text-gray-400 hover:text-white font-body" href="#">Claim</a></li>
+<li><a class="text-sm leading-6 text-gray-400 hover:text-white font-body" href="#">Privacy</a></li>
+<li><a class="text-sm leading-6 text-gray-400 hover:text-white font-body" href="#">Terms</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
+<p class="text-xs leading-5 text-gray-400 text-center font-body">© 2024 Maison d'Or Inc. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cybernetic Trading Terminal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2547f4",
+                        "primary-glow": "#2547f480",
+                        "background-dark": "#06070d",
+                        "surface-dark": "#0d111d",
+                        "surface-lighter": "#161b30",
+                        "accent-cyan": "#00f0ff",
+                        "accent-green": "#0bda65",
+                        "accent-red": "#ff4d4d",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    boxShadow: {
+                        "glow": "0 0 15px -3px rgba(37, 71, 244, 0.5)",
+                        "glow-sm": "0 0 8px -2px rgba(37, 71, 244, 0.4)",
+                        "glow-green": "0 0 10px -2px rgba(11, 218, 101, 0.4)",
+                        "glow-red": "0 0 10px -2px rgba(255, 77, 77, 0.4)",
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-display bg-background-dark text-slate-300 antialiased overflow-hidden;
+            }
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #06070d; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1c223a; 
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2547f4; 
+        }
+        .terminal-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr 320px;
+            grid-template-rows: 48px 1fr;
+            height: 100vh;
+        }
+        .glass-panel {
+            background: rgba(13, 17, 29, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .cyber-scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(37, 71, 244, 0.02) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<div class="terminal-grid relative">
+<header class="col-span-3 h-12 flex items-center justify-between px-4 border-b border-white/5 bg-surface-dark/95 z-50">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">terminal</span>
+<span class="font-bold text-sm tracking-tighter uppercase text-white">Cybernetic<span class="text-primary">.io</span></span>
+</div>
+<nav class="flex items-center gap-1">
+<a class="px-3 py-1 text-xs font-medium text-white bg-primary/20 rounded border border-primary/30" href="#">Exchange</a>
+<a class="px-3 py-1 text-xs font-medium text-slate-400 hover:text-white transition-colors" href="#">Markets</a>
+<a class="px-3 py-1 text-xs font-medium text-slate-400 hover:text-white transition-colors" href="#">Portfolio</a>
+<a class="px-3 py-1 text-xs font-medium text-slate-400 hover:text-white transition-colors" href="#">Staking</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-4 px-4 h-8 bg-black/20 rounded border border-white/5">
+<div class="flex items-center gap-1.5">
+<span class="text-[10px] text-slate-500 font-mono">BTC:</span>
+<span class="text-[11px] text-accent-green font-mono">$42,150.20</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-[10px] text-slate-500 font-mono">ETH:</span>
+<span class="text-[11px] text-accent-red font-mono">$2,240.50</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-[10px] text-slate-500 font-mono">GAS:</span>
+<span class="text-[11px] text-accent-cyan font-mono">18 Gwei</span>
+</div>
+</div>
+<button class="flex items-center gap-2 px-3 h-8 bg-primary hover:bg-blue-600 text-white text-[11px] font-bold rounded shadow-glow transition-all">
+<span class="material-symbols-outlined text-sm">account_balance_wallet</span>
+<span>0x71C...4f2</span>
+</button>
+<div class="h-6 w-px bg-white/10"></div>
+<button class="text-slate-400 hover:text-white"><span class="material-symbols-outlined text-lg">settings</span></button>
+</div>
+</header>
+<aside class="border-r border-white/5 bg-surface-dark flex flex-col overflow-hidden">
+<div class="p-3 border-b border-white/5 flex items-center justify-between">
+<span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Market Watch</span>
+<span class="material-symbols-outlined text-sm text-slate-500 cursor-pointer">search</span>
+</div>
+<div class="flex-1 overflow-y-auto">
+<div class="divide-y divide-white/5">
+<div class="p-3 bg-primary/5 border-l-2 border-primary cursor-pointer hover:bg-primary/10 transition-colors">
+<div class="flex justify-between items-start mb-1">
+<span class="text-xs font-bold text-white">BTC/USDT</span>
+<span class="text-[10px] text-accent-green font-mono">+2.45%</span>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-sm font-mono text-white">42,150.20</span>
+<span class="text-[10px] text-slate-500 font-mono">Vol: 4.2B</span>
+</div>
+</div>
+<div class="p-3 cursor-pointer hover:bg-white/5 transition-colors">
+<div class="flex justify-between items-start mb-1">
+<span class="text-xs font-bold text-white">ETH/USDT</span>
+<span class="text-[10px] text-accent-red font-mono">-0.12%</span>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-sm font-mono text-white">2,240.50</span>
+<span class="text-[10px] text-slate-500 font-mono">Vol: 1.8B</span>
+</div>
+</div>
+<div class="p-3 cursor-pointer hover:bg-white/5 transition-colors">
+<div class="flex justify-between items-start mb-1">
+<span class="text-xs font-bold text-white">SOL/USDT</span>
+<span class="text-[10px] text-accent-green font-mono">+5.82%</span>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-sm font-mono text-white">98.34</span>
+<span class="text-[10px] text-slate-500 font-mono">Vol: 852M</span>
+</div>
+</div>
+<div class="p-3 cursor-pointer hover:bg-white/5 transition-colors opacity-60">
+<div class="flex justify-between items-start mb-1">
+<span class="text-xs font-bold text-white">DOT/USDT</span>
+<span class="text-[10px] text-accent-red font-mono">-1.24%</span>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-sm font-mono text-white">7.42</span>
+<span class="text-[10px] text-slate-500 font-mono">Vol: 124M</span>
+</div>
+</div>
+<div class="p-3 cursor-pointer hover:bg-white/5 transition-colors opacity-60">
+<div class="flex justify-between items-start mb-1">
+<span class="text-xs font-bold text-white">MATIC/USDT</span>
+<span class="text-[10px] text-accent-green font-mono">+0.55%</span>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-sm font-mono text-white">0.824</span>
+<span class="text-[10px] text-slate-500 font-mono">Vol: 98M</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-black/40 border-t border-white/5">
+<div class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">My Balance</div>
+<div class="text-lg font-bold text-white mb-1">$12,492.30</div>
+<div class="flex gap-2">
+<div class="flex-1 h-1 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[60%]"></div>
+</div>
+<div class="flex-1 h-1 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-accent-cyan w-[30%]"></div>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex flex-col overflow-hidden bg-background-dark/50 relative">
+<div class="cyber-scanline absolute inset-0"></div>
+<div class="h-10 border-b border-white/5 flex items-center justify-between px-4 z-10 bg-surface-dark/40 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="text-sm font-bold text-white">BTC/USDT</span>
+<span class="px-1 text-[10px] bg-accent-green/10 text-accent-green border border-accent-green/20 rounded">Perp</span>
+</div>
+<div class="h-4 w-px bg-white/10"></div>
+<div class="flex gap-1">
+<button class="px-2 py-0.5 text-[10px] rounded hover:bg-white/5 text-slate-400">1m</button>
+<button class="px-2 py-0.5 text-[10px] rounded hover:bg-white/5 text-slate-400">5m</button>
+<button class="px-2 py-0.5 text-[10px] rounded bg-primary text-white">15m</button>
+<button class="px-2 py-0.5 text-[10px] rounded hover:bg-white/5 text-slate-400">1h</button>
+<button class="px-2 py-0.5 text-[10px] rounded hover:bg-white/5 text-slate-400">4h</button>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm text-slate-400 cursor-pointer">grid_view</span>
+<span class="material-symbols-outlined text-sm text-slate-400 cursor-pointer">fullscreen</span>
+</div>
+</div>
+<div class="flex-1 relative overflow-hidden z-0">
+<div class="absolute inset-0 grid grid-cols-6 grid-rows-4 pointer-events-none opacity-20">
+<div class="border-r border-b border-primary/20"></div><div class="border-r border-b border-primary/20"></div><div class="border-r border-b border-primary/20"></div><div class="border-r border-b border-primary/20"></div><div class="border-r border-b border-primary/20"></div><div class="border-b border-primary/20"></div>
+<div class="border-r border-b border-primary/20"></div><div class="border-r border-b border-primary/20"></div><div class="border-r border-b border-primary/20"></div><div class="border-r border-b border-primary/20"></div><div class="border-r border-b border-primary/20"></div><div class="border-b border-primary/20"></div>
+<div class="border-r border-b border-primary/20"></div><div class="border-r border-b border-primary/20"></div><div class="border-r border-b border-primary/20"></div><div class="border-r border-b border-primary/20"></div><div class="border-r border-b border-primary/20"></div><div class="border-b border-primary/20"></div>
+</div>
+<svg class="w-full h-full absolute inset-0" preserveAspectRatio="none" viewBox="0 0 1000 400">
+<defs>
+<linearGradient id="chartGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#2547f4" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#2547f4" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+<path d="M0 300 Q 100 280 200 320 T 400 200 T 600 240 T 800 150 L 1000 120 L 1000 400 L 0 400 Z" fill="url(#chartGrad)"></path>
+<path class="drop-shadow-glow" d="M0 300 Q 100 280 200 320 T 400 200 T 600 240 T 800 150 L 1000 120" fill="none" stroke="#2547f4" stroke-width="2"></path>
+<line stroke="#2547f4" stroke-dasharray="4" stroke-opacity="0.5" x1="0" x2="1000" y1="120" y2="120"></line>
+</svg>
+<div class="absolute right-0 top-[110px] bg-primary text-white text-[10px] font-mono px-2 py-0.5 rounded-l shadow-glow">
+                    42,150.20
+                </div>
+</div>
+<div class="h-64 border-t border-white/5 grid grid-cols-2 bg-surface-dark/60 backdrop-blur-md z-10">
+<div class="border-r border-white/5 flex flex-col">
+<div class="flex items-center justify-between px-3 py-2 border-b border-white/5">
+<span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Order Book</span>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-xs text-accent-green cursor-pointer">expand_less</span>
+<span class="material-symbols-outlined text-xs text-accent-red cursor-pointer">expand_more</span>
+</div>
+</div>
+<div class="flex-1 overflow-hidden grid grid-cols-2 text-[10px] font-mono">
+<div class="flex flex-col-reverse divide-y divide-white/5 overflow-hidden">
+<div class="flex justify-between px-3 py-1 bg-accent-red/5 relative">
+<div class="absolute right-0 top-0 bottom-0 bg-accent-red/10 w-[40%]"></div>
+<span class="text-accent-red z-10">42,158.40</span>
+<span class="text-slate-400 z-10">0.451</span>
+</div>
+<div class="flex justify-between px-3 py-1 bg-accent-red/5 relative">
+<div class="absolute right-0 top-0 bottom-0 bg-accent-red/10 w-[20%]"></div>
+<span class="text-accent-red z-10">42,155.00</span>
+<span class="text-slate-400 z-10">1.205</span>
+</div>
+<div class="flex justify-between px-3 py-1 bg-accent-red/5 relative">
+<div class="absolute right-0 top-0 bottom-0 bg-accent-red/10 w-[70%]"></div>
+<span class="text-accent-red z-10">42,152.10</span>
+<span class="text-slate-400 z-10">3.881</span>
+</div>
+</div>
+<div class="flex flex-col divide-y divide-white/5 overflow-hidden">
+<div class="flex justify-between px-3 py-1 bg-accent-green/5 relative">
+<div class="absolute left-0 top-0 bottom-0 bg-accent-green/10 w-[60%]"></div>
+<span class="text-accent-green z-10">42,148.20</span>
+<span class="text-slate-400 z-10">2.112</span>
+</div>
+<div class="flex justify-between px-3 py-1 bg-accent-green/5 relative">
+<div class="absolute left-0 top-0 bottom-0 bg-accent-green/10 w-[35%]"></div>
+<span class="text-accent-green z-10">42,145.50</span>
+<span class="text-slate-400 z-10">0.950</span>
+</div>
+<div class="flex justify-between px-3 py-1 bg-accent-green/5 relative">
+<div class="absolute left-0 top-0 bottom-0 bg-accent-green/10 w-[90%]"></div>
+<span class="text-accent-green z-10">42,142.00</span>
+<span class="text-slate-400 z-10">8.420</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col overflow-hidden">
+<div class="flex items-center justify-between px-3 py-2 border-b border-white/5">
+<span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Market History</span>
+<span class="text-[9px] text-slate-500">Real-time</span>
+</div>
+<div class="flex-1 overflow-y-auto px-3 py-1 text-[10px] font-mono divide-y divide-white/5">
+<div class="flex justify-between py-1">
+<span class="text-accent-green">42,149.50</span>
+<span class="text-white">0.024</span>
+<span class="text-slate-500">14:24:02</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="text-accent-red">42,148.90</span>
+<span class="text-white">1.450</span>
+<span class="text-slate-500">14:24:01</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="text-accent-green">42,150.10</span>
+<span class="text-white">0.118</span>
+<span class="text-slate-500">14:23:58</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="text-accent-green">42,149.20</span>
+<span class="text-white">0.005</span>
+<span class="text-slate-500">14:23:55</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="text-accent-red">42,148.50</span>
+<span class="text-white">0.882</span>
+<span class="text-slate-500">14:23:52</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<aside class="border-l border-white/5 bg-surface-dark flex flex-col p-4">
+<div class="flex gap-1 mb-6 bg-black/40 p-1 rounded">
+<button class="flex-1 py-1.5 text-xs font-bold text-white bg-surface-lighter rounded border border-white/10">Buy</button>
+<button class="flex-1 py-1.5 text-xs font-bold text-slate-500 hover:text-white transition-colors">Sell</button>
+</div>
+<div class="space-y-4">
+<div class="space-y-1.5">
+<label class="text-[10px] font-bold text-slate-500 uppercase">Order Type</label>
+<select class="w-full bg-black/40 border-white/10 rounded text-xs text-white focus:ring-primary focus:border-primary">
+<option>Limit</option>
+<option>Market</option>
+<option>Stop Limit</option>
+</select>
+</div>
+<div class="space-y-1.5">
+<label class="text-[10px] font-bold text-slate-500 uppercase">Price (USDT)</label>
+<div class="relative">
+<input class="w-full bg-black/40 border-white/10 rounded text-xs font-mono text-white focus:ring-primary focus:border-primary pl-3 pr-10" type="text" value="42,150.20"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] text-slate-500">USDT</span>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="text-[10px] font-bold text-slate-500 uppercase">Size (BTC)</label>
+<div class="relative">
+<input class="w-full bg-black/40 border-white/10 rounded text-xs font-mono text-white focus:ring-primary focus:border-primary pl-3 pr-10" placeholder="0.00" type="text"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] text-slate-500">BTC</span>
+</div>
+</div>
+<div class="space-y-1.5 pt-2">
+<div class="flex justify-between text-[10px] font-bold text-slate-500 uppercase">
+<span>Leverage</span>
+<span class="text-primary">10x</span>
+</div>
+<input class="w-full h-1.5 bg-white/5 rounded-full appearance-none accent-primary cursor-pointer" type="range"/>
+<div class="flex justify-between text-[8px] text-slate-600 font-mono">
+<span>1x</span>
+<span>25x</span>
+<span>50x</span>
+<span>100x</span>
+</div>
+</div>
+<div class="p-3 bg-black/40 rounded border border-white/5 space-y-2 mt-4">
+<div class="flex justify-between text-[10px]">
+<span class="text-slate-500">Margin Required</span>
+<span class="text-white font-mono">421.50 USDT</span>
+</div>
+<div class="flex justify-between text-[10px]">
+<span class="text-slate-500">Max Trade Size</span>
+<span class="text-white font-mono">2.45 BTC</span>
+</div>
+</div>
+<button class="w-full py-3 mt-4 bg-accent-green hover:bg-green-600 text-black font-bold rounded shadow-glow-green transition-all transform active:scale-[0.98] uppercase text-xs tracking-widest">
+                    Buy BTC Long
+                </button>
+</div>
+<div class="mt-auto pt-6 border-t border-white/5">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold text-slate-500 uppercase">Positions</span>
+<span class="text-[10px] text-primary cursor-pointer">View All</span>
+</div>
+<div class="bg-black/40 p-2 rounded border border-white/5 mb-2">
+<div class="flex justify-between items-center mb-1">
+<span class="text-[10px] font-bold text-white">BTC Long 10x</span>
+<span class="text-[10px] text-accent-green">+ $12.40</span>
+</div>
+<div class="w-full h-1 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-accent-green w-[45%] shadow-glow-green"></div>
+</div>
+</div>
+</div>
+</aside>
+<footer class="col-span-3 h-6 bg-primary/10 border-t border-primary/20 flex items-center justify-between px-4 z-50">
+<div class="flex items-center gap-4 text-[9px] uppercase tracking-wider font-bold">
+<div class="flex items-center gap-1.5">
+<span class="size-1.5 rounded-full bg-accent-green shadow-glow-green animate-pulse"></span>
+<span class="text-accent-green">Operational</span>
+</div>
+<span class="text-slate-500">Lat: 14ms</span>
+<span class="text-slate-500">Block: 18,942,012</span>
+</div>
+<div class="flex items-center gap-4 text-[9px] font-mono text-slate-400">
+<span>API V3.2.1-STABLE</span>
+<span>UTC: 14:24:05</span>
+</div>
+</footer>
+</div>
+
+</body></html>

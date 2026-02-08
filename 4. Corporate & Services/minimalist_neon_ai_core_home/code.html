@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Minimalist Neon AI Core Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f425f4",
+                        "background-light": "#f8f5f8",
+                        "background-dark": "#0a0a0f", // Deep charcoal/midnight
+                        "surface-dark": "#16161e",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "sans": ["Space Grotesk", "sans-serif"],
+                    },
+                    backgroundImage: {
+                        'nebula-gradient': 'radial-gradient(circle at 50% 0%, rgba(35, 16, 35, 1) 0%, rgba(10, 10, 15, 1) 70%)',
+                        'glow-primary': 'radial-gradient(circle, rgba(244, 37, 244, 0.15) 0%, rgba(0,0,0,0) 70%)',
+                        'glass-card': 'linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(22, 22, 30, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .neon-border-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .neon-border-hover:hover {
+            border-color: rgba(244, 37, 244, 0.5);
+            box-shadow: 0 0 15px rgba(244, 37, 244, 0.2);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 20px rgba(244, 37, 244, 0.3);
+        }
+        
+        /* 3D Geometric Core Animation Placeholder - CSS only approach for visual */
+        .core-spinner {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            animation: spin 20s linear infinite;
+        }
+        
+        .core-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 1px solid rgba(244, 37, 244, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .core-ring:nth-child(1) { width: 100%; height: 100%; border-top-color: #f425f4; animation: spin-reverse 8s linear infinite; }
+        .core-ring:nth-child(2) { width: 70%; height: 70%; border-left-color: #f425f4; animation: spin 12s linear infinite; }
+        .core-ring:nth-child(3) { width: 40%; height: 40%; border-bottom-color: #f425f4; animation: spin-reverse 5s linear infinite; }
+
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        
+        @keyframes spin-reverse {
+            0% { transform: translate(-50%, -50%) rotate(360deg); }
+            100% { transform: translate(-50%, -50%) rotate(0deg); }
+        }
+
+        .grid-pattern {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col overflow-x-hidden text-slate-900 dark:text-white selection:bg-primary selection:text-white">
+<!-- Ambient Glow Background -->
+<div class="fixed inset-0 z-0 pointer-events-none">
+<div class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[80vw] h-[60vh] bg-primary/20 blur-[120px] rounded-full opacity-40"></div>
+<div class="absolute inset-0 grid-pattern opacity-30 mask-gradient-b"></div>
+</div>
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 w-full border-b border-white/5 bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="relative w-8 h-8 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl animate-pulse">hexagon</span>
+<div class="absolute inset-0 bg-primary/30 blur-md rounded-full"></div>
+</div>
+<h2 class="text-white text-xl font-bold tracking-widest uppercase">Neon<span class="text-primary">Core</span></h2>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium text-gray-400 hover:text-white transition-colors uppercase tracking-wider" href="#">Platform</a>
+<a class="text-sm font-medium text-gray-400 hover:text-white transition-colors uppercase tracking-wider" href="#">Solutions</a>
+<a class="text-sm font-medium text-gray-400 hover:text-white transition-colors uppercase tracking-wider" href="#">Enterprise</a>
+<a class="text-sm font-medium text-gray-400 hover:text-white transition-colors uppercase tracking-wider" href="#">Developers</a>
+</div>
+<button class="hidden md:flex items-center justify-center h-10 px-6 bg-primary hover:bg-primary/90 text-white text-xs font-bold uppercase tracking-widest rounded transition-all shadow-[0_0_15px_rgba(244,37,244,0.4)] hover:shadow-[0_0_25px_rgba(244,37,244,0.6)]">
+                Initialize Core
+            </button>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<main class="relative z-10 flex flex-col grow">
+<!-- Hero Section -->
+<section class="relative pt-20 pb-32 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<!-- Hero Text -->
+<div class="flex flex-col gap-8 text-center lg:text-left order-2 lg:order-1">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 self-center lg:self-start w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-medium text-primary uppercase tracking-wider">System v3.0 Online</span>
+</div>
+<h1 class="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tight text-white">
+                        INTELLIGENCE <br/>
+                        ENGINE FOR <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-primary/80">FUTURE ENTERPRISE</span>
+</h1>
+<p class="text-lg text-gray-400 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Deploy neural networks at scale with the precision of the Neon Core. Experience the next generation of predictive infrastructure designed for zero-latency operations.
+                    </p>
+<div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
+<button class="h-12 px-8 bg-primary text-white text-sm font-bold uppercase tracking-widest rounded hover:bg-white hover:text-background-dark transition-colors shadow-[0_0_20px_rgba(244,37,244,0.3)]">
+                            Request Access
+                        </button>
+<button class="h-12 px-8 border border-white/20 bg-white/5 hover:bg-white/10 text-white text-sm font-bold uppercase tracking-widest rounded backdrop-blur-sm transition-colors flex items-center gap-2 group">
+                            Documentation
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="flex items-center gap-6 justify-center lg:justify-start pt-8 border-t border-white/5 mt-4">
+<div class="flex flex-col">
+<span class="text-2xl font-bold text-white">99.9%</span>
+<span class="text-xs text-gray-500 uppercase tracking-wider">Uptime</span>
+</div>
+<div class="w-px h-8 bg-white/10"></div>
+<div class="flex flex-col">
+<span class="text-2xl font-bold text-white">&lt;10ms</span>
+<span class="text-xs text-gray-500 uppercase tracking-wider">Latency</span>
+</div>
+<div class="w-px h-8 bg-white/10"></div>
+<div class="flex flex-col">
+<span class="text-2xl font-bold text-white">50k+</span>
+<span class="text-xs text-gray-500 uppercase tracking-wider">Nodes</span>
+</div>
+</div>
+</div>
+<!-- 3D Abstract Core Visual -->
+<div class="relative flex items-center justify-center h-[400px] lg:h-[600px] order-1 lg:order-2">
+<!-- Background Glow -->
+<div class="absolute inset-0 bg-gradient-radial from-primary/10 to-transparent opacity-60 blur-3xl"></div>
+<!-- CSS 3D Animated Core -->
+<div class="core-spinner">
+<div class="core-ring"></div>
+<div class="core-ring"></div>
+<div class="core-ring"></div>
+<!-- Central Cube Representation -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-br from-primary/80 to-purple-900/80 backdrop-blur-xl border border-white/20 shadow-[0_0_50px_rgba(244,37,244,0.4)] flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl opacity-80">hub</span>
+</div>
+</div>
+<!-- Floating Data Points -->
+<div class="absolute top-10 right-10 p-3 glass-panel rounded border border-primary/20 flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
+<div class="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.8)]"></div>
+<span class="text-xs text-white font-mono">NODE_ACTIVE</span>
+</div>
+<div class="absolute bottom-20 left-0 p-3 glass-panel rounded border border-primary/20 flex items-center gap-3 animate-bounce" style="animation-duration: 4s;">
+<div class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(244,37,244,0.8)]"></div>
+<span class="text-xs text-white font-mono">SYNTHESIZING</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Trusted By Section -->
+<section class="border-y border-white/5 bg-black/20 backdrop-blur-sm py-10">
+<div class="max-w-7xl mx-auto px-6">
+<p class="text-center text-xs font-bold text-gray-500 tracking-widest mb-8 uppercase">Trusted by Industry Leaders</p>
+<div class="flex flex-wrap justify-center gap-12 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+<!-- Placeholder Logos using simple text/icons for demo purposes -->
+<div class="flex items-center gap-2 group">
+<span class="material-symbols-outlined text-3xl group-hover:text-white">diamond</span>
+<span class="text-xl font-bold tracking-tight group-hover:text-white">VERTEX</span>
+</div>
+<div class="flex items-center gap-2 group">
+<span class="material-symbols-outlined text-3xl group-hover:text-white">change_history</span>
+<span class="text-xl font-bold tracking-tight group-hover:text-white">PRISM</span>
+</div>
+<div class="flex items-center gap-2 group">
+<span class="material-symbols-outlined text-3xl group-hover:text-white">all_inclusive</span>
+<span class="text-xl font-bold tracking-tight group-hover:text-white">LOOP</span>
+</div>
+<div class="flex items-center gap-2 group">
+<span class="material-symbols-outlined text-3xl group-hover:text-white">widgets</span>
+<span class="text-xl font-bold tracking-tight group-hover:text-white">BLOCK</span>
+</div>
+<div class="flex items-center gap-2 group">
+<span class="material-symbols-outlined text-3xl group-hover:text-white">blur_on</span>
+<span class="text-xl font-bold tracking-tight group-hover:text-white">NEXUS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Grid -->
+<section class="py-24 px-6 relative">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16 text-center md:text-left">
+<h2 class="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">CORE CAPABILITIES</h2>
+<p class="text-gray-400 max-w-2xl text-lg">Our architecture is built for speed, security, and scalability. Every component is optimized for the next era of computing.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Feature 1 -->
+<div class="glass-panel p-8 rounded-lg neon-border-hover group">
+<div class="w-12 h-12 bg-primary/10 rounded flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">memory</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3 tracking-wide">Neural Processing</h3>
+<p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Real-time data synthesis with zero latency. Our proprietary engine processes millions of vectors per second.
+                        </p>
+<a class="inline-flex items-center text-primary text-xs font-bold uppercase tracking-wider group-hover:translate-x-2 transition-transform" href="#">
+                            Learn more <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+<!-- Feature 2 -->
+<div class="glass-panel p-8 rounded-lg neon-border-hover group">
+<div class="w-12 h-12 bg-primary/10 rounded flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3 tracking-wide">Quantum Security</h3>
+<p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Enterprise-grade encryption ready for the quantum era. Your data is protected by lattice-based cryptography.
+                        </p>
+<a class="inline-flex items-center text-primary text-xs font-bold uppercase tracking-wider group-hover:translate-x-2 transition-transform" href="#">
+                            View Protocols <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+<!-- Feature 3 -->
+<div class="glass-panel p-8 rounded-lg neon-border-hover group">
+<div class="w-12 h-12 bg-primary/10 rounded flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">trending_up</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3 tracking-wide">Predictive Scaling</h3>
+<p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Infrastructure that autonomously adapts to your growth. AI-driven resource allocation ensures optimal performance.
+                        </p>
+<a class="inline-flex items-center text-primary text-xs font-bold uppercase tracking-wider group-hover:translate-x-2 transition-transform" href="#">
+                            See Analytics <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Big Visual / CTA Section -->
+<section class="py-20 px-6">
+<div class="max-w-7xl mx-auto rounded-2xl overflow-hidden relative border border-white/10 group">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Abstract dark geometric neon pattern background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCouW4jSKGWALxZQ8sOpIRPhXom5ApF3Xokb4kEb4XDysKGcJopoxK4QD7tazbd2Wkr_H8wJpwqsdeReBIQgGSeMF-OKzzZqrv2dXp_mupdVdIiw5N8W3yjIn9MUTWmx-As06DV2czFNXgNvszsM0Iy7fguOAmfHYlGoMZySJSkiepmuWj8qpz9f91I22S_GJteGJTWFB77Ir5e1z1NCP_JDUQpMnx94QIuxAu1r1DWA7yC1IBchDztua5G2MEGLrDofXh36qlzfwAj');"></div>
+<div class="absolute inset-0 bg-background-dark/80 group-hover:bg-background-dark/70 transition-colors duration-500"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<div class="relative z-10 px-8 py-20 md:px-20 md:py-24 text-center">
+<span class="material-symbols-outlined text-6xl text-primary mb-6 animate-bounce">rocket_launch</span>
+<h2 class="text-4xl md:text-5xl font-bold text-white mb-6">READY TO DEPLOY?</h2>
+<p class="text-gray-300 max-w-2xl mx-auto mb-10 text-lg">Join the waitlist for early access to the Neon Core beta. Limited spots available for enterprise partners.</p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+<input class="flex-1 bg-white/5 border border-white/20 rounded px-6 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-sm uppercase tracking-wide" placeholder="ENTER WORK EMAIL" type="email"/>
+<button class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded font-bold uppercase tracking-widest text-sm transition-all shadow-[0_0_15px_rgba(244,37,244,0.4)]" type="button">
+                            Initialize
+                        </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Stats / Code Section -->
+<section class="py-20 px-6 border-b border-white/5">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12">
+<div class="flex-1">
+<h3 class="text-2xl font-bold text-white mb-6 uppercase tracking-wide">System Architecture</h3>
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between p-4 border border-white/10 bg-white/5 rounded">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gray-400">dns</span>
+<span class="text-white font-medium">Core API</span>
+</div>
+<span class="text-green-400 text-xs font-mono bg-green-400/10 px-2 py-1 rounded border border-green-400/20">OPERATIONAL</span>
+</div>
+<div class="flex items-center justify-between p-4 border border-white/10 bg-white/5 rounded">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gray-400">schema</span>
+<span class="text-white font-medium">Neural Grid</span>
+</div>
+<span class="text-green-400 text-xs font-mono bg-green-400/10 px-2 py-1 rounded border border-green-400/20">OPERATIONAL</span>
+</div>
+<div class="flex items-center justify-between p-4 border border-white/10 bg-white/5 rounded">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gray-400">lock</span>
+<span class="text-white font-medium">Quantum Shield</span>
+</div>
+<span class="text-primary text-xs font-mono bg-primary/10 px-2 py-1 rounded border border-primary/20">UPGRADING</span>
+</div>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="text-2xl font-bold text-white mb-6 uppercase tracking-wide">Developer Friendly</h3>
+<div class="glass-panel p-6 rounded-lg font-mono text-sm overflow-hidden relative group">
+<div class="absolute top-2 right-2 flex gap-1">
+<div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+<div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+</div>
+<pre class="text-gray-300 overflow-x-auto"><span class="text-primary">import</span> { NeonCore } <span class="text-primary">from</span> '@neon/sdk';
+
+<span class="text-gray-500">// Initialize the secure core</span>
+<span class="text-primary">const</span> core = <span class="text-primary">await</span> NeonCore.initialize({
+    apiKey: process.env.NEON_KEY,
+    mode: <span class="text-green-400">'secure-quantum'</span>
+});
+
+<span class="text-gray-500">// Deploy neural network</span>
+<span class="text-primary">const</span> network = <span class="text-primary">await</span> core.deploy({
+    model: <span class="text-green-400">'gpt-neo-x'</span>,
+    shards: <span class="text-purple-400">128</span>
+});
+
+console.log(<span class="text-green-400">`Network active: ${network.id}`</span>);
+</pre>
+<div class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-background-dark/50 to-transparent pointer-events-none"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-dark py-12 px-6 border-t border-white/5">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">hexagon</span>
+<span class="text-white font-bold uppercase tracking-widest">Neon Core</span>
+</div>
+<div class="flex gap-8 text-sm text-gray-500 font-medium uppercase tracking-wider">
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-primary transition-colors" href="#">Status</a>
+</div>
+<div class="text-xs text-gray-600">
+                    © 2024 Neon Core AI. All Systems Nominal.
+                </div>
+</div>
+</footer>
+</main>
+</body></html>

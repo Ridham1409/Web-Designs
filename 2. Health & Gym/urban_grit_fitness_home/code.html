@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Urban Grit Fitness | Push Your Limits</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#D4FF00", // Electric Yellow
+                        secondary: "#FF3E00", // Lava Red
+                        "background-light": "#F2EFE9", // Vintage off-white
+                        "background-dark": "#0A0A0A", // Deep charcoal black
+                    },
+                    fontFamily: {
+                        display: ["Bebas Neue", "cursive"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0px", // Sharp urban aesthetic
+                    },
+                },
+            },
+        };
+    </script>
+<style>.distressed-text {letter-spacing: 0.05em;
+    text-transform: uppercase;
+    filter: contrast(150%) brightness(110%)
+    }
+.grunge-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDqx9VeuD3vopApmdV46wdcVmYqOGfbR07qa1QBYzymldEOxjHmTcQ-7xRtNS_JoBcz0hkbQ-7PkdQ27ifHB4wWqygbVeWIEfgX4ArkvYxJ8K25p41u-Oj1REfiJx1RPs9BCwxl7l_rBBByE4_r9un6iz6-NrfXtn0lsJGKNpjnPTIjiv58vR_nVDloc99_Bz5gipJ0NYpHirGXBsK74PYjvbtFm9mVks_GFQdyPEjB_bDQNmRLYIWO3okTlnY8y8d5nV4-Qnmen3sV);
+    pointer-events: none
+    }
+.card-glitch:hover {
+    filter: hue-rotate(15deg);
+    transform: scale(1.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+    }</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-stone-900 dark:text-stone-100 font-sans transition-colors duration-300">
+<nav class="fixed top-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-stone-300 dark:border-stone-800">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center space-x-2 group cursor-pointer">
+<div class="w-8 h-8 bg-primary flex items-center justify-center font-display text-2xl text-black rotate-3 group-hover:rotate-0 transition-transform">U</div>
+<span class="font-display text-3xl tracking-tighter">URBAN GRIT</span>
+</div>
+<div class="hidden md:flex items-center space-x-12 font-display text-xl tracking-wide">
+<a class="hover:text-primary transition-colors" href="#">Programs</a>
+<a class="hover:text-primary transition-colors" href="#">Locations</a>
+<a class="hover:text-primary transition-colors" href="#">Shop</a>
+<a class="px-6 py-2 border-2 border-stone-900 dark:border-stone-100 hover:bg-stone-900 hover:text-white dark:hover:bg-stone-100 dark:hover:text-black transition-all" href="#">Member Login</a>
+</div>
+<button class="md:hidden">
+<span class="material-icons">menu</span>
+</button>
+</div>
+</nav>
+<header class="relative h-screen flex items-center justify-center overflow-hidden pt-20">
+<div class="absolute inset-0 z-0">
+<img alt="Athlete training in an urban gym" class="w-full h-full object-cover grayscale brightness-50 contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcQMBMOQvA8BFVZMb--14AC_XWIYlIpRjGd_g0q3dt1Wrf43fkwRKiDizTQH8HN8r-cd1pxYCqR68-R_N31w2sTZZboLmiCKI1TanF6bNbrsMUnT2AHn3VtKFyyQcFiqGP1Pz_zS91ZuZ2hwortKE9MNc2CB4SgI4xgqewDLCBplzI4soWMWku_eZUFY-nee-tecghlJxhHNtb_SUNYtbYei9s3RRiKaYzAQhMEwMg_0DVZ9Yr82udZWL53ASRYrD_Re3wsrjY6YfA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<div class="absolute inset-0 grunge-overlay opacity-30"></div>
+</div>
+<div class="relative z-10 text-center px-4">
+<h1 class="font-display text-8xl md:text-[12rem] leading-none mb-6 distressed-text text-white drop-shadow-2xl">
+                PUSH YOUR <br/> <span class="text-primary italic">LIMITS</span>
+</h1>
+<p class="max-w-2xl mx-auto text-lg md:text-xl text-stone-300 mb-10 font-medium uppercase tracking-widest">
+                No Excuses. No Shortcuts. Just Pure Urban Intensity.
+            </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<a class="bg-primary text-black font-display text-3xl px-12 py-4 hover:scale-105 transition-transform shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-none active:translate-x-1 active:translate-y-1" href="#">
+                    JOIN THE TRIBE
+                </a>
+<a class="bg-transparent text-white border-2 border-white font-display text-3xl px-12 py-4 hover:bg-white hover:text-black transition-all" href="#">
+                    VIEW SCHEDULE
+                </a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-icons text-white text-4xl">expand_more</span>
+</div>
+</header>
+<section class="py-24 px-6 max-w-7xl mx-auto">
+<div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h2 class="font-display text-6xl md:text-8xl dark:text-white uppercase leading-none">The Arsenal</h2>
+<div class="h-2 w-32 bg-secondary mt-4"></div>
+</div>
+<p class="max-w-md text-stone-500 dark:text-stone-400 font-medium uppercase tracking-tight">
+                Our specialized training protocols are designed to forge elite performance through raw, unfiltered effort.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group relative aspect-[3/4] overflow-hidden border-4 border-stone-900 dark:border-stone-100 card-glitch bg-stone-900">
+<img alt="Strength Training" class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0hqCO6-u5sPM8GWpSXrskxskCibGMdXNVjnGKCmj753jKQ-9e-4QpEjqEOOJL9OHXWfAoX5wOr3z7mzBaIkJYkbo2-AqCcpqOv2QjhFZSELTQ8q4qQY2daGBXlCxRXX54aq_SokkiQChTijkvFCIBvE0DKtUWxXmCScwlb25VIDpZvem0UBIhkLvAjSuy-K9v04R91LAGVRrxkR8MfhyHQgTZJwzrs-EWDuSWGsFxgHcBMOhj1UtroIetj8qs7ikRwOgRwz-_8bci"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="font-display text-5xl text-white mb-2">STRENGTH</h3>
+<p class="text-stone-300 text-sm uppercase tracking-widest mb-4">Elite Powerlifting &amp; Bodybuilding</p>
+<a class="text-primary flex items-center font-bold" href="#">
+                        EXPLORE <span class="material-icons ml-2">trending_flat</span>
+</a>
+</div>
+</div>
+<div class="group relative aspect-[3/4] overflow-hidden border-4 border-stone-900 dark:border-stone-100 card-glitch bg-stone-900">
+<img alt="HIIT Training" class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDhjnnNBMYJBE8QMjmbAk0xl0WU7VK8NgCqhYqY-EL0UTcfchGXW4VghUTjr4nfYVZRDzXhqF4tjoEMF_goxZSNoDDf70a6BLEsRsJgnryczNFkO7Qlbv-x_BMD50tGHgv_RIPzNcXCXkhQqVU-dP9-CHKxnpJkvA0j0Qn-8FW_B49F-S35p90L43lYlZeUGFJHZBircJn2qAVOmn33Jqdz9gNVxLEbjetJEXRh-tLZ-SGr_oSsNqwAyoghDeTNXm7-kNu0hw6pR0N"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="font-display text-5xl text-white mb-2">H.I.I.T</h3>
+<p class="text-stone-300 text-sm uppercase tracking-widest mb-4">High Intensity Interval Training</p>
+<a class="text-primary flex items-center font-bold" href="#">
+                        EXPLORE <span class="material-icons ml-2">trending_flat</span>
+</a>
+</div>
+</div>
+<div class="group relative aspect-[3/4] overflow-hidden border-4 border-stone-900 dark:border-stone-100 card-glitch bg-stone-900">
+<img alt="Endurance Training" class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFajMaS52FXB4SzCQ_N7eRoO76QXaJr6diICIH8DolCsLDSHkEkyPPa9r9X0VIrtYaAtf6ajLf_-Vau9E0-koW6i7h93rfMapDAb-V9hmAWn6r_HP-rP5IAlGDlkANRGqCRMjITtkaiKb9IwR7k11_VotBmdJs_7cVx_Ucm1nFMqP_ryFRHx1n4gfhP1lhwQXtKDcxNMYaz9sCec1vxmwmO9kIGUVktLs-OXxlwOvdDMyIcKp9ntCE8AB1WuRqp50qr3hW0umHin16"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="font-display text-5xl text-white mb-2">ENDURANCE</h3>
+<p class="text-stone-300 text-sm uppercase tracking-widest mb-4">Conditioning &amp; Stamina</p>
+<a class="text-primary flex items-center font-bold" href="#">
+                        EXPLORE <span class="material-icons ml-2">trending_flat</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="relative bg-stone-900 py-32 overflow-hidden border-y-8 border-primary">
+<div class="absolute inset-0 grunge-overlay opacity-20"></div>
+<div class="relative z-10 text-center px-4">
+<h2 class="font-display text-7xl md:text-9xl text-white distressed-text tracking-tighter leading-none">
+                BLOOD, SWEAT, <br/> AND <span class="text-secondary">RESPECT.</span>
+</h2>
+<p class="text-stone-400 mt-8 font-display text-2xl uppercase tracking-[0.5em]">The first two you give, the last one you earn.</p>
+</div>
+<div class="absolute top-4 left-4 text-white opacity-10 font-display text-9xl select-none">GRIT</div>
+<div class="absolute bottom-4 right-4 text-white opacity-10 font-display text-9xl select-none">URBAN</div>
+</section>
+<section class="py-24 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<img alt="Warehouse gym equipment" class="w-full grayscale border-l-8 border-secondary p-4 bg-stone-200 dark:bg-stone-800" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaCx9JJXyksI7DOJnOe4ZCXBxQedOlCoKDHs2IGPbJYqtLfcdCL12RENs9EekEs5bxh6i8_34PlYYK8UrUKLpHv61xbhGgOjs9_weEn0jAmoFz_hf4FUgtPSxlbGSUJUiqxLv7PaMAKvRdNnK7k6hZfFEvk_oqY3T8D3N3aZrFdr8kG7Vt11oaThfdMAkQZW5Pgo2I0OGrfqjfrJnY2kdOhPAannQ1MgO3Ya_0RhqukrnU_oAjdCmRhdG_t_J8z-bkeQXhlu7ptefz"/>
+<div class="absolute -top-6 -right-6 bg-primary text-black p-6 font-display text-2xl hidden md:block">EST. 2014</div>
+</div>
+<div>
+<h3 class="font-display text-6xl mb-6 leading-tight dark:text-white">NOT YOUR AVERAGE <br/><span class="text-secondary">COMMERCIAL GYM.</span></h3>
+<p class="text-stone-600 dark:text-stone-400 text-lg mb-8 leading-relaxed">
+                    We don't do juice bars. We don't do neon lights. We do raw, unfiltered training in an environment that demands your absolute best. Whether you're a pro athlete or just starting your journey, the grit is the same.
+                </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center space-x-4">
+<span class="material-icons text-primary">check_circle</span>
+<span class="font-bold uppercase tracking-wide dark:text-white">Professional Grade Equipment</span>
+</li>
+<li class="flex items-center space-x-4">
+<span class="material-icons text-primary">check_circle</span>
+<span class="font-bold uppercase tracking-wide dark:text-white">Expert Strength Coaches</span>
+</li>
+<li class="flex items-center space-x-4">
+<span class="material-icons text-primary">check_circle</span>
+<span class="font-bold uppercase tracking-wide dark:text-white">24/7 Warehouse Access</span>
+</li>
+</ul>
+<a class="inline-block bg-stone-900 dark:bg-stone-100 text-white dark:text-stone-900 font-display text-3xl px-10 py-4 hover:bg-primary hover:text-black transition-all" href="#">
+                    OUR LOCATIONS
+                </a>
+</div>
+</div>
+</section>
+<footer class="bg-stone-900 text-stone-400 py-16 border-t-4 border-stone-800">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center space-x-2 mb-6">
+<div class="w-8 h-8 bg-primary flex items-center justify-center font-display text-2xl text-black">U</div>
+<span class="font-display text-3xl tracking-tighter text-white">URBAN GRIT</span>
+</div>
+<p class="max-w-md mb-8">
+                    The ultimate destination for those who want to push past their physical and mental barriers. Join the revolution of raw strength and endurance.
+                </p>
+<div class="flex space-x-4">
+<a class="w-12 h-12 flex items-center justify-center bg-stone-800 hover:bg-primary hover:text-black transition-colors" href="#">
+<i class="material-icons">facebook</i>
+</a>
+<a class="w-12 h-12 flex items-center justify-center bg-stone-800 hover:bg-primary hover:text-black transition-colors" href="#">
+<i class="material-icons">camera_alt</i>
+</a>
+<a class="w-12 h-12 flex items-center justify-center bg-stone-800 hover:bg-primary hover:text-black transition-colors" href="#">
+<i class="material-icons">movie</i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-display text-2xl text-white mb-6">Quick Links</h4>
+<ul class="space-y-3 uppercase tracking-wider text-sm">
+<li><a class="hover:text-primary" href="#">Membership</a></li>
+<li><a class="hover:text-primary" href="#">The Collective</a></li>
+<li><a class="hover:text-primary" href="#">Apparel</a></li>
+<li><a class="hover:text-primary" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-display text-2xl text-white mb-6">HQ Contact</h4>
+<p class="text-sm mb-4">124 Industrial Way,<br/>Warehouse District, NY 10001</p>
+<p class="text-sm">support@urbangrit.com</p>
+<p class="text-sm">+1 (555) 012-3456</p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center text-xs uppercase tracking-[0.2em]">
+<p>© 2024 URBAN GRIT FITNESS. NO RETREAT. NO SURRENDER.</p>
+<div class="flex items-center mt-4 md:mt-0">
+<span>Dark Mode</span>
+<button class="ml-4 w-12 h-6 bg-stone-700 rounded-full relative" onclick="document.documentElement.classList.toggle('dark')">
+<div class="absolute left-1 top-1 w-4 h-4 bg-primary transition-all dark:translate-x-6"></div>
+</button>
+</div>
+</div>
+</footer>
+<div class="fixed inset-0 pointer-events-none opacity-5 grunge-overlay mix-blend-multiply dark:mix-blend-overlay"></div>
+
+</body></html>

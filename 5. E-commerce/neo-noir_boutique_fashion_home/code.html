@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Neo-Noir Boutique Fashion Home</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7317cf",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#191121",
+                        "charcoal": "#1a1122",
+                        "accent-glow": "#7317cf",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'spotlight': 'radial-gradient(circle at 50% 0%, rgba(115, 23, 207, 0.15) 0%, transparent 60%)',
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+    width: 8px
+    }
+::-webkit-scrollbar-track {
+    background: #191121
+    }
+::-webkit-scrollbar-thumb {
+    background: #362447;
+    border-radius: 4px
+    }
+/* Subtle noise texture */
+.bg-noise {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCsXWXQeGxM0zx3qKz4kfzDg_UScuyYuMbzckbDToFUhCvNvHtxmZ4AbTq2Fss6hkmwIu1yq7H328iGL2yMGWBeuAe1YxrxoaIKjUhI3OyeRTTq34ELKEh0Qmt3bgMNxB9cNqGdIAi0svklkL_u2C5U1TFT0plHoGNdhjOHgkICzyxtFFx4dhj1vrwUjIDGXd5yfjU8azU4o0ScAfw0GVDCXYpd9vxMujoYofnV7Jn2l-yzUAX_G2gPuuPrBcM7a0gZKXTpRHf2icUE)
+    }
+.text-stroke {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    color: transparent
+    }</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden">
+<div class="relative min-h-screen w-full flex flex-col bg-charcoal">
+<!-- Background Effects -->
+<div class="fixed inset-0 pointer-events-none z-0 bg-noise opacity-30 mix-blend-overlay"></div>
+<div class="fixed top-0 left-1/2 -translate-x-1/2 w-full h-[800px] bg-spotlight pointer-events-none z-0"></div>
+<!-- Navigation -->
+<header class="fixed top-0 w-full z-50 px-6 py-6 md:px-12 mix-blend-difference text-white">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-3xl">diamond</span>
+<h1 class="text-xl font-bold tracking-[0.2em]">NEO-NOIR</h1>
+</div>
+<span class="text-xs uppercase tracking-widest opacity-60 ml-9">Boutique</span>
+</div>
+<div class="flex gap-6 items-center">
+<nav class="hidden md:flex gap-8 text-sm font-medium tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">SHOP</a>
+<a class="hover:text-primary transition-colors" href="#">EDITORIAL</a>
+<a class="hover:text-primary transition-colors" href="#">ARCHIVE</a>
+</nav>
+<button class="relative group">
+<span class="material-symbols-outlined text-2xl group-hover:text-primary transition-colors">shopping_bag</span>
+<span class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold">2</span>
+</button>
+<button class="md:hidden">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Grid -->
+<main class="relative z-10 flex-grow pt-32 pb-20 px-6 md:px-12 max-w-[1600px] mx-auto w-full">
+<!-- Hero Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 min-h-[80vh] items-center mb-32 relative">
+<!-- Left: Artistic Visual (Pseudo-Video) -->
+<div class="lg:col-span-5 relative h-[600px] w-full group">
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent z-10 opacity-80"></div>
+<div class="h-full w-full bg-cover bg-center rounded-sm grayscale group-hover:grayscale-0 transition-all duration-700 ease-out" data-alt="Abstract moody fashion portrait with dramatic lighting and shadows" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMOt6s-unau8i6FZJGT9soRQRCnlgjs73bhddIlikW_tdajO7qFmyX_OpD3jE2ry2rpIY9OcvEoC3XEGp3wj4bfb9J96arH4PdZiBrm9V1zkROj9CWUOhfoHnMK9Rg6tYlQ4K1swyjUs4yvIjqYLkkVR-9Jul6Hm1FpAgO8x6uaFf4_NGZx-6jfFseenN71-l6Ex3KIesVCBuFF7WR8Hhg26qTOocV0zWWpPMK2NzseRqUgTIj2IcaCEDXQIUGytcPZv9pET1uZX0a');">
+</div>
+<!-- Floating Caption -->
+<div class="absolute -bottom-8 -right-8 z-20 bg-background-dark/90 backdrop-blur border border-white/10 p-6 max-w-xs shadow-2xl">
+<div class="flex items-center justify-between mb-2">
+<span class="text-primary text-xs font-bold tracking-widest uppercase">New Arrival</span>
+<span class="text-white/40 text-xs">01 / 03</span>
+</div>
+<h3 class="text-white text-lg font-bold leading-tight mb-1">Silk Trench Coat</h3>
+<p class="text-white/60 text-sm mb-4">Italian silk blend with midnight chrome finish.</p>
+<div class="flex justify-between items-center">
+<span class="text-white font-mono">$1,200</span>
+<button class="h-8 w-8 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right: Typography & Content -->
+<div class="lg:col-span-7 flex flex-col justify-center relative lg:-ml-12 z-20 pointer-events-none">
+<h2 class="text-[12vw] lg:text-[8rem] font-black leading-[0.85] tracking-tighter text-white mix-blend-exclusion pointer-events-auto">
+                        MIDNIGHT<br/>
+<span class="text-stroke text-transparent hover:text-primary transition-colors duration-500">VELVET</span>
+</h2>
+<div class="mt-12 pl-2 lg:pl-32 pointer-events-auto max-w-xl">
+<p class="text-xl md:text-2xl text-white/90 font-light leading-relaxed mb-8">
+                            Experience the new standard of tactile luxury. Fabrics sourced from the shadows, tailored for the spotlight.
+                        </p>
+<div class="flex flex-wrap gap-4 items-center">
+<button class="group relative px-8 py-4 bg-transparent overflow-hidden border border-white/20 hover:border-primary/50 transition-colors">
+<div class="absolute inset-0 w-0 bg-primary transition-all duration-[250ms] ease-out group-hover:w-full opacity-20"></div>
+<span class="relative text-white font-bold tracking-widest text-sm flex items-center gap-2">
+                                    ENTER COLLECTION
+                                    <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">east</span>
+</span>
+</button>
+<button class="px-6 py-4 text-white/60 hover:text-white text-sm font-medium tracking-widest flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined">play_circle</span>
+                                WATCH CAMPAIGN
+                            </button>
+</div>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary rounded-full blur-[150px] opacity-10 pointer-events-none mix-blend-screen"></div>
+</div>
+<!-- Overlapping Grid Section -->
+<section class="mb-32 relative">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-white/10 pb-6">
+<h3 class="text-3xl font-bold tracking-tight">CURATED PIECES</h3>
+<div class="flex gap-4 text-white/40 text-sm mt-4 md:mt-0">
+<span class="text-white">ALL</span>
+<span>OUTERWEAR</span>
+<span>ACCESSORIES</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-y-24">
+<!-- Item 1 -->
+<div class="group relative flex flex-col gap-4">
+<div class="relative overflow-hidden aspect-[3/4] bg-neutral-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Dark moody fashion shot of a model wearing a blazer" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_IVsVDrxURqvFLzXQltYkCUcxAnWcwefb58hz6CNNFBvVrtDR1BdPb7xhho0e0PwlO9QOyDnvl5KF3iRrxNPYrRJek5pZnMK0bmUfIaDFKa9TbxoylzIzlWxYB-rZs00tqkWTh2nPhfJzl4USCzDFnCSjEstOs6EQ0T5jemrG-1cCPGIamKrrvCq-9g4w7JN2llw_Le8me5JWGfl3KhRaPxuBS1zQitP0sMC8Yi8ZAze5hYZSI1NRD-QCptC6_xVMi2rcYWXCb2Rp');"></div>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-lg font-bold text-white mb-1">Velvet Blazer</h4>
+<p class="text-sm text-white/50">Tailored Fit</p>
+</div>
+<span class="text-white font-mono">$890</span>
+</div>
+</div>
+<!-- Item 2 (Offset) -->
+<div class="group relative flex flex-col gap-4 lg:mt-24">
+<div class="relative overflow-hidden aspect-[3/4] bg-neutral-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Close up of black leather boots on dark pavement" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAj33SG2-HzwaFVJ7V_zEMvCKNXW4kQd3mt2KoB5oDXCLYIs6d0bEv79utuZhAi9kr1h9gNOwj6wGxO90uckUHcymNxIoFkfw1QAr2Q2a_FZliwxwoeWAt3Ew6t41tX1h5bGbDHCIaPixXnGbis2vnUhNsRu03JJl6jLeZXc5hckGP6qaJw7Wl-3htUmZDiDCz3YDm93-BngxizcPrNCK7Cvc7DOiKAzdjyi16KbAEE1U1ylSwGRdr23MJpNu0zPN9LSPfLeZDewRMt');"></div>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+<div class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-wider">Bestseller</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-lg font-bold text-white mb-1">Noir Boots</h4>
+<p class="text-sm text-white/50">Calfskin Leather</p>
+</div>
+<span class="text-white font-mono">$650</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group relative flex flex-col gap-4">
+<div class="relative overflow-hidden aspect-[3/4] bg-neutral-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Model in shadow wearing a dark silk dress" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXvKpbGrQmxkp3Gbxo-guem2ovNunWXu_SZUKcmFk_fKWBrhy-j6QnorpNqSY1mQoh_mV-ZsejJFE4S2OawT_HNyEKBcccB-lWfSkM0iXApGGE07VUZp9pKU496RQotgbCv5_2AbA9Ugp0oEs8wMryGlNkvfgk6QNm1eVXgxpTOq9F8xMLqb0XWHueI5M2TofJbe-3dECHVfFKWeh-1dXlvdQ6NJfngAKWRIuKoyz8kCxTsG6FuYyrVJfy8ERGV9ALxiIMQYAiF7PE');"></div>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-lg font-bold text-white mb-1">Silk Slip Dress</h4>
+<p class="text-sm text-white/50">Midnight Black</p>
+</div>
+<span class="text-white font-mono">$420</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature / Detail Section -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-white/10 mb-32">
+<div class="p-8 lg:p-12 border-b md:border-b-0 md:border-r border-white/10 hover:bg-white/5 transition-colors group">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary group-hover:scale-110 transition-transform block">texture</span>
+<h3 class="text-xl font-bold mb-3">Tactile Fabric</h3>
+<p class="text-white/60 text-sm leading-relaxed">
+                        Imported Italian silk and velvet blends designed to catch the light in the darkest rooms.
+                    </p>
+</div>
+<div class="p-8 lg:p-12 border-b md:border-b-0 md:border-r border-white/10 hover:bg-white/5 transition-colors group">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary group-hover:scale-110 transition-transform block">straighten</span>
+<h3 class="text-xl font-bold mb-3">Modern Fit</h3>
+<p class="text-white/60 text-sm leading-relaxed">
+                        Silhouettes that blend classic tailoring with avant-garde cuts for a sharp profile.
+                    </p>
+</div>
+<div class="p-8 lg:p-12 hover:bg-white/5 transition-colors group">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary group-hover:scale-110 transition-transform block">auto_awesome</span>
+<h3 class="text-xl font-bold mb-3">Hand Finish</h3>
+<p class="text-white/60 text-sm leading-relaxed">
+                        Every button, seam, and hem is finished by hand in our midnight chrome atelier.
+                    </p>
+</div>
+</section>
+<!-- Immersion / Behind The Scenes -->
+<section class="relative rounded overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div class="bg-primary/20 p-12 lg:p-24 flex flex-col justify-center relative overflow-hidden">
+<!-- Decorative bg -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary blur-[100px] opacity-40"></div>
+<div class="relative z-10">
+<span class="text-primary text-sm font-bold tracking-widest uppercase mb-4 block">Process</span>
+<h2 class="text-4xl md:text-5xl font-black leading-tight mb-8">THE TOUCH OF NOIR</h2>
+<p class="text-lg text-white/80 mb-10 max-w-md">
+                                Watch the making of the Midnight Velvet campaign. From the loom to the runway, discover the shadows.
+                            </p>
+<button class="w-fit flex items-center gap-3 text-white font-bold border-b border-primary pb-1 hover:text-primary transition-colors">
+                                EXPLORE THE ATELIER
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="h-[400px] lg:h-auto bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-700" data-alt="Behind the scenes view of a fashion photoshoot with lighting equipment" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAXVwPtMUGoPdqWCUNKcuwPOjJC_wrxb8qNw590E2WzZjNDSuKWQSHYgQW-15e2ouzdOdkGXIRRLErIL4iJ1ztGpPBZ2RaBVG4_YuNn5fHu1yjcqWztHhFHJ_8-fTjHePh_kBtq04n72tTqYjGtV6KAgRW5uxwJzSi_nrrJO76Pdqlmm66jsrMxZy2QXHeg3GsXkMugP0YTTGC-17P_uPbr9ETGF6z1Czd6d3gvqlwyKw76g31brRyLjJW1dGN2tk4aAZLFYOmiYhix');">
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-white/10 bg-background-dark py-12 px-6 md:px-12">
+<div class="max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-end gap-8">
+<div>
+<h2 class="text-2xl font-bold tracking-widest mb-2">NEO-NOIR</h2>
+<p class="text-white/40 text-sm">© 2024. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap gap-8 text-sm font-medium tracking-wide text-white/60">
+<a class="hover:text-white transition-colors" href="#">INSTAGRAM</a>
+<a class="hover:text-white transition-colors" href="#">TWITTER</a>
+<a class="hover:text-white transition-colors" href="#">CONTACT</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
