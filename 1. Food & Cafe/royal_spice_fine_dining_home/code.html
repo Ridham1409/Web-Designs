@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Royal Spice - Fine Dining</title>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#181611",
+                        "charcoal": "#1c1c1c",
+                        "brass": "#bfa15f",
+                    },
+                    fontFamily: {
+                        "sans": ["Montserrat", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                        "display": ["Work Sans", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #181611;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #393528;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #544e3b;
+        }
+        .ghost-button {
+            transition: all 0.3s ease;
+        }
+        .ghost-button:hover {
+            background-color: rgba(242, 185, 13, 0.1);
+            border-color: #f2b90d;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#181611] dark:text-white font-sans overflow-x-hidden antialiased selection:bg-primary selection:text-black">
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-[#181611]/90 backdrop-blur-md border-b border-[#393528]">
+<div class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">restaurant_menu</span>
+<span class="text-white text-xl font-serif tracking-wider font-semibold">ROYAL SPICE</span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-gray-300 hover:text-primary transition-colors text-sm uppercase tracking-widest font-medium" href="#">Menu</a>
+<a class="text-gray-300 hover:text-primary transition-colors text-sm uppercase tracking-widest font-medium" href="#">Story</a>
+<a class="text-gray-300 hover:text-primary transition-colors text-sm uppercase tracking-widest font-medium" href="#">Private Dining</a>
+</div>
+<div class="hidden md:block">
+<!-- Placeholder for spacing balance, button is floating fixed -->
+</div>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<main class="relative pt-20">
+<!-- Hero Section: Split Screen Editorial -->
+<section class="min-h-[calc(100vh-80px)] w-full flex flex-col lg:flex-row">
+<!-- Left: Typography & Intro -->
+<div class="w-full lg:w-1/2 flex flex-col justify-center px-8 md:px-16 lg:px-24 py-16 lg:py-0 bg-[#12100c] relative overflow-hidden">
+<!-- Decorative background element -->
+<div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none" style="background-image: radial-gradient(circle at 20% 50%, #f2b90d 0%, transparent 40%);"></div>
+<div class="relative z-10 space-y-8">
+<span class="text-primary uppercase tracking-[0.2em] text-sm font-medium border-b border-primary/30 pb-2 inline-block">Est. 1894</span>
+<h1 class="font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.1] text-white">
+                        The Art of <br/>
+<span class="text-primary italic">Indian Spice</span>
+</h1>
+<p class="text-gray-400 text-lg font-light leading-relaxed max-w-md font-sans">
+                        Experience a symphony of flavors where traditional heritage meets modern culinary artistry. A journey through the royal kitchens of Rajasthan to your plate.
+                    </p>
+<div class="flex items-center gap-6 pt-4">
+<button class="bg-primary text-[#181611] px-8 py-4 rounded-none uppercase tracking-widest text-xs font-bold hover:bg-white transition-colors duration-300">
+                            Explore Menu
+                        </button>
+<button class="flex items-center gap-2 text-white hover:text-primary transition-colors group">
+<span class="uppercase tracking-widest text-xs font-bold border-b border-transparent group-hover:border-primary pb-1">Watch Video</span>
+<span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">play_circle</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right: Full Bleed Image -->
+<div class="w-full lg:w-1/2 h-[50vh] lg:h-auto relative">
+<img alt="Close up of delicious high-end lamb chops plated artistically with herbs and sauce" class="absolute inset-0 w-full h-full object-cover" data-alt="Gourmet lamb dish plated artistically" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiH58gQX2H2VIaBIPLDkqPPNWIcOo3eQ7c0WykWfVvMxy0W3rvXwzSVwglae1x7SY1gXw0geXQSL53RKSLmTvbEoIEjWvlvRqDOm-CC9ZiwK9jcss9ijrKiNruDhPe4O3ju02rRZcsj22jSToQ9zhINdxPQFD1DpY9teVAbtzEaBFioofo0YI5X9j8ufIb9YkGBnESQGFt_bfwphKkfZXpA0IAL6bjwNNPGq7Q2kL5sU_wR8rVWVwyY3bmsBqjuQhva1aSgL-urRY9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#181611] via-transparent to-transparent lg:bg-gradient-to-l lg:from-transparent lg:to-[#12100c]/50"></div>
+<!-- Floating Caption -->
+<div class="absolute bottom-8 right-8 bg-[#181611]/80 backdrop-blur-sm p-4 border-l-2 border-primary max-w-xs hidden md:block">
+<p class="text-white font-serif text-lg italic">Signature Rack of Lamb</p>
+<p class="text-gray-400 text-xs uppercase tracking-wider mt-1">Marinated in 24-hour spices</p>
+</div>
+</div>
+</section>
+<!-- Story Section: Minimalist Text-Led -->
+<section class="py-24 px-6 md:px-12 bg-[#f8f8f5] dark:bg-[#1a1814] text-center">
+<div class="max-w-3xl mx-auto space-y-8">
+<span class="material-symbols-outlined text-primary text-4xl">local_fire_department</span>
+<h2 class="font-serif text-4xl md:text-5xl text-[#181611] dark:text-white leading-tight">
+                    "We believe in the power of spice to tell a story."
+                </h2>
+<div class="w-16 h-[1px] bg-primary mx-auto"></div>
+<p class="font-sans text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+                    Born from the royal kitchens of Rajasthan, our recipes have traveled through generations, refined by time and perfected by passion. At Royal Spice, every dish is an homage to the past, reinterpreted for the modern palate using sustainable, locally sourced ingredients.
+                </p>
+<div class="pt-4">
+<a class="text-[#181611] dark:text-white border-b border-[#181611] dark:border-white pb-1 uppercase text-xs tracking-[0.2em] hover:text-primary hover:border-primary transition-colors" href="#">Read Our Full Story</a>
+</div>
+</div>
+</section>
+<!-- Menu Section: Asymmetrical Grid -->
+<section class="py-24 px-6 md:px-12 lg:px-24 bg-[#12100c]">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<h3 class="font-serif text-3xl md:text-4xl text-white mb-2">Curated Selection</h3>
+<p class="text-gray-500 font-sans text-sm tracking-wide">SEASONAL HIGHLIGHTS</p>
+</div>
+<a class="text-primary hover:text-white transition-colors flex items-center gap-2 group" href="#">
+<span class="uppercase text-xs tracking-widest font-bold">View Full Menu</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
+<!-- Item 1 (Large) -->
+<div class="lg:col-span-8 group cursor-pointer">
+<div class="relative aspect-[16/9] overflow-hidden rounded-sm border border-[#393528] group-hover:border-primary transition-colors duration-500">
+<img alt="Top down view of a rich creamy curry dish with naan bread" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Rich creamy curry with garnish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC_eTSxU0WNETvGh2r7OfVmV8etq_2bFMNKTzdGlRLYJdd-epo1zTl7sJkad6dqi9mfeb7f6b693NLDXwiOQGp58sljRFzVxmbcpTKHbVIdjJ4nL4rcD58Rr2v4kVv7sSrJzyqVwkkKYS8G7LZzIF0VyorsQ0dhtdQHFK3i0oqIbqfjo9wSyv6ZES1WaUWAYZ5v02GW0XjZ6PmdG-Fi5kNd_zJwelDt1MDDqWlg_TnnjPfr8Lhjg4H5QvmpZSpkdK0T2AU-VtR_9Pb"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500"></div>
+<div class="absolute bottom-0 left-0 w-full p-6 md:p-8 flex justify-between items-end bg-gradient-to-t from-black/90 to-transparent">
+<div>
+<h4 class="font-serif text-2xl text-white mb-1">Tandoori Lamb Chops</h4>
+<p class="text-gray-300 text-sm font-light">Charcoal grilled, ginger, garlic, garam masala</p>
+</div>
+<span class="text-primary font-serif italic text-xl">$45</span>
+</div>
+</div>
+</div>
+<!-- Item 2 (Vertical) -->
+<div class="lg:col-span-4 group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden rounded-sm border border-[#393528] group-hover:border-primary transition-colors duration-500 h-full">
+<img alt="Elegant plating of saffron scallops on a dark plate" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Plated scallops with saffron sauce" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsXSXUy63TIvi1AyP-eSUlIua5-7kMKXoaHKO9JhibizwOpl_BHzS0lEg1OjupVD-A_44E6e1V-p5YQxL29pQ_n5TjQ3kq9vnQW0ypiu7JH3yuQ5dkZ97XQrVWRUjZzL0EpPlRYS3nTCmIi5a_fPRWhpCqxUH2O8PtFvWyqFe3AgVkhwd42D5g7_pOZKcGnVU77o2F71zN5EttpP_A-lD99j9Ss0TWIx37gEEp5qV0idyoGKa1J8fWvsFFYJ_n4VdRMk0eN9j7Iqqc"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500"></div>
+<div class="absolute bottom-0 left-0 w-full p-6 flex flex-col items-start bg-gradient-to-t from-black/90 to-transparent">
+<h4 class="font-serif text-2xl text-white mb-1">Saffron Scallops</h4>
+<p class="text-gray-300 text-sm font-light mb-4">Pan seared, saffron cream reduction</p>
+<div class="flex justify-between w-full items-center">
+<span class="text-primary font-serif italic text-xl">$38</span>
+<button class="ghost-button border border-white/30 text-white text-xs uppercase px-4 py-2 tracking-wider rounded-sm backdrop-blur-sm">View Details</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 3 (Medium) -->
+<div class="lg:col-span-5 group cursor-pointer">
+<div class="relative aspect-[4/3] overflow-hidden rounded-sm border border-[#393528] group-hover:border-primary transition-colors duration-500">
+<img alt="Close up of a dark rich lentil stew in a copper bowl" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Dark lentil dal makhani in copper bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9WnIrVP8gEdzVevPiEu30Qrg64HyF-baNv6enyFf6xGifEenq0vr43Z6Olne59EX_aEZtjQgBq-nJm3_g4aZZ3W37jcALF5ftDL1Zf9Dena6vdn37ucvU-EmACrzSqsMWVLSkTgpVrb4agbhUnFr4sCjat_BWNW7pXy6zXvWNV5AbVRMdfUW21NIWwvOW1Akfc64jBkhTt0Tx3lgc2ZALor3C8hiULEihne93Jefln1h6sByDdAX2Bc1kuWqBZd8uhYsRQ0OxN-mX"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500"></div>
+<div class="absolute bottom-0 left-0 w-full p-6 flex justify-between items-end bg-gradient-to-t from-black/90 to-transparent">
+<div>
+<h4 class="font-serif text-2xl text-white mb-1">Smoked Dal Makhani</h4>
+<p class="text-gray-300 text-sm font-light">Black lentils, simmered 24 hours</p>
+</div>
+<span class="text-primary font-serif italic text-xl">$28</span>
+</div>
+</div>
+</div>
+<!-- Item 4 (Medium Text Block) -->
+<div class="lg:col-span-7 flex flex-col justify-center p-8 border border-[#393528] bg-[#1a1814] rounded-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">spa</span>
+</div>
+<h4 class="font-serif text-2xl text-white mb-4">Chef's Tasting Menu</h4>
+<p class="text-gray-400 font-sans text-sm leading-relaxed mb-6">
+                         An immersive seven-course journey curated daily by our head chef. Featuring off-menu seasonal specialties and wine pairings from our cellar.
+                     </p>
+<div class="flex items-center gap-4">
+<span class="text-primary font-serif italic text-xl">$125 pp</span>
+<div class="h-px bg-[#393528] flex-grow"></div>
+<button class="ghost-button border border-primary text-primary hover:text-black hover:bg-primary text-xs uppercase px-6 py-3 tracking-wider rounded-sm transition-colors">
+                            View Course List
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-20 px-6 md:px-12 bg-[#181611] border-t border-[#393528]">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="p-6 border-l border-[#393528] hover:border-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">diamond</span>
+<h3 class="text-white font-serif text-xl mb-2">Private Dining</h3>
+<p class="text-gray-500 text-sm leading-relaxed">Exclusive rooms for intimate gatherings and corporate events, tailored to your needs.</p>
+</div>
+<!-- Feature 2 -->
+<div class="p-6 border-l border-[#393528] hover:border-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">eco</span>
+<h3 class="text-white font-serif text-xl mb-2">Sustainable Sourcing</h3>
+<p class="text-gray-500 text-sm leading-relaxed">We partner with local farms to ensure every ingredient is fresh, ethical, and seasonal.</p>
+</div>
+<!-- Feature 3 -->
+<div class="p-6 border-l border-[#393528] hover:border-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">wine_bar</span>
+<h3 class="text-white font-serif text-xl mb-2">Sommelier Selection</h3>
+<p class="text-gray-500 text-sm leading-relaxed">A curated wine list designed specifically to complement the complex spices of our cuisine.</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#12100c] py-16 px-6 md:px-12 border-t border-[#393528]">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-xs">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-2xl">restaurant_menu</span>
+<span class="text-white text-lg font-serif font-semibold">ROYAL SPICE</span>
+</div>
+<p class="text-gray-500 text-sm">
+                        123 Culinary Avenue, <br/>
+                        Metropolis, NY 10012
+                    </p>
+<p class="text-gray-500 text-sm mt-2">+1 (555) 123-4567</p>
+</div>
+<div class="grid grid-cols-2 gap-12">
+<div class="flex flex-col gap-4">
+<h5 class="text-white font-serif text-lg">Explore</h5>
+<a class="text-gray-500 hover:text-primary text-sm transition-colors" href="#">Menu</a>
+<a class="text-gray-500 hover:text-primary text-sm transition-colors" href="#">Reservations</a>
+<a class="text-gray-500 hover:text-primary text-sm transition-colors" href="#">Gift Cards</a>
+<a class="text-gray-500 hover:text-primary text-sm transition-colors" href="#">Careers</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-white font-serif text-lg">Social</h5>
+<a class="text-gray-500 hover:text-primary text-sm transition-colors" href="#">Instagram</a>
+<a class="text-gray-500 hover:text-primary text-sm transition-colors" href="#">Facebook</a>
+<a class="text-gray-500 hover:text-primary text-sm transition-colors" href="#">Twitter</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-white font-serif text-lg">Newsletter</h5>
+<div class="flex border-b border-[#393528] py-2">
+<input class="bg-transparent border-none text-white focus:ring-0 placeholder-gray-600 w-full px-0" placeholder="Your email" type="email"/>
+<button class="text-primary uppercase text-xs font-bold tracking-widest hover:text-white transition-colors">Join</button>
+</div>
+</div>
+</div>
+<div class="border-t border-[#393528] mt-16 pt-8 text-center text-gray-700 text-xs">
+                © 2023 Royal Spice. All rights reserved. Designed for Fine Dining.
+            </div>
+</footer>
+<!-- Floating CTA Button -->
+<div class="fixed bottom-8 right-8 z-50">
+<button class="bg-primary hover:bg-white text-[#181611] font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_rgba(242,185,13,0.3)] transition-all transform hover:scale-105 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)] flex items-center gap-3">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="uppercase tracking-widest text-xs">Book a Table</span>
+</button>
+</div>
+</main>
+</body></html>

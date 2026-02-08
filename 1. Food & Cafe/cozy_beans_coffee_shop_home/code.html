@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cozy Beans - Brewing Moments</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;family=Playfair+Display:ital,wght@0,700;1,700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ec7f13",
+                "background-light": "#f8f7f6",
+                "background-dark": "#221910",
+                "toasted-almond": "#9a734c",
+                "cream": "#fdfbf7"
+              },
+              fontFamily: {
+                "display": ["Be Vietnam Pro", "sans-serif"],
+                "serif": ["Playfair Display", "serif"]
+              },
+              borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .serif-heading {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#1b140d] dark:text-white transition-colors duration-300">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full bg-cream/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-[#f3ede7] dark:border-[#3a2c1d]">
+<div class="max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between">
+<!-- Logo -->
+<div class="flex items-center gap-3">
+<div class="text-primary size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 17.4264C16.7203 18.1174 20.2244 18.5217 24 18.5217C27.7756 18.5217 31.2797 18.1174 34.1739 17.4264C36.9144 16.7722 39.9967 15.2331 41.3563 14.1648L24.8486 40.6391C24.4571 41.267 23.5429 41.267 23.1514 40.6391L6.64374 14.1648C8.00331 15.2331 11.0856 16.7722 13.8261 17.4264Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M39.998 12.236C39.9944 12.2537 39.9875 12.2845 39.9748 12.3294C39.9436 12.4399 39.8949 12.5741 39.8346 12.7175C39.8168 12.7597 39.7989 12.8007 39.7813 12.8398C38.5103 13.7113 35.9788 14.9393 33.7095 15.4811C30.9875 16.131 27.6413 16.5217 24 16.5217C20.3587 16.5217 17.0125 16.131 14.2905 15.4811C12.0012 14.9346 9.44505 13.6897 8.18538 12.8168C8.17384 12.7925 8.16216 12.767 8.15052 12.7408C8.09919 12.6249 8.05721 12.5114 8.02977 12.411C8.00356 12.3152 8.00039 12.2667 8.00004 12.2612C8.00004 12.261 8 12.2607 8.00004 12.2612C8.00004 12.2359 8.0104 11.9233 8.68485 11.3686C9.34546 10.8254 10.4222 10.2469 11.9291 9.72276C14.9242 8.68098 19.1919 8 24 8C28.8081 8 33.0758 8.68098 36.0709 9.72276C37.5778 10.2469 38.6545 10.8254 39.3151 11.3686C39.9006 11.8501 39.9857 12.1489 39.998 12.236ZM4.95178 15.2312L21.4543 41.6973C22.6288 43.5809 25.3712 43.5809 26.5457 41.6973L43.0534 15.223C43.0709 15.1948 43.0878 15.1662 43.104 15.1371L41.3563 14.1648C43.104 15.1371 43.1038 15.1374 43.104 15.1371L43.1051 15.135L43.1065 15.1325L43.1101 15.1261L43.1199 15.1082C43.1276 15.094 43.1377 15.0754 43.1497 15.0527C43.1738 15.0075 43.2062 14.9455 43.244 14.8701C43.319 14.7208 43.4196 14.511 43.5217 14.2683C43.6901 13.8679 44 13.0689 44 12.2609C44 10.5573 43.003 9.22254 41.8558 8.2791C40.6947 7.32427 39.1354 6.55361 37.385 5.94477C33.8654 4.72057 29.133 4 24 4C18.867 4 14.1346 4.72057 10.615 5.94478C8.86463 6.55361 7.30529 7.32428 6.14419 8.27911C4.99695 9.22255 3.99999 10.5573 3.99999 12.2609C3.99999 13.1275 4.29264 13.9078 4.49321 14.3607C4.60375 14.6102 4.71348 14.8196 4.79687 14.9689C4.83898 15.0444 4.87547 15.1065 4.9035 15.1529C4.91754 15.1762 4.92954 15.1957 4.93916 15.2111L4.94662 15.223L4.95178 15.2312ZM35.9868 18.996L24 38.22L12.0131 18.996C12.4661 19.1391 12.9179 19.2658 13.3617 19.3718C16.4281 20.1039 20.0901 20.5217 24 20.5217C27.9099 20.5217 31.5719 20.1039 34.6383 19.3718C35.082 19.2658 35.5339 19.1391 35.9868 18.996Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-[#1b140d] dark:text-white">Cozy Beans</h2>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold text-[#1b140d] dark:text-white hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-semibold text-[#1b140d] dark:text-white hover:text-primary transition-colors" href="#about">Our Story</a>
+<a class="text-sm font-semibold text-[#1b140d] dark:text-white hover:text-primary transition-colors" href="#menu">Menu</a>
+<a class="text-sm font-semibold text-[#1b140d] dark:text-white hover:text-primary transition-colors" href="#contact">Contact</a>
+</nav>
+<!-- CTA Button -->
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg shadow-primary/20">
+                Order Now
+            </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[85vh] w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-black/40 z-10"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Steaming latte with intricate latte art and scattered coffee beans" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAkwYub7L-S8kDmmkYk3LFvyHNDQt1p2SgshlrF8YU6bvrUiaIqHKc_AJuiO38NRUBzx4r-HMTxT8CvEoJ6a74X09zKT1pHnnIAuagYt0EyESIDSvYDa-ZOw1q8OCiWy48NZdOPOnUH6qCuijoS1PzT3kPUnLpEdd3BlnPVXr3QKd1EMpkPOsQoAqylWeAJGqK7UadugAn6be3wmYB-3-g4CGrpfGQ1tCmP66VQI36wXG6Am0-hO350jFsxNG6RC4w6bkqD5Kq4VwNx");'></div>
+</div>
+<div class="relative z-20 text-center px-6 max-w-3xl">
+<h1 class="serif-heading text-6xl md:text-8xl text-white mb-6 leading-[1.1]">
+                    Brewing Moments
+                </h1>
+<p class="text-white/90 text-lg md:text-xl mb-10 font-medium max-w-xl mx-auto">
+                    Experience the warmth of hand-picked beans and artisanal brewing in every cup.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="bg-primary text-white px-10 py-4 rounded-xl text-lg font-bold hover:scale-105 transition-transform shadow-xl shadow-primary/30 min-w-[200px]">
+                        See Our Menu
+                    </button>
+<button class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-xl text-lg font-bold hover:bg-white/20 transition-all min-w-[200px]">
+                        Our Story
+                    </button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+<span class="material-symbols-outlined text-white text-3xl">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 bg-cream dark:bg-[#1a130c]" id="about">
+<div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative z-10">
+<div class="w-full h-full bg-cover bg-center" data-alt="Barista pouring milk into a coffee cup in a sunlit cafe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAs0u_-AypPkDP43kn8D0DCP2LJAF73uUMzZHgdgekPy8YEgYaMWYfgQdwhVoXD8GbitcbhmEYVTSMijUgwNDzmCqiND5a0l-zHs5nGqC4J6bFgYV-It0hYVRqZE1GCy85HupxagxX0Z7KSG-8-qC15CaFRMRkTpR9OsEW1FwoBVgOlpCBCKijAIMY_jKWdTzA5cjavPDFTjR50LE6Gf1p0cM6zjaqTF2HLK7b7wdKeEXgyb1bAqV3X0nsjkp_RH9WRytU_bSt0Bb7r");'></div>
+</div>
+<div class="absolute -bottom-8 -right-8 w-64 h-64 bg-primary/10 rounded-2xl -z-0"></div>
+</div>
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 text-primary font-bold tracking-widest uppercase text-xs">
+<span class="h-px w-8 bg-primary"></span>
+                        Our Philosophy
+                    </div>
+<h2 class="serif-heading text-5xl text-[#1b140d] dark:text-white leading-tight">
+                        From bean to cup, we prioritize quality.
+                    </h2>
+<p class="text-lg text-toasted-almond dark:text-gray-400 leading-relaxed">
+                        At Cozy Beans, we believe that every morning deserves a perfect start. We source our beans from sustainable, high-altitude farms in Ethiopia and Colombia, ensuring a rich and ethical coffee experience. Our baristas are artisans, dedicated to the craft of the perfect pour-over.
+                    </p>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4">eco</span>
+<h4 class="font-bold text-lg mb-2 dark:text-white">100% Organic</h4>
+<p class="text-sm text-toasted-almond dark:text-gray-500">Pesticide-free beans sourced directly from the growers.</p>
+</div>
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4">local_fire_department</span>
+<h4 class="font-bold text-lg mb-2 dark:text-white">Fresh Roasted</h4>
+<p class="text-sm text-toasted-almond dark:text-gray-500">Small-batch roasting right here in the shop every 48 hours.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Favorites Section -->
+<section class="py-24 bg-background-light dark:bg-background-dark" id="menu">
+<div class="max-w-[1200px] mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="serif-heading text-5xl mb-4 text-[#1b140d] dark:text-white">Barista Favorites</h2>
+<div class="h-1 w-20 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Item 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-square rounded-2xl overflow-hidden mb-6 relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A tall glass of signature caramel latte" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4tJmunIBoNzQ246AFb091vRqx14GLwzl2RlrkukaYuO0QwCPQAIz8dZbRz8-QbOpRGoyGH9nejmiYxEIlDvOwBgNx0gMR5iZ9azXkq-QepQ4xiXeV0Ldf3DO1pOLMaS0yQH6olhtk692n_wsZoIrvgIZoIl1DiaH1O5IzsQehcn_GshN9YFs2QZTKmcNy8i2qFdUXBfu0zRI5SRKd4v3xX8NXI5YNE1LwN0sJ0w5y4X_-xLtB7kxukRHeDLSm3o3I-LcNEvWCCBcI");'></div>
+<div class="absolute top-4 right-4 bg-white/90 dark:bg-black/90 px-3 py-1 rounded-full text-xs font-bold">$5.50</div>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors dark:text-white">Signature Latte</h3>
+<p class="text-toasted-almond dark:text-gray-400 text-sm">Double espresso shot with house-made vanilla bean syrup and velvety steamed milk.</p>
+</div>
+<!-- Item 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-square rounded-2xl overflow-hidden mb-6 relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Cold brew coffee with ice cubes in a clear glass" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNBAFo9r9UoA-evZ9trd11B9tE4HtOje5VRmHYJgQhqmm2YneS1d5WaPJMARb0vOwuTMkkHTxrU4wlxfFM1rfrTyCbogwmk4TqJYFzfWebKhrOgWVN4KoP-dKVFSiWosu2_cMnj-qqAlMs6lgvhfzvhCN5blYNY8Qy5kSIkKvlDklwCW6YTK5TtO06Se1rbOZD1GeUS1gaZpifQw45BIa_nAR6u3R7Lle3YhfZOEF2ipJqyKusgToVdlzZ0G9sW98-Zm4tWRIegCqS");'></div>
+<div class="absolute top-4 right-4 bg-white/90 dark:bg-black/90 px-3 py-1 rounded-full text-xs font-bold">$4.75</div>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors dark:text-white">24hr Cold Brew</h3>
+<p class="text-toasted-almond dark:text-gray-400 text-sm">Slow-steeped for 24 hours to extract maximum chocolate and nutty notes. Low acidity.</p>
+</div>
+<!-- Item 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-square rounded-2xl overflow-hidden mb-6 relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Golden flaky almond croissant on a ceramic plate" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcUwg_P0Mpb-x2SDf_POtNG6iHHsH6mV2w55A3rvBmM75OXwhHi1hw5qtwlXXaVuB6NW7ub5wqXVCmwSopVFg-BYdRNrd9fl59gnZmZ6ZnX_SoN043GNDKzqV0CjR-jM--FfsN6j4pIePMy7R-Ro00CckRkk8QeW4WyWemi4nXPWQyN05UBXu-9-pl9FvPudLzr4rLkzJG4H4rCH9tpzBpOFj2te4GfTr-yp0F1UY9dwghFQadgjqy3Pa-IcV6lU_fx9vs3wphqHjz");'></div>
+<div class="absolute top-4 right-4 bg-white/90 dark:bg-black/90 px-3 py-1 rounded-full text-xs font-bold">$4.25</div>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors dark:text-white">Almond Croissant</h3>
+<p class="text-toasted-almond dark:text-gray-400 text-sm">Hand-rolled flaky pastry filled with house-made almond cream and topped with sliced almonds.</p>
+</div>
+</div>
+<div class="text-center mt-16">
+<button class="border-2 border-primary text-primary px-10 py-3 rounded-xl font-bold hover:bg-primary hover:text-white transition-all">
+                        View Full Menu
+                    </button>
+</div>
+</div>
+</section>
+<!-- Visit Us Section -->
+<section class="py-24 bg-cream dark:bg-[#1a130c]" id="contact">
+<div class="max-w-[1200px] mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Map Placeholder -->
+<div class="rounded-2xl overflow-hidden shadow-xl min-h-[400px] relative">
+<div class="absolute inset-0 bg-[#e5e7eb] dark:bg-[#2d2419] flex items-center justify-center">
+<div class="w-full h-full bg-cover bg-center opacity-60 grayscale hover:grayscale-0 transition-all duration-700" data-alt="Stylized map view of a city neighborhood" data-location="Brooklyn, New York" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFPtMxhluyoDN1y1e2nuk7RemudAmvlzOOeOdmmeNqHkrnch80m6fNDTrrZ3QDlaIfj2gDz-6UMv6qVo9G3VLom5d119mbvYY0atW-UmHlu3gT8OMPf6f_q2gFRl73onaiGsqGhYupTO1CTzXgEfHrBz24KSGNdI2f10ahnsE85BqkOFiapPgSRuu5Rz6xpSkp5qBPFwqsvWLwfnX3xD9edDw0-WASzdZDvXVrwI9mYIbCKrRXqt-TZRUeDx6yASx-IKJlVjvjCTTT");'></div>
+<div class="absolute z-10 flex flex-col items-center">
+<div class="bg-primary p-3 rounded-full shadow-lg text-white mb-2">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<span class="bg-white/90 dark:bg-black/90 px-4 py-2 rounded-lg text-sm font-bold shadow-md">Find us in Brooklyn</span>
+</div>
+</div>
+</div>
+<!-- Contact Details -->
+<div class="flex flex-col justify-center">
+<h2 class="serif-heading text-4xl mb-8 text-[#1b140d] dark:text-white">Visit Our Sanctuary</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="bg-primary/10 p-4 rounded-xl h-fit">
+<span class="material-symbols-outlined text-primary">pin_drop</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1 dark:text-white">Location</h4>
+<p class="text-toasted-almond dark:text-gray-400">123 Artisan Alley, Creative District<br/>Brooklyn, NY 11201</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="bg-primary/10 p-4 rounded-xl h-fit">
+<span class="material-symbols-outlined text-primary">schedule</span>
+</div>
+<div class="w-full">
+<h4 class="font-bold text-lg mb-3 dark:text-white">Opening Hours</h4>
+<div class="space-y-2 text-sm text-toasted-almond dark:text-gray-400">
+<div class="flex justify-between border-b border-primary/10 pb-1">
+<span>Monday — Friday</span>
+<span class="font-semibold text-[#1b140d] dark:text-white">7:00 AM — 6:00 PM</span>
+</div>
+<div class="flex justify-between border-b border-primary/10 pb-1">
+<span>Saturday</span>
+<span class="font-semibold text-[#1b140d] dark:text-white">8:00 AM — 8:00 PM</span>
+</div>
+<div class="flex justify-between border-b border-primary/10 pb-1">
+<span>Sunday</span>
+<span class="font-semibold text-[#1b140d] dark:text-white">9:00 AM — 5:00 PM</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex gap-4 pt-4">
+<a class="bg-white dark:bg-background-dark p-3 rounded-full border border-primary/20 hover:border-primary transition-colors" href="#">
+<svg class="size-5 fill-primary" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a class="bg-white dark:bg-background-dark p-3 rounded-full border border-primary/20 hover:border-primary transition-colors" href="#">
+<svg class="size-5 fill-primary" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-dark text-white py-12 border-t border-white/5">
+<div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="text-primary size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 17.4264C16.7203 18.1174 20.2244 18.5217 24 18.5217C27.7756 18.5217 31.2797 18.1174 34.1739 17.4264C36.9144 16.7722 39.9967 15.2331 41.3563 14.1648L24.8486 40.6391C24.4571 41.267 23.5429 41.267 23.1514 40.6391L6.64374 14.1648C8.00331 15.2331 11.0856 16.7722 13.8261 17.4264Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold tracking-tight">Cozy Beans</h2>
+</div>
+<div class="text-gray-500 text-sm">
+                © 2024 Cozy Beans Coffee Shop. All rights reserved.
+            </div>
+<div class="flex gap-8 text-sm font-medium">
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-primary transition-colors" href="#">Careers</a>
+</div>
+</div>
+</footer>
+</body></html>

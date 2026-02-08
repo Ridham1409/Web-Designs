@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Spice &amp; Gold - Luxury Fine Dining</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4af25",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#181611",
+                        "background-card": "#221c10",
+                        "text-gold": "#d4961e",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "sans": ["Space Grotesk", "sans-serif"],
+                    },
+                    backgroundImage: {
+                        'hero-gradient': 'linear-gradient(to bottom, rgba(24, 22, 17, 0.3) 0%, rgba(24, 22, 17, 0.8) 80%, rgba(24, 22, 17, 1) 100%)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar for dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #181611;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #393328;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f4af25;
+        }
+        .text-shadow-sm {
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-white overflow-x-hidden selection:bg-primary selection:text-black">
+<!-- Sticky Navigation Bar -->
+<header class="sticky top-0 z-50 w-full backdrop-blur-md bg-[#181611]/80 border-b border-[#393328] transition-all duration-300">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<!-- Logo -->
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-[32px]">restaurant_menu</span>
+</div>
+<h2 class="text-white text-xl font-bold tracking-tight">Spice &amp; Gold</h2>
+</div>
+<!-- Desktop Menu -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="#">Menu</a>
+<a class="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="#">Reservations</a>
+<a class="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="#">Private Dining</a>
+<a class="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="#">Our Story</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex bg-primary hover:bg-[#d99818] text-[#181611] px-6 py-2.5 rounded-lg text-sm font-bold transition-all duration-300 transform hover:scale-105 shadow-[0_0_15px_rgba(244,175,37,0.3)]">
+                        Order Now
+                    </button>
+<!-- Mobile Menu Button -->
+<button class="md:hidden p-2 text-gray-300 hover:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Cinematic Hero Section -->
+<section class="relative w-full h-[85vh] min-h-[600px] flex items-end pb-20 overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Steaming hot Paneer Butter Masala with Naan close up cinematic lighting" class="w-full h-full object-cover object-center scale-105 animate-[pulse_10s_ease-in-out_infinite]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0ns2dDcM8sddtS7tZOfmo5jIX6s9AfRDlgxgM0qwM55LLJymMq9N0Zua0Ml-xj8tTT90vvEAMlbGLskHJO7e4I5v5AnBu059ISnJVa1E3CUSYvK9bBUh2-1NXrzXCRyRgAVXPio-6xha0FOITRslJSqan3RNoNkMZ8TZEG7PzncaWX0PRRBSXYzilvfeNIO6izDjRrDldAVNvMgs0RXHYgCZtOQz6X9_V56hf8ymcv8_TmMt_Y9R6kdpe6EaASvIFW_PewqPkcnpy" style="animation-play-state: paused; transform: scale(1.05);"/>
+<!-- Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#181611] via-[#181611]/60 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-[#181611]/80 via-transparent to-transparent"></div>
+</div>
+<!-- Content -->
+<div class="relative z-10 w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-2xl animate-[fadeInUp_1s_ease-out]">
+<div class="flex items-center gap-2 mb-4 text-primary font-medium tracking-wider uppercase text-sm">
+<span class="w-8 h-[1px] bg-primary"></span>
+<span>Luxury Indian Cuisine</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-bold text-white leading-[1.1] mb-6 tracking-tight text-shadow-sm">
+                        Experience the <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#ffeebb]">Essence of Spice</span>
+</h1>
+<p class="text-lg md:text-xl text-gray-300 mb-8 font-light max-w-lg leading-relaxed">
+                        Award-winning Indian cuisine reimagined for the modern palate. Taste the tradition in every bite of our signature creations.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary hover:bg-[#d99818] text-[#181611] px-8 py-3.5 rounded-lg text-base font-bold transition-all shadow-[0_0_20px_rgba(244,175,37,0.4)] flex items-center gap-2">
+<span>Order Now</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="bg-[#393328]/50 backdrop-blur-sm hover:bg-[#393328] border border-[#544c3b] text-white px-8 py-3.5 rounded-lg text-base font-bold transition-all flex items-center gap-2">
+<span>Book a Table</span>
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white/50">
+<span class="material-symbols-outlined">keyboard_arrow_down</span>
+</div>
+</section>
+<!-- Reservation Widget Section -->
+<div class="relative z-20 -mt-10 px-4 sm:px-6 lg:px-8 max-w-[1280px] mx-auto">
+<div class="bg-[#221c10] border border-[#393328] rounded-xl p-6 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex flex-col sm:flex-row gap-6 w-full md:w-auto flex-1">
+<div class="flex flex-col gap-2 flex-1">
+<label class="text-xs uppercase tracking-wider text-gray-400 font-semibold">Date</label>
+<div class="flex items-center gap-2 text-white border-b border-[#393328] pb-2">
+<span class="material-symbols-outlined text-primary text-xl">calendar_month</span>
+<input class="bg-transparent border-none focus:ring-0 p-0 text-sm w-full cursor-pointer text-white" type="date" value="2023-10-27"/>
+</div>
+</div>
+<div class="flex flex-col gap-2 flex-1">
+<label class="text-xs uppercase tracking-wider text-gray-400 font-semibold">Time</label>
+<div class="flex items-center gap-2 text-white border-b border-[#393328] pb-2">
+<span class="material-symbols-outlined text-primary text-xl">schedule</span>
+<select class="bg-transparent border-none focus:ring-0 p-0 text-sm w-full cursor-pointer text-white">
+<option class="text-black">7:00 PM</option>
+<option class="text-black">7:30 PM</option>
+<option class="text-black">8:00 PM</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-2 flex-1">
+<label class="text-xs uppercase tracking-wider text-gray-400 font-semibold">Guests</label>
+<div class="flex items-center gap-2 text-white border-b border-[#393328] pb-2">
+<span class="material-symbols-outlined text-primary text-xl">group</span>
+<select class="bg-transparent border-none focus:ring-0 p-0 text-sm w-full cursor-pointer text-white">
+<option class="text-black">2 People</option>
+<option class="text-black">3 People</option>
+<option class="text-black">4 People</option>
+</select>
+</div>
+</div>
+</div>
+<button class="w-full md:w-auto bg-white text-[#181611] hover:bg-gray-200 px-8 py-3 rounded-lg font-bold transition-colors whitespace-nowrap">
+                    Find Table
+                </button>
+</div>
+</div>
+<!-- Features Grid -->
+<section class="py-24 px-4 sm:px-6 lg:px-8 max-w-[1280px] mx-auto">
+<div class="text-center mb-16">
+<span class="text-primary text-sm font-bold tracking-[0.2em] uppercase block mb-3">Why Choose Us</span>
+<h2 class="text-3xl md:text-4xl font-bold text-white">The Fine Dining Experience</h2>
+<div class="w-24 h-1 bg-primary mx-auto mt-6"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="group bg-[#221c10] border border-[#393328] p-8 rounded-xl hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+<div class="w-14 h-14 bg-[#2d261a] rounded-full flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:text-[#181611]">eco</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">Farm to Table</h3>
+<p class="text-gray-400 leading-relaxed text-sm">
+                        Fresh ingredients sourced locally from organic farms ensure the purest flavors in every dish we serve.
+                    </p>
+</div>
+<!-- Feature 2 -->
+<div class="group bg-[#221c10] border border-[#393328] p-8 rounded-xl hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+<div class="w-14 h-14 bg-[#2d261a] rounded-full flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:text-[#181611]">restaurant</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">Master Chefs</h3>
+<p class="text-gray-400 leading-relaxed text-sm">
+                        Culinary artists with decades of experience bringing authentic Indian recipes to life with modern techniques.
+                    </p>
+</div>
+<!-- Feature 3 -->
+<div class="group bg-[#221c10] border border-[#393328] p-8 rounded-xl hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+<div class="w-14 h-14 bg-[#2d261a] rounded-full flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:text-[#181611]">diamond</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">Exquisite Ambiance</h3>
+<p class="text-gray-400 leading-relaxed text-sm">
+                        A luxurious setting designed for comfort and intimacy, perfect for romantic dinners or business meetings.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Signature Dish Spotlight -->
+<section class="py-20 bg-[#221c10] border-y border-[#393328] relative overflow-hidden">
+<!-- Decorative Pattern -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+<div class="w-full lg:w-1/2 relative group">
+<div class="absolute inset-0 bg-primary rounded-2xl transform rotate-3 opacity-20 group-hover:rotate-6 transition-transform duration-500"></div>
+<div class="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl">
+<img alt="Delicious close-up of Paneer Butter Masala curry with cream swirl" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkDykYK6G_NJCh3vm5PtLHjGm1zhWHEQwD3I5k81rfAmAUbykT5Mauam9AMqQVB1_pfrG7W2ciAkRWfm9tjmYlLAVE2fL1CatuFYt6t_8yiWSSM26sn-vteglWrpfu1Vu1t20yo7N1timTToVTDlr4OlS6j1wdYvwqSziTVDetuoAawM5Y_f2mcEimIidz-bQhWxoTTIwQCZWh-T3ikjlUAl8_HmbqmlcTymtCHX8Sof1tRsNI93zpqmAOQI9irlR2N4GJexvMVgBe"/>
+<div class="absolute top-4 right-4 bg-primary text-[#181611] font-bold px-4 py-1 rounded-full text-sm">
+                                Chef's Special
+                            </div>
+</div>
+</div>
+<div class="w-full lg:w-1/2">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">star</span>
+<span class="text-primary font-medium tracking-wide uppercase text-xs">Signature Creation</span>
+</div>
+<h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Paneer Butter Masala</h2>
+<p class="text-gray-300 text-lg leading-relaxed mb-8">
+                            Our crown jewel. Cubes of fresh, homemade cottage cheese simmered in a rich, buttery tomato gravy, infused with fenugreek and finished with a swirl of fresh cream. Served with garlic butter naan straight from the tandoor.
+                        </p>
+<div class="grid grid-cols-2 gap-6 mb-8">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">timer</span>
+<div>
+<h4 class="text-white font-bold">Preparation</h4>
+<p class="text-gray-400 text-sm">Slow cooked for 4 hours</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">local_fire_department</span>
+<div>
+<h4 class="text-white font-bold">Spice Level</h4>
+<p class="text-gray-400 text-sm">Mild to Medium</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="text-3xl font-bold text-primary">$24.00</span>
+<button class="text-white border-b border-primary pb-1 hover:text-primary transition-colors flex items-center gap-2">
+                                View Full Menu <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu Highlights -->
+<section class="py-24 px-4 sm:px-6 lg:px-8 max-w-[1280px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+<div>
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Curated Masterpieces</h2>
+<p class="text-gray-400">Explore our chef's selection of fine Indian delicacies.</p>
+</div>
+<a class="text-primary hover:text-white transition-colors flex items-center gap-1 font-medium" href="#">
+                    See All Menu <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Menu Item 1 -->
+<div class="group bg-[#221c10] rounded-xl overflow-hidden border border-[#393328] hover:border-primary/30 transition-all">
+<div class="aspect-square overflow-hidden relative">
+<img alt="Tandoori Platter grilled chicken and kebab skewers" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZoUg-goMdNlBjzOGYppnmCz4ayWMo3IDViEFohVE_RIfZLkb10C214QhjWmAiHShJEveX7hpHxRiKKeSEHlbmmhSIQMlmZvNYLYW7jdHuAsIItcW1vPCJgxelahfo5pCdParhhDG6AS4H7eBtMRnyM4U4SCWVBa1_50_edGax-VF1iC0oYcXHak_jklDe4tFrpzSQ7PCS2JtGG_obB8z9u3_s0cW1_pXe703lchfzlsPhBNmIiZwddiziDJ8PSDbsty3C_mQO-o-G"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-black rounded-full p-3 transform scale-0 group-hover:scale-100 transition-transform duration-300">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-white font-bold text-lg">Tandoori Platter</h3>
+<span class="text-primary font-bold">$32</span>
+</div>
+<p class="text-gray-400 text-sm line-clamp-2">Assorted grilled delicacies marinated in spices and yogurt, cooked in clay oven.</p>
+</div>
+</div>
+<!-- Menu Item 2 -->
+<div class="group bg-[#221c10] rounded-xl overflow-hidden border border-[#393328] hover:border-primary/30 transition-all">
+<div class="aspect-square overflow-hidden relative">
+<img alt="Saffron Biryani rice dish with herbs in bowl" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDJ9-FQMI9U1BcJBmWUKQVNR-7HxE1rBI_q_dO0LmQUtk3AE306uI_i210wMM4gF98PJQ3-WLZBJuaztVrlLAai8JaqV_VsdWektMDFT1hKOAMfJ1dvir_IEQx48CUEUEUsfEls2GfGBBZK0reak9bYZ_67MwJ7IIuGKVPtIVDiotdJiaJsPoO9KafNABXOWXx2MtUVq-geBgbew150uW7VDmGyJln9q7OesJIuOIp8B8_ZkmBiqt41VXiR81spZAEMYJses3gbN0A"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-black rounded-full p-3 transform scale-0 group-hover:scale-100 transition-transform duration-300">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-white font-bold text-lg">Saffron Biryani</h3>
+<span class="text-primary font-bold">$28</span>
+</div>
+<p class="text-gray-400 text-sm line-clamp-2">Aromatic basmati rice cooked with saffron, exotic spices and your choice of protein.</p>
+</div>
+</div>
+<!-- Menu Item 3 -->
+<div class="group bg-[#221c10] rounded-xl overflow-hidden border border-[#393328] hover:border-primary/30 transition-all">
+<div class="aspect-square overflow-hidden relative">
+<img alt="Dal Makhani black lentils curry in copper bowl" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_t2i8opeMAJap7Z-qKP_2h9M0sugVGAwdd97lCWfYVRbkkR0HtohQ2Gm-tfiRtZNynzx4i1QK7teq_5wNT4X5IKcIQ225AKfVT2DGWY8WNX1EE8f6mN03055xJHQvNoNMPeEV6DM9wmCLJLmWjGmLFjO_iua2PL2HhXiM0hB9Nxr6LEUck0LCMlR_MF2PVOerW0ZHKaqvURzW09FTK9Rd8K16W5TpQQztqC_q06S4BSoL3EVyBzDxMQlxt_cqfWdOOD2g8Bx3Ak2X"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-black rounded-full p-3 transform scale-0 group-hover:scale-100 transition-transform duration-300">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-white font-bold text-lg">Dal Makhani</h3>
+<span class="text-primary font-bold">$22</span>
+</div>
+<p class="text-gray-400 text-sm line-clamp-2">Whole black lentils cooked overnight with butter and cream. A North Indian staple.</p>
+</div>
+</div>
+<!-- Menu Item 4 -->
+<div class="group bg-[#221c10] rounded-xl overflow-hidden border border-[#393328] hover:border-primary/30 transition-all">
+<div class="aspect-square overflow-hidden relative">
+<img alt="Garlic Naan bread basket close up" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtIpdvtyK53a1R2nHEJP0u8G4EF0U0M9AuhoTh2qcFfrkoiW3FiklByOZ1az4AJgirCwmgUE5QDpSBrjHtz_yNC-D8h9QQmI9cQG_Sve96ZsgNFKEM7NMcTLNl9uXyz1XAcDD7bluqwc56f4xw6jEmpi9RuETH55zUYcGCs_XO3LJxfqR32jOBTn7ZfoXxcSlknPUu2qapwlT0d148DuZiknUQMlfxwmMPN5DIOhcRThKSCW-BLzqvaNpV6-enHexHdEJgJjW4tCvN"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-black rounded-full p-3 transform scale-0 group-hover:scale-100 transition-transform duration-300">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-white font-bold text-lg">Truffle Naan</h3>
+<span class="text-primary font-bold">$12</span>
+</div>
+<p class="text-gray-400 text-sm line-clamp-2">Traditional Indian bread elevated with truffle oil and herbs.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof / Testimonial -->
+<section class="py-24 bg-[#181611] relative border-t border-[#393328]">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+<div class="text-primary mb-6">
+<span class="material-symbols-outlined text-5xl">format_quote</span>
+</div>
+<h2 class="text-2xl md:text-4xl font-light italic text-white leading-relaxed max-w-4xl mx-auto mb-8">
+                    "Spice &amp; Gold isn't just a restaurant; it's a sensory journey. The best Indian fine dining experience in the city, hands down. The Paneer Butter Masala is simply divine."
+                </h2>
+<div class="flex flex-col items-center gap-2">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary mb-2">
+<img alt="Portrait of James Thompson food critic" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxCA_VPHdM9TW__upci-rmtD17Ro1i9GKLTE9ge6DfNBmmffIxlWb3uLYcO9-JJNrcXwlzsnAbGmdgkcCpadrEFtyO8x-xCTmmNCzlMesUlcgm5ra5IGhfigpwR0-__UerW3_LA2RIERuJp4lMC7C6KnsuVY_QYupaqJgPn6pt_FGBtPs16rWAJVfWruBZjjjJdwKxjgXbhjTW4BihF-3G-ZZ2i3-vaA7C7LvWSbioi2ErIBoFSfR0xxG4_obQ9pOh8mDH4bMFSqiy"/>
+</div>
+<cite class="not-italic text-lg font-bold text-white">James Thompson</cite>
+<span class="text-primary text-sm uppercase tracking-widest font-semibold">Food Critic, The Daily Gourmet</span>
+</div>
+<div class="mt-16 flex justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+<!-- Award Logos (Simulated) -->
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl text-white">award_star</span>
+<span class="text-xs text-white uppercase">Michelin Guide 2023</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl text-white">workspace_premium</span>
+<span class="text-xs text-white uppercase">Best Luxury Dining</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl text-white">verified</span>
+<span class="text-xs text-white uppercase">TripAdvisor Choice</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#12100c] border-t border-[#393328] pt-16 pb-8">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<!-- Brand -->
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-[28px]">restaurant_menu</span>
+<h2 class="text-white text-xl font-bold">Spice &amp; Gold</h2>
+</div>
+<p class="text-gray-500 text-sm leading-relaxed mb-6">
+                        Elevating Indian cuisine to an art form. Join us for an unforgettable culinary journey.
+                    </p>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465 1.067-.047 1.409-.06 3.809-.06h.63zm1.673 5.378c-.845 0-1.54.695-1.54 1.543 0 .845.695 1.54 1.54 1.54.845 0 1.54-.695 1.54-1.54 0-.845-.695-1.543-1.54-1.543zm-4.697 1.761c-1.63 0-2.953 1.323-2.953 2.953 0 1.63 1.323 2.954 2.953 2.954 1.629 0 2.953-1.324 2.953-2.954 0-1.63-1.324-2.953-2.953-2.953z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h3 class="text-white font-bold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Menu</a></li>
+<li><a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Reservations</a></li>
+<li><a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Private Dining</a></li>
+<li><a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Gift Cards</a></li>
+<li><a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<!-- Contact -->
+<div>
+<h3 class="text-white font-bold mb-6">Contact Us</h3>
+<ul class="space-y-3">
+<li class="flex items-start gap-3 text-gray-400 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">location_on</span>
+<span>123 Culinary Avenue,<br/>Fine Dining District, NY 10012</span>
+</li>
+<li class="flex items-center gap-3 text-gray-400 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">call</span>
+<span>+1 (212) 555-0123</span>
+</li>
+<li class="flex items-center gap-3 text-gray-400 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">mail</span>
+<span>reservations@spiceandgold.com</span>
+</li>
+</ul>
+</div>
+<!-- Newsletter -->
+<div>
+<h3 class="text-white font-bold mb-6">Newsletter</h3>
+<p class="text-gray-500 text-sm mb-4">Subscribe for seasonal updates and exclusive offers.</p>
+<div class="flex flex-col gap-3">
+<input class="bg-[#181611] border border-[#393328] rounded-lg px-4 py-2.5 text-sm text-white focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Your email address" type="email"/>
+<button class="bg-primary hover:bg-[#d99818] text-[#181611] rounded-lg px-4 py-2.5 text-sm font-bold transition-colors">
+                            Subscribe
+                        </button>
+</div>
+</div>
+</div>
+<div class="border-t border-[#393328] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-600 text-xs">© 2024 Spice &amp; Gold. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-gray-600 hover:text-gray-400 text-xs transition-colors" href="#">Privacy Policy</a>
+<a class="text-gray-600 hover:text-gray-400 text-xs transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

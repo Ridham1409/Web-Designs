@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Emerald Sanctuary - Fine Dining</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Noto+Sans:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#11d483",
+              "emerald-dark": "#0a221a", // Deep background
+              "emerald-darker": "#05110d", // Darker shade
+              "brass": "#d4af37", // Brass accent
+              "brass-light": "#f3cf55",
+              "background-light": "#f6f8f7",
+              "background-dark": "#0a221a", // Matching the emerald theme
+            },
+            fontFamily: {
+              "display": ["Newsreader", "serif"],
+              "body": ["Noto Sans", "sans-serif"],
+            },
+            backgroundImage: {
+              'brass-gradient': 'linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .brass-text {
+            background: linear-gradient(to bottom, #d4af37 0%, #aa771c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .brass-border {
+            border-image: linear-gradient(to right, #bf953f, #fcf6ba, #b38728) 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-gray-100 font-display min-h-screen flex flex-col overflow-x-hidden selection:bg-brass selection:text-emerald-dark">
+<!-- Minimalist Header -->
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-6 lg:px-12 bg-gradient-to-b from-emerald-darker/90 to-transparent backdrop-blur-sm transition-all duration-300">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brass text-3xl">eco</span>
+<h1 class="text-white text-xl lg:text-2xl font-display font-medium tracking-wide">Emerald Sanctuary</h1>
+</div>
+<button class="group flex items-center gap-3 cursor-pointer">
+<span class="hidden sm:block text-brass text-sm font-bold uppercase tracking-[0.2em] group-hover:text-brass-light transition-colors">Menu</span>
+<div class="flex flex-col gap-1.5 w-8 items-end">
+<span class="block w-full h-[1px] bg-brass group-hover:w-3/4 transition-all duration-300 group-hover:bg-brass-light"></span>
+<span class="block w-2/3 h-[1px] bg-brass group-hover:w-full transition-all duration-300 group-hover:bg-brass-light"></span>
+</div>
+</button>
+</header>
+<!-- Cinematic Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<!-- Background Image with vignette -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-emerald-darker/40 z-10"></div>
+<!-- Radial gradient overlay to create spotlight effect -->
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#0a221a_85%)] z-20"></div>
+<img alt="Close-up artistic shot of gourmet scallop dish with foam and herbs on dark plate" class="w-full h-full object-cover opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5z2nTxMqA9Z9ILWfPomFwnX0n4X8er7gOrp9J0NFfwZ3kMFJxBre_sUp9K1eDKpsILq0KRdxCEjNGNUfo41mj_Rvn2bnK16RUCdLr2BkrhNI8W3c3nWK1gh6YY632zlW60LP1V7XX4UH4jzDj39aVKFCzWRQA8nXKPOGML8_yJDtx_-buuJqkaESVwh2bnaN2LRg4C6oi7mtEmW2sr4DqTFqVv_nqwOYWpYGtzbK4o9cN130DqPhaIM01URm0R2GLBbKXygJq0J90"/>
+</div>
+<!-- Hero Content -->
+<div class="relative z-30 text-center px-4 animate-fade-in-up">
+<p class="text-brass uppercase tracking-[0.3em] text-xs lg:text-sm mb-4 font-body font-medium">Michelin Star Experience</p>
+<h2 class="text-5xl md:text-7xl lg:text-8xl font-display italic text-white mb-8 leading-tight">
+                Taste the <span class="brass-text font-normal">Silence</span>
+</h2>
+<div class="flex justify-center">
+<button class="px-8 py-3 border border-brass/50 text-brass hover:bg-brass hover:text-emerald-darker transition-all duration-500 rounded-sm uppercase tracking-widest text-xs font-bold font-body">
+                    Reserve a Table
+                </button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 animate-bounce opacity-70">
+<span class="text-brass text-[10px] uppercase tracking-widest font-body">Scroll</span>
+<span class="material-symbols-outlined text-brass">keyboard_arrow_down</span>
+</div>
+</section>
+<!-- The Experience Section -->
+<section class="relative bg-emerald-dark py-24 lg:py-32 px-6">
+<!-- Decorative Brass Lines -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-24 bg-gradient-to-b from-transparent via-brass/40 to-transparent"></div>
+<div class="max-w-4xl mx-auto">
+<div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+<div class="order-2 md:order-1 space-y-6">
+<h3 class="text-brass uppercase tracking-[0.2em] text-sm font-body">The Philosophy</h3>
+<h2 class="text-4xl lg:text-5xl text-white font-display italic leading-tight">
+                        "Nestled in shadows, <br/>illuminated by taste."
+                    </h2>
+<p class="text-gray-400 font-display text-lg leading-relaxed font-light">
+                        Our dining room is a sanctuary from the world, designed to heighten your senses. We strip away the noise of the city, leaving only the essential: texture, aroma, and the intimate company of flavor.
+                    </p>
+<div class="pt-4">
+<a class="inline-flex items-center gap-2 text-brass border-b border-brass/30 pb-1 hover:border-brass transition-colors uppercase text-xs tracking-widest font-body" href="#">
+                            Our Story <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="order-1 md:order-2 relative aspect-[3/4] md:aspect-square">
+<div class="absolute inset-2 border border-brass/20 rounded-t-full rounded-b-full pointer-events-none z-10"></div>
+<img alt="Moody dark interior of fine dining restaurant with velvet booths" class="w-full h-full object-cover rounded-t-full rounded-b-full opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLQN_DD4gJlRkAtea1YdVadw040hn5xKJavNoginpqbH0Pvx6pUvml-dKMpzsySVE8OLCkM_Y44BxSTZFnyCCCdFoaoeJPC6F9LEWXjToPk-Jo9qCmUHlqDpuavQ7OT_mkuddLWooWm9X4MlBsA4ZVvufWPo848wV6z5AKprbYI1kjO2Crd4JddSrefnCgVZdEFd5z9MeBILUItbQej-kciBQ4K5RT_sv32OetBiZ6nHnt91KDtt1S5MsX06I-jlPzi5YopqYcXU2m"/>
+</div>
+</div>
+<!-- Divider -->
+<div class="w-full h-[1px] bg-gradient-to-r from-transparent via-brass/30 to-transparent my-16"></div>
+<!-- Features Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-12 h-12 flex items-center justify-center rounded-full border border-brass/20 text-brass group-hover:bg-brass group-hover:text-emerald-dark transition-all duration-300">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<h4 class="text-white text-xl font-display italic">Culinary Art</h4>
+<p class="text-gray-500 text-sm leading-relaxed max-w-xs">Dishes that tell a story of their origin, meticulously prepared to surprise and delight.</p>
+</div>
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-12 h-12 flex items-center justify-center rounded-full border border-brass/20 text-brass group-hover:bg-brass group-hover:text-emerald-dark transition-all duration-300">
+<span class="material-symbols-outlined">chair</span>
+</div>
+<h4 class="text-white text-xl font-display italic">Intimate Setting</h4>
+<p class="text-gray-500 text-sm leading-relaxed max-w-xs">Private booths draped in velvet and silence, ensuring your conversation remains yours.</p>
+</div>
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-12 h-12 flex items-center justify-center rounded-full border border-brass/20 text-brass group-hover:bg-brass group-hover:text-emerald-dark transition-all duration-300">
+<span class="material-symbols-outlined">wine_bar</span>
+</div>
+<h4 class="text-white text-xl font-display italic">Curated Pairings</h4>
+<p class="text-gray-500 text-sm leading-relaxed max-w-xs">A world-class cellar featuring rare vintages selected to harmonize with every course.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Parallax / Image Break -->
+<section class="h-[60vh] w-full relative overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 bg-fixed bg-cover bg-center" data-alt="Cocktail being poured into glass with dramatic smoke and lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBbsitNo9yxwR_wOozgYC4y2vDMrbwDKZO_9epdk7j--OTZW36Qczcb29h8LtwIZzr6YB6wj55MeJPh7HP0buO2IK8l9Td-LP5MCk3PQZRCNFF7GuCdB8SLbKkuKy45eUjryvPJyRjLXqG8T24eCUeLPDQ990E5Njh4rhSwULOLp_f-eS7tEwlHf0rV-2fYec5oTa6NJRAJx9mlLUO3a8TbyZxL4vQqdB17lfbQSXQke1rJC4sE_Mo16lGVQmhqGN4ePJ1nl5pJcNb');">
+<div class="absolute inset-0 bg-emerald-darker/70"></div>
+</div>
+<div class="relative z-10 text-center max-w-2xl px-6">
+<span class="material-symbols-outlined text-brass text-5xl mb-6">star</span>
+<blockquote class="text-2xl md:text-3xl lg:text-4xl text-white font-display italic leading-snug">
+                "A michelin-star journey through texture and time. Emerald Sanctuary isn't just dinner; it's a memory crafted in real-time."
+            </blockquote>
+<cite class="block mt-6 text-brass text-sm uppercase tracking-widest not-italic font-body">— The Culinary Review</cite>
+</div>
+</section>
+<!-- Featured Menu Preview -->
+<section class="bg-emerald-darker py-24 px-6 relative">
+<div class="max-w-6xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<h3 class="text-brass uppercase tracking-[0.2em] text-sm font-body mb-2">Seasonal Tasting</h3>
+<h2 class="text-4xl md:text-5xl text-white font-display italic">The Winter Menu</h2>
+</div>
+<button class="text-white hover:text-brass transition-colors border-b border-white/20 hover:border-brass pb-1 flex items-center gap-2 text-sm uppercase tracking-widest font-body">
+                    View Full Menu <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-12">
+<!-- Item 1 -->
+<div class="group flex gap-6 items-start">
+<div class="w-24 h-24 shrink-0 rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Small portion of chicken roast with dark sauce" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIih2AmvuVpC8hU3LsSaIz0kDYoPLVdTj7lEl4_OPIt1qajKNPvuUdlSEh7fwILKed_K86XpJb2EBoLKjZBaL2dGK3jCXHVtWosxY4Vo--NUQPb7dx_kInX3d--36F6odSRnbCJp07ZBRY5-LzVkMDyGJEajqL3-4J0cNNEb-yspl1yEJ3IyblWc2_1ikM-Zuei_YimQ58DBt6skHa1lZVC0kJVY6N8wKv_sCeCj4fe7VWpD0KRsKu4LdxPFjnHiB7q6ws5_lCIKXd"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline border-b border-brass/20 pb-2 mb-2 group-hover:border-brass/50 transition-colors">
+<h4 class="text-xl text-white font-display">Forest Floor Quail</h4>
+<span class="text-brass font-body text-sm">$45</span>
+</div>
+<p class="text-gray-500 text-sm font-light leading-relaxed">Roasted with juniper berries, wild mushroom purée, and a truffle-infused reduction.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group flex gap-6 items-start">
+<div class="w-24 h-24 shrink-0 rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Seared scallops on dark plate with green foam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArTXvEAjREnEpZjUtZuRh3_yrQURbfibys8aqSA60e23N2OgELe-LiQRJg1FHyVF4HdCaYqTbrrPill5g5Pyp2gOJ7oClBAIo62QsmCWZFTMgW-xZVaY7o818rk02ixmKQa8AqBFhVioxIo6HlXHfFUSB3FqSlF_U-0blEdfRhpZwGbHZ6QyrV__ynkIK2b8mOcbNL0xq70piQMUYi-pnqHqpH7jH6fd-mUNTz9L64zSu2wSHTpi4ubSycVSQM8UN1crFr4Kgb4x7p"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline border-b border-brass/20 pb-2 mb-2 group-hover:border-brass/50 transition-colors">
+<h4 class="text-xl text-white font-display">Abyssal Scallop</h4>
+<span class="text-brass font-body text-sm">$38</span>
+</div>
+<p class="text-gray-500 text-sm font-light leading-relaxed">Hand-dived scallop, sea asparagus, lemon verbena foam, and caviar pearls.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group flex gap-6 items-start">
+<div class="w-24 h-24 shrink-0 rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Fancy plated salad with edible flowers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9VmX1bHJRwcizCD9KW7WF0DTKHXjvZPeZRi1mzYacQ3DlNlDo7Xqd1EEp5BzfnShMYmLG5J4Ep9IyIThWHvBZcIyDDNjr-zDLbszCPuzQZoxRmdY0r_Lab3jI2AT6uRLHb8dALPVC-JV4E5_RyT-bLAq1qmkU85sRtfr_B4CQuom__6W4qjUS4LnV_0Q0RixsZ-lITLllhk1nqQ0R3PI7lX8M1H4y4erQVCoxnp4a0n--QGoNOz7wv-WmCHkGoq9jJnfDHVpqLscY"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline border-b border-brass/20 pb-2 mb-2 group-hover:border-brass/50 transition-colors">
+<h4 class="text-xl text-white font-display">Heirloom Garden</h4>
+<span class="text-brass font-body text-sm">$32</span>
+</div>
+<p class="text-gray-500 text-sm font-light leading-relaxed">A composition of 30 seasonal vegetables, herbs, and edible flowers from our own garden.</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="group flex gap-6 items-start">
+<div class="w-24 h-24 shrink-0 rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Dark chocolate dessert with gold leaf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1bMM13JeMoAZI3RPrcZm-LrpRLVdqqIzx7zI27kXLFKIPPaxEuDbq0frSQ6vheyzrA_dVU_bCd0EqRNl-BDoTxYC02YhLpRfjrgDwKZEpqZi-NNi0IUolfPoMrGnjFD5oun1r48_4kcYkdJ7rkIjrwW-lJ5WCsDCwsJg_m3wsHuRfxVtJvba6N9FMM9dDY17ji3njPYvKXAkVOnd55q0aPoRH1qDngQjPjhdkRHNi_RblrGOK3v-B_omwMRsQGr_Pgy3yEA30oKyb"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline border-b border-brass/20 pb-2 mb-2 group-hover:border-brass/50 transition-colors">
+<h4 class="text-xl text-white font-display">Obsidian Cacao</h4>
+<span class="text-brass font-body text-sm">$28</span>
+</div>
+<p class="text-gray-500 text-sm font-light leading-relaxed">Dark chocolate sphere, smoked caramel, sea salt, and gold leaf.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Reservation CTA -->
+<section class="bg-emerald-dark py-24 relative overflow-hidden">
+<!-- Abstract lines background -->
+<div class="absolute inset-0 opacity-5">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0 100 C 20 0 50 0 100 100" fill="none" stroke="white" stroke-width="0.5"></path>
+<path d="M0 100 C 20 0 50 0 100 80" fill="none" stroke="white" stroke-width="0.5"></path>
+<path d="M0 100 C 20 0 50 0 100 60" fill="none" stroke="white" stroke-width="0.5"></path>
+</svg>
+</div>
+<div class="container mx-auto px-6 relative z-10 text-center">
+<h2 class="text-4xl md:text-5xl lg:text-6xl text-white font-display italic mb-8">Secure Your Experience</h2>
+<p class="text-gray-400 max-w-lg mx-auto mb-10 font-light">Reservations open 30 days in advance. We recommend booking early for weekend evenings.</p>
+<form class="max-w-3xl mx-auto bg-emerald-darker/50 p-2 rounded-lg border border-brass/20 flex flex-col md:flex-row gap-2 backdrop-blur-sm">
+<div class="flex-1 relative group">
+<div class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-gray-500 group-focus-within:text-brass">calendar_today</span>
+</div>
+<input class="w-full bg-transparent border-0 text-white placeholder-gray-500 focus:ring-0 pl-10 h-12" placeholder="Select Date" type="text"/>
+</div>
+<div class="w-[1px] bg-brass/20 my-2 hidden md:block"></div>
+<div class="flex-1 relative group">
+<div class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-gray-500 group-focus-within:text-brass">schedule</span>
+</div>
+<input class="w-full bg-transparent border-0 text-white placeholder-gray-500 focus:ring-0 pl-10 h-12" placeholder="Time" type="text"/>
+</div>
+<div class="w-[1px] bg-brass/20 my-2 hidden md:block"></div>
+<div class="flex-1 relative group">
+<div class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-gray-500 group-focus-within:text-brass">person</span>
+</div>
+<select class="w-full bg-transparent border-0 text-white focus:ring-0 pl-10 h-12 [&amp;&gt;option]:text-black">
+<option disabled="" selected="" value="">Guests</option>
+<option value="2">2 Guests</option>
+<option value="3">3 Guests</option>
+<option value="4">4 Guests</option>
+</select>
+</div>
+<button class="bg-brass hover:bg-brass-light text-emerald-darker font-bold uppercase tracking-widest text-xs px-8 py-3 rounded md:w-auto w-full transition-colors">
+                    Find Table
+                </button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-emerald-darker border-t border-brass/10 pt-16 pb-8 px-6">
+<div class="max-w-6xl mx-auto flex flex-col items-center text-center">
+<div class="flex items-center gap-2 mb-8">
+<span class="material-symbols-outlined text-brass text-2xl">eco</span>
+<span class="text-white text-xl font-display font-medium tracking-wide">Emerald Sanctuary</span>
+</div>
+<div class="flex flex-col md:flex-row gap-8 md:gap-16 text-gray-400 text-sm font-light mb-12">
+<div class="flex flex-col gap-2">
+<span class="uppercase tracking-widest text-brass text-xs font-bold mb-1">Visit</span>
+<p>1080 Emerald Avenue</p>
+<p>New York, NY 10012</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="uppercase tracking-widest text-brass text-xs font-bold mb-1">Contact</span>
+<p>+1 (212) 555-0199</p>
+<p>concierge@emeraldsanctuary.com</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="uppercase tracking-widest text-brass text-xs font-bold mb-1">Hours</span>
+<p>Tue - Sun: 5:00 PM - 11:00 PM</p>
+<p>Mon: Closed</p>
+</div>
+</div>
+<div class="flex gap-6 mb-12">
+<a class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-brass hover:border-brass transition-colors" href="#">
+<svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-brass hover:border-brass transition-colors" href="#">
+<svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.468 2.373c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+<p class="text-gray-600 text-xs font-light">
+                © 2024 Emerald Sanctuary. All rights reserved.
+            </p>
+</div>
+</footer>
+</body></html>

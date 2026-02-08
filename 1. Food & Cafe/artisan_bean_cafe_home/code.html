@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Artisan Bean Cafe | Crafting the Perfect Cup</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;600&amp;family=Material+Icons&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6F4E37", // Coffee Brown
+              "background-light": "#FFF9F3", // Cream/Warm White
+              "background-dark": "#1A1412", // Espresso Black
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1541167760496-162955ed8a9f?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .map-placeholder {
+            background: url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1000&auto=format&fit=crop');
+            background-size: cover;
+            filter: grayscale(40%) sepia(20%);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-stone-800 dark:text-stone-200 bg-background-light dark:bg-background-dark">
+<nav class="fixed w-full z-50 transition-all duration-300 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-stone-200 dark:border-stone-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex items-center gap-2">
+<span class="material-icons text-primary text-3xl">coffee</span>
+<span class="font-display text-2xl font-bold tracking-tight text-primary">The Artisan Bean</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Our Story</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#roasts">Roasts</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#menu">Menu</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#visit">Visit Us</a>
+<button class="bg-primary text-white px-6 py-2.5 rounded hover:bg-opacity-90 transition-all font-semibold text-sm">Order Online</button>
+<button class="p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons text-xl dark:hidden">dark_mode</span>
+<span class="material-icons text-xl hidden dark:block text-yellow-500">light_mode</span>
+</button>
+</div>
+<div class="md:hidden flex items-center">
+<span class="material-icons cursor-pointer">menu</span>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative h-screen flex items-center justify-center hero-gradient">
+<div class="max-w-4xl mx-auto text-center px-4">
+<h1 class="font-display text-5xl md:text-7xl text-white mb-6 leading-tight">Mornings Made <br/><span class="italic">Beautiful</span></h1>
+<p class="text-stone-200 text-lg md:text-xl mb-10 max-w-2xl mx-auto">Experience the perfect balance of hand-picked beans, expert roasting, and the art of the perfect pour.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="bg-primary text-white px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform shadow-xl" href="#menu">Explore Our Menu</a>
+<a class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary transition-all shadow-xl" href="#visit">Find a Location</a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce">
+<span class="material-icons text-3xl">expand_more</span>
+</div>
+</section>
+<section class="py-24 px-4 bg-background-light dark:bg-background-dark" id="roasts">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<span class="text-primary font-semibold tracking-widest uppercase text-xs">Excellence in every bean</span>
+<h2 class="font-display text-4xl md:text-5xl mt-2 dark:text-white">Our Signature Roasts</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-2xl mb-6">
+<img alt="Light roast coffee beans" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByFfyF9LAtAptD-S5rtuVB-GYEw6fFV5eiVF1zf-jdPjooes_exWwRfQZ03bhSsNeZ5R_lTbpeOnGV2EHP2h1jZNl7FWcGKfbi8Bx-OtXf805yzavP6rs9bTAaVNnitH89RmQqA1QpPwSBwM24_HA_iGp47_CUPJq8rU1qI1mz4MT9VJDKynnNpvAyLnrD1o8sjh6Jqx2oyaz0MItoNfrq_SLLzCS4XYfq1bOQQHGJ4SpmX5zrKUNOSBl2cxN2O70ejZoZPcF8WXKx"/>
+<div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">LIGHT</div>
+</div>
+<h3 class="font-display text-2xl mb-2 dark:text-white">Ethiopian Yirgacheffe</h3>
+<p class="text-stone-600 dark:text-stone-400">Floral notes with hints of jasmine and lemon. Clean, tea-like finish.</p>
+</div>
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-2xl mb-6">
+<img alt="Medium roast coffee beans" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu2HRBuhBTWrFFSNZKUZd2fL1Yp2buuG0R9Q3S6RkW2tRVLSxfiwb6b7JWN8Fa5O0Y0mnHfVyrzkeyUh3e2Qq9LGl_eE5fuEFkY6TbEUj1zEUBobT6XNIkqXwEkWd0MvuWZXgOg5NAh96b-PQtDqkvKgbfmaDzWpT1taVYreZIL0DjmVEHumUbdyB1XFjFOcHYnMrv3nzmrIrdOziR1GENcczj1WtFyIi_M49adkvG0RFzI4ImWE8OdI7f3h-fkdtf5FmCLFKg3WdK"/>
+<div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">MEDIUM</div>
+</div>
+<h3 class="font-display text-2xl mb-2 dark:text-white">Colombian Huila</h3>
+<p class="text-stone-600 dark:text-stone-400">Classic chocolate profile with sweet caramel and a bright acidity.</p>
+</div>
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-2xl mb-6">
+<img alt="Dark roast coffee beans" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjezkC9_rHG9JnBYOgkD_7n-KRhhcOS1eLZkV93Y1xD9JVSX-TghffvXvP5BHw8HiOaaCbR-qGnz43EExCdDpKZ-lhuhmAApcNO0YpMjggb8_FStbWfU3x7CppsXO7DrPYxCdyiYFonYMwfmAyhPtJYVuENPvQeVON1_ZH2l4hbbP_nazSoNVIO_Q7_2rENpbMTEWN7TMtd31VpoHD338z2ZwJtJ-MZ2ZvHAnZ-8tvWA_q6gN3XI6_RIF9GWwSk_y7O5jzKs0LLGMv"/>
+<div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">DARK</div>
+</div>
+<h3 class="font-display text-2xl mb-2 dark:text-white">French Espresso Blend</h3>
+<p class="text-stone-600 dark:text-stone-400">Bold, smokey, and incredibly smooth. Perfect for lattes and cappuccinos.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-stone-100 dark:bg-stone-900/50" id="menu">
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-1/2">
+<img alt="Seasonal drink with cinnamon" class="rounded-3xl shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfx15eCKVeS2tJRzBr_j-K3d_fSvNmxOqR4I84ztbKKfqIypfiYtV09Vu5WrIiScBUiBQNVPB8pUGEE_fyJhtMmWY26Pbv6G5WXFU_fDnPnGrzZGdCfb9hw51P0f3HNVipZOVRQzmbDfaHEE6sVlmmaMpPWEVEidY3FIScs7omrCempC8hQ62osxdaOFiyBtrZzF7mMPJ3wk2-HDa2ZvAa1Qac3jjjINUYxeSr-fwKGGKVOuhd_qxog5C1mMCdsv2f6CLxg0CeAuUQ"/>
+</div>
+<div class="lg:w-1/2">
+<span class="text-primary font-semibold tracking-widest uppercase text-xs">Winter Specials</span>
+<h2 class="font-display text-4xl md:text-5xl mt-2 mb-8 dark:text-white">Seasonal Favorites</h2>
+<div class="space-y-8">
+<div class="flex justify-between items-start border-b border-stone-300 dark:border-stone-700 pb-4">
+<div>
+<h4 class="font-display text-xl dark:text-white">Lavender Honey Latte</h4>
+<p class="text-sm text-stone-500 mt-1 italic">Espresso, honey, dried lavender, oat milk</p>
+</div>
+<span class="text-primary font-bold">$6.50</span>
+</div>
+<div class="flex justify-between items-start border-b border-stone-300 dark:border-stone-700 pb-4">
+<div>
+<h4 class="font-display text-xl dark:text-white">Smoked Sea Salt Mocha</h4>
+<p class="text-sm text-stone-500 mt-1 italic">Dark chocolate, espresso, maldon salt, cream</p>
+</div>
+<span class="text-primary font-bold">$6.75</span>
+</div>
+<div class="flex justify-between items-start border-b border-stone-300 dark:border-stone-700 pb-4">
+<div>
+<h4 class="font-display text-xl dark:text-white">Maple Pecan Cold Brew</h4>
+<p class="text-sm text-stone-500 mt-1 italic">12-hr steep, maple syrup, toasted pecan foam</p>
+</div>
+<span class="text-primary font-bold">$5.95</span>
+</div>
+</div>
+<button class="mt-10 flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">
+                        View Full Menu <span class="material-icons">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-4 bg-background-light dark:bg-background-dark" id="visit">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden rounded-3xl shadow-xl">
+<div class="bg-primary p-12 lg:p-20 text-white">
+<h2 class="font-display text-4xl mb-10">Visit Our Roastery</h2>
+<div class="space-y-8">
+<div class="flex gap-4">
+<span class="material-icons">location_on</span>
+<div>
+<p class="font-bold mb-1">Location</p>
+<p class="text-stone-200">124 Artisan Way, Suite 400<br/>Portland, Oregon 97201</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-icons">schedule</span>
+<div>
+<p class="font-bold mb-1">Opening Hours</p>
+<p class="text-stone-200">Mon - Fri: 7:00 AM - 6:00 PM<br/>Sat - Sun: 8:00 AM - 7:00 PM</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-icons">phone</span>
+<div>
+<p class="font-bold mb-1">Get in Touch</p>
+<p class="text-stone-200">(503) 555-0198<br/>hello@artisanbean.cafe</p>
+</div>
+</div>
+</div>
+</div>
+<div class="map-placeholder min-h-[400px]">
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-stone-100 dark:bg-stone-900 py-16 px-4 border-t border-stone-200 dark:border-stone-800">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-icons text-primary text-2xl">coffee</span>
+<span class="font-display text-xl font-bold tracking-tight text-primary">The Artisan Bean</span>
+</div>
+<p class="text-stone-500 text-sm leading-relaxed">Dedicated to the craft of exceptional coffee since 2012. We source ethically, roast carefully, and serve with love.</p>
+</div>
+<div>
+<h5 class="font-bold mb-6 dark:text-white">Quick Links</h5>
+<ul class="space-y-4 text-sm text-stone-500">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Our Roasts</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Brewing Guides</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 dark:text-white">Shop</h5>
+<ul class="space-y-4 text-sm text-stone-500">
+<li><a class="hover:text-primary transition-colors" href="#">Coffee Beans</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Subscription</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Equipment</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Merchandise</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 dark:text-white">Newsletter</h5>
+<p class="text-stone-500 text-sm mb-4">Get brewing tips and bean drops in your inbox.</p>
+<div class="flex gap-2">
+<input class="bg-white dark:bg-stone-800 border-stone-200 dark:border-stone-700 rounded-lg text-sm flex-1" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white p-2 rounded-lg"><span class="material-icons">send</span></button>
+</div>
+</div>
+</div>
+<div class="border-t border-stone-200 dark:border-stone-800 pt-8 flex flex-col md:row justify-between items-center gap-4">
+<p class="text-stone-500 text-xs">© 2024 The Artisan Bean Cafe. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-stone-400 hover:text-primary" href="#"><span class="material-icons text-lg">facebook</span></a>
+<a class="text-stone-400 hover:text-primary" href="#"><span class="material-icons text-lg">camera_alt</span></a>
+<a class="text-stone-400 hover:text-primary" href="#"><span class="material-icons text-lg">alternate_email</span></a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

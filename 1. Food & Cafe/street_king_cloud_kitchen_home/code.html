@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Street King Cloud Kitchen Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f20d0d", // Signal Red
+                        "street-yellow": "#FFD700", // Electric Yellow
+                        "street-black": "#181111", // Black
+                        "background-light": "#f8f5f5",
+                        "background-dark": "#221010",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "display": ["Archivo Black", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .font-archivo {
+            font-family: 'Archivo Black', sans-serif;
+        }
+        
+        /* Ticker tape animation */
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-ticker {
+            animation: ticker 20s linear infinite;
+        }
+        
+        /* Hide scrollbar for horizontal scrolling areas */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-street-black dark:text-white font-sans overflow-x-hidden">
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 bg-white dark:bg-[#1a0c0c] border-b border-[#f5f0f0] dark:border-[#332020] px-4 md:px-10 py-3">
+<div class="max-w-[1200px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="bg-primary text-white p-1 rounded">
+<span class="material-symbols-outlined text-[24px]">lunch_dining</span>
+</div>
+<h2 class="font-archivo text-xl tracking-tighter uppercase italic transform -skew-x-6 text-street-black dark:text-white">Street King</h2>
+</div>
+<div class="hidden md:flex items-center gap-8 font-bold uppercase tracking-tight text-sm">
+<a class="hover:text-primary transition-colors" href="#">Menu</a>
+<a class="hover:text-primary transition-colors" href="#">Offers</a>
+<a class="hover:text-primary transition-colors" href="#">Locations</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex relative">
+<input class="bg-[#f5f0f0] dark:bg-[#332020] border-none rounded-full py-2 px-4 pl-10 w-64 text-sm focus:ring-2 focus:ring-primary" placeholder="Search craving..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-2 text-gray-500 text-[20px]">search</span>
+</div>
+<button class="relative bg-primary text-white p-2 rounded-full hover:bg-red-700 transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-street-black text-white text-[10px] font-bold h-5 w-5 flex items-center justify-center rounded-full border-2 border-white dark:border-[#1a0c0c]">2</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section: Z-Pattern Layout -->
+<header class="relative bg-street-yellow dark:bg-street-yellow overflow-hidden">
+<!-- Abstract Pattern Background Overlay -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="max-w-[1200px] mx-auto px-4 py-12 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative z-10">
+<!-- Left: Typography -->
+<div class="flex flex-col gap-6 order-2 md:order-1 text-center md:text-left">
+<div class="inline-flex items-center gap-2 bg-street-black text-white px-3 py-1 rounded-full w-fit mx-auto md:mx-0">
+<span class="material-symbols-outlined text-[16px] text-primary">bolt</span>
+<span class="text-xs font-bold uppercase tracking-widest">Delivered in 20 Mins</span>
+</div>
+<h1 class="font-archivo text-5xl md:text-7xl lg:text-8xl leading-[0.9] text-street-black uppercase tracking-tighter">
+                    Street<br/>
+<span class="text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">Flavor,</span><br/>
+                    King Style
+                </h1>
+<p class="text-street-black font-medium text-lg md:text-xl max-w-md mx-auto md:mx-0 leading-tight">
+                    Mumbai’s favorite snacks. Experience the crunch, the spice, and the speed of the city.
+                </p>
+<div class="flex gap-4 justify-center md:justify-start pt-4">
+<button class="bg-primary text-white font-archivo uppercase text-lg px-8 py-4 rounded-lg hover:scale-105 transition-transform shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-[4px] active:translate-y-[4px]">
+                        Order Now
+                    </button>
+<button class="bg-white text-street-black font-bold uppercase text-sm px-6 py-4 rounded-lg border-2 border-street-black hover:bg-gray-50 transition-colors">
+                        View Menu
+                    </button>
+</div>
+</div>
+<!-- Right: Image -->
+<div class="order-1 md:order-2 flex justify-center relative">
+<!-- Decorative Elements behind image -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white rounded-full opacity-20 blur-3xl"></div>
+<div class="relative w-full max-w-[500px] aspect-square animate-[float_6s_ease-in-out_infinite]">
+<img alt="Top down view of delicious Indian Vada Pav with chutney" class="w-full h-full object-cover rounded-full border-8 border-white shadow-2xl rotate-12 hover:rotate-0 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL2bvEX5GBImWq6hRUjfTUMnazLy7l0RRBJYOtuH-dSh5UJWIcLa7D1ZETOZnGTas5XKbg5JYnBPk5AhRrVp6w40vmIjuPBWwPF8RaUjxxqDxMuQgJrjnam3R2pGhNrPO8Rk1Ocy_NmX-gU9327aF81FyD4d7Y17Mg3zTSwjmHSH12LLj8RHUCL60VC2lRNMF4CAjKfq4bZgPF70aIwica903mn8fm5AThOtZK0yK9jObiR7S7UN_GjShM3zdzxh_65iwk5gsom_gn"/>
+<!-- Price Tag Badge -->
+<div class="absolute -bottom-4 -right-4 md:bottom-10 md:-left-4 bg-street-black text-white p-4 rounded-full h-24 w-24 flex flex-col items-center justify-center border-4 border-white shadow-lg rotate-[-12deg]">
+<span class="text-xs font-bold uppercase">Only</span>
+<span class="font-archivo text-3xl text-street-yellow">₹49</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Ticker Tape Trust Bar -->
+<div class="bg-street-black text-white overflow-hidden py-4 border-y-4 border-primary">
+<div class="whitespace-nowrap flex animate-ticker">
+<!-- Content duplicated for seamless loop -->
+<div class="flex gap-12 px-6 items-center">
+<span class="font-archivo text-xl md:text-2xl uppercase italic flex items-center gap-2"><span class="material-symbols-outlined text-primary">star</span> Best Samosas in Town!</span>
+<span class="font-archivo text-xl md:text-2xl uppercase italic flex items-center gap-2"><span class="material-symbols-outlined text-primary">bolt</span> Fastest Delivery</span>
+<span class="font-archivo text-xl md:text-2xl uppercase italic flex items-center gap-2"><span class="material-symbols-outlined text-primary">local_fire_department</span> Spicy &amp; Hot</span>
+<span class="font-archivo text-xl md:text-2xl uppercase italic flex items-center gap-2"><span class="material-symbols-outlined text-primary">verified_user</span> 5 Star Hygiene</span>
+<span class="font-archivo text-xl md:text-2xl uppercase italic flex items-center gap-2"><span class="material-symbols-outlined text-primary">star</span> Best Samosas in Town!</span>
+<span class="font-archivo text-xl md:text-2xl uppercase italic flex items-center gap-2"><span class="material-symbols-outlined text-primary">bolt</span> Fastest Delivery</span>
+<span class="font-archivo text-xl md:text-2xl uppercase italic flex items-center gap-2"><span class="material-symbols-outlined text-primary">local_fire_department</span> Spicy &amp; Hot</span>
+<span class="font-archivo text-xl md:text-2xl uppercase italic flex items-center gap-2"><span class="material-symbols-outlined text-primary">verified_user</span> 5 Star Hygiene</span>
+</div>
+<div class="flex gap-12 px-6 items-center">
+<span class="font-archivo text-xl md:text-2xl uppercase italic flex items-center gap-2"><span class="material-symbols-outlined text-primary">star</span> Best Samosas in Town!</span>
+<span class="font-archivo text-xl md:text-2xl uppercase italic flex items-center gap-2"><span class="material-symbols-outlined text-primary">bolt</span> Fastest Delivery</span>
+<span class="font-archivo text-xl md:text-2xl uppercase italic flex items-center gap-2"><span class="material-symbols-outlined text-primary">local_fire_department</span> Spicy &amp; Hot</span>
+<span class="font-archivo text-xl md:text-2xl uppercase italic flex items-center gap-2"><span class="material-symbols-outlined text-primary">verified_user</span> 5 Star Hygiene</span>
+<span class="font-archivo text-xl md:text-2xl uppercase italic flex items-center gap-2"><span class="material-symbols-outlined text-primary">star</span> Best Samosas in Town!</span>
+<span class="font-archivo text-xl md:text-2xl uppercase italic flex items-center gap-2"><span class="material-symbols-outlined text-primary">bolt</span> Fastest Delivery</span>
+<span class="font-archivo text-xl md:text-2xl uppercase italic flex items-center gap-2"><span class="material-symbols-outlined text-primary">local_fire_department</span> Spicy &amp; Hot</span>
+<span class="font-archivo text-xl md:text-2xl uppercase italic flex items-center gap-2"><span class="material-symbols-outlined text-primary">verified_user</span> 5 Star Hygiene</span>
+</div>
+</div>
+</div>
+<!-- Main Content Area -->
+<main class="max-w-[1200px] mx-auto px-4 py-12">
+<!-- Filter Tabs -->
+<div class="flex overflow-x-auto gap-3 pb-8 no-scrollbar md:flex-wrap">
+<button class="shrink-0 bg-primary text-white font-bold px-6 py-2 rounded-full shadow-md hover:bg-red-700 transition">
+                All Cravings
+            </button>
+<button class="shrink-0 bg-white dark:bg-[#332020] text-street-black dark:text-gray-200 font-medium px-6 py-2 rounded-full border border-gray-200 dark:border-gray-700 hover:border-primary hover:text-primary transition">
+                Chaats
+            </button>
+<button class="shrink-0 bg-white dark:bg-[#332020] text-street-black dark:text-gray-200 font-medium px-6 py-2 rounded-full border border-gray-200 dark:border-gray-700 hover:border-primary hover:text-primary transition">
+                Vada Pavs
+            </button>
+<button class="shrink-0 bg-white dark:bg-[#332020] text-street-black dark:text-gray-200 font-medium px-6 py-2 rounded-full border border-gray-200 dark:border-gray-700 hover:border-primary hover:text-primary transition">
+                Samosas
+            </button>
+<button class="shrink-0 bg-white dark:bg-[#332020] text-street-black dark:text-gray-200 font-medium px-6 py-2 rounded-full border border-gray-200 dark:border-gray-700 hover:border-primary hover:text-primary transition">
+                Rolls
+            </button>
+<button class="shrink-0 bg-white dark:bg-[#332020] text-street-black dark:text-gray-200 font-medium px-6 py-2 rounded-full border border-gray-200 dark:border-gray-700 hover:border-primary hover:text-primary transition">
+                Beverages
+            </button>
+</div>
+<div class="flex flex-col lg:flex-row gap-10">
+<!-- Express Menu Grid -->
+<div class="flex-1">
+<div class="flex items-end justify-between mb-6">
+<h2 class="font-archivo text-3xl md:text-4xl text-street-black dark:text-white uppercase">Express Menu</h2>
+<a class="text-primary font-bold text-sm underline decoration-2 underline-offset-4" href="#">View Full Menu</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group bg-white dark:bg-[#1a0c0c] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-[#332020] flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img alt="Golden crispy Indian samosa with mint chutney" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0TxsmbPhaL576nR0efsYK0DBzQ6aeAD6h2-6XnJauy73jHGS6kbe39OlkrJxnNPX08am3jcJfhdPIceR-_QjyuhzAMGW2qDmCCAA1w67odMwhQhJszytISWl4q069J9C3DdRw8tMOjdFV7q4m_lBZ07O8smqaIAHqMEzmgr3j6glBAo6dr3ib5WIYOoI-x5qzqrAZ1T8beYMFzVDZzS4aqCi3Gv1YUk7LYwp1Lm-W7DFY3vURcCGw1XvLghPxFznWvIsVpDGElzhd"/>
+<div class="absolute top-3 right-3 bg-street-yellow text-street-black text-xs font-bold px-2 py-1 rounded shadow-sm">
+                                BESTSELLER
+                            </div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-archivo text-lg leading-tight group-hover:text-primary transition-colors">Schezwan Samosa Burst</h3>
+<div class="bg-green-100 dark:bg-green-900 p-[2px] rounded border border-green-600">
+<div class="w-2 h-2 rounded-full bg-green-600"></div>
+</div>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Crispy pastry filled with spicy schezwan potato mix, served with tangy chutney.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-archivo text-xl">₹69</span>
+<button class="bg-white dark:bg-[#332020] text-primary border-2 border-primary hover:bg-primary hover:text-white w-8 h-8 rounded flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-white dark:bg-[#1a0c0c] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-[#332020] flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img alt="Close up of Indian Pav Bhaji with butter and coriander" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXkggkNIk8q9SlFBP4s_JZjzc_8hTE_nUv4Gm5fwouJf3ZZBOwdsndowVYJrfYaGh-dtpsQKlug-P-EYcQIoxMwk6tp-t06BXoifdB-kw-qcG_kmJy66A9BMBc9uboXdjleRLAyTictoTPztSP0Ob9mhnMTPhFW9OBXACPYqf7yJo2D2gBY_fxzNO5DxMHv5Atw1aaR6laOqEFl1aLx_PxWXdi32x9HYuYcs5irNLPCNqhScAJuGKpzycfQPt2xLFfqXdbT1bKfnyv"/>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-archivo text-lg leading-tight group-hover:text-primary transition-colors">Butter Pav Bhaji</h3>
+<div class="bg-green-100 dark:bg-green-900 p-[2px] rounded border border-green-600">
+<div class="w-2 h-2 rounded-full bg-green-600"></div>
+</div>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Rich buttery vegetable mash served with soft butter-toasted pav bread.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-archivo text-xl">₹149</span>
+<button class="bg-white dark:bg-[#332020] text-primary border-2 border-primary hover:bg-primary hover:text-white w-8 h-8 rounded flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-white dark:bg-[#1a0c0c] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-[#332020] flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img alt="Indian Paneer Tikka Kathi Roll wrapped in paper" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWPzk67WC_J-kyjmOUvetBSxiHvsDf5SjYUHyOpt-n95UpIZ7hbvOIBRYxGOtkhaggFY03hV38FV1zDgLdzW4YjVnsd3Sqt_CC1ZDivMF2qsjExwZkL2E357T8oImHFLGBw0OGqcO_KsfqbXO0DPBNIkqrcBOO5nQLOGAzlcO5bOn23dJpS5QiX1VTvpvn9ZZEHgzsw5mE3lGtiWjDko44-doB1NUR00KsxcVfH87u47Ag9inMO9Oh1z5JMLgm311PLqW9TcKtyAaN"/>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-archivo text-lg leading-tight group-hover:text-primary transition-colors">Paneer Tikka Roll</h3>
+<div class="bg-green-100 dark:bg-green-900 p-[2px] rounded border border-green-600">
+<div class="w-2 h-2 rounded-full bg-green-600"></div>
+</div>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Smoky paneer cubes wrapped in a flaky paratha with onions and mint sauce.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-archivo text-xl">₹129</span>
+<button class="bg-white dark:bg-[#332020] text-primary border-2 border-primary hover:bg-primary hover:text-white w-8 h-8 rounded flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-white dark:bg-[#1a0c0c] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-[#332020] flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img alt="Classic Vada Pav with dry garlic chutney" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkNn0Lg26sVo-NDBayVr1dqgW3TnemuLZuPSXUcIqHYT8duqQ47y5ceXgzd5ovGB1VwodusfCG7-cnEOFqnVOeuftpG3nYl1k4dr2lquiItBfBea2UoVyXqpYGBd0Q9Fg8jsWNB4J7qYA5X7Jetx4uuv7a29jYCPjr2Z44-kC8MMX5P74qJYHirii5IoBRQwWAnskHQlSrSDZL6kjbcz0v_6BYZikEjSwh2jzcixDxgT1GFnessfmc6JbT1xa0hFXZuisPgIOfa7qh"/>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-archivo text-lg leading-tight group-hover:text-primary transition-colors">The King Vada Pav</h3>
+<div class="bg-green-100 dark:bg-green-900 p-[2px] rounded border border-green-600">
+<div class="w-2 h-2 rounded-full bg-green-600"></div>
+</div>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Our signature Mumbai burger. Spicy potato fritter in a soft bun.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-archivo text-xl">₹49</span>
+<button class="bg-white dark:bg-[#332020] text-primary border-2 border-primary hover:bg-primary hover:text-white w-8 h-8 rounded flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group bg-white dark:bg-[#1a0c0c] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-[#332020] flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img alt="Glass of mango lassi with saffron garnish" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLTGRArT27HN1Plx5dIOvMsSBkBiDMfe4ZMuWmpohNMV7EuvvQ9CP70bQJ75LSi02TPpDYBCXpTQA9fjU7SJpd7ozFkzXCC0a8ugG_8ic1WoaCfpsSe2xC3z2lBU69rx29eVVkjP4w0PW2QmjgnBNCXmFlXoVIiV8AohxROHtqoNkvR5hTEfUVjE4PVTrV5RXnD0FIIkhRliQ3Ax_vLYV0xKhsNfx1hEK_NPvDBVUeXuthDojx1JDuJNV37ugc_QpvgGnfqe5EiotF"/>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-archivo text-lg leading-tight group-hover:text-primary transition-colors">Mango Lassi</h3>
+<div class="bg-green-100 dark:bg-green-900 p-[2px] rounded border border-green-600">
+<div class="w-2 h-2 rounded-full bg-green-600"></div>
+</div>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Thick, creamy yogurt drink blended with sweet Alphonso mangoes.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-archivo text-xl">₹89</span>
+<button class="bg-white dark:bg-[#332020] text-primary border-2 border-primary hover:bg-primary hover:text-white w-8 h-8 rounded flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group bg-white dark:bg-[#1a0c0c] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-[#332020] flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img alt="Plate of chicken biryani with raita" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3o1id24RfyQ4rPxC_A3z57I9s9QMxRNvP9GOJhe39P8Ug2kxDDq3IbzT7J8EL5X-cAnoaobNLD9KjFo6WlHthXI8Uxr5aZHjETkcFsFClWNoXV9XxQ7smj_erW-dNkiyOorpFQ_EDZeuT7-2wNeBkFCaxdh5dZN0wE14Mb4r16P883jc356B3TB51aWk_lwP_pPq1MOwZePNTDfhAQ1JK8ARH17QyhOkDjnEAGlXbLMnJS2ulpy8EH1Eq2Gh_VqLaxH21Cc_ftVlU"/>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-archivo text-lg leading-tight group-hover:text-primary transition-colors">Street Chicken Biryani</h3>
+<div class="bg-red-100 dark:bg-red-900 p-[2px] rounded border border-red-600">
+<div class="w-2 h-2 rounded-full bg-red-600"></div>
+</div>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Aromatic basmati rice cooked with spiced chicken pieces, street style.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-archivo text-xl">₹199</span>
+<button class="bg-white dark:bg-[#332020] text-primary border-2 border-primary hover:bg-primary hover:text-white w-8 h-8 rounded flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar / Cart Summary (Sticky on Desktop) -->
+<aside class="hidden lg:block w-80 shrink-0">
+<div class="sticky top-24 bg-white dark:bg-[#1a0c0c] rounded-xl shadow-lg border border-gray-100 dark:border-[#332020] p-6">
+<h3 class="font-archivo text-2xl uppercase mb-4 border-b border-gray-100 dark:border-[#332020] pb-2">Your Order</h3>
+<div class="space-y-4 mb-6">
+<!-- Cart Item 1 -->
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-bold text-sm">The King Vada Pav</span>
+<span class="text-xs text-gray-500">Spicy</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center border border-gray-200 dark:border-gray-700 rounded bg-background-light dark:bg-[#2a1a1a]">
+<button class="w-6 text-primary hover:bg-gray-200 dark:hover:bg-gray-800 rounded-l">-</button>
+<span class="w-4 text-center text-xs font-bold">2</span>
+<button class="w-6 text-primary hover:bg-gray-200 dark:hover:bg-gray-800 rounded-r">+</button>
+</div>
+<span class="text-sm font-bold">₹98</span>
+</div>
+</div>
+<!-- Cart Item 2 -->
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-bold text-sm">Mango Lassi</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center border border-gray-200 dark:border-gray-700 rounded bg-background-light dark:bg-[#2a1a1a]">
+<button class="w-6 text-primary hover:bg-gray-200 dark:hover:bg-gray-800 rounded-l">-</button>
+<span class="w-4 text-center text-xs font-bold">1</span>
+<button class="w-6 text-primary hover:bg-gray-200 dark:hover:bg-gray-800 rounded-r">+</button>
+</div>
+<span class="text-sm font-bold">₹89</span>
+</div>
+</div>
+</div>
+<div class="border-t border-dashed border-gray-300 dark:border-gray-700 py-4 space-y-2">
+<div class="flex justify-between text-sm text-gray-500">
+<span>Item Total</span>
+<span>₹187</span>
+</div>
+<div class="flex justify-between text-sm text-gray-500">
+<span>Delivery Partner Fee</span>
+<span>₹25</span>
+</div>
+<div class="flex justify-between text-sm text-gray-500">
+<span>Taxes</span>
+<span>₹37</span>
+</div>
+</div>
+<div class="flex justify-between items-center py-4 border-t border-gray-100 dark:border-[#332020] mb-2">
+<span class="font-bold text-lg">To Pay</span>
+<span class="font-archivo text-xl text-primary">₹249</span>
+</div>
+<button class="w-full bg-primary text-white font-archivo uppercase py-3 rounded-lg hover:bg-red-700 transition-colors shadow-lg shadow-red-200 dark:shadow-none">
+                        Proceed to Pay
+                    </button>
+</div>
+</aside>
+</div>
+</main>
+<!-- Mobile Sticky Bottom Bar -->
+<div class="lg:hidden fixed bottom-4 left-4 right-4 z-40">
+<button class="w-full bg-street-black text-white rounded-xl p-4 shadow-2xl flex items-center justify-between group overflow-hidden relative">
+<div class="absolute inset-0 bg-primary w-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></div>
+<div class="relative z-10 flex flex-col items-start">
+<span class="text-xs uppercase text-gray-400 group-hover:text-white/80">3 Items</span>
+<span class="font-archivo text-xl">₹249</span>
+</div>
+<div class="relative z-10 flex items-center gap-2 uppercase font-bold text-lg tracking-wider group-hover:translate-x-2 transition-transform">
+                Order Now <span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</button>
+</div>
+<!-- Footer -->
+<footer class="bg-street-black text-white pt-16 pb-24 lg:pb-16 mt-12 border-t-8 border-street-yellow">
+<div class="max-w-[1200px] mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-street-yellow text-[32px]">lunch_dining</span>
+<h2 class="font-archivo text-2xl uppercase italic">Street King</h2>
+</div>
+<p class="text-gray-400 text-sm">Bringing the authentic taste of Mumbai streets to your doorstep, faster than ever.</p>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-4 uppercase text-street-yellow">Company</h4>
+<ul class="space-y-2 text-sm text-gray-400">
+<li><a class="hover:text-white" href="#">About Us</a></li>
+<li><a class="hover:text-white" href="#">Careers</a></li>
+<li><a class="hover:text-white" href="#">Team</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-4 uppercase text-street-yellow">Support</h4>
+<ul class="space-y-2 text-sm text-gray-400">
+<li><a class="hover:text-white" href="#">Help &amp; Support</a></li>
+<li><a class="hover:text-white" href="#">Partner with us</a></li>
+<li><a class="hover:text-white" href="#">Ride with us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-4 uppercase text-street-yellow">Follow Us</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="font-bold">IG</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="font-bold">TW</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="font-bold">FB</span>
+</a>
+</div>
+</div>
+</div>
+<div class="text-center text-gray-600 text-xs mt-12 border-t border-gray-800 pt-8">
+            © 2023 Street King Cloud Kitchens Pvt Ltd. All rights reserved.
+        </div>
+</footer>
+<script>
+        // Placeholder for simple interaction if needed in future
+        console.log("Street King UI Loaded");
+    </script>
+</body></html>

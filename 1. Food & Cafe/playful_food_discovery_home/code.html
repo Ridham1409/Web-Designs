@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GourmetGo - Order Joy</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&amp;family=Bungee&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#F59E0B", // Amber 500
+              secondary: "#D97706", // Amber 600
+              "background-light": "#FDFCF6",
+              "background-dark": "#064E3B", // Deep forest green from image
+            },
+            fontFamily: {
+              display: ["Outfit", "sans-serif"],
+              playful: ["Bungee", "cursive"],
+              body: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              "xl": "1.5rem",
+              "2xl": "2rem",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        .text-shadow-3d {
+            text-shadow: 
+                0 1px 0 #92400E,
+                0 2px 0 #92400E,
+                0 3px 0 #92400E,
+                0 4px 0 #92400E,
+                0 5px 0 #92400E,
+                0 6px 1px rgba(0,0,0,.1),
+                0 0 5px rgba(0,0,0,.1),
+                0 1px 3px rgba(0,0,0,.3),
+                0 3px 5px rgba(0,0,0,.2),
+                0 5px 10px rgba(0,0,0,.25),
+                0 10px 10px rgba(0,0,0,.2),
+                0 20px 20px rgba(0,0,0,.15);
+        }
+        .chalk-icon {
+            filter: drop-shadow(0 0 2px rgba(255,255,255,0.5));
+            opacity: 0.8;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-body transition-colors duration-300">
+<nav class="fixed top-0 w-full z-50 px-6 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between glass rounded-2xl px-8 py-3">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-icons-outlined text-white">restaurant</span>
+</div>
+<span class="font-display font-extrabold text-xl tracking-tight dark:text-white">GourmetGo</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-medium">
+<a class="text-primary" href="#">Home</a>
+<a class="hover:text-primary transition-colors" href="#">Discover</a>
+<a class="hover:text-primary transition-colors" href="#">Offers</a>
+<a class="hover:text-primary transition-colors" href="#">Orders</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-white/10 transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons-outlined">dark_mode</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-primary/20 border-2 border-primary overflow-hidden cursor-pointer">
+<img alt="User Profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD3EQ2RVT1enthcBrrbD-6VVB0qc96Blk5jBHrXlWdBRTWVHKIyf525uFzGfSmYc8ieM4whsiqs5AyDCglWb13JqX8sNRFY41fQWgVxfN6k9u5xPkMxirLSqI4fk1AB7Zptsdy5N-hM1UWj-0naqnN5qoKL4HmR0J0nBLA2D-fSjKrblmH3W-H60jdHWOwuLnKeJeqDIR8kNRIIjOHk_X1OCOOkNAhsQ7rb_zrWKwlBzOPWZryouQNEluvimGpMs1mLbutwC3IIrCM"/>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative pt-32 pb-20 overflow-hidden min-h-[80vh] flex flex-col items-center justify-center text-center">
+<div class="absolute inset-0 pointer-events-none select-none">
+<img alt="Burger icon" class="chalk-icon absolute top-[20%] left-[15%] w-16 rotate-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEdWZYO0REYHLM-b4NGX3pXdG60HcO95Wr1u2hF8GV9rS6hmuAU0JAQshIz-xvf-xJ-L9H8k_vEGVHR9pEAUX0JHM9fKfW6hQ2vMlQHza25AE7zVQaT770jBGt9W8zTMgMNR8IUaF8oTbpvu4TZ_jtyAylVmdCjhKiOA6d3wlTlv8d_HLMtsk5Ca4qdDRMQ1OQitkGAGNbYYyjDzQ5V3t0PaGhkjOlPMafaOVc3if040WzTVs2djV85zWdtSuYSZJhru8wdHMEuUzW"/>
+<img alt="Noodles icon" class="chalk-icon absolute top-[60%] left-[10%] w-20 -rotate-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQmiEwZOcCPAFBgTV1T0JvIriNXHZCR7MOad8U4YoctVE2cLQiHBP8tcDjISq9pUDMrCng3E03odR1rlAmyw_KF51ZKSocwLpbLvqRuO8E9o5WEQwbH98KpJ0uegw3RFLsRLlUGDuP75ow-9M-Ydv2BwXHa6UtyABLw5Dm978TcUy6hosTSCWM_7L7kVJMrBagi6KqPifs-1iF_nwGYAMmjgQBGfDLfcCwwhEKBbVjCZw31wLxqyIJw749A5tpHURjVZdzYxCkrvQT"/>
+<img alt="Coffee icon" class="chalk-icon absolute top-[25%] right-[15%] w-14 -rotate-45" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD53qbJrF30kbEafW92qiLVjgpcYKIJibBONNQUGteGQeoXcFPNQNON3GjcqqJD8a_eHvvyGRO4BKqd-lEi7czxZrdA033gYwdl1VqKwktE5gS-RN-nrm4TpTMhHe8G1inVclThRPIugQostFrItYW9kmxV7I6O3pkxxYlleShmFgEcJ-VzGyV8wTt4M70_nhjJZMC5t4b3W6YTbK58Ep1numf4cbjCFJOXSOcDcGghIuCi4qBq4_fP8Rc74X8hCPpMQniBmoEPpx2B"/>
+<img alt="Ice cream icon" class="chalk-icon absolute top-[70%] right-[12%] w-16 rotate-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZBGHpkqi10UDCgASeetfPm24IZKrrtW3IZqxVGPgLBRA30jp3WZIU4eZTLmo87mZFO1SPbqOU9jBsKVZfkWA3TLDA7lOmXLRAIdSOs5Kiob9T2uUQN6yi2LtBGaxEudDPKj5Kyp49pBH9bCvYKlZkf2P0aBnd3S8a9rPCWfY3H7xJZHeJEgOHKUsHROLK2MYmVspMwLsn82lxa-Tr9awcxu_8lqj6y2o4XwnxIpevcMNcfBTNftrPcn5RnfHjpGv_BeHYBpKUepnA"/>
+<img alt="Pizza icon" class="chalk-icon absolute bottom-[10%] left-[30%] w-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA50qlDKjm50y3dzueZ642av59woov5fZL1UJRbzPFGZW3mnnN5DUs1OZGfxZx023H7zy2jF18y2Xt4_1t4ah0xr4bvM9IVN8nT8utiD_96JBtIAHwWxxcnDldrrFM116Yn6r0Kk2DIYUR3mcv_ai0YphVL5A5Yh3Ia-oU6SmlJ43Pp84mmTsg21w8ldIapFVqyrg_tN65DHFrwmeUDq0XlIH5nNoecUbc2GxHUpwkqSiJDG4BBRSJ44TFbtChoJ72K6NW4P1XvX2_6"/>
+<div class="absolute top-[40%] right-[30%] border-2 border-dashed border-white/20 rounded-full w-24 h-24"></div>
+</div>
+<div class="relative z-10 px-6 max-w-4xl mx-auto">
+<h1 class="font-playful text-7xl md:text-9xl text-primary text-shadow-3d mb-8 uppercase tracking-widest transform -rotate-2">
+                Order Joy
+            </h1>
+<p class="text-xl md:text-2xl font-display font-light mb-12 text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+                Discover the best flavors in town delivered straight to your doorstep with a smile.
+            </p>
+<div class="max-w-2xl mx-auto relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-400 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative flex items-center bg-white dark:bg-slate-800 rounded-2xl p-2 shadow-2xl">
+<span class="material-icons-outlined ml-4 text-slate-400">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-lg py-4 px-4 dark:text-white" placeholder="Search for your favorite dish, restaurant..." type="text"/>
+<button class="bg-primary hover:bg-secondary text-white font-bold py-4 px-8 rounded-xl transition-all flex items-center gap-2">
+                        Find Food
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-12 px-6 max-w-7xl mx-auto">
+<div class="flex items-end justify-between mb-8">
+<div>
+<h2 class="text-3xl font-display font-extrabold mb-2">Popular Categories</h2>
+<p class="text-slate-500 dark:text-slate-400">Whatever you crave, we've got you covered.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-1 hover:gap-2 transition-all">
+                View All <span class="material-icons-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="flex overflow-x-auto gap-6 pb-8 hide-scrollbar snap-x">
+<div class="snap-start flex-none w-48 group cursor-pointer">
+<div class="relative h-64 rounded-2xl overflow-hidden mb-3">
+<img alt="Fast Food" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhCPzE2MHvgDr-CtV7ZZdoesxtBrUmBSVYKJcPGQQ-1HTgqZaZ6TQltXlClVdrV0fWGzs8-inHQ7_9JfX6KqZ4U2br_VEcWDOYJYt7vhJbugFFxtnIHh9WjAe7axHrBsEx5BLuDJaDTRAjTmrKnsTEKwfCPSqTQ2jNBg_4tJ1OwqPW8MdFC92AEaFgFPuw5LGtkGN5489NBzVd6PuC0gbG7fjehWg-n95qHWikHlcAyjxyJPjAhEFroCo5yJt9a3iVTiKQgbiYuCyu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="text-white font-bold text-lg">Fast Food</span>
+</div>
+</div>
+</div>
+<div class="snap-start flex-none w-48 group cursor-pointer">
+<div class="relative h-64 rounded-2xl overflow-hidden mb-3">
+<img alt="Gourmet" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0W-z5Sd4GK1bf40SnxR6cJbMjYvpq_UGXnKW98lcitI_o0eJX3bRR_80DD8ky1ZkG-Bh6L3PEkfogTumVkEYzGBcoUVgRj41EEZisU8bxF-GBQZI7Pw1DP80_Wh4GZcrvrkJXHwGCPsD3fqkORvCMYt1sllBeD_YxzVr3JpGoJhfHm956kiroCXQ7MO7QDuBvaSOGBYVDQxLzPOYHGIQAZjhAROs4fs3s86jo6e5L7IMcV2KgYadgLFWCEKabdlqe4TsygsVlvsRv"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="text-white font-bold text-lg">Gourmet</span>
+</div>
+</div>
+</div>
+<div class="snap-start flex-none w-48 group cursor-pointer">
+<div class="relative h-64 rounded-2xl overflow-hidden mb-3">
+<img alt="Desserts" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGbC3YYti3Pc4nNQgNvJkbfHfRLhzBG2GWZr5aHKmBhLLf3r6jBaCW9IFE1kHVLC4h3Hi6R9IOKv1Ke2ESdjhSUuj9Esx6nNvts0ZKDv-n7R2ORafeFAbintZ5ZAgl1E3mAXaObpeRtmu69sfY5dfy3AUXsquLc846JUSpO20njGJCQaBLtGlGyh05wniYpHifmvyAUuvGQiORYtU6kPYa8QsAb4JkgR-K_bjaYqrsLlW4NVS6jkVjeCaRH5md6cfYJSxCWK2uv_5V"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="text-white font-bold text-lg">Desserts</span>
+</div>
+</div>
+</div>
+<div class="snap-start flex-none w-48 group cursor-pointer">
+<div class="relative h-64 rounded-2xl overflow-hidden mb-3">
+<img alt="Healthy Eats" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_QaJaocPY9yCBup-x0PsbY13i7FWQR8hzAcbLei_hCCmaUr_40Ay-3jEisN9bd2aGutl4bjKsCwQ2MjbtJ8BY35wpCobggzZ_EKSe-eZqqJTSO05hWud3_SRuHTKvSUGLn5nwYgkBQBQRWGX6OXZrDTQaB1jGjhO3Rxd0DxcWsJk4OY5pX53hkr7jAS35TQTuMuJGscATMulG1c3_lxVDSGsDJgDY3iP-FGL9ZjcAL0p4OIr08SY4IzgvKHq4DTqunyZTEgbJRoH5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="text-white font-bold text-lg">Healthy Eats</span>
+</div>
+</div>
+</div>
+<div class="snap-start flex-none w-48 group cursor-pointer">
+<div class="relative h-64 rounded-2xl overflow-hidden mb-3">
+<img alt="Asian" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG1hViZDvQOPyrLJMd2t0l5U3CTnk4ODfEBM9xhbtW7yjlZXRBm33NM5XhGUoGXZI5Wxgt9alQxclCyoupI2QM-pbqE_aEGMmR6GTnno4Bfa_jye8Tkvq2Rs23B9CXamBibbKRPXXtpglwPkVs-zmYItXAIttYRq4RGroiW6_V2kCKwmI_EMn28caTx5KHzRS9-QDxCMtBgbAhXZgrk-SiIUFs1QCKx99vdn4CkvO45NgxN_OK4ytBDmLWC8uGYHwKEaKTpTOmmRtx"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="text-white font-bold text-lg">Asian</span>
+</div>
+</div>
+</div>
+<div class="snap-start flex-none w-48 group cursor-pointer">
+<div class="relative h-64 rounded-2xl overflow-hidden mb-3">
+<img alt="Pizza" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMjG1pmFsFieaFTsafT5OI0GQsp3TVeCeWb6vmSIoZl7QctJWnFPP5MreviVu3tp56pbW1VpzSANLa5_7srCh2CCrxOKhYZ1dguVnVN1I2aeEAYPQFqGJnSw-zjU9LwRfcMAfr3twsFEyCF1RboGXmc-joSA2sOu6xQflc3iRyZT9TIY5-DrbIvZIKYyM3OagZtt5b8G1-H7O5H6PsNiUWpl9asbRxQoL4Q5BwAn6Jnxah6pP6RNKreMNBTJzNutExHfzWJP6cDPcy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="text-white font-bold text-lg">Italian</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-12 px-6 max-w-7xl mx-auto">
+<div class="relative bg-primary rounded-3xl p-8 md:p-16 overflow-hidden shadow-2xl">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 hidden md:block">
+<img alt="Promo Food" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKCf3WX1kjy_yhjyEm2eysgUz6rZ_WfpNsxDnX5Qv5MFCTU1O_ZsRWuQwMxl4lrLKf8fS1HJ_9Wz723bk-9O5Uo2KURZjkq_kuFt3S4vuRdI-AMFQFjoKcySgWXGJkEzdGG7mykLm8_Pz_sc4MSyvQT5dyK35J69QOpDKmMaG_Ovag35kD5Nv9ccSPUlBIXP2fPZaVPLaq7JNhRGeVoMvtWn5ynYIjT-W-RVt--y_Jgv4mtL5Cf674RcxFhN8MJi7G2Fj0kt3AKK5V"/>
+</div>
+<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-primary via-primary to-transparent"></div>
+<div class="relative z-10 max-w-md">
+<span class="bg-white/20 text-white font-bold py-1 px-4 rounded-full text-sm mb-6 inline-block uppercase tracking-wider">Limited Offer</span>
+<h2 class="text-4xl md:text-5xl font-playful text-white mb-6 leading-tight">Free delivery on your first 3 orders</h2>
+<p class="text-white/90 text-lg mb-8 font-medium">Use code <span class="bg-white text-primary px-3 py-1 rounded-lg">JOYRIDE</span> at checkout.</p>
+<button class="bg-white text-primary font-bold py-4 px-10 rounded-xl hover:scale-105 transition-transform shadow-lg">
+                    Claim Now
+                </button>
+</div>
+<img alt="Star icon" class="absolute bottom-10 right-10 w-8 opacity-40 animate-pulse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeuk3630b9h2wp_a5rslBv3dN03dtTXB0LC56w85BDUd-uTxMk0bcBKxQoW6s6rA2gtSko3BPN6Cz4LUIELsbWWpYo20ozyZHeKRgDL1JXMGxy5_WMMijsASOhUnsFZDPM0yvLmxq5e4VNt_XtEJ177DBo2-O9FaRTckLZcj2BoUxlaEoZdPtU5iQK6T0GpjPjZtsWrdiInMveWmAMASaqwSIRGMdech4T8iuWbDQhprq_slMWJMzukCIBUz1wY2iwySceGDu9DNk9"/>
+<img alt="Confetti icon" class="absolute top-10 right-20 w-12 opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrSlFSNllkpaz95jZkPFeUQcepNZuoU-7ts4b-shYGAu-1aiDfLWkEU8WoZBtAn8ZpUHcjUBVIe3VSav0da9L6ZG3hF2JmDmzsogvQezdrnMiY49N9HwtQ5-mbv-H-_YkgWbxuOAjT9NnHcr5hGKIKVtGVNxCsvKuuLwgGFBzzOV-9IS9osXQ9_beNb2XZ3xybyzweHgGfMJrW9GYsC_p7etdSqNz84Z2j2yhT3e9kXbO_mIlMNPpCdwIeEr_IWMN5LoKi6GN6euBB"/>
+</div>
+</section>
+<section class="py-12 px-6 max-w-7xl mx-auto pb-32">
+<div class="flex items-end justify-between mb-8">
+<div>
+<h2 class="text-3xl font-display font-extrabold mb-2">Editor's Choice</h2>
+<p class="text-slate-500 dark:text-slate-400">Hand-picked favorites just for you.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group cursor-pointer bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700">
+<div class="relative h-48">
+<img alt="The Bistro" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtVO4kZu9Ftgp1n6OBDuBt1RhCbZRJYNnnSVeL9FcXQYajSqqh__Qlpx7zjopQjkkjfF9t_BcK9bFT1ykTuX1U-svTIqnHWbduqVgESGNrvDNAmBjpdStm2XELRTHzBn-OFKxQrJ76D3nWLzG5N4ggJTHdDEuvaa2bxxKwlG28M0u4c5v3p8_EvT4LUTm0m-jSjy4fFl0wnWcvbgKoYfT7_JdNo-G2psCk3xT_BF6wgwlTr-Ncyimj8wFs0cEqzF4xFIoGP_3GYB6t"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-2 py-1 rounded-lg flex items-center gap-1">
+<span class="material-icons-outlined text-amber-500 text-sm">star</span>
+<span class="text-sm font-bold text-slate-800">4.8</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">The Rustic Bistro</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Italian • Pasta • Wine • $$</p>
+<div class="flex items-center gap-4 text-sm font-medium text-slate-600 dark:text-slate-300">
+<div class="flex items-center gap-1">
+<span class="material-icons-outlined text-primary text-base">schedule</span> 20-30 min
+                        </div>
+<div class="flex items-center gap-1">
+<span class="material-icons-outlined text-primary text-base">delivery_dining</span> Free
+                        </div>
+</div>
+</div>
+</div>
+<div class="group cursor-pointer bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700">
+<div class="relative h-48">
+<img alt="Sushi Zen" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL9UaOvNoP_3zEiQgMi501ZYt4lLj6m-SVZD2j1DbwEP8JFLgLif7CPrM6hJP0rI2COhPbuQ-AX9VGctrf8vpySRdTU_6153iXhJyAeFGFQ6wzyXEODY7jwpsa3LpAKJUQxa7liCwfQbRB-cFH5RAot7I0i3iUXnShAYY0YcViugWWLWaHv0kmtXOQpPu6rde6uTw3NqlTHps4foN3yUf1K62ACZix9p2iELwMJDUtNkeFhUzuL4pJ32zMW9Q9VPi1qsuI-eH0gTPj"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-2 py-1 rounded-lg flex items-center gap-1">
+<span class="material-icons-outlined text-amber-500 text-sm">star</span>
+<span class="text-sm font-bold text-slate-800">4.9</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Sushi Zen House</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Japanese • Sushi • Ramen • $$$</p>
+<div class="flex items-center gap-4 text-sm font-medium text-slate-600 dark:text-slate-300">
+<div class="flex items-center gap-1">
+<span class="material-icons-outlined text-primary text-base">schedule</span> 35-45 min
+                        </div>
+<div class="flex items-center gap-1">
+<span class="material-icons-outlined text-primary text-base">delivery_dining</span> $2.99
+                        </div>
+</div>
+</div>
+</div>
+<div class="group cursor-pointer bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700">
+<div class="relative h-48">
+<img alt="Burger Lab" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAecOF44ZcWEDGvakkBUn2zmpH4dkHiV78DMDPr1EiVIoELmcRuYDB8HNxQGGZQNrLETBTEmTB1m8bEYUU-pJJzTJHOt9zI7d0Pi-hV8sIcisdCQtYrd0hcdzit7P_EksymcbqoOgDWKcA9shGI6cB3g5ofOvhPENSrNniaNoWI7vBH1f7IPa_H-HgT633PFwDzs21v7nZuhLFURl0ALLl0E79W3vnZGSoDJxSpxPnyBnsrx1YP_ztPWjwQ1RcwCcMVO8XdVQduZtQd"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-2 py-1 rounded-lg flex items-center gap-1">
+<span class="material-icons-outlined text-amber-500 text-sm">star</span>
+<span class="text-sm font-bold text-slate-800">4.7</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">The Burger Lab</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Burgers • American • Craft Beer • $$</p>
+<div class="flex items-center gap-4 text-sm font-medium text-slate-600 dark:text-slate-300">
+<div class="flex items-center gap-1">
+<span class="material-icons-outlined text-primary text-base">schedule</span> 15-25 min
+                        </div>
+<div class="flex items-center gap-1">
+<span class="material-icons-outlined text-primary text-base">delivery_dining</span> Free
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-slate-100 dark:bg-black/20 py-12 px-6">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-icons-outlined text-white">restaurant</span>
+</div>
+<span class="font-display font-extrabold text-xl tracking-tight dark:text-white">GourmetGo</span>
+</div>
+<div class="flex gap-8 text-sm font-medium text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary" href="#">About Us</a>
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center cursor-pointer hover:bg-primary hover:text-white transition-all">
+<span class="material-icons-outlined text-lg">facebook</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center cursor-pointer hover:bg-primary hover:text-white transition-all">
+<span class="material-icons-outlined text-lg">camera_alt</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center cursor-pointer hover:bg-primary hover:text-white transition-all">
+<span class="material-icons-outlined text-lg">alternate_email</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-slate-400 text-sm">
+            © 2024 GourmetGo. Made with ❤️ for food lovers.
+        </div>
+</footer>
+
+</body></html>

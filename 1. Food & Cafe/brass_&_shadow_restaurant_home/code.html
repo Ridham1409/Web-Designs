@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Brass &amp; Shadow | Fine Dining</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Noto+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "primary-dark": "#cda120",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0a0a0a", // Deep charcoal almost black
+                        "brass-light": "#f4d06f",
+                        "brass-muted": "#8a7e56",
+                        "surface-dark": "#161616",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-500 { animation-delay: 0.5s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gold-glow:hover {
+            box-shadow: 0 0 20px rgba(238, 189, 43, 0.3);
+        }
+        
+        /* Custom scrollbar for a premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #eebd2b;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-gray-200 font-sans antialiased overflow-x-hidden">
+<!-- Sticky Header -->
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background-dark/80 backdrop-blur-sm border-b border-white/5">
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<button aria-label="Menu" class="text-primary hover:text-white transition-colors p-2 rounded-full hover:bg-white/5 group">
+<span class="material-symbols-outlined text-3xl group-hover:rotate-90 transition-transform duration-300">menu</span>
+</button>
+<!-- Small Logo for Sticky Header (Visible on Scroll - conceptually) -->
+<a class="font-display italic text-xl text-primary tracking-wider font-semibold opacity-0 hover:opacity-100 transition-opacity duration-500 absolute left-1/2 -translate-x-1/2 hidden md:block" href="#">
+                B &amp; S
+            </a>
+<button class="bg-transparent border border-primary text-primary hover:bg-primary hover:text-background-dark px-6 py-2 rounded text-sm font-bold tracking-widest uppercase transition-all duration-300 gold-glow">
+                Reserve
+            </button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-background-dark/30 via-background-dark/50 to-background-dark z-10"></div>
+<img alt="Dimly lit elegant restaurant interior with warm lighting" class="w-full h-full object-cover opacity-60" data-alt="Dark moody restaurant interior with blurred lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBABbac0E53RZh-SRBvRSBKInfnbva3RqfeaFBsWyXENiLXgf670YAA2u3oUzrUn3hXY7U9XPOyYxEaqYeRw1JZFAbP57nr7ZcF0TPxVt0dqaDnIAog0owqKDHQNfBABHZcWkrhcOTC2kXPvqZe_bod7yeV5NvkFHMXO_vkX1sJ1qgLFd3wNHrm6JJpLukZvgyYm-dka8QdhZ5SuQQs58P9ZP7LwQYiFUt07nPiUXjDrLN3jmYE0bn4f_gM-Oh-T40H9ISLbxcAnOcg"/>
+</div>
+<!-- Hero Content -->
+<div class="relative z-20 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-8">
+<div class="fade-in-up delay-100">
+<span class="material-symbols-outlined text-primary text-5xl mb-4 opacity-80">restaurant</span>
+</div>
+<h1 class="font-display italic font-bold text-6xl md:text-8xl lg:text-9xl text-primary tracking-tighter leading-none fade-in-up delay-300 drop-shadow-2xl">
+                Brass <span class="text-white font-light">&amp;</span> Shadow
+            </h1>
+<p class="font-display text-lg md:text-2xl text-gray-300 tracking-wide font-light max-w-2xl fade-in-up delay-500">
+                Modern Gastronomy in the Heart of the City
+            </p>
+<div class="mt-8 fade-in-up delay-500">
+<button class="group relative px-8 py-3 overflow-hidden rounded bg-transparent text-primary border border-primary transition-all duration-300 hover:bg-primary hover:text-background-dark">
+<span class="relative z-10 font-bold tracking-[0.2em] uppercase text-sm">Reserve a Table</span>
+</button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-primary/50">
+<span class="material-symbols-outlined">keyboard_arrow_down</span>
+</div>
+</section>
+<!-- Introduction / Philosophy Section -->
+<section class="py-24 px-6 md:px-12 bg-background-dark relative">
+<div class="max-w-3xl mx-auto text-center flex flex-col gap-10">
+<div class="w-px h-24 bg-gradient-to-b from-transparent via-primary to-transparent mx-auto"></div>
+<h2 class="font-display text-4xl md:text-5xl text-white font-bold tracking-tight">
+<span class="italic text-primary">Shadows</span> &amp; Light
+            </h2>
+<p class="font-display text-xl md:text-2xl text-gray-400 leading-relaxed font-light">
+                "Our philosophy is rooted in the interplay of darkness and illumination. We curate an atmosphere where every dish tells a story, crafted from the finest seasonal ingredients and presented with artistic precision."
+            </p>
+<div class="flex items-center justify-center gap-2 text-brass-muted text-sm tracking-widest uppercase font-bold mt-4">
+<span>Est. 2024</span>
+<span class="w-1 h-1 rounded-full bg-primary"></span>
+<span>Michelin Star</span>
+</div>
+</div>
+</section>
+<!-- Features / Experience Grid -->
+<section class="py-20 px-4 md:px-8 bg-surface-dark border-y border-white/5">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group p-8 rounded border border-white/5 bg-background-dark hover:border-primary/30 transition-all duration-500 hover:-translate-y-1">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 font-light group-hover:scale-110 transition-transform">local_fire_department</span>
+<h3 class="font-display text-2xl text-white mb-3">The Atmosphere</h3>
+<p class="text-gray-400 font-display text-lg leading-relaxed">
+                        Intimate, moody, and designed for privacy. A space where time slows down.
+                    </p>
+</div>
+<!-- Card 2 -->
+<div class="group p-8 rounded border border-white/5 bg-background-dark hover:border-primary/30 transition-all duration-500 hover:-translate-y-1">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 font-light group-hover:scale-110 transition-transform">restaurant_menu</span>
+<h3 class="font-display text-2xl text-white mb-3">The Cuisine</h3>
+<p class="text-gray-400 font-display text-lg leading-relaxed">
+                        Avant-garde techniques meet classic flavors. A journey through texture and taste.
+                    </p>
+</div>
+<!-- Card 3 -->
+<div class="group p-8 rounded border border-white/5 bg-background-dark hover:border-primary/30 transition-all duration-500 hover:-translate-y-1">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 font-light group-hover:scale-110 transition-transform">wine_bar</span>
+<h3 class="font-display text-2xl text-white mb-3">The Wine</h3>
+<p class="text-gray-400 font-display text-lg leading-relaxed">
+                        An award-winning cellar of rare vintages selected to perfectly pair with our menu.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Chef's Table / Macro Photography Section -->
+<section class="py-24 bg-background-dark overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 mb-12 flex flex-col md:flex-row items-end justify-between gap-6">
+<div>
+<h2 class="font-display text-4xl md:text-6xl text-white italic mb-2">The Chef's Table</h2>
+<p class="text-brass-muted uppercase tracking-widest text-sm font-bold">A Seasonal Exploration</p>
+</div>
+<a class="text-primary hover:text-white transition-colors flex items-center gap-2 group pb-2" href="#">
+<span class="font-display text-lg italic">View Full Menu</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Horizontal Scroll Container -->
+<div class="flex overflow-x-auto snap-x snap-mandatory pb-8 gap-6 px-6 md:px-12 scrollbar-hide no-scrollbar" style="-ms-overflow-style: none; scrollbar-width: none;">
+<!-- Item 1 -->
+<div class="snap-center shrink-0 w-[85vw] md:w-[600px] group cursor-pointer">
+<div class="aspect-[16/9] overflow-hidden rounded-lg mb-4 relative">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all z-10"></div>
+<img alt="Macro shot of truffle shavings on a dark plate" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of black truffle texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxJFTRiBMsPHYXSN5Ax_jvIgDbjgtOulrzUrsehoBwxvbhMy_moXMLpPthFyAA7caVvM_R4Q8nPc1_uf7oBjTFWm5Fb6BymImwbXJGHQjQ7ahsIkffs99i3czaad1Zv5JNA13cy_t_wdvZ_fcMP1_8VfzgqGqSJdoJB2gqxiP-SQNX2uu3f8NvqfnMKSZTO14k-YliIK1jdU4h4fWuIDjsMeigKiTOi4yM4X11vFfQ60Age--Y0pNh2YVZXtERCm3cJdskDzU_w9kV"/>
+</div>
+<div class="flex justify-between items-start border-t border-white/10 pt-4">
+<div>
+<h3 class="font-display text-2xl text-white italic group-hover:text-primary transition-colors">Truffle &amp; Gold</h3>
+<p class="text-gray-500 text-sm mt-1">Winter Black Truffle • 24k Gold Leaf</p>
+</div>
+<span class="text-primary font-display text-xl">$85</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="snap-center shrink-0 w-[85vw] md:w-[600px] group cursor-pointer">
+<div class="aspect-[16/9] overflow-hidden rounded-lg mb-4 relative">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all z-10"></div>
+<img alt="Macro shot of searing wagyu beef with smoke" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of grilled meat texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPc18U2NBWFfutmPkkMkjVSwgWrloEi0mLCW8goXjA50XO5YwrtajY5fp-AhGIL7ajc9qXdGa4pTkPiOQarSgnU4VaTsTG6cXlhspkkOWkFGe-RpNFrXeU7e-boGWrCsyDv9MKleQNOJmY-zN0z3rR4aaAtZXvnTKzfbp7SoRxTvgmc59wgrwhJMyjTbMTWrJaO5hEcIC0T4r4n1UiNsvE_KUxFJQVktM28fzOmqSJZuxZtiBT6VtQ0Qtt-T7ceNhR4juL3tNYO8WY"/>
+</div>
+<div class="flex justify-between items-start border-t border-white/10 pt-4">
+<div>
+<h3 class="font-display text-2xl text-white italic group-hover:text-primary transition-colors">Searing Wagyu</h3>
+<p class="text-gray-500 text-sm mt-1">A5 Japanese Wagyu • Charcoal Smoke</p>
+</div>
+<span class="text-primary font-display text-xl">$120</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="snap-center shrink-0 w-[85vw] md:w-[600px] group cursor-pointer">
+<div class="aspect-[16/9] overflow-hidden rounded-lg mb-4 relative">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all z-10"></div>
+<img alt="Delicate plating of herbs and seafood" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of delicate green herbs on dark dish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-0KXfGL0m935jY1ZxvT4rpD22Td0TjWK3OE9deKujA4MrFm7ru9OWpbQzjhITUuS31KOxIyvkerkMw39ocay7t_ZIaDYwrWLXHISOhT6CUt5nfUOO7BMLXKExgU9-q1wtNMbKj0becow-J5-aESVUtvTf-upeczT_lBn4iNmXwMonp-wGz8pGbQx4NIr4D9NLXS_JsQI1qzik1ehiYPCF0wKpVgaI7ASq39HzDiFIdKKkuDqFVj_fBiHgoI__NvWvMsOXJQZsvoin"/>
+</div>
+<div class="flex justify-between items-start border-t border-white/10 pt-4">
+<div>
+<h3 class="font-display text-2xl text-white italic group-hover:text-primary transition-colors">Herbs &amp; Smoke</h3>
+<p class="text-gray-500 text-sm mt-1">Foraged Herbs • Smoked Eel</p>
+</div>
+<span class="text-primary font-display text-xl">$45</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Location / Reservation CTA Block -->
+<section class="relative py-24 px-6 md:px-12 flex flex-col items-center justify-center bg-surface-dark border-t border-white/5">
+<div class="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+<img alt="Abstract texture of restaurant wall" class="w-full h-full object-cover grayscale" data-alt="Dark abstract texture background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjQya17v0J-ij5Xp7chpMUD27YO_OLUClXCIiVERcxKVV00gazpEL4vv1d_Ido-fnM6eGDzs4XJhIIAa9zvpjPTCXY1qnODuc5aownAU0bQTEBtnhYpohp1xzqi81eoW30uwBYqyd51jTn7c6xCYagBpt941SNspFNTbSmYRTR1iM-o2QQkkGa05c4Rku5lHwvJ6_MvPfeZ6breP9UpYYdYVvObrgfJ2KCGzlTIzODE-JPYIZ1a_dKzhiRutqzSrQSRqFCmlSDFVYh"/>
+</div>
+<div class="relative z-10 max-w-4xl text-center">
+<h2 class="font-display text-4xl md:text-5xl text-white font-bold mb-6">
+                An Unforgettable Evening Awaits
+            </h2>
+<p class="text-gray-400 mb-10 text-lg font-light max-w-xl mx-auto">
+                Secure your table at Brass &amp; Shadow. Reservations are released on the 1st of every month at 9:00 AM.
+            </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<button class="bg-primary text-background-dark font-bold px-8 py-4 rounded hover:bg-white transition-colors duration-300 min-w-[200px] gold-glow">
+                    Book a Table
+                </button>
+<button class="bg-transparent border border-white/20 text-white font-bold px-8 py-4 rounded hover:bg-white/10 transition-colors duration-300 min-w-[200px]">
+                    Private Dining
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-dark border-t border-white/5 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-16">
+<!-- Logo -->
+<div class="flex flex-col gap-2">
+<span class="font-display italic text-3xl text-primary font-bold">Brass &amp; Shadow</span>
+<span class="text-xs text-gray-500 tracking-[0.2em] uppercase">Fine Dining • New York</span>
+</div>
+<!-- Navigation -->
+<nav class="flex flex-wrap gap-8">
+<a class="text-gray-400 hover:text-primary transition-colors font-display text-lg" href="#">Menu</a>
+<a class="text-gray-400 hover:text-primary transition-colors font-display text-lg" href="#">Wines</a>
+<a class="text-gray-400 hover:text-primary transition-colors font-display text-lg" href="#">Story</a>
+<a class="text-gray-400 hover:text-primary transition-colors font-display text-lg" href="#">Press</a>
+<a class="text-gray-400 hover:text-primary transition-colors font-display text-lg" href="#">Contact</a>
+</nav>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-500 border-t border-white/5 pt-8">
+<!-- Address -->
+<div class="flex flex-col gap-1">
+<span class="text-brass-muted text-xs font-bold uppercase tracking-wider mb-2">Location</span>
+<p class="font-display text-lg">128 Shadow Lane</p>
+<p class="font-display text-lg">Tribeca, New York, NY 10013</p>
+</div>
+<!-- Hours -->
+<div class="flex flex-col gap-1">
+<span class="text-brass-muted text-xs font-bold uppercase tracking-wider mb-2">Hours</span>
+<p class="font-display text-lg">Tue - Sun: 5:30 PM - 11:00 PM</p>
+<p class="font-display text-lg">Closed Mondays</p>
+</div>
+<!-- Socials -->
+<div class="flex flex-col gap-1 md:items-end">
+<span class="text-brass-muted text-xs font-bold uppercase tracking-wider mb-2">Connect</span>
+<div class="flex gap-4">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">Twitter</a>
+<a class="hover:text-primary transition-colors" href="#">Facebook</a>
+</div>
+</div>
+</div>
+<div class="text-center mt-16 pt-8 text-xs text-gray-700 font-sans">
+                © 2024 Brass &amp; Shadow Restaurant Group. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

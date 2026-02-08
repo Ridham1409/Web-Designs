@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gourmet Minimalist Restaurant</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d483",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#10221a",
+                        "charcoal": "#1a1a1a",
+                        "brass": "#D4AF37", 
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden antialiased selection:bg-primary selection:text-background-dark">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Navigation -->
+<header class="fixed top-0 z-50 w-full px-6 py-6 transition-all duration-300 bg-gradient-to-b from-background-dark/90 to-transparent">
+<div class="mx-auto flex max-w-[1400px] items-center justify-between">
+<!-- Logo -->
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined !text-[32px]">restaurant_menu</span>
+</div>
+<h2 class="text-white text-2xl font-medium tracking-wide italic">Gourmet Minimalist</h2>
+</div>
+<!-- Menu Button -->
+<button class="group flex items-center gap-3 px-4 py-2 text-white transition-colors hover:text-primary">
+<span class="hidden text-sm font-medium uppercase tracking-widest sm:block">Menu</span>
+<span class="material-symbols-outlined !text-[32px] transition-transform group-hover:rotate-90">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 pb-20 pt-32 text-center sm:px-10">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="h-full w-full bg-cover bg-center bg-no-repeat opacity-60 mix-blend-overlay" data-alt="Dark moody fine dining table setting with focus on textures" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmrrFahKPs2WrW9WWuRIqw3pfF8xNlO_xY7UbiQK45KFMlkQnAZ9kqjL6NPDIdI862Z41xyJftgACYaWP0XWOSB0uIJdislCcC0gia6fvguZyFfwskZQIXlL5S9tV_6-ErUXzV4ROx93mt3y6fDzVQ_ElnspkLorSodHy8nyX_2BYXomvcOZ7vzZjL2OSAZ7kBVzdyMBV9QOT0czSTMy5bQXEPOHopOGdhQBTyusEfU2nXi7d6RvB1lNMTog7ZCPCyW5P10Wa8K07f');"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-background-dark via-background-dark/80 to-background-dark"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+</div>
+<!-- Hero Content -->
+<div class="relative z-10 flex max-w-4xl flex-col items-center gap-8">
+<p class="text-primary text-sm font-bold uppercase tracking-[0.2em]">Michelin Star Experience</p>
+<h1 class="font-display text-5xl font-light leading-tight text-white sm:text-7xl md:text-8xl italic">
+                        The Art of <br/> <span class="not-italic font-normal">Subtlety</span>
+</h1>
+<p class="max-w-xl text-lg leading-relaxed text-gray-300 font-sans font-light">
+                        Where deep emerald meets dark charcoal. A culinary journey designed to awaken the senses through precision, passion, and purity.
+                    </p>
+<div class="mt-8 flex flex-col gap-4 sm:flex-row">
+<button class="relative overflow-hidden rounded-full border border-primary/50 bg-primary/10 px-8 py-4 text-sm font-bold uppercase tracking-widest text-white backdrop-blur-sm transition-all hover:bg-primary hover:text-background-dark hover:border-primary">
+                            Reserve a Table
+                        </button>
+<button class="flex items-center justify-center gap-2 rounded-full border border-white/20 px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition-all hover:bg-white/10 hover:border-white/40">
+<span class="material-symbols-outlined !text-[20px]">play_circle</span>
+                            View Film
+                        </button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/50">
+<span class="material-symbols-outlined">keyboard_arrow_down</span>
+</div>
+</section>
+<!-- Featured Dishes Carousel (Horizontal Scroll) -->
+<section class="relative z-10 -mt-20 bg-gradient-to-b from-transparent to-background-dark pb-24">
+<div class="mx-auto max-w-[1400px] px-6">
+<div class="mb-12 flex items-end justify-between border-b border-white/10 pb-6">
+<h2 class="text-3xl font-light text-white sm:text-4xl italic">Seasonal Highlights</h2>
+<div class="flex gap-4">
+<button class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white hover:bg-white hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white hover:bg-white hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Scroll Container -->
+<div class="scrollbar-hide flex snap-x snap-mandatory gap-6 overflow-x-auto pb-8">
+<!-- Card 1 -->
+<div class="group relative min-w-[300px] flex-1 snap-center sm:min-w-[400px]">
+<div class="aspect-[3/4] w-full overflow-hidden rounded-lg bg-charcoal">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Plated scallop dish with truffle foam and artistic garnish" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtGyxpwumgoyZA-0rzdU2wOKF9AXJLOCw5jiJp5rwSjxchxYvcsSp4EMtSHgmuPZY-FRTRCNSDnzP3fF9BM7ZSVSYh9TULiagWGzzdimUvJrsVKpmt4SlUcJSHwmm1z8U9H12OJcynHIYndDrJc2sbBx8xIrXc1Lt2xHAPmbQi-SVAOcK-ggS9zEaa1GUpE4WFrp1Gm7ueHr2TV4ChNBWla5HFOGFdM2smr98EJKB32ca9OP8oVdu_rtFy5Ldi8jqnFtkkayeuCHl4');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-80"></div>
+</div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="mb-2 block text-xs font-bold uppercase tracking-widest text-primary">Appetizer</span>
+<h3 class="mb-2 font-display text-3xl text-white italic">The Taste of the Ocean</h3>
+<p class="mb-6 text-sm text-gray-400 font-sans">Seared Scallop with Truffle Foam</p>
+<button class="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white transition-all group-hover:text-primary">
+                                    Details <span class="material-symbols-outlined !text-[18px]">arrow_right_alt</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative min-w-[300px] flex-1 snap-center sm:min-w-[400px]">
+<div class="aspect-[3/4] w-full overflow-hidden rounded-lg bg-charcoal">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Dark gourmet meat dish smoked venison with berry reduction" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6d4W4fb46ZqPCZX4o64-59vvRHfTvpgF_4zrRsgh4AXjRtc--_XsjS9D6NsuU9ddufwZrWPGW873lhXNPqvP7bJWa7ydUoOElpIbUxuTvMGnzmUS3MMT2Z4Ppuq9C0KRdJ3rAp9L9GhGL7m8hPe4WHRVv3KbtnaCUiIzKObSiiDk1Zgd10rajhloWJuy3EgnVPeeGvAdAdbO3T7rssBl5K6fduRT9LHY7odvBqx7lp_hL8N_1Ma-yNJQkoOTCSgwkU5jj7gfTUWPl');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-80"></div>
+</div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="mb-2 block text-xs font-bold uppercase tracking-widest text-primary">Main Course</span>
+<h3 class="mb-2 font-display text-3xl text-white italic">Forest &amp; Fire</h3>
+<p class="mb-6 text-sm text-gray-400 font-sans">Smoked Venison with Berry Reduction</p>
+<button class="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white transition-all group-hover:text-primary">
+                                    Details <span class="material-symbols-outlined !text-[18px]">arrow_right_alt</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative min-w-[300px] flex-1 snap-center sm:min-w-[400px]">
+<div class="aspect-[3/4] w-full overflow-hidden rounded-lg bg-charcoal">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="High end chocolate dessert with gold leaf and minimalist plating" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDt5ttSTawPWwDBJ451DfXn-Ks5HewN4iYkhk03KkbN0YaZM81bgaPfijTlCDH_xahQsC9vZQrMoUbq48BIK1V009UGqhryMQCx6pUqnsewZa3Ztr27u5XM6FxiLpnb1XbDpEdfKIHhBduoSTifCZeeEw5UAYB9_GCiOxo7qbUN62UY0DlVRKnL3VKBx5CV6eGzCR_VGhd_bKsJLwjv8yB0r69T33F-JWmqL7JglTt0gURM5yZPLPPAYX9Xe7WWMvO_jTIO3QJnpCbU');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-80"></div>
+</div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="mb-2 block text-xs font-bold uppercase tracking-widest text-primary">Dessert</span>
+<h3 class="mb-2 font-display text-3xl text-white italic">Sweet Architecture</h3>
+<p class="mb-6 text-sm text-gray-400 font-sans">70% Dark Chocolate &amp; Gold Leaf</p>
+<button class="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white transition-all group-hover:text-primary">
+                                    Details <span class="material-symbols-outlined !text-[18px]">arrow_right_alt</span>
+</button>
+</div>
+</div>
+<!-- Card 4 (Added for scroll demo) -->
+<div class="group relative min-w-[300px] flex-1 snap-center sm:min-w-[400px]">
+<div class="aspect-[3/4] w-full overflow-hidden rounded-lg bg-charcoal">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Artistic plating of steak tartare with microgreens" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCevgaKa1C0ok8xkq2a3ojuqQSiv9qIo57OY1oSRKZcg_PBchYTPxAY1vKnaDUF6rsuXNrp-Id4EPWacX7HM6qgea3n6MkbpmNOfosZQfXLDtZM8595MOdQ_QhiYPA7XF2UsJZAyYE6A-YEz1zzy7dhVfok5TE8Vb2W1MIyxZi6mEmyTML8u4zWmXlkZavzpFXpIioJwp-pD0fV68C2tlqSjsZ2r11HV9ihyTTH8kG6aGf28ygurMdu5g857XRAoJlSsCEYknGgRhba');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-80"></div>
+</div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="mb-2 block text-xs font-bold uppercase tracking-widest text-primary">Starter</span>
+<h3 class="mb-2 font-display text-3xl text-white italic">Raw Elegance</h3>
+<p class="mb-6 text-sm text-gray-400 font-sans">Wagyu Tartare with Quail Egg</p>
+<button class="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white transition-all group-hover:text-primary">
+                                    Details <span class="material-symbols-outlined !text-[18px]">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Philosophy Section -->
+<section class="bg-charcoal px-6 py-24">
+<div class="mx-auto flex max-w-[1200px] flex-col items-center gap-12 text-center md:flex-row md:text-left">
+<div class="flex-1">
+<span class="mb-4 block text-sm font-bold uppercase tracking-[0.2em] text-brass">Our Philosophy</span>
+<h2 class="font-display text-4xl font-light leading-tight text-white md:text-5xl lg:text-6xl">
+                            We believe in the <i class="text-primary">purity</i> of flavor and the elegance of simplicity.
+                        </h2>
+</div>
+<div class="flex-1 border-l border-white/10 pl-0 md:pl-12 pt-8 md:pt-0">
+<p class="mb-8 text-lg leading-relaxed text-gray-400 font-sans font-light">
+                            Every dish is a chapter in our story, crafted with precision and passion. By stripping away the unnecessary, we reveal the true essence of each ingredient. Our kitchen is a laboratory of taste where tradition meets innovation.
+                        </p>
+<div class="flex flex-col gap-6 sm:flex-row">
+<div class="flex flex-col gap-1">
+<span class="text-3xl font-light text-white italic">3</span>
+<span class="text-xs uppercase tracking-widest text-gray-500">Michelin Stars</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-3xl font-light text-white italic">25+</span>
+<span class="text-xs uppercase tracking-widest text-gray-500">Seasonal Menus</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-3xl font-light text-white italic">100%</span>
+<span class="text-xs uppercase tracking-widest text-gray-500">Sustainable Sourcing</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Experience Grid -->
+<section class="bg-background-dark px-6 py-24">
+<div class="mx-auto max-w-[1400px]">
+<div class="mb-16 text-center">
+<h2 class="font-display text-4xl font-light text-white md:text-6xl italic">The Experience</h2>
+<p class="mt-4 text-gray-400 font-sans font-light">Immerse yourself in a culinary journey designed to awaken the senses.</p>
+</div>
+<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+<!-- Experience Item 1 -->
+<div class="group cursor-pointer">
+<div class="mb-6 overflow-hidden rounded-lg">
+<div class="aspect-video w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Chef plating food in a dark kitchen with focus" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCooFDSUYQHN4av3ThrVqjbptrfiZtrd8mNd8t4ko9gZtifzxhav57FmkraAw7xyRLZeNGv6OLIcoku4RZ2szLabX0cBpBtFcrbNvVULYM2zAwdtpJAMsT57Ka45Uj2dk_1EZ0F0ujIOJwMe0ZcEReURad5gpSUbNPQEhm_bZ4v8MskFDWxQhuzMDbIxPkSKQWzFEaow7mzLmAhog79KBb0M6UH52NXSTmmEbU_VCL4pDwhLWxCWEDgSik0H6NnrXSXKy5H1XZuqJIg');"></div>
+</div>
+<div class="border-t border-white/10 pt-4">
+<h3 class="mb-2 text-xl font-medium text-white italic">Seasonal Menus</h3>
+<p class="text-sm text-primary font-sans">Curated daily based on market availability.</p>
+</div>
+</div>
+<!-- Experience Item 2 -->
+<div class="group cursor-pointer">
+<div class="mb-6 overflow-hidden rounded-lg">
+<div class="aspect-video w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Private dining room with elegant setting and dark ambiance" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDiwqT8SdI0jpA8eIbNAvCkp-2g00AtD8FQ-SbiVI2mPpVdUqE5XQ3lk76xkLLMiws7Sgvg-WlWygRvjJajCG2z5ZitBGaGt97AXv4UqQOjDJPUrwTq0cFJe58W4hgWlih-20GWkCmawBmfofaJ4ZRTqW2UFR9GBcN5AnY4NOQBANZBSowy1xIhFenylLuUsWXOggb0pEerQJeWKJytyDBXpUBeSqQ7D4Pp0j8iuHvgjLqLlrNDTCgvseQEIO0gMJixpysqFtly8lji');"></div>
+</div>
+<div class="border-t border-white/10 pt-4">
+<h3 class="mb-2 text-xl font-medium text-white italic">Private Dining</h3>
+<p class="text-sm text-primary font-sans">Intimate spaces for special gatherings.</p>
+</div>
+</div>
+<!-- Experience Item 3 -->
+<div class="group cursor-pointer">
+<div class="mb-6 overflow-hidden rounded-lg">
+<div class="aspect-video w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Sommelier pouring red wine into a glass" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIJNrTo-8y-b6EqkaQHOj3wiOzPeE3NDfd36OcbguxreviJcPWQnO9SfIkld-ylXZgwuebGPSAe67mRPPdFfP3bYF0Xi38MviRcOhr_bkC4VpPuxBHjUlRNa00X_NZZrorj053WByWMwuBcxUE7FSO0i3qrBg-zXKnxwAI4BjOeQ5HcPZk3c2IK-aR3naOiFX3Jnvrx8pziRmlXUOUP0r_cmQ5ajfda8595BloLzUgc8YmqwQLk9z-yV8oMDGKS-YqWv07k0s0s6Xe');"></div>
+</div>
+<div class="border-t border-white/10 pt-4">
+<h3 class="mb-2 text-xl font-medium text-white italic">Wine Pairing</h3>
+<p class="text-sm text-primary font-sans">Expertly selected by our Sommelier.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Minimal Footer -->
+<footer class="bg-background-dark border-t border-white/5 px-6 py-12">
+<div class="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-8 md:flex-row">
+<!-- Location (Brass Toned) -->
+<a class="flex items-center gap-2 text-brass hover:text-white transition-colors" data-location="New York" href="#">
+<span class="material-symbols-outlined !text-[20px]">location_on</span>
+<span class="font-display text-lg italic">123 Culinary Ave, New York</span>
+</a>
+<!-- Logo Small -->
+<div class="text-white/30 font-display text-sm tracking-widest uppercase">
+                    Gourmet Minimalist © 2024
+                </div>
+<!-- Social Icons -->
+<div class="flex gap-6">
+<a class="text-white/50 transition-colors hover:text-white" href="#">
+<!-- Instagram SVG -->
+<svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.468 2.37c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-white/50 transition-colors hover:text-white" href="#">
+<!-- Twitter SVG -->
+<svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24">
+<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+</svg>
+</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
